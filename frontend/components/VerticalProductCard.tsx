@@ -14,7 +14,6 @@ import { Star, CheckCircle2, MessageSquareQuote } from 'lucide-react';
 import { BuyCODButton } from './buttons/BuyCODButton';
 import { CODChoiceModal } from './modals/CODChoiceModal';
 import { PayOnDeliveryModal } from './modals/PayOnDeliveryModal';
-import { FestiveDiscountSticker } from './FestiveDiscountSticker';
 import { LimitedStockSticker } from './LimitedStockSticker';
 import { ProductReviewsModal } from './modals/ProductReviewsModal';
 import { getProductReviews } from '../lib/productReviews';
@@ -381,17 +380,7 @@ export const VerticalProductCard: React.FC<VerticalProductCardProps> = ({
             </BulgeWidget>
           </ScrollZoomIn>
         </div>
-
-        {/* Festive Discount Sticker — right side on desktop, bottom on mobile */}
-        <div className="hidden md:flex md:absolute md:right-0 md:bottom-8 md:w-auto items-end justify-end pointer-events-none" style={{ zIndex: 20 }}>
-          <FestiveDiscountSticker position="right" />
-        </div>
       </motion.div>
-
-      {/* Mobile: sticker at bottom of card */}
-      <div className="flex md:hidden w-full justify-center mt-2 mb-4">
-        <FestiveDiscountSticker position="bottom" />
-      </div>
     </div>
     </>
   );

@@ -475,25 +475,27 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
             <div
               className="relative w-full max-w-md pointer-events-auto rounded-2xl overflow-hidden"
               style={{
-                background: 'linear-gradient(145deg, rgba(15,23,42,0.97) 0%, rgba(10,17,38,0.99) 100%)',
-                border: '1px solid rgba(59,130,246,0.35)',
+                background: 'rgba(15, 15, 15, 0.85)',
+                backdropFilter: 'blur(24px) saturate(1.8)',
+                WebkitBackdropFilter: 'blur(24px) saturate(1.8)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
                 boxShadow:
-                  '0 0 0 1px rgba(59,130,246,0.15), 0 24px 64px rgba(0,0,0,0.7), 0 0 80px rgba(37,99,235,0.12)',
+                  '0 0 0 1px rgba(255, 255, 255, 0.06), 0 24px 64px rgba(0, 0, 0, 0.85), 0 0 60px rgba(255, 255, 255, 0.05)',
               }}
             >
-              {/* Blue glow top bar */}
+              {/* White glow top bar */}
               <div
                 className="absolute top-0 left-0 right-0 h-[2px] rounded-t-2xl"
                 style={{
-                  background: 'linear-gradient(90deg, transparent, #2563EB 40%, #3B82F6 60%, transparent)',
+                  background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.6) 40%, #ffffff 50%, rgba(255,255,255,0.6) 60%, transparent)',
                 }}
               />
 
-              {/* Radial blue glow */}
+              {/* Radial white ambient glow */}
               <div
                 className="absolute inset-0 pointer-events-none"
                 style={{
-                  background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(37,99,235,0.09) 0%, transparent 70%)',
+                  background: 'radial-gradient(ellipse 70% 50% at 50% 0%, rgba(255,255,255,0.06) 0%, transparent 70%)',
                 }}
               />
 
@@ -502,16 +504,16 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-3">
                     <div
-                      className="flex items-center justify-center w-10 h-10 rounded-xl text-white font-black text-lg select-none"
+                      className="flex items-center justify-center w-10 h-10 rounded-xl text-black font-black text-lg select-none"
                       style={{
-                        background: 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-                        boxShadow: '0 4px 14px rgba(37,99,235,0.45)',
+                        background: 'linear-gradient(135deg, #ffffff 0%, #e5e5e5 100%)',
+                        boxShadow: '0 4px 14px rgba(255, 255, 255, 0.25)',
                       }}
                     >
                       R
                     </div>
                     <div>
-                      <p className="text-[11px] text-blue-400/80 font-bold uppercase tracking-widest">Secured by</p>
+                      <p className="text-[11px] text-neutral-400 font-bold uppercase tracking-widest">Secured by</p>
                       <p className="text-base font-extrabold text-white leading-none">Razorpay</p>
                     </div>
                   </div>
@@ -527,17 +529,17 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
                 </div>
 
                 {/* Divider */}
-                <div className="h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+                <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
                 {/* Main message */}
                 <div className="space-y-2 text-center">
                   <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-                    <Zap size={36} className="mx-auto mb-3" style={{ color: '#3B82F6' }} strokeWidth={2} />
+                    <Zap size={36} className="mx-auto mb-3 text-white" strokeWidth={2} />
                     <h2 className="font-bold text-xl text-white leading-tight">You&apos;re being redirected to</h2>
                     <p
                       className="font-black text-2xl"
                       style={{
-                        background: 'linear-gradient(90deg, #3B82F6, #60A5FA)',
+                        background: 'linear-gradient(90deg, #ffffff, #d4d4d4 60%, #a3a3a3 100%)',
                         WebkitBackgroundClip: 'text',
                         WebkitTextFillColor: 'transparent',
                         backgroundClip: 'text',
@@ -562,12 +564,16 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.18, type: 'spring', stiffness: 300 }}
                   className="rounded-xl p-4 flex items-center justify-between gap-4"
-                  style={{ background: 'rgba(37,99,235,0.10)', border: '1px solid rgba(59,130,246,0.22)' }}
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.06)',
+                    border: '1px solid rgba(255, 255, 255, 0.12)',
+                    backdropFilter: 'blur(8px)',
+                  }}
                 >
                   <div className="min-w-0">
                     <p className="text-white font-bold text-sm truncate">{product.name}</p>
                     {product.category && (
-                      <p className="text-blue-400/70 text-[11px] font-mono uppercase tracking-widest truncate mt-0.5">
+                      <p className="text-neutral-400 text-[11px] font-mono uppercase tracking-widest truncate mt-0.5">
                         {product.category}
                       </p>
                     )}
@@ -642,22 +648,23 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
                   </motion.button>
 
                   <motion.button
-                    whileHover={{ scale: 1.03, boxShadow: '0 8px 28px rgba(37,99,235,0.55)' }}
+                    whileHover={{ scale: 1.03, boxShadow: '0 8px 28px rgba(255,255,255,0.35)' }}
                     whileTap={{ scale: 0.97 }}
                     onClick={handleProceed}
                     disabled={status === 'loading' || status === 'success'}
-                    className="flex-[2] py-3 rounded-xl text-sm font-black tracking-wide text-white flex items-center justify-center gap-2 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
+                    className="flex-[2] py-3 rounded-xl text-sm font-black tracking-wide flex items-center justify-center gap-2 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
                     style={{
                       background:
                         status === 'loading'
-                          ? 'rgba(37,99,235,0.7)'
-                          : 'linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%)',
-                      boxShadow: '0 4px 18px rgba(37,99,235,0.40)',
+                          ? 'rgba(255,255,255,0.8)'
+                          : '#ffffff',
+                      color: '#000000',
+                      boxShadow: '0 4px 18px rgba(255,255,255,0.25)',
                     }}
                   >
                     {status === 'loading' ? (
                       <>
-                        <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+                        <svg className="animate-spin w-4 h-4 text-black" fill="none" viewBox="0 0 24 24">
                           <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                           <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
                         </svg>
@@ -665,7 +672,7 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
                       </>
                     ) : (
                       <>
-                        <Zap size={15} strokeWidth={2.5} />
+                        <Zap size={15} strokeWidth={2.5} className="text-black" />
                         Proceed to Pay
                       </>
                     )}

@@ -100,24 +100,13 @@ export const CartDrawer: React.FC<CartDrawerProps> = ({ onCheckout }) => {
                             </p>
                           </div>
                           <div className="flex items-center justify-between mt-2">
-                            <div className="flex items-center space-x-2 border border-neutral-300 dark:border-neutral-700 rounded-lg px-2 py-0.5">
-                              <button
-                                onClick={() => updateQuantity(item.product.id, item.quantity - 1, item.variant?.id)}
-                                className="text-xs font-bold hover:text-black dark:hover:text-white"
-                              >
-                                -
-                              </button>
-                              <span className="text-xs font-bold px-1">{item.quantity}</span>
-                              <button
-                                onClick={() => updateQuantity(item.product.id, item.quantity + 1, item.variant?.id)}
-                                className="text-xs font-bold hover:text-black dark:hover:text-white"
-                              >
-                                +
-                              </button>
+                            <div className="flex items-center border border-neutral-300 dark:border-neutral-700 rounded-lg px-2.5 py-0.5">
+                              <span className="text-xs font-bold text-black dark:text-white">Qty: {item.quantity}</span>
                             </div>
                             <button
                               onClick={() => removeItem(item.product.id, item.variant?.id)}
-                              className="text-neutral-400 hover:text-red-600 transition-colors"
+                              className="text-neutral-400 hover:text-red-600 transition-colors p-1"
+                              title="Remove item"
                             >
                               <Trash2 size={16} />
                             </button>

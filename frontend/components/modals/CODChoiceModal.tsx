@@ -1,4 +1,4 @@
-'use client';
+ 'use client';
 
 import React, { useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -136,8 +136,8 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
             }}
             onClick={(e) => e.stopPropagation()}
             className={[
-              'bg-[#FAF4EC] dark:bg-[#1A0A0D]',
-              'border border-[#2A0A10]/20 dark:border-[#3D0C11]/60',
+              'bg-white dark:bg-neutral-900',
+              'border border-neutral-200 dark:border-neutral-800',
               'rounded-2xl shadow-2xl',
               'p-6 sm:p-8',
               'overflow-hidden',
@@ -146,7 +146,7 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
             {/* Decorative top accent bar */}
             <div
               aria-hidden="true"
-              className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-gradient-to-r from-[#2A0A10] via-[#731C24] to-[#2A0A10]"
+              className="absolute top-0 left-0 right-0 h-1 rounded-t-2xl bg-black dark:bg-white"
             />
 
             {/* Close button */}
@@ -154,27 +154,27 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
               type="button"
               onClick={onClose}
               aria-label="Close delivery options"
-              className="absolute top-4 right-4 p-1.5 rounded-lg text-[#3D0C11]/60 dark:text-stone-400 hover:bg-[#2A0A10]/10 dark:hover:bg-stone-800/60 transition-colors"
+              className="absolute top-4 right-4 p-1.5 rounded-lg text-neutral-400 hover:text-black dark:hover:text-white hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors"
             >
               <X size={18} />
             </button>
 
             {/* Header */}
             <div className="mb-6 pr-6">
-              <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#731C24] dark:text-amber-500 mb-1">
+              <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">
                 ARGHYA COLLECTIONS
               </p>
               <h2
                 id="cod-modal-title"
-                className="font-serif text-xl sm:text-2xl font-bold text-[#2A0A10] dark:text-stone-100 leading-tight"
+                className="font-serif text-xl sm:text-2xl font-bold text-black dark:text-white leading-tight"
               >
                 Choose Delivery Option
               </h2>
               {product && (
-                <p className="mt-1 text-xs text-[#3D0C11]/60 dark:text-stone-400 line-clamp-1">
+                <p className="mt-1 text-xs text-neutral-600 dark:text-neutral-400 line-clamp-1">
                   {product.name}
                   {product.price != null && (
-                    <span className="ml-1 font-semibold text-[#2A0A10] dark:text-amber-400">
+                    <span className="ml-1 font-bold text-black dark:text-white">
                       · ₹{Number(product.price).toLocaleString('en-IN')}
                     </span>
                   )}
@@ -194,25 +194,25 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
                 onClick={handleRazorpayCOD}
                 className={[
                   'group w-full flex items-start gap-4 p-4 rounded-xl',
-                  'bg-[#2A0A10] dark:bg-[#1C0508]',
-                  'border border-[#2A0A10] dark:border-[#3D0C11]',
+                  'bg-black dark:bg-white',
+                  'border border-black dark:border-white',
                   'text-left shadow-md',
-                  'hover:bg-[#3D0C11] dark:hover:bg-[#2A0A10]',
+                  'hover:bg-neutral-800 dark:hover:bg-neutral-100',
                   'transition-colors duration-200',
                 ].join(' ')}
               >
-                <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center">
-                  <CreditCard size={18} className="text-amber-300" />
+                <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-lg bg-white/10 dark:bg-black/10 flex items-center justify-center">
+                  <CreditCard size={18} className="text-white dark:text-black" />
                 </span>
                 <span className="flex-1 min-w-0">
-                  <span className="block text-xs font-bold uppercase tracking-wider text-white leading-snug">
+                  <span className="block text-xs font-bold uppercase tracking-wider text-white dark:text-black leading-snug">
                     Continue Cash On Delivery
                   </span>
-                  <span className="block text-[10px] text-white/60 mt-0.5">
+                  <span className="block text-[10px] text-white/70 dark:text-black/70 mt-0.5">
                     Secured via Razorpay · ₹15 handling fee only
                   </span>
                 </span>
-                <span className="self-center text-amber-300 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-lg leading-none">
+                <span className="self-center text-white dark:text-black opacity-80 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-lg leading-none">
                   →
                 </span>
               </motion.button>
@@ -227,25 +227,25 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
                 className={[
                   'group w-full flex items-start gap-4 p-4 rounded-xl',
                   'bg-transparent',
-                  'border-2 border-[#2A0A10]/25 dark:border-[#3D0C11]/50',
+                  'border-2 border-neutral-300 dark:border-neutral-700',
                   'text-left',
-                  'hover:border-[#2A0A10]/60 dark:hover:border-[#731C24]/70',
-                  'hover:bg-[#2A0A10]/5 dark:hover:bg-[#1C0508]/40',
+                  'hover:border-black dark:hover:border-white',
+                  'hover:bg-neutral-50 dark:hover:bg-neutral-800/50',
                   'transition-colors duration-200',
                 ].join(' ')}
               >
-                <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-lg bg-[#2A0A10]/10 dark:bg-[#1C0508]/40 flex items-center justify-center">
-                  <Truck size={18} className="text-[#2A0A10] dark:text-amber-400" />
+                <span className="mt-0.5 flex-shrink-0 w-8 h-8 rounded-lg bg-neutral-100 dark:bg-neutral-800 flex items-center justify-center">
+                  <Truck size={18} className="text-black dark:text-white" />
                 </span>
                 <span className="flex-1 min-w-0">
-                  <span className="block text-xs font-bold uppercase tracking-wider text-[#2A0A10] dark:text-stone-100 leading-snug">
+                  <span className="block text-xs font-bold uppercase tracking-wider text-black dark:text-white leading-snug">
                     Continue With Pay On Delivery
                   </span>
-                  <span className="block text-[10px] text-[#3D0C11]/50 dark:text-stone-400 mt-0.5">
+                  <span className="block text-[10px] text-neutral-500 dark:text-neutral-400 mt-0.5">
                     Pay in cash when your order arrives
                   </span>
                 </span>
-                <span className="self-center text-[#2A0A10]/50 dark:text-stone-400 opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-lg leading-none">
+                <span className="self-center text-neutral-400 dark:text-neutral-500 group-hover:text-black dark:group-hover:text-white opacity-70 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all text-lg leading-none">
                   →
                 </span>
               </motion.button>
@@ -253,7 +253,7 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
             </div>
 
             {/* Footer note */}
-            <p className="mt-5 text-center text-[10px] text-[#3D0C11]/40 dark:text-stone-600 font-medium">
+            <p className="mt-5 text-center text-[10px] text-neutral-400 dark:text-neutral-500 font-medium">
               100% Safe · Authentic Arghya Couture · Free Shipping
             </p>
           </motion.div>
