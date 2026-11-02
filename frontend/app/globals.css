@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-color: #FAF4EC;
+  --text-color: #3D0C11;
+  /* Smooth 60fps scroll */
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  --bg-color: #0c0a09;
+  --text-color: #f5f5f4;
+}
+
+html {
+  /* Hardware-accelerated compositing root */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  /* Prevent janky overscroll repaints on WebKit */
+  overscroll-behavior: none;
+}
+
+.luxury-text-gradient {
+  background: linear-gradient(135deg, #3D0C11 0%, #731C24 50%, #2E080C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html.dark .luxury-text-gradient {
+  background: linear-gradient(135deg, #BF953F 0%, #FCF6BA 25%, #B38728 50%, #FBF5B7 75%, #AA771C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-bg {
+  background-color: #FFFFFF;
+  border-color: rgba(61, 12, 17, 0.15);
+}
+
+html.dark .card-bg {
+  background-color: rgba(28, 25, 23, 0.6);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+
+/* ── Shining Moving Border: rotating conic-gradient via @property ── */
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes shineBorderSpin {
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+/* ── Card Shining Moving Border ── */
+@property --card-border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes cardBorderSpin {
+  to {
+    --card-border-angle: 360deg;
+  }
+}
+
+/* ── Social Icon Buttons (Black & White Theme) ── */
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  transition: color 0.2s ease, background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  /* Light mode: clean black & white */
+  color: #000000;
+  background-color: #f4f4f5;
+  border: 1.5px solid #e4e4e7;
+}
+
+.social-icon-btn:hover {
+  /* Light mode hover */
+  color: #ffffff;
+  background-color: #000000;
+  transform: translateY(-2px) scale(1.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+html.dark .social-icon-btn {
+  /* Dark mode */
+  color: #ffffff;
+  background-color: #18181b;
+  border: 1.5px solid #27272a;
+}
+
+html.dark .social-icon-btn:hover {
+  color: #000000;
+  background-color: #ffffff;
+  transform: translateY(-2px) scale(1.08);
+}
+
+/* ── Festive Flag Wave Animation ── */
+@keyframes flagWave {
+  0% { transform: perspective(500px) rotateY(0deg) rotateX(0deg) skewY(0deg); }
+  25% { transform: perspective(500px) rotateY(10deg) rotateX(2deg) skewY(1deg); }
+  50% { transform: perspective(500px) rotateY(0deg) rotateX(0deg) skewY(0deg); }
+  75% { transform: perspective(500px) rotateY(-10deg) rotateX(-2deg) skewY(-1deg); }
+  100% { transform: perspective(500px) rotateY(0deg) rotateX(0deg) skewY(0deg); }
+}
+
+.animate-flag-wave {
+  animation: flagWave 3s ease-in-out infinite;
+  transform-origin: left center;
+  will-change: transform;
+}
+
+/* ─── GPU layer hints for animated elements ─── */
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* ─── Smooth image rendering ─── */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/* ─── Respect reduced-motion preference ─── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

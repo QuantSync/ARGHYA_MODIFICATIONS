@@ -1,0 +1,46 @@
+{
+  "brand": "Arghya Modifications",
+  "generated_at": "2026-09-20",
+  "analytics": {
+    "total_revenue": 121997.0,
+    "transactions_count": 5
+  },
+  "inventory": [
+    {
+      "sku": "ARG-SAR-CRIM-FS",
+      "product": "Royal Crimson Banarasi Silk Saree",
+      "current_stock": 15,
+      "avg_daily_sales": 2.5,
+      "category": "Saree",
+      "reorder_point": 22.5,
+      "needs_restock": true
+    },
+    {
+      "sku": "ARG-LEH-EMR-M",
+      "product": "Emerald Green Zardozi Velvet Lehenga (M)",
+      "current_stock": 3,
+      "avg_daily_sales": 0.8,
+      "category": "Lehenga",
+      "reorder_point": 10.600000000000001,
+      "needs_restock": true
+    },
+    {
+      "sku": "ARG-ANK-PNK-M",
+      "product": "Blush Pink Chanderi Anarkali Suit (M)",
+      "current_stock": 20,
+      "avg_daily_sales": 3.1,
+      "category": "Anarkali",
+      "reorder_point": 26.7,
+      "needs_restock": true
+    },
+    {
+      "sku": "ARG-KUR-IVR-M",
+      "product": "Ivory Pearl Embroidered Silk Kurti Set (M)",
+      "current_stock": 2,
+      "avg_daily_sales": 1.2,
+      "category": "Kurti",
+      "reorder_point": 13.4,
+      "needs_restock": true
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+version: '3.8'
+
+services:
+  # 1. Redis Cache Server
+  redis:
+    image: redis:7-alpine
+    container_name: arghya-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - arghya-modifications-network
+
+  # 2. Node.js Backend API (Port 3000)
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    container_name: arghya-backend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      SUPABASE_URL: ${SUPABASE_URL:-https://uiiftayelwraxowjisub.supabase.co}
+      SUPABASE_KEY: ${SUPABASE_KEY:-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpaWZ0YXllbHdyYXhvd2ppc3ViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NzU5NjYsImV4cCI6MjEwNTQ1MTk2Nn0.BjtqKHaSTrvGMXbh7snE1pKB_F3GrTTKpfEhgs8F8PE}
+      SUPABASE_SERVICE_KEY: ${SUPABASE_SERVICE_KEY:-sb_secret_MmIstWl3vrZKUpimPbwhUg_7I8Tr0mG}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      FRONTEND_URL: http://localhost:3001
+      JWT_SECRET: arghya_modifications_jwt_secret_key_2026_secure
+    volumes:
+      - ../backend:/app
+      - /app/node_modules
+    depends_on:
+      - redis
+    networks:
+      - arghya-modifications-network
+
+  # 3. Next.js Frontend Web App (Port 3001)
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    container_name: arghya-frontend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    environment:
+      PORT: 3001
+      NEXT_PUBLIC_BACKEND_URL: http://localhost:3000
+      NEXT_PUBLIC_SUPABASE_URL: https://uiiftayelwraxowjisub.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVpaWZ0YXllbHdyYXhvd2ppc3ViIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk4NzU5NjYsImV4cCI6MjEwNTQ1MTk2Nn0.BjtqKHaSTrvGMXbh7snE1pKB_F3GrTTKpfEhgs8F8PE
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+      - /app/.next
+    depends_on:
+      - backend
+    networks:
+      - arghya-modifications-network
+
+  # 4. Python Analytics & Inventory Engine
+  python-analytics:
+    build:
+      context: ../python
+      dockerfile: Dockerfile
+    container_name: arghya-python-analytics
+    restart: unless-stopped
+    environment:
+      ANALYTICS_INTERVAL_SECONDS: 120
+      RUN_ONCE: "false"
+    volumes:
+      - ../python:/app
+    depends_on:
+      - backend
+    networks:
+      - arghya-modifications-network
+
+volumes:
+  redis-data:
+
+networks:
+  arghya-modifications-network:
+    driver: bridge
