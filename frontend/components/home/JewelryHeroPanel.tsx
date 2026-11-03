@@ -39,7 +39,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ label, href, variant, image
     );
   }
 
-  // PENDANTS and BRACELETS: Label at top in white area, circle, black pillar extending down
+  // NECKLACE and BRACELETS: Label at top in white area, circle, black pillar extending down
   return (
     <Link href={href} className="group flex flex-col items-center justify-between h-[340px] sm:h-[380px] w-full max-w-[210px] mx-auto cursor-pointer transition-transform duration-300">
       <div className="pb-3 pt-1 text-center">
@@ -110,10 +110,10 @@ export const JewelryHeroPanel: React.FC = () => {
             imageSrc="/images/anklets/925-traditional-silver-ghungroo-anklet_1.png"
           />
 
-          {/* Column 2: PENDANTS (Bottom Black Pillar) */}
+          {/* Column 2: NECKLACE (Bottom Black Pillar) */}
           <CategoryCard
-            label="PENDANTS"
-            href="/products?category=pendants"
+            label="NECKLACE"
+            href="/products?category=necklaces"
             variant="bottom-pillar"
           />
 
