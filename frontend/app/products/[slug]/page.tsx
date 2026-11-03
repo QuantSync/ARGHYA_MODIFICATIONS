@@ -589,53 +589,32 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </div>
           )}
 
-          {/* ── THREE PAYMENT BUTTONS ── */}
+          {/* ── PAYMENT BUTTONS (Add To Cart | Buy Now) ── */}
           <div className="flex flex-col gap-3 pt-1">
-            {/* 1. Buy Now */}
-            <button
-              type="button"
-              onClick={() => setIsBuyNowChoiceOpen(true)}
-              className="w-full bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs shadow-lg flex items-center justify-center gap-2 transition-colors"
-            >
-              Buy Now
-            </button>
-
-            {/* 2. Buy Now · Cash on Delivery */}
-            <BuyCODButton
-              onClick={() => setIsCODModalOpen(true)}
-              size="lg"
-              fadeDelay={0.2}
-              className="w-full"
-            />
-
-            {/* 3. Buy Now · Pay on Delivery */}
-            <motion.button
-              type="button"
-              whileHover={{ scale: 1.02, y: -1 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => setIsPODModalOpen(true)}
-              className="w-full py-3.5 px-4 rounded-xl font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:to-emerald-600 text-white shadow-lg border border-emerald-400/30 cursor-pointer"
-            >
-              <Truck size={15} />
-              Buy Now with Pay On Delivery
-            </motion.button>
-
-            {/* Add to Bag */}
-            <button
-              type="button"
-              onClick={() => addItem(product, {
-                id: `v-${product.slug}-${selectedColorIdx}`,
-                product_id: product.id,
-                size: selectedSize,
-                color: activeColorOption?.colorName || 'Default',
-                sku: `ARG-${product.slug.toUpperCase()}`,
-                quantity_avail: 15
-              })}
-              className="w-full bg-transparent border border-burgundy-800/20 dark:border-amber-500/30 text-burgundy-900 dark:text-amber-500 hover:bg-burgundy-50 dark:hover:bg-amber-500/10 py-3 rounded-xl font-bold uppercase tracking-wider text-xs flex items-center justify-center gap-2 transition-colors"
-            >
-              <ShoppingBag size={15} />
-              Add to Shopping Bag
-            </button>
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={() => addItem(product, {
+                  id: `v-${product.slug}-${selectedColorIdx}`,
+                  product_id: product.id,
+                  size: selectedSize,
+                  color: activeColorOption?.colorName || 'Default',
+                  sku: `ARG-${product.slug.toUpperCase()}`,
+                  quantity_avail: 15
+                })}
+                className="flex-1 bg-white dark:bg-transparent border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black py-4 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200"
+              >
+                <ShoppingBag size={15} />
+                Add To Cart
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsBuyNowChoiceOpen(true)}
+                className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-100 py-4 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
+              >
+                Buy Now
+              </button>
+            </div>
           </div>
 
 
