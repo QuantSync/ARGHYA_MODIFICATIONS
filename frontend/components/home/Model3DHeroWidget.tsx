@@ -108,22 +108,6 @@ export const Model3DHeroWidget: React.FC = () => {
           />
         </div>
 
-        {/* Floating Sparkle on Butterfly Pendant */}
-        <motion.div
-          animate={{
-            opacity: isHovered ? [0.6, 1, 0.6] : 0.4,
-            scale: isHovered ? [1, 1.3, 1] : 1,
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 2.2,
-            ease: 'easeInOut',
-          }}
-          className="absolute right-[44%] top-[20%] pointer-events-none hidden md:block"
-          style={{ transform: 'translateZ(90px)' }}
-        >
-          <span className="text-white text-xs drop-shadow-[0_0_10px_rgba(255,255,255,0.95)]">✦</span>
-        </motion.div>
       </motion.div>
     </div>
   );
