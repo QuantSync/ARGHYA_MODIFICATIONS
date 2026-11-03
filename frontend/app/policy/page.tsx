@@ -2,11 +2,24 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Lock, RefreshCw, Tag, X } from 'lucide-react';
+import { ArrowLeft, Lock, RefreshCw, Tag, X, Truck, ShieldCheck, RotateCcw } from 'lucide-react';
 import { BulgeWidget } from '../../components/BulgeWidget';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const POLICIES = [
+  {
+    id: 'shipping',
+    icon: Truck,
+    title: 'Shipping Policy',
+    points: [
+      'We offer reliable express delivery across all serviceable pincodes throughout India.',
+      'Prepaid orders are dispatched with premium complimentary shipping; Cash on Delivery orders may carry a minimal handling fee.',
+      'All orders are processed and handed over to trusted logistics partners within 24 to 48 business hours.',
+      'Estimated delivery timeline is 4–7 business days depending on delivery location and state transit regulations.',
+      'Real-time tracking links via SMS and email are sent automatically once your package is dispatched.',
+      'Every order is packaged in tamper-evident, damage-proof protective luxury boxes.',
+    ],
+  },
   {
     id: 'privacy',
     icon: Lock,
@@ -16,21 +29,42 @@ const POLICIES = [
       'Your personal data is never sold, rented, or shared with third parties without your explicit consent.',
       'We employ industry-standard TLS encryption and secure storage to safeguard every piece of information you entrust to us.',
       'Payment details are processed by PCI-DSS compliant gateways; Arghya Collections never stores raw card information on its servers.',
-      'You may request complete deletion of your account and associated data at any time by writing to us at privacy@arghyacollections.com.',
+      'You may request complete deletion of your account and associated data at any time by writing to us at care.arghya@gmail.com.',
       'Cookies are used exclusively to improve site performance and remember your preferences — never for advertising profiling.',
     ],
   },
   {
     id: 'return',
     icon: RefreshCw,
-    title: 'Return & Exchange Policy',
+    title: 'Return Policy',
     points: [
-      'All Sale / Clearance / Promotional Items: Eligible only for exchange or store credit. Defect claims: 72-hour window applies along with photo and video submission of the product.',
-      'All Accessories & Bags: Final sale. No return, exchange or credit under any condition.',
-      'Replacement Orders: Products received as replacements are non-returnable and non-exchangeable.',
-      'Store Credit/Gift Card Purchases: Orders placed using store credit / coupon codes/Gift Card are non-returnable.',
-      'Freedom Fit Sale Items: Orders using codes are non-returnable and non-exchangeable.',
-      'Refused Prepaid Deliveries (Sale): Refused prepaid orders during sale/clearance periods are not eligible for resending, refund or credit.',
+      'Quality Guarantee: If you receive a damaged, defective, or incorrect piece, submit unboxing photo/video proof within 72 hours of delivery.',
+      'Items must be unworn, in pristine original condition, with security tags and original luxury packaging intact.',
+      'Store credit or replacement will be initiated immediately upon return package verification.',
+      'Customized or final-clearance items are non-returnable unless defective on arrival.',
+      'To initiate a return request, contact our care team on WhatsApp at +91-88828 27148 or email care.arghya@gmail.com.',
+    ],
+  },
+  {
+    id: 'replacement',
+    icon: ShieldCheck,
+    title: 'Replacement Policy',
+    points: [
+      'Transit Damage or Defect: Eligible for immediate, hassle-free replacement with zero additional shipping charges.',
+      'Submit clear photos/unboxing video showing the defect to care.arghya@gmail.com or WhatsApp within 72 hours.',
+      'Once verified, our logistics team arranges a priority reverse pickup from your doorstep.',
+      'The replacement piece is dispatched promptly upon handover of the returned item.',
+    ],
+  },
+  {
+    id: 'exchange',
+    icon: RotateCcw,
+    title: 'Exchange Policy',
+    points: [
+      'Size & Variant Exchanges: Exchanges for size or alternative designs are supported within 7 days of delivery.',
+      'Items must be unused, unwashed, and retained in original box packaging with all tags attached.',
+      'If the desired size is out of stock, full store credit will be issued with lifetime validity.',
+      'Reverse pickup is coordinated conveniently through our national courier network.',
     ],
   },
   {
@@ -106,6 +140,23 @@ function PolicyCard({ policy, onClick }: PolicyCardProps) {
 
 export default function PolicyPage() {
   const [selectedPolicy, setSelectedPolicy] = useState<(typeof POLICIES)[0] | null>(null);
+
+  useEffect(() => {
+    const handleHash = () => {
+      if (typeof window !== 'undefined' && window.location.hash) {
+        const id = window.location.hash.replace('#', '');
+        const el = document.getElementById(id);
+        if (el) {
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 150);
+        }
+      }
+    };
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+    return () => window.removeEventListener('hashchange', handleHash);
+  }, []);
 
   useEffect(() => {
     if (selectedPolicy) {

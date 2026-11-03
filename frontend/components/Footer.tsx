@@ -2,99 +2,131 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { Mail, Phone, Instagram, Globe } from 'lucide-react';
-import { InstagramButton } from './buttons/InstagramButton';
-import { LinkedinButton } from './buttons/LinkedinButton';
-import { YoutubeButton } from './buttons/YoutubeButton';
-import { TwitterButton } from './buttons/TwitterButton';
-import { DiscordButton } from './buttons/DiscordButton';
-import { MetaButton } from './buttons/MetaButton';
-import { TelegramButton } from './buttons/TelegramButton';
+import Image from 'next/image';
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-white dark:bg-black text-black dark:text-white border-t border-neutral-200 dark:border-neutral-800 pt-16 pb-12 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+    <footer className="w-full bg-black text-white border-t border-[#1F1F1F] select-none">
+      <div className="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-12 min-h-[300px]">
 
-        {/* Brand Column */}
-        <div className="space-y-4">
+        {/* ─── COLUMN 1: LEFT SIDE (LOGO + ABOUT US) ─── */}
+        <div className="md:col-span-6 flex flex-col border-b md:border-b-0 md:border-r border-[#1F1F1F]">
+          {/* Top Half: Arghya Logo from Image 1 */}
+          <div className="flex-1 flex items-center justify-center p-8 sm:p-10 border-b border-[#1F1F1F]">
+            <Link href="/" className="inline-block transition-opacity hover:opacity-90">
+              <Image
+                src="/images/arghya-footer-logo-cropped.png"
+                alt="Arghya - Slay Everyday"
+                width={260}
+                height={87}
+                className="h-16 sm:h-20 w-auto object-contain brightness-105"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Bottom Half: About Us with Direct Link */}
+          <div className="flex-1 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+            <Link
+              href="/about"
+              className="group inline-flex items-center gap-1.5 mb-3 w-fit"
+            >
+              <h3 className="font-sans font-bold text-sm sm:text-base tracking-wider uppercase text-white group-hover:text-neutral-300 transition-colors">
+                ABOUT US
+              </h3>
+              <span className="text-neutral-400 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all text-xs">
+                →
+              </span>
+            </Link>
+            <p className="font-sans text-xs sm:text-[13px] text-neutral-300 leading-relaxed max-w-xl">
+              At Arghya, we believe elegance isn&apos;t about being noticed, it&apos;s about being remembered. Every piece is thoughtfully chosen to celebrate your individuality, turning everyday moments into something special.
+            </p>
+          </div>
+        </div>
+
+        {/* ─── COLUMN 2: MIDDLE (CARE LINKS) ─── */}
+        <div className="md:col-span-3 border-b md:border-b-0 md:border-r border-[#1F1F1F] p-8 sm:p-10 flex flex-col items-center justify-start text-center">
+          <h4 className="font-sans font-bold text-sm sm:text-base tracking-wider uppercase text-white mb-6">
+            CARE
+          </h4>
+          <nav className="flex flex-col items-center space-y-3.5 w-full">
+            <Link
+              href="/policy#shipping"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Shipping Policy
+            </Link>
+            <Link
+              href="/terms"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Terms and Conditions
+            </Link>
+            <Link
+              href="/policy#return"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Return Policy
+            </Link>
+            <Link
+              href="/policy#privacy"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Privacy Policy
+            </Link>
+            <Link
+              href="/policy#replacement"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Replacement Policy
+            </Link>
+            <Link
+              href="/policy#exchange"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Exchange Policy
+            </Link>
+            <Link
+              href="/about"
+              className="text-xs sm:text-[13px] text-neutral-300 hover:text-white transition-colors duration-200 tracking-wide"
+            >
+              Careers
+            </Link>
+          </nav>
+        </div>
+
+        {/* ─── COLUMN 3: RIGHT SIDE (CONTACT US & COPYRIGHT) ─── */}
+        <div className="md:col-span-3 p-8 sm:p-10 flex flex-col justify-between">
           <div>
-            <h3 className="font-serif text-3xl font-bold tracking-widest text-black dark:text-white">ARGHYA</h3>
-            <span className="text-xs uppercase tracking-[0.3em] text-neutral-800 dark:text-neutral-300 font-semibold block">SLAY EVERYDAY</span>
+            <h4 className="font-sans font-bold text-sm sm:text-base tracking-wider uppercase text-white mb-6 text-center md:text-left">
+              CONTACT US
+            </h4>
+            <p className="font-sans text-xs sm:text-[13px] text-neutral-300 leading-relaxed text-center md:text-left">
+              For any queries, please reach out to us between 10:30 AM to 5:30 PM, Monday to Saturday.
+              <span className="block mt-2">
+                WhatsApp here:{' '}
+                <a
+                  href="https://wa.me/918882827148"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:underline font-medium inline-block underline-offset-2"
+                >
+                  +91-88828 27148
+                </a>
+              </span>
+            </p>
           </div>
-          <p className="text-xs leading-relaxed text-neutral-600 dark:text-neutral-400">
-            Celebrating royal Indian heritage, timeless craftsmanship, and Affordable Premium couture tailored for the modern woman.
-          </p>
 
-          {/* ── Social Media Buttons ── */}
-          <div
-            role="list"
-            aria-label="Social media links"
-            className="flex flex-wrap items-center gap-2 pt-2"
-          >
-            <div role="listitem"><TwitterButton /></div>
-            <div role="listitem"><InstagramButton /></div>
-            <div role="listitem"><LinkedinButton /></div>
-            <div role="listitem"><YoutubeButton /></div>
-            <div role="listitem"><MetaButton /></div>
-            <div role="listitem"><DiscordButton /></div>
-            <div role="listitem"><TelegramButton /></div>
-          </div>
-        </div>
-
-        {/* Contact Info matching Business Card */}
-        <div>
-          <h4 className="text-xs uppercase tracking-widest text-black dark:text-white font-bold mb-4">Contact Atelier</h4>
-          <ul className="space-y-3 text-xs text-neutral-600 dark:text-neutral-400">
-            <li className="flex items-center space-x-2.5">
-              <Mail size={16} className="text-black dark:text-white flex-shrink-0" />
-              <a href="mailto:care.arghya@gmail.com" className="hover:text-black dark:hover:text-white hover:underline font-medium">care.arghya@gmail.com</a>
-            </li>
-            <li className="flex items-start space-x-2.5">
-              <Phone size={16} className="text-black dark:text-white flex-shrink-0 mt-0.5" />
-              <span className="font-medium">+91-8882827148</span>
-            </li>
-            <li className="flex items-center space-x-2.5">
-              <Instagram size={16} className="text-black dark:text-white flex-shrink-0" />
-              <span className="font-medium">@arghyyaofficial</span>
-            </li>
-            <li className="flex items-center space-x-2.5">
-              <Globe size={16} className="text-black dark:text-white flex-shrink-0" />
-              <a href="https://www.arghyya.com" target="_blank" rel="noreferrer" className="hover:text-black dark:hover:text-white hover:underline font-medium uppercase tracking-wider">WWW.ARGHYYA.COM</a>
-            </li>
-          </ul>
-        </div>
-
-        {/* Collections */}
-        <div>
-          <h4 className="text-xs uppercase tracking-widest text-black dark:text-white font-bold mb-4">Collections</h4>
-          <ul className="space-y-2 text-xs text-neutral-600 dark:text-neutral-400">
-            <li><Link href="/products?category=Navratri" className="hover:text-black dark:hover:text-white transition-colors">Navratri Collection</Link></li>
-            <li><Link href="/products?category=Kurti" className="hover:text-black dark:hover:text-white transition-colors">Traditional and Ethnic Kurtis</Link></li>
-            <li><Link href="/products?category=Skirt" className="hover:text-black dark:hover:text-white transition-colors">Trendy and Popular Skirts</Link></li>
-          </ul>
-        </div>
-
-        {/* Newsletter */}
-        <div>
-          <h4 className="text-xs uppercase tracking-widest text-black dark:text-white font-bold mb-4">Newsletter</h4>
-          <p className="text-xs text-neutral-600 dark:text-neutral-400 mb-4">Receive invitations to private collection unveils &amp; trunk shows.</p>
-          <div className="flex">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="bg-neutral-50 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 text-black dark:text-white text-xs px-3 py-2 rounded-l focus:outline-none focus:border-black dark:focus:border-white flex-1"
-            />
-            <button className="bg-black dark:bg-white hover:bg-neutral-800 dark:hover:bg-neutral-200 text-white dark:text-black px-4 py-2 text-[10px] font-bold uppercase tracking-wider rounded-r transition-colors">
-              Join
-            </button>
+          <div className="pt-8 md:pt-14 text-center md:text-left">
+            <p className="font-sans text-xs text-neutral-400">
+              © 2026 ARGHYA All rights reserved.
+            </p>
           </div>
         </div>
-      </div>
 
-      <div className="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-neutral-200 dark:border-neutral-800 text-center text-[11px] text-neutral-500 dark:text-neutral-400 font-mono">
-        © {new Date().getFullYear()} ARGHYA Atelier. WWW.ARGHYYA.COM. All Rights Reserved.
       </div>
     </footer>
   );
 };
+
+export default Footer;
