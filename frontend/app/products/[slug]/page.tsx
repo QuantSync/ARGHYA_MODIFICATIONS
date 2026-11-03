@@ -602,7 +602,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   sku: `ARG-${product.slug.toUpperCase()}`,
                   quantity_avail: 15
                 })}
-                className="flex-1 bg-white dark:bg-transparent border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black py-4 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200"
+                className="flex-1 bg-white dark:bg-transparent border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black py-4 rounded-md font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200"
               >
                 <ShoppingBag size={15} />
                 Add To Cart
@@ -610,7 +610,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               <button
                 type="button"
                 onClick={() => setIsBuyNowChoiceOpen(true)}
-                className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-100 py-4 rounded-xl font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
+                className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-100 py-4 rounded-md font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
               >
                 Buy Now
               </button>
