@@ -71,3 +71,4 @@ else:
         # Print surrounding lines for debug
         for i in range(start_idx, min(start_idx+60, len(lines))):
             print(f"{i+1}: {repr(lines[i][:100])}")
+
