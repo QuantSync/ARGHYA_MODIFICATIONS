@@ -7,6 +7,9 @@ import { HorizontalProductCard } from '../components/HorizontalProductCard';
 import { ViewToggle, ViewMode } from '../components/ViewToggle';
 import { CartDrawer } from '../components/CartDrawer';
 import { PaymentRedirectCard } from '../components/PaymentRedirectCard';
+import { BuyNowChoiceModal } from '../components/modals/BuyNowChoiceModal';
+import { CODChoiceModal } from '../components/modals/CODChoiceModal';
+import { PayOnDeliveryModal } from '../components/modals/PayOnDeliveryModal';
 import { ValuePillarsWidget } from '../components/ValuePillarsWidget';
 import { JewelryHeroPanel } from '../components/home/JewelryHeroPanel';
 import { Product } from '../lib/api';
@@ -38,6 +41,14 @@ export default function HomePage() {
   const [necklaceViewMode, setNecklaceViewMode] = useState<ViewMode>('horizontal');
   const [ankletViewMode, setAnkletViewMode] = useState<ViewMode>('horizontal');
   const [buyNowProduct, setBuyNowProduct] = useState<Product | null>(null);
+  const [isBuyNowChoiceOpen, setIsBuyNowChoiceOpen] = useState(false);
+  const [isCODModalOpen, setIsCODModalOpen] = useState(false);
+  const [isPODModalOpen, setIsPODModalOpen] = useState(false);
+
+  const handleBuyNow = (product: Product) => {
+    setBuyNowProduct(product);
+    setIsBuyNowChoiceOpen(true);
+  };
 
   return (
     <div className="space-y-16 sm:space-y-20 pb-20 overflow-x-hidden bg-white dark:bg-black text-black dark:text-white transition-colors">

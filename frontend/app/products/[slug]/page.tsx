@@ -12,6 +12,7 @@ import { Product } from '../../../lib/api';
 import { BuyCODButton } from '../../../components/buttons/BuyCODButton';
 import { CODChoiceModal } from '../../../components/modals/CODChoiceModal';
 import { PayOnDeliveryModal } from '../../../components/modals/PayOnDeliveryModal';
+import { BuyNowChoiceModal } from '../../../components/modals/BuyNowChoiceModal';
 import { ProductReviewsModal } from '../../../components/modals/ProductReviewsModal';
 import { getProductReviews } from '../../../lib/productReviews';
 
@@ -377,6 +378,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     ? remainingReviews
     : remainingReviews.filter(r => r.rating === reviewRatingFilter);
 
+  const [isBuyNowChoiceOpen, setIsBuyNowChoiceOpen] = useState(false);
   const [isCODModalOpen, setIsCODModalOpen] = useState(false);
   const [isPODModalOpen, setIsPODModalOpen] = useState(false);
 
@@ -418,6 +420,15 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         onClose={() => setIsSoldOutModalOpen(false)}
         productName={product.name}
         onSelectSize={(size) => setSelectedSize(size)}
+      />
+      <BuyNowChoiceModal
+        isOpen={isBuyNowChoiceOpen}
+        onClose={() => setIsBuyNowChoiceOpen(false)}
+        product={product as Product}
+        selectedSize={selectedSize}
+        onPayOnline={() => setBuyNowProduct(product as Product)}
+        onCashOnDelivery={() => setIsCODModalOpen(true)}
+        onPayOnDelivery={() => setIsPODModalOpen(true)}
       />
 
       {/* Breadcrumb */}
@@ -577,61 +588,13 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               </div>
             </div>
           )}
-
-          {/* Size Selector */}
-          <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <label className="text-xs text-burgundy-800/70 dark:text-stone-400 font-bold uppercase tracking-wider">
-                Select Size / Fitting
-              </label>
-              {isBlossomKurti && (
-                <span className="text-[10px] text-rose-600 dark:text-rose-400 font-bold bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded-full border border-rose-200 dark:border-rose-900/60 flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
-                  Size S Sold Out
-                </span>
-              )}
-            </div>
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="flex gap-2.5 flex-wrap">
-                {sizes.map((size: string) => {
-                  const isSoldOut = size === 'S' && isBlossomKurti;
-                  return (
-                    <div key={size} className="relative">
-                      <button
-                        type="button"
-                        onClick={() => {
-                          if (isSoldOut) { setIsSoldOutModalOpen(true); return; }
-                          setSelectedSize(size);
-                        }}
-                        className={`relative px-4 py-2 rounded-lg text-xs font-bold uppercase border transition-all ${
-                          isSoldOut
-                            ? 'border-rose-300 dark:border-rose-900/70 bg-rose-50/70 dark:bg-rose-950/30 text-rose-400 dark:text-rose-400/60 cursor-pointer'
-                            : selectedSize === size
-                            ? 'border-burgundy-800 bg-burgundy-800/10 text-burgundy-900 dark:border-amber-400 dark:bg-amber-500/20 dark:text-amber-300'
-                            : 'border-burgundy-800/15 bg-white dark:border-stone-800 dark:bg-stone-900 text-burgundy-800/70 dark:text-stone-400 hover:border-burgundy-800/30'
-                        }`}
-                      >
-                        <span className={isSoldOut ? 'line-through opacity-70' : ''}>{size}</span>
-                        {isSoldOut && (
-                          <span className="absolute -top-2 -right-1.5 text-[8px] font-black text-rose-600 bg-rose-100 dark:bg-rose-900 px-1.5 rounded-full border border-rose-300 dark:border-rose-700">
-                            Sold
-                          </span>
-                        )}
-                      </button>
-                    </div>
-                  );
-                })}
-              </div>
-
-            </div>
-          </div>
-
+
           {/* ── THREE PAYMENT BUTTONS ── */}
           <div className="flex flex-col gap-3 pt-1">
             {/* 1. Buy Now */}
             <button
               type="button"
-              onClick={() => setBuyNowProduct(product as Product)}
+              onClick={() => setIsBuyNowChoiceOpen(true)}
               className="w-full bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black py-3.5 rounded-xl font-bold uppercase tracking-wider text-xs shadow-lg flex items-center justify-center gap-2 transition-colors"
             >
               Buy Now
