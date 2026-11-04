@@ -14,6 +14,7 @@ interface CategoryCardItem {
   subcategory: string;
   imageSrc: string;
   labelPosition: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
+  showNativeLabel: boolean;
   alt: string;
 }
 
@@ -24,15 +25,17 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
     subcategory: 'American Diamonds',
     imageSrc: '/images/anti_tarnish/banner_ethnic_ad.jpg',
     labelPosition: 'bottom-right',
+    showNativeLabel: true,
     alt: 'Ethnic American Diamond Anti-Tarnish Necklace Set',
   },
   {
     id: 'kashmiri-card',
     label: 'KASHMIRI EARRINGS',
     subcategory: 'Oxidized Earrings',
-    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings_clean.jpg',
+    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.jpg',
     labelPosition: 'bottom-left',
-    alt: 'Kashmiri Style Drop & Dangle Earrings',
+    showNativeLabel: true,
+    alt: 'Kashmiri Style Drop & Dangle Traditional Earrings',
   },
   {
     id: 'earrings-card',
@@ -40,7 +43,8 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
     subcategory: 'Oxidized Earrings',
     imageSrc: '/images/anti_tarnish/banner_earrings.jpg',
     labelPosition: 'bottom-left',
-    alt: 'Anti-Tarnish Modern Earrings',
+    showNativeLabel: true,
+    alt: 'Anti-Tarnish Butterfly and Modern Earrings',
   },
   {
     id: 'oxidized-card',
@@ -48,6 +52,7 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
     subcategory: 'Oxidized Earrings',
     imageSrc: '/images/anti_tarnish/banner_oxidized.jpg',
     labelPosition: 'top-right',
+    showNativeLabel: true,
     alt: 'Handcrafted Traditional Oxidized Silver Earrings',
   },
 ];
@@ -68,7 +73,7 @@ export const AntiTarnishBannerGrid: React.FC<AntiTarnishBannerGridProps> = ({
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto my-6 sm:my-8 space-y-4 sm:space-y-6">
+    <div className="w-full max-w-5xl mx-auto my-6 sm:my-8 space-y-4 sm:space-y-6 select-none">
       {/* ── 1. Top Promo Banner (Get Free Gifts on Order Above INR 299) ── */}
       <button
         type="button"
@@ -104,7 +109,7 @@ export const AntiTarnishBannerGrid: React.FC<AntiTarnishBannerGridProps> = ({
         <div className="h-px bg-neutral-300 dark:bg-neutral-700 w-12 sm:w-24" />
       </div>
 
-      {/* ── 3. 2x2 Grid of Category Card Buttons ── */}
+      {/* ── 3. 2x2 Grid of Category Card Buttons with aspect-[2.05/1] for zoomed-out jewelry ── */}
       <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-5">
         {CATEGORY_CARDS.map((card) => {
           // Label position styles matching Image 1
@@ -122,32 +127,31 @@ export const AntiTarnishBannerGrid: React.FC<AntiTarnishBannerGridProps> = ({
               whileHover={{ scale: 1.015 }}
               whileTap={{ scale: 0.985 }}
               onClick={() => handleClick(card.subcategory)}
-              className="group relative w-full h-[140px] sm:h-[200px] md:h-[250px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all cursor-pointer text-left"
+              className="group relative w-full h-[160px] sm:h-[210px] md:h-[250px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white transition-all cursor-pointer text-left bg-neutral-100 dark:bg-neutral-900"
             >
-              {/* Background Image with Hover Zoom */}
+              {/* Background Image with subtle zoom that preserves jewelry visibility */}
               <Image
                 src={card.imageSrc}
                 alt={card.alt}
                 fill
-                sizes="(max-width: 640px) 100vw, 50vw"
-                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 600px"
+                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
               />
 
               {/* Gradient Scrim for Contrast & Elegance */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/25 opacity-70 group-hover:opacity-85 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/10 opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
 
               {/* Native Typography Label positioned like in reference image */}
-              <div className={`absolute z-10 ${positionClasses}`}>
-                <span className="inline-block font-sans font-bold text-xs sm:text-sm tracking-[0.25em] uppercase text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)] group-hover:text-amber-200 transition-colors duration-200">
-                  {card.label}
-                </span>
-                <span className="block text-[9px] uppercase tracking-widest text-neutral-300 font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-200 mt-0.5">
-                  Explore Collection →
-                </span>
-              </div>
+              {card.showNativeLabel && (
+                <div className={`absolute z-10 ${positionClasses}`}>
+                  <span className="inline-block font-sans font-bold text-[10px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] group-hover:text-amber-200 transition-colors duration-200">
+                    {card.label}
+                  </span>
+                </div>
+              )}
 
               {/* Active / Hover Ring Highlight */}
-              <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-white/50 transition-colors duration-300 pointer-events-none" />
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-white/50 transition-colors duration-300 pointer-events-none" />
             </motion.button>
           );
         })}

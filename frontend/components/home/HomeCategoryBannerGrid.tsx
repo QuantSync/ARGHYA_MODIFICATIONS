@@ -3,7 +3,6 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 interface BannerCard {
   id: string;
@@ -23,16 +22,16 @@ const ANTI_TARNISH_CARDS: BannerCard[] = [
     imageSrc: '/images/anti_tarnish/banner_ethnic_ad.jpg',
     labelPosition: 'bottom-right',
     showNativeLabel: true,
-    alt: 'Ethnic American Diamond Anti-Tarnish Jewelry',
+    alt: 'Ethnic American Diamond Anti-Tarnish Jewelry Set',
   },
   {
     id: 'anti-kashmiri',
     title: 'KASHMIRI EARRINGS',
     href: '/products?category=AntiTarnish&subcategory=OxidizedEarrings',
-    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings_clean.jpg',
+    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.jpg',
     labelPosition: 'bottom-left',
     showNativeLabel: true,
-    alt: 'Kashmiri Style Drop & Dangle Earrings',
+    alt: 'Kashmiri Style Drop & Dangle Traditional Earrings',
   },
   {
     id: 'anti-earrings',
@@ -86,11 +85,11 @@ const PURE_SILVER_CARDS: BannerCard[] = [
 
 export const HomeCategoryBannerGrid: React.FC = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto space-y-10 sm:space-y-14 select-none">
+    <div className="w-full max-w-6xl mx-auto space-y-8 sm:space-y-12 select-none">
       {/* ═══════════════════════════════════════════════════════
           SECTION 1: ANTI - TARNISH (2x2 Grid from Image 1)
           ═══════════════════════════════════════════════════════ */}
-      <div className="space-y-4 sm:space-y-5">
+      <div className="space-y-3.5 sm:space-y-5">
         {/* Native Section Heading */}
         <div className="text-center">
           <Link
@@ -105,7 +104,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
           </Link>
         </div>
 
-        {/* 2x2 Grid */}
+        {/* 2x2 Grid with aspect-[2.05/1] for zoomed-out fully visible jewelry */}
         <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-5">
           {ANTI_TARNISH_CARDS.map((card) => {
             const positionClasses = {
@@ -119,21 +118,21 @@ export const HomeCategoryBannerGrid: React.FC = () => {
               <Link
                 key={card.id}
                 href={card.href}
-                className="group relative block w-full h-[140px] sm:h-[200px] md:h-[240px] lg:h-[270px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer"
+                className="group relative block w-full h-[160px] sm:h-[210px] md:h-[250px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
               >
-                {/* Background Image */}
+                {/* Background Image - Object-cover with exact 2.05:1 aspect ratio ensures 100% visible products without vertical crop */}
                 <Image
                   src={card.imageSrc}
                   alt={card.alt}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 600px"
-                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 />
 
-                {/* Gradient Scrim */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/20 opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                {/* Subtle Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 opacity-50 group-hover:opacity-75 transition-opacity duration-300" />
 
-                {/* Native Text Label */}
+                {/* Native Text Label (when image does not have text baked in) */}
                 {card.showNativeLabel && (
                   <div className={`absolute z-10 ${positionClasses}`}>
                     <span className="inline-block font-sans font-bold text-[10px] sm:text-xs md:text-sm tracking-[0.25em] uppercase text-white drop-shadow-[0_2px_6px_rgba(0,0,0,0.85)] group-hover:text-amber-200 transition-colors duration-200">
@@ -143,7 +142,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
                 )}
 
                 {/* Hover Border Ring */}
-                <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-white/40 transition-colors duration-300 pointer-events-none" />
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-white/50 transition-colors duration-300 pointer-events-none" />
               </Link>
             );
           })}
@@ -153,7 +152,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
       {/* ═══════════════════════════════════════════════════════
           SECTION 2: 925 PURE SILVER (3 Cards from Image 1, 2, 3, 4)
           ═══════════════════════════════════════════════════════ */}
-      <div className="space-y-4 sm:space-y-5">
+      <div className="space-y-3.5 sm:space-y-5">
         {/* Native Section Heading */}
         <div className="text-center">
           <Link
@@ -168,14 +167,14 @@ export const HomeCategoryBannerGrid: React.FC = () => {
           </Link>
         </div>
 
-        {/* 3-Column Grid for Bracelets, Necklace, Anklets */}
+        {/* 3-Column Grid for Bracelets, Necklace, Anklets with aspect-[3/4] */}
         <div className="grid grid-cols-3 gap-2 sm:gap-4 md:gap-5">
           {PURE_SILVER_CARDS.map((card) => {
             return (
               <Link
                 key={card.id}
                 href={card.href}
-                className="group relative block w-full aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer"
+                className="group relative block w-full aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
               >
                 {/* Background Image (High-Res Image 2, 3, 4) */}
                 <Image
@@ -183,11 +182,11 @@ export const HomeCategoryBannerGrid: React.FC = () => {
                   alt={card.alt}
                   fill
                   sizes="(max-width: 640px) 33vw, (max-width: 1024px) 33vw, 400px"
-                  className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
                 />
 
                 {/* Subtle Hover Overlay */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300" />
 
                 {/* Hover Border Ring */}
                 <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-white/50 transition-colors duration-300 pointer-events-none" />
@@ -201,4 +200,3 @@ export const HomeCategoryBannerGrid: React.FC = () => {
 };
 
 export default HomeCategoryBannerGrid;
-
