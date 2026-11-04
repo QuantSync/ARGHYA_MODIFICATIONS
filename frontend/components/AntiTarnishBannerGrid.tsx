@@ -40,7 +40,7 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'earrings-card',
     label: 'EARRINGS',
-    subcategory: 'Oxidized Earrings',
+    subcategory: 'Modern Earrings',
     imageSrc: '/images/anti_tarnish/banner_earrings.jpg',
     labelPosition: 'bottom-left',
     showNativeLabel: true,
@@ -86,16 +86,18 @@ export const AntiTarnishBannerGrid: React.FC<AntiTarnishBannerGridProps> = ({
           }
         }}
         className="w-full text-left focus:outline-none group block cursor-pointer"
-        title="Shop now for Free Gifts on Orders above INR 299"
+        title="Shop now - Anti-Tarnish Collection"
       >
-        <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg border border-pink-200/80 dark:border-neutral-800 bg-[#fce7f3] aspect-[1024/283] transition-transform duration-300 group-hover:scale-[1.01]">
+        <div className="relative w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl border border-[#470813] bg-[#5f0c1a] aspect-[1024/341] transition-transform duration-300 group-hover:scale-[1.01]">
           <Image
-            src="/images/anti_tarnish/free_gifts_banner.jpg"
-            alt="Get Free Gifts On Order Above INR 299 - Shop Now"
+            src="/images/anti_tarnish/shop_collection_banner_3x.png"
+            alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
             fill
             priority
-            className="object-cover object-center"
-            sizes="(max-width: 768px) 100vw, 1024px"
+            quality={100}
+            unoptimized
+            className="object-contain object-center"
+            sizes="(max-width: 768px) 100vw, 1200px"
           />
         </div>
       </button>

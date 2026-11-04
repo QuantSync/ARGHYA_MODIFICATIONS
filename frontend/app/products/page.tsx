@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
+import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { VerticalProductCard }   from '../../components/VerticalProductCard';
 import { HorizontalProductCard } from '../../components/HorizontalProductCard';
@@ -20,6 +21,8 @@ import {
   PENDANT_PRODUCTS,
   OXIDIZED_EARRINGS_PRODUCTS,
   AMERICAN_DIAMONDS_PRODUCTS,
+  MODERN_PENDANTS_PRODUCTS,
+  MODERN_EARRINGS_PRODUCTS,
 } from '../../lib/productsCatalog';
 
 const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p => ({
@@ -52,7 +55,7 @@ function ProductsPageContent() {
 
   const mainCategories = ['All', '925 Pure Silver', 'Anti Tarnish', 'Best Sellers', 'Hot Deals'];
   const silverSubsections = ['All', 'Bracelets', 'Necklaces', 'Anklets', 'Pendants'];
-  const antiTarnishSubsections = ['All', 'Oxidized Earrings', 'American Diamonds'];
+  const antiTarnishSubsections = ['All', 'Oxidized Earrings', 'American Diamonds', 'Modern Pendants', 'Modern Earrings'];
 
   useEffect(() => {
     if (!categoryParam) return;
@@ -83,6 +86,12 @@ function ProductsPageContent() {
     } else if (catLower === 'pendants') {
       setSelectedCategory('925 Pure Silver');
       setSelectedSubcategory('Pendants');
+    } else if (catLower.includes('modernpendant') || catLower.includes('modern-pendant') || catLower.includes('modern pendants')) {
+      setSelectedCategory('Anti Tarnish');
+      setSelectedSubcategory('Modern Pendants');
+    } else if (catLower.includes('modernearring') || catLower.includes('modern-earring') || catLower.includes('modern earrings') || catLower.includes('modern earring') || catLower.includes('modern earing')) {
+      setSelectedCategory('Anti Tarnish');
+      setSelectedSubcategory('Modern Earrings');
     } else {
       const match = mainCategories.find(c => c.toLowerCase() === catLower);
       if (match) setSelectedCategory(match);
@@ -98,7 +107,15 @@ function ProductsPageContent() {
       setSelectedCategory('925 Pure Silver');
       return;
     }
-    const matchAnti = antiTarnishSubsections.find(s => s.toLowerCase() === subLower || (subLower.includes('diamond') && s === 'American Diamonds') || (subLower.includes('earring') && s === 'Oxidized Earrings'));
+    const matchAnti = antiTarnishSubsections.find(s => {
+      const sLow = s.toLowerCase();
+      if (sLow === subLower) return true;
+      if (s === 'American Diamonds' && subLower.includes('diamond')) return true;
+      if (s === 'Oxidized Earrings' && subLower.includes('oxidized')) return true;
+      if (s === 'Modern Pendants' && (subLower.includes('pendant') || subLower === 'modern pendants')) return true;
+      if (s === 'Modern Earrings' && (subLower.includes('modern') && (subLower.includes('earring') || subLower.includes('earing')) || subLower === 'modern earrings' || subLower === 'modern earings')) return true;
+      return false;
+    });
     if (matchAnti) {
       setSelectedSubcategory(matchAnti);
       setSelectedCategory('Anti Tarnish');
@@ -115,6 +132,8 @@ function ProductsPageContent() {
   // Strict Category Buckets under Anti Tarnish
   const oxidizedEarrings: Product[] = (OXIDIZED_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const americanDiamonds: Product[] = (AMERICAN_DIAMONDS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
+  const modernPendants: Product[] = (MODERN_PENDANTS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
+  const modernEarrings: Product[] = (MODERN_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
 
   // Filtered list when a single subcategory or other category is selected
   const filteredProducts = ALL_CATALOG_PRODUCTS.filter((product) => {
@@ -149,12 +168,40 @@ function ProductsPageContent() {
     selectedCategory === '925 Pure Silver' && selectedSubcategory === 'All'
       ? bracelets.length + necklaces.length + anklets.length + pendants.length
       : selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'All'
-        ? oxidizedEarrings.length + americanDiamonds.length
+        ? oxidizedEarrings.length + americanDiamonds.length + modernPendants.length + modernEarrings.length
         : filteredProducts.length;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
-      <CartDrawer />
+    <div className="w-full">
+      {/* ── Top Edge-to-Edge Hero Banner for Anti-Tarnish (Full Viewport Width like Home Screen Model Banner) ── */}
+      {selectedCategory === 'Anti Tarnish' && (
+        <div
+          onClick={() => {
+            if (typeof window !== 'undefined') {
+              const el = document.getElementById('anti-tarnish-catalog-view');
+              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }}
+          className="w-full bg-[#5f0c1a] relative flex items-center justify-center cursor-pointer select-none group shadow-md border-b border-[#470813]"
+          title="Click to explore Anti-Tarnish Collection"
+        >
+          <div className="w-full max-w-[1920px] aspect-[1024/341] relative overflow-hidden">
+            <Image
+              src="/images/anti_tarnish/shop_collection_banner_3x.png"
+              unoptimized
+              alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
+              fill
+              priority
+              quality={100}
+              sizes="100vw"
+              className="object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.006]"
+            />
+          </div>
+        </div>
+      )}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
+        <CartDrawer />
       <PaymentRedirectCard
         isOpen={buyNowProduct !== null}
         onClose={() => setBuyNowProduct(null)}
@@ -600,6 +647,98 @@ function ProductsPageContent() {
                 </div>
               )}
             </section>
+
+            {/* 3. Modern Pendants Collection */}
+            <section id="anti-tarnish-modern-pendants-section" className="space-y-6 pt-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Modern Style
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Modern Pendants Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('Modern Pendants')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Modern Pendants ({modernPendants.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {modernPendants.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {modernPendants.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* 4. Modern Earrings Collection */}
+            <section id="anti-tarnish-modern-earrings-section" className="space-y-6 pt-4">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Chic & Contemporary
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Modern Earrings Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('Modern Earrings')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Modern Earrings ({modernEarrings.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {modernEarrings.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {modernEarrings.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
           </div>
         ) : filteredProducts.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8">
@@ -640,6 +779,7 @@ function ProductsPageContent() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

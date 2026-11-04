@@ -36,7 +36,7 @@ const ANTI_TARNISH_CARDS: BannerCard[] = [
   {
     id: 'anti-earrings',
     title: 'EARRINGS',
-    href: '/products?category=AntiTarnish&subcategory=OxidizedEarrings',
+    href: '/products?category=AntiTarnish&subcategory=ModernEarrings',
     imageSrc: '/images/anti_tarnish/banner_earrings.jpg',
     labelPosition: 'bottom-left',
     showNativeLabel: true,
