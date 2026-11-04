@@ -12,6 +12,7 @@ import { CODChoiceModal } from '../components/modals/CODChoiceModal';
 import { PayOnDeliveryModal } from '../components/modals/PayOnDeliveryModal';
 import { ValuePillarsWidget } from '../components/ValuePillarsWidget';
 import { JewelryHeroPanel } from '../components/home/JewelryHeroPanel';
+import { HomeCategoryBannerGrid } from '../components/home/HomeCategoryBannerGrid';
 import { Product } from '../lib/api';
 import { ScrollReveal } from '../components/animations/ScrollReveal';
 import { ArghyaLargeText } from '../components/animations/ArghyaLargeText';
@@ -67,6 +68,13 @@ export default function HomePage() {
         <section className="relative z-10">
           <ScrollReveal direction="up">
             <ValuePillarsWidget />
+          </ScrollReveal>
+        </section>
+
+        {/* ── Category Banner Grid (Anti-Tarnish & 925 Pure Silver) ── */}
+        <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollReveal direction="up" delay={0.05}>
+            <HomeCategoryBannerGrid />
           </ScrollReveal>
         </section>
 
