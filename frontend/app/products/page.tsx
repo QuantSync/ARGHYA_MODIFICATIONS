@@ -10,6 +10,7 @@ import { PaymentRedirectCard }   from '../../components/PaymentRedirectCard';
 import { BuyNowChoiceModal }     from '../../components/modals/BuyNowChoiceModal';
 import { CODChoiceModal }        from '../../components/modals/CODChoiceModal';
 import { PayOnDeliveryModal }    from '../../components/modals/PayOnDeliveryModal';
+import { AntiTarnishBannerGrid }  from '../../components/AntiTarnishBannerGrid';
 import { Product }               from '../../lib/api';
 import {
   PRODUCTS_CATALOG,
@@ -215,6 +216,15 @@ function ProductsPageContent() {
         </p>
       </div>
 
+      {/* ── Anti-Tarnish Festive Banner & Interactive Category Grid ── */}
+      {selectedCategory === 'Anti Tarnish' && (
+        <AntiTarnishBannerGrid
+          onSelectSubcategory={(sub) => {
+            setSelectedSubcategory(sub);
+          }}
+        />
+      )}
+
       {/* ── Main Category Tabs ── */}
       <div className="flex flex-wrap items-center gap-2 border-b border-neutral-200 dark:border-neutral-800 pb-4">
         {mainCategories.map((cat) => (
@@ -301,7 +311,7 @@ function ProductsPageContent() {
       <ViewToggle viewMode={viewMode} onChange={setViewMode} />
 
       {/* ── Main Listing Area ── */}
-      <div className="w-full">
+      <div id="anti-tarnish-catalog-view" className="w-full scroll-mt-24">
         {selectedCategory === '925 Pure Silver' && selectedSubcategory === 'All' ? (
           /* ─────────────────────────────────────────────────
              COMBINED "ALL" VIEW UNDER 925 PURE SILVER
