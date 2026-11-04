@@ -973,6 +973,7 @@ Add a pop of color to your ethnic wardrobe with these stunning oxidised silver j
     craft_type: 'Traditional Jhumki',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/royalblueleafdropoxidisedjhumk'
   },
 
   'vintage-floral-peacock-oxidised-dangle-earrings': {
@@ -996,6 +997,7 @@ These exquisite oxidised earrings feature an intricate, vintage-inspired floral 
     craft_type: 'Dangle & Drop',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/vintagefloralpeacockdangleeari'
   },
 
   'mirror-center-oxidised-chandbali-jhumki': {
@@ -1019,6 +1021,7 @@ A unique blend of modern and traditional, these oxidised silver earrings feature
     craft_type: 'Chandbali Jhumki',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/mirrorcentreoxidisedchandbalij'
   },
 
   'antique-gold-textured-dome-jhumki': {
@@ -1041,6 +1044,7 @@ Elevate your look with these majestic antique gold-tone jhumkis. The large circu
     craft_type: 'Heavy Jhumki',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/antiquegoldtextureddomejhumki'
   },
 
   'crystal-studded-spiral-oxidised-earrings': {
@@ -1064,6 +1068,7 @@ Dazzle your way through every event with these sparkling oxidised earrings. They
     craft_type: 'Dangle & Drop',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crystalstuddedspiraloxidisedea'
   },
 
   'minimalist-round-mirror-oxidised-drops': {
@@ -1087,6 +1092,7 @@ Simple, elegant, and trendy. These oxidised silver earrings feature a clean, lar
     craft_type: 'Dangle',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/minimalistroundmirroroxidisedd'
   },
 
   'pink-petal-teardrop-oxidised-earrings': {
@@ -1110,6 +1116,7 @@ These charming oxidised earrings feature a smooth, pink teardrop stone set withi
     craft_type: 'Drop Earrings',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/pinkpetalteardropoxidisedearri'
   },
 
   'classic-silver-hoop-with-ghungroo-drops': {
@@ -1133,6 +1140,7 @@ A timeless classic with a traditional twist. These oxidised silver hoop earrings
     craft_type: 'Hoop with Drops',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/classicsilverhoopswithghungroo'
   },
 
   'midnight-blue-teardrop-oxidised-earrings': {
@@ -1156,6 +1164,7 @@ A classic design featuring a deep navy blue teardrop stone. The stone is encased
     craft_type: 'Drop Earrings',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/midnightblueteardropoxidisedea'
   },
 
   'floral-motif-pearl-cluster-oxidised-drops': {
@@ -1179,6 +1188,7 @@ These gorgeous oxidised earrings feature a detailed floral stud that transitions
     craft_type: 'Dangle & Drop',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/floralmotifpearlclusteroxidise'
   },
 
   'bohemian-silver-chandbali-hoops': {
@@ -1202,6 +1212,7 @@ Embrace the bohemian trend with these simple yet striking oxidised silver hoop e
     craft_type: 'Hoop / Chandbali',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/bohemiansilverchandbalihoops'
   },
 
   'monochrome-mirror-statement-oxidised-earrings': {
@@ -1225,6 +1236,7 @@ Make a bold statement with these oversized oxidised earrings. Featuring a large,
     craft_type: 'Statement Dangles',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/monochromemirroroxidisedearing'
   },
 
   'majestic-peacock-oxidised-jhumki': {
@@ -1248,6 +1260,7 @@ These grand jhumkis are a masterpiece of traditional design. The stud features a
     craft_type: 'Heavy Jhumki',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/majesticpeacockoxidisedjhumki'
   },
 
   'sunburst-mosaic-oxidised-danglers': {
@@ -1271,6 +1284,7 @@ A true conversation starter, these oxidised earrings feature a geometric sunburs
     craft_type: 'Statement Dangles',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/sunburstmosiacoxidiseddanglers'
   },
 
   'black-stone-leaf-hoop-oxidised-earrings': {
@@ -1294,6 +1308,7 @@ A perfect balance of elegance and edge. These oxidised earrings feature a cluste
     craft_type: 'Hoop / Dangle',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blackstoneleafhooppxidisedearr'
   },
 
   'intricate-dome-classic-oxidised-jhumki': {
@@ -1317,6 +1332,7 @@ These classic oxidised jhumkis feature a large, highly detailed circular stud th
     craft_type: 'Classic Jhumki',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/intricatedomeclassicoxidisedjh'
   },
 
   'turquoise-elephant-motif-oxidised-earrings': {
@@ -1340,6 +1356,7 @@ Show off your love for artistic jewelry with these unique oxidised earrings. The
     craft_type: 'Statement Dangles',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/turquoiseelephantmotifoxidised'
   },
 
 
@@ -1368,6 +1385,7 @@ A stunning traditional necklace set featuring intricate spiral motifs and beauti
     craft_type: 'Necklace Set',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/royalspiraladnecklaceset'
   },
 
   'elegant-floral-sparkle-necklace-set': {
@@ -1393,6 +1411,7 @@ Enhance your everyday style with this beautiful dual-tone necklace set. Designed
     craft_type: 'Modern & Elegant',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/elegantfloralsparklenecklacese'
   },
 
   'ruby-emerald-teardrop-necklace-set': {
@@ -1418,6 +1437,7 @@ A beautiful combination of red and green teardrop stones with delicate sparkling
     craft_type: 'Necklace & Earrings Set',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/rubyemeraldteardropnecklaceset'
   },
 
   'pink-petal-charm-necklace-set': {
@@ -1443,6 +1463,7 @@ Add a feminine touch to your jewellery collection with this gorgeous pink floral
     craft_type: 'Floral Design',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/pinkpetalcharmnecklaceset'
   },
 
   'silver-arrow-glamour-necklace-set': {
@@ -1468,6 +1489,7 @@ Make a statement with this eye-catching silver-tone necklace set. Featuring a be
     craft_type: 'Contemporary Statement Style',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/silverarrowglamournecklaceset'
   },
 
   'midnight-black-leaf-necklace-set': {
@@ -1493,6 +1515,7 @@ A sophisticated necklace set featuring sparkling American Diamond leaf patterns 
     craft_type: 'Designer Party Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/midnightblackleafnecklaceset'
   },
 
   'emerald-leaf-cascade-necklace-set': {
@@ -1518,6 +1541,7 @@ Give your look a graceful makeover with this beautiful American Diamond necklace
     craft_type: 'Leaf Pattern',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldleafcascadenecklaceset'
   },
 
   'emerald-teardrop-radiance-necklace-set': {
@@ -1543,6 +1567,7 @@ Featuring rich emerald green teardrop stones arranged beautifully along a sparkl
     craft_type: 'Elegant Traditional Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldteardropradiancenecklac'
   },
 
   'royal-blue-teardrop-necklace-set': {
@@ -1568,6 +1593,7 @@ Make your look stand out with this stunning royal blue necklace set. Beautiful b
     craft_type: 'Party & Festive Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/royalblueteardropnecklaceset'
   },
 
   'blossom-vine-ad-necklace-set': {
@@ -1593,6 +1619,7 @@ Inspired by delicate floral vines, this beautiful American Diamond necklace set 
     craft_type: 'Floral Vine Pattern',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blossomvineadnecklaceset'
   },
 
   'ruby-diamond-royal-choker-set': {
@@ -1618,6 +1645,7 @@ A luxurious statement choker featuring intricate American Diamond work combined 
     craft_type: 'Bridal & Wedding Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/rubydiamondroyalchokerset'
   },
 
   'sapphire-elegance-bridal-choker': {
@@ -1643,6 +1671,7 @@ Bring elegance to your special occasions with this gorgeous sapphire blue Americ
     craft_type: 'Bridal & Party Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/sapphireelegancebridalchoker'
   },
 
   'emerald-majesty-diamond-choker': {
@@ -1668,6 +1697,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Premium Bridal & Festive Wear',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldmajestydiamondchoker'
   },
 
   // ── ANTI TARNISH -> MODERN PENDANTS ──
