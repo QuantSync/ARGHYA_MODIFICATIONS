@@ -104,7 +104,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
           </Link>
         </div>
 
-        {/* 2x2 Grid with aspect-[2.05/1] for zoomed-out fully visible jewelry */}
+        {/* 2x2 Grid with exact 2:1 aspect ratio matching 1024x512 images */}
         <div className="grid grid-cols-2 gap-2.5 sm:gap-4 md:gap-5">
           {ANTI_TARNISH_CARDS.map((card) => {
             const positionClasses = {
@@ -118,7 +118,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
               <Link
                 key={card.id}
                 href={card.href}
-                className="group relative block w-full h-[160px] sm:h-[210px] md:h-[250px] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
+                className="group relative block w-full aspect-[2/1] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
               >
                 {/* Background Image - Object-cover with exact 2.05:1 aspect ratio ensures 100% visible products without vertical crop */}
                 <Image
