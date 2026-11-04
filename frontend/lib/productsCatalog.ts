@@ -950,6 +950,399 @@ Make a sophisticated style statement with this elegant triple-layer sterling sil
     ],
     sizes: ['10.5 Inch (Standard)'],
   },
+
+  // ── ANTI TARNISH -> OXIDIZED EARRINGS ──
+  'royal-blue-leaf-drop-oxidised-jhumki': {
+    id: 'anti-ox-ear-001',
+    name: 'Royal Blue Leaf Drop Oxidised Jhumki',
+    slug: 'royal-blue-leaf-drop-oxidised-jhumki',
+    description: `*Royal Blue Leaf Drop Oxidised Jhumki*
+
+Add a pop of color to your ethnic wardrobe with these stunning oxidised silver jhumkis. Featuring a rectangular top adorned with deep royal blue leaf-shaped stones, these earrings cascade into a beautifully detailed, traditional silver jhumki. Perfect for pairing with kurtis and sarees.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Artificial Stones
+• Colour: Silver & Royal Blue
+• Style: Traditional Jhumki
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Artificial Stones',
+    craft_type: 'Traditional Jhumki',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'vintage-floral-peacock-oxidised-dangle-earrings': {
+    id: 'anti-ox-ear-002',
+    name: 'Vintage Floral Peacock Oxidised Dangle Earrings',
+    slug: 'vintage-floral-peacock-oxidised-dangle-earrings',
+    description: `*Vintage Floral Peacock Oxidised Dangle Earrings*
+
+These exquisite oxidised earrings feature an intricate, vintage-inspired floral and peacock motif. Crafted with meticulous attention to detail, the antique silver finish and dangling pearl-like beads give them a rich, regal look. A perfect statement piece for festive occasions.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Metal Beads
+• Colour: Antique Silver
+• Style: Dangle & Drop
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Metal Beads',
+    craft_type: 'Dangle & Drop',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'mirror-center-oxidised-chandbali-jhumki': {
+    id: 'anti-ox-ear-003',
+    name: 'Mirror Center Oxidised Chandbali Jhumki',
+    slug: 'mirror-center-oxidised-chandbali-jhumki',
+    description: `*Mirror Center Oxidised Chandbali Jhumki*
+
+A unique blend of modern and traditional, these oxidised silver earrings feature a striking round mirror in the center, surrounded by an ornate, filigree-style circular frame. The attached jhumki with tiny beads adds a classic touch to this contemporary design.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Mirror, Metal Beads
+• Colour: Silver
+• Style: Chandbali Jhumki
+• Closure: Hook`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Mirror, Metal Beads',
+    craft_type: 'Chandbali Jhumki',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'antique-gold-textured-dome-jhumki': {
+    id: 'anti-ox-ear-004',
+    name: 'Antique Gold Textured Dome Jhumki',
+    slug: 'antique-gold-textured-dome-jhumki',
+    description: `*Antique Gold Textured Dome Jhumki*
+
+Elevate your look with these majestic antique gold-tone jhumkis. The large circular top and the dome-shaped bottom are heavily textured with traditional embossed patterns. The look is completed with delicate pearl drops.
+
+*Product Details:*
+• Material: Antique Gold Finish, Faux Pearls
+• Colour: Antique Gold
+• Style: Heavy Jhumki
+• Closure: Push Back`,
+    price: 199.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Antique Gold Finish, Faux Pearls',
+    craft_type: 'Heavy Jhumki',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'crystal-studded-spiral-oxidised-earrings': {
+    id: 'anti-ox-ear-005',
+    name: 'Crystal Studded Spiral Oxidised Earrings',
+    slug: 'crystal-studded-spiral-oxidised-earrings',
+    description: `*Crystal Studded Spiral Oxidised Earrings*
+
+Dazzle your way through every event with these sparkling oxidised earrings. They feature a beautiful floral stud at the top, leading down to a unique spiral ring design encrusted with clear, brilliant crystals and finished with delicate silver beads.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Clear Crystals
+• Colour: Silver & Clear
+• Style: Dangle & Drop
+• Closure: Push Back`,
+    price: 219.00,
+    compare_at_price: 599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Clear Crystals',
+    craft_type: 'Dangle & Drop',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'minimalist-round-mirror-oxidised-drops': {
+    id: 'anti-ox-ear-006',
+    name: 'Minimalist Round Mirror Oxidised Drops',
+    slug: 'minimalist-round-mirror-oxidised-drops',
+    description: `*Minimalist Round Mirror Oxidised Drops*
+
+Simple, elegant, and trendy. These oxidised silver earrings feature a clean, large circular mirror at the center, bordered by a textured silver frame and finished with tiny metallic drops at the bottom. Lightweight and perfect for daily wear.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Mirror
+• Colour: Silver
+• Style: Dangle
+• Closure: Hook`,
+    price: 189.00,
+    compare_at_price: 399.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Mirror',
+    craft_type: 'Dangle',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'pink-petal-teardrop-oxidised-earrings': {
+    id: 'anti-ox-ear-007',
+    name: 'Pink Petal Teardrop Oxidised Earrings',
+    slug: 'pink-petal-teardrop-oxidised-earrings',
+    description: `*Pink Petal Teardrop Oxidised Earrings*
+
+These charming oxidised earrings feature a smooth, pink teardrop stone set within a crescent moon-like silver frame. Adorned with traditional silver beads and tiny pearl drops at the bottom, they are perfect for adding a subtle hint of color to your outfit.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Pink Stone, Faux Pearls
+• Colour: Silver & Pink
+• Style: Drop Earrings
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Pink Stone, Faux Pearls',
+    craft_type: 'Drop Earrings',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'classic-silver-hoop-with-ghungroo-drops': {
+    id: 'anti-ox-ear-008',
+    name: 'Classic Silver Hoop with Ghungroo Drops',
+    slug: 'classic-silver-hoop-with-ghungroo-drops',
+    description: `*Classic Silver Hoop with Ghungroo Drops*
+
+A timeless classic with a traditional twist. These oxidised silver hoop earrings are topped with a delicate leaf motif and feature multiple tiny, metallic ghungroo-style beads dangling from the bottom edge. They move beautifully with you.
+
+*Product Details:*
+• Material: Oxidised Silver Finish
+• Colour: Silver
+• Style: Hoop with Drops
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish',
+    craft_type: 'Hoop with Drops',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'midnight-blue-teardrop-oxidised-earrings': {
+    id: 'anti-ox-ear-009',
+    name: 'Midnight Blue Teardrop Oxidised Earrings',
+    slug: 'midnight-blue-teardrop-oxidised-earrings',
+    description: `*Midnight Blue Teardrop Oxidised Earrings*
+
+A classic design featuring a deep navy blue teardrop stone. The stone is encased in a thick oxidised silver setting with a distinctive crescent shape and surrounded by prominent silver beads. The delicate pearl drops at the bottom add an elegant finish.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Blue Stone, Faux Pearls
+• Colour: Silver & Navy Blue
+• Style: Drop Earrings
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Blue Stone, Faux Pearls',
+    craft_type: 'Drop Earrings',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'floral-motif-pearl-cluster-oxidised-drops': {
+    id: 'anti-ox-ear-010',
+    name: 'Floral Motif Pearl Cluster Oxidised Drops',
+    slug: 'floral-motif-pearl-cluster-oxidised-drops',
+    description: `*Floral Motif Pearl Cluster Oxidised Drops*
+
+These gorgeous oxidised earrings feature a detailed floral stud that transitions into an elongated, intricately patterned teardrop shape. The bottom is heavily adorned with a cluster of faux pearls, giving it a rich, bridal-adjacent appeal.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Faux Pearls
+• Colour: Silver & White
+• Style: Dangle & Drop
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Faux Pearls',
+    craft_type: 'Dangle & Drop',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'bohemian-silver-chandbali-hoops': {
+    id: 'anti-ox-ear-011',
+    name: 'Bohemian Silver Chandbali Hoops',
+    slug: 'bohemian-silver-chandbali-hoops',
+    description: `*Bohemian Silver Chandbali Hoops*
+
+Embrace the bohemian trend with these simple yet striking oxidised silver hoop earrings. The plain wire hoops feature an array of small metallic beads dangling along the bottom curve, adding just the right amount of movement and texture.
+
+*Product Details:*
+• Material: Oxidised Silver Finish
+• Colour: Silver
+• Style: Hoop / Chandbali
+• Closure: Hook (Wire)`,
+    price: 159.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish',
+    craft_type: 'Hoop / Chandbali',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'monochrome-mirror-statement-oxidised-earrings': {
+    id: 'anti-ox-ear-012',
+    name: 'Monochrome Mirror Statement Oxidised Earrings',
+    slug: 'monochrome-mirror-statement-oxidised-earrings',
+    description: `*Monochrome Mirror Statement Oxidised Earrings*
+
+Make a bold statement with these oversized oxidised earrings. Featuring a large, uniquely shaped white mirror as the centerpiece, topped with a detailed rectangular bar and studded with clear stones. The pearl drops at the bottom add a luxurious touch to this heavy piece.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Large Mirror, Faux Pearls, Crystals
+• Colour: Silver & White
+• Style: Statement Dangles
+• Closure: Push Back`,
+    price: 359.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Large Mirror, Faux Pearls, Crystals',
+    craft_type: 'Statement Dangles',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'majestic-peacock-oxidised-jhumki': {
+    id: 'anti-ox-ear-013',
+    name: 'Majestic Peacock Oxidised Jhumki',
+    slug: 'majestic-peacock-oxidised-jhumki',
+    description: `*Majestic Peacock Oxidised Jhumki*
+
+These grand jhumkis are a masterpiece of traditional design. The stud features an intricately carved peacock, while the large dome below is decorated with circular patterns and encrusted with small stones. The cascading chains with metallic beads complete this royal look.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Stones
+• Colour: Silver
+• Style: Heavy Jhumki
+• Closure: Push Back`,
+    price: 359.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Stones',
+    craft_type: 'Heavy Jhumki',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'sunburst-mosaic-oxidised-danglers': {
+    id: 'anti-ox-ear-014',
+    name: 'Sunburst Mosaic Oxidised Danglers',
+    slug: 'sunburst-mosaic-oxidised-danglers',
+    description: `*Sunburst Mosaic Oxidised Danglers*
+
+A true conversation starter, these oxidised earrings feature a geometric sunburst top and a large circular body. The open circle design is studded with grey stones and features a unique floral bottom with colored petals. Finished with beaded drops.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Assorted Stones
+• Colour: Silver, Grey, Black, Brown
+• Style: Statement Dangles
+• Closure: Push Back`,
+    price: 259.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Assorted Stones',
+    craft_type: 'Statement Dangles',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'black-stone-leaf-hoop-oxidised-earrings': {
+    id: 'anti-ox-ear-015',
+    name: 'Black Stone Leaf Hoop Oxidised Earrings',
+    slug: 'black-stone-leaf-hoop-oxidised-earrings',
+    description: `*Black Stone Leaf Hoop Oxidised Earrings*
+
+A perfect balance of elegance and edge. These oxidised earrings feature a cluster of black, leaf-shaped stones at the top, sitting above a textured silver hoop. Small metallic beads dangle from the bottom of the hoop, adding a playful element.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Black Stones
+• Colour: Silver & Black
+• Style: Hoop / Dangle
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Black Stones',
+    craft_type: 'Hoop / Dangle',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'intricate-dome-classic-oxidised-jhumki': {
+    id: 'anti-ox-ear-016',
+    name: 'Intricate Dome Classic Oxidised Jhumki',
+    slug: 'intricate-dome-classic-oxidised-jhumki',
+    description: `*Intricate Dome Classic Oxidised Jhumki*
+
+These classic oxidised jhumkis feature a large, highly detailed circular stud that leads to a traditional dome-shaped bell. The jhumki is heavily detailed with embossed patterns and surrounded by multiple metallic ghungroo beads, creating a lovely musical movement.
+
+*Product Details:*
+• Material: Oxidised Silver Finish
+• Colour: Silver
+• Style: Classic Jhumki
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish',
+    craft_type: 'Classic Jhumki',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'turquoise-elephant-motif-oxidised-earrings': {
+    id: 'anti-ox-ear-017',
+    name: 'Turquoise Elephant Motif Oxidised Earrings',
+    slug: 'turquoise-elephant-motif-oxidised-earrings',
+    description: `*Turquoise Elephant Motif Oxidised Earrings*
+
+Show off your love for artistic jewelry with these unique oxidised earrings. They feature a large turquoise rectangular stone, crowned with a floral crystal design and flanked by beautifully crafted silver elephants on the sides. Finished with pearl drops.
+
+*Product Details:*
+• Material: Oxidised Silver Finish, Turquoise Stone, Crystals, Faux Pearls
+• Colour: Silver & Turquoise
+• Style: Statement Dangles
+• Closure: Push Back`,
+    price: 199.00,
+    compare_at_price: 499.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Oxidized Earrings',
+    fabric: 'Oxidised Silver Finish, Turquoise Stone, Crystals, Faux Pearls',
+    craft_type: 'Statement Dangles',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+
 };
 
 export function getCatalogProduct(slug: string): CatalogProduct | undefined {
@@ -995,4 +1388,24 @@ export const BRACELET_PRODUCTS: CatalogProduct[] = [
 
 export const PENDANT_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['925-sterling-silver-celestial-solitaire-pendant'],
+];
+
+export const OXIDIZED_EARRINGS_PRODUCTS: CatalogProduct[] = [
+  PRODUCTS_CATALOG['royal-blue-leaf-drop-oxidised-jhumki'],
+  PRODUCTS_CATALOG['vintage-floral-peacock-oxidised-dangle-earrings'],
+  PRODUCTS_CATALOG['mirror-center-oxidised-chandbali-jhumki'],
+  PRODUCTS_CATALOG['antique-gold-textured-dome-jhumki'],
+  PRODUCTS_CATALOG['crystal-studded-spiral-oxidised-earrings'],
+  PRODUCTS_CATALOG['minimalist-round-mirror-oxidised-drops'],
+  PRODUCTS_CATALOG['pink-petal-teardrop-oxidised-earrings'],
+  PRODUCTS_CATALOG['classic-silver-hoop-with-ghungroo-drops'],
+  PRODUCTS_CATALOG['midnight-blue-teardrop-oxidised-earrings'],
+  PRODUCTS_CATALOG['floral-motif-pearl-cluster-oxidised-drops'],
+  PRODUCTS_CATALOG['bohemian-silver-chandbali-hoops'],
+  PRODUCTS_CATALOG['monochrome-mirror-statement-oxidised-earrings'],
+  PRODUCTS_CATALOG['majestic-peacock-oxidised-jhumki'],
+  PRODUCTS_CATALOG['sunburst-mosaic-oxidised-danglers'],
+  PRODUCTS_CATALOG['black-stone-leaf-hoop-oxidised-earrings'],
+  PRODUCTS_CATALOG['intricate-dome-classic-oxidised-jhumki'],
+  PRODUCTS_CATALOG['turquoise-elephant-motif-oxidised-earrings'],
 ];

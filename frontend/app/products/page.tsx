@@ -7,6 +7,9 @@ import { HorizontalProductCard } from '../../components/HorizontalProductCard';
 import { ViewToggle, ViewMode }  from '../../components/ViewToggle';
 import { CartDrawer }            from '../../components/CartDrawer';
 import { PaymentRedirectCard }   from '../../components/PaymentRedirectCard';
+import { BuyNowChoiceModal }     from '../../components/modals/BuyNowChoiceModal';
+import { CODChoiceModal }        from '../../components/modals/CODChoiceModal';
+import { PayOnDeliveryModal }    from '../../components/modals/PayOnDeliveryModal';
 import { Product }               from '../../lib/api';
 import {
   PRODUCTS_CATALOG,
@@ -14,6 +17,7 @@ import {
   NECKLACE_PRODUCTS,
   ANKLET_PRODUCTS,
   PENDANT_PRODUCTS,
+  OXIDIZED_EARRINGS_PRODUCTS,
 } from '../../lib/productsCatalog';
 
 const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p => ({
@@ -33,16 +37,31 @@ function ProductsPageContent() {
   const [viewMode, setViewMode] = useState<ViewMode>('horizontal');
   const [buyNowProduct, setBuyNowProduct] = useState<Product | null>(null);
 
+  // Buy Now choice modal states
+  const [buyNowChoiceProduct, setBuyNowChoiceProduct] = useState<Product | null>(null);
+  const [isBuyNowChoiceOpen, setIsBuyNowChoiceOpen] = useState(false);
+  const [isCODModalOpen, setIsCODModalOpen] = useState(false);
+  const [isPODModalOpen, setIsPODModalOpen] = useState(false);
+
+  const handleBuyNow = (product: Product) => {
+    setBuyNowChoiceProduct(product);
+    setIsBuyNowChoiceOpen(true);
+  };
+
   const mainCategories = ['All', '925 Pure Silver', 'Anti Tarnish', 'Best Sellers', 'Hot Deals'];
   const silverSubsections = ['All', 'Bracelets', 'Necklaces', 'Anklets', 'Pendants'];
+  const antiTarnishSubsections = ['All', 'Oxidized Earrings'];
 
   useEffect(() => {
     if (!categoryParam) return;
     const catLower = categoryParam.toLowerCase();
     if (catLower === 'silver' || catLower.includes('silver')) {
       setSelectedCategory('925 Pure Silver');
-    } else if (catLower === 'antitarnish') {
+    } else if (catLower === 'antitarnish' || catLower.includes('anti-tarnish') || catLower.includes('antitarnish') || catLower.includes('tarnish')) {
       setSelectedCategory('Anti Tarnish');
+    } else if (catLower === 'earrings' || catLower.includes('oxidized')) {
+      setSelectedCategory('Anti Tarnish');
+      setSelectedSubcategory('Oxidized Earrings');
     } else if (catLower === 'bestsellers') {
       setSelectedCategory('Best Sellers');
     } else if (catLower === 'hotdeals') {
@@ -68,10 +87,17 @@ function ProductsPageContent() {
   useEffect(() => {
     if (!subcategoryParam) return;
     const subLower = subcategoryParam.toLowerCase();
-    const matchSub = silverSubsections.find(s => s.toLowerCase() === subLower);
-    if (matchSub) {
-      setSelectedSubcategory(matchSub);
+    const matchSilver = silverSubsections.find(s => s.toLowerCase() === subLower);
+    if (matchSilver) {
+      setSelectedSubcategory(matchSilver);
       setSelectedCategory('925 Pure Silver');
+      return;
+    }
+    const matchAnti = antiTarnishSubsections.find(s => s.toLowerCase() === subLower);
+    if (matchAnti) {
+      setSelectedSubcategory(matchAnti);
+      setSelectedCategory('Anti Tarnish');
+      return;
     }
   }, [subcategoryParam]);
 
@@ -80,6 +106,9 @@ function ProductsPageContent() {
   const necklaces: Product[] = NECKLACE_PRODUCTS.map(p => ({ ...p, is_featured: true }));
   const anklets: Product[]   = ANKLET_PRODUCTS.map(p => ({ ...p, is_featured: true }));
   const pendants: Product[]  = PENDANT_PRODUCTS.map(p => ({ ...p, is_featured: true }));
+
+  // Strict Category Buckets under Anti Tarnish
+  const oxidizedEarrings: Product[] = (OXIDIZED_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
 
   // Filtered list when a single subcategory or other category is selected
   const filteredProducts = ALL_CATALOG_PRODUCTS.filter((product) => {
@@ -92,7 +121,14 @@ function ProductsPageContent() {
       }
       return true;
     }
-    if (selectedCategory === 'Anti Tarnish')  return true;
+    if (selectedCategory === 'Anti Tarnish') {
+      const isAntiTarnish = product.category === 'Anti Tarnish';
+      if (!isAntiTarnish) return false;
+      if (selectedSubcategory !== 'All') {
+        return product.subcategory?.toLowerCase() === selectedSubcategory.toLowerCase();
+      }
+      return true;
+    }
     if (selectedCategory === 'Best Sellers')
       return product.price >= 1500 || product.slug.includes('toggle') || product.slug.includes('clover');
     if (selectedCategory === 'Hot Deals')
@@ -106,7 +142,9 @@ function ProductsPageContent() {
   const totalDesignsCount =
     selectedCategory === '925 Pure Silver' && selectedSubcategory === 'All'
       ? bracelets.length + necklaces.length + anklets.length + pendants.length
-      : filteredProducts.length;
+      : selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'All'
+        ? oxidizedEarrings.length
+        : filteredProducts.length;
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
@@ -115,6 +153,38 @@ function ProductsPageContent() {
         isOpen={buyNowProduct !== null}
         onClose={() => setBuyNowProduct(null)}
         product={buyNowProduct}
+      />
+      <BuyNowChoiceModal
+        isOpen={isBuyNowChoiceOpen && buyNowChoiceProduct !== null}
+        onClose={() => setIsBuyNowChoiceOpen(false)}
+        product={buyNowChoiceProduct as Product}
+        selectedSize="Free Size"
+        onPayOnline={() => {
+          setIsBuyNowChoiceOpen(false);
+          setBuyNowProduct(buyNowChoiceProduct);
+        }}
+        onCashOnDelivery={() => {
+          setIsBuyNowChoiceOpen(false);
+          setIsCODModalOpen(true);
+        }}
+        onPayOnDelivery={() => {
+          setIsBuyNowChoiceOpen(false);
+          setIsPODModalOpen(true);
+        }}
+      />
+      <CODChoiceModal
+        isOpen={isCODModalOpen && buyNowChoiceProduct !== null}
+        onClose={() => setIsCODModalOpen(false)}
+        product={buyNowChoiceProduct as Product}
+        onRazorpayCOD={(p) => setBuyNowProduct(p)}
+        onPayOnDelivery={() => setIsPODModalOpen(true)}
+      />
+      <PayOnDeliveryModal
+        isOpen={isPODModalOpen && buyNowChoiceProduct !== null}
+        onClose={() => setIsPODModalOpen(false)}
+        product={buyNowChoiceProduct as Product}
+        selectedSize="Free Size"
+        effectivePrice={buyNowChoiceProduct?.price || 0}
       />
 
       {/* ── Page Heading ── */}
@@ -127,11 +197,16 @@ function ProductsPageContent() {
             ? `925 Pure Silver ${selectedSubcategory}`
             : selectedCategory === '925 Pure Silver'
               ? '925 Pure Silver Collection'
-              : `${selectedCategory} Collection`}
+              : selectedCategory === 'Anti Tarnish' && selectedSubcategory !== 'All'
+                ? `Anti Tarnish ${selectedSubcategory}`
+                : selectedCategory === 'Anti Tarnish'
+                  ? 'Anti Tarnish Collection'
+                  : `${selectedCategory} Collection`}
         </h1>
         <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
-          Handcrafted in genuine 925 sterling silver with waterproof anti-tarnish rhodium
-          finish. Designed for timeless elegance and effortless everyday styling.
+          {selectedCategory === 'Anti Tarnish'
+            ? 'Intricately handcrafted anti-tarnish oxidized jewelry designed for timeless style, lasting durability, and everyday ethnic elegance.'
+            : 'Handcrafted in genuine 925 sterling silver with waterproof anti-tarnish rhodium finish. Designed for timeless elegance and effortless everyday styling.'}
         </p>
       </div>
 
@@ -142,7 +217,7 @@ function ProductsPageContent() {
             key={cat}
             onClick={() => {
               setSelectedCategory(cat);
-              if (cat !== '925 Pure Silver') setSelectedSubcategory('All');
+              setSelectedSubcategory('All');
             }}
             className={`px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
               selectedCategory === cat
@@ -169,6 +244,36 @@ function ProductsPageContent() {
           </div>
           <div className="flex flex-wrap items-center gap-2.5">
             {silverSubsections.map((sub, idx) => (
+              <button
+                key={sub}
+                onClick={() => setSelectedSubcategory(sub)}
+                className={`px-4 py-2 rounded-xl text-xs font-bold tracking-wide uppercase transition-all duration-200 ${
+                  selectedSubcategory === sub
+                    ? 'bg-black text-white dark:bg-white dark:text-black shadow-sm ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-neutral-900'
+                    : 'bg-white dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-white'
+                }`}
+              >
+                {idx > 0 ? `${idx}) ${sub}` : sub}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* ── Sub-sections under "Anti Tarnish" ── */}
+      {selectedCategory === 'Anti Tarnish' && (
+        <div className="p-4 sm:p-5 rounded-2xl bg-neutral-50 dark:bg-neutral-900/60 border border-neutral-200 dark:border-neutral-800 space-y-3">
+          <div className="flex items-center justify-between">
+            <span className="text-xs uppercase tracking-widest font-mono font-bold text-neutral-500 dark:text-neutral-400">
+              Sub-sections under Anti Tarnish:
+            </span>
+            <span className="text-[11px] font-mono text-neutral-400">
+              {totalDesignsCount}{' '}
+              {totalDesignsCount === 1 ? 'Design' : 'Designs'}
+            </span>
+          </div>
+          <div className="flex flex-wrap items-center gap-2.5">
+            {antiTarnishSubsections.map((sub, idx) => (
               <button
                 key={sub}
                 onClick={() => setSelectedSubcategory(sub)}
@@ -224,7 +329,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                     />
                   ))}
                 </div>
@@ -235,7 +340,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                       isCouponActive={false}
                       activeCouponCode={null}
                     />
@@ -270,7 +375,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                     />
                   ))}
                 </div>
@@ -281,7 +386,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                       isCouponActive={false}
                       activeCouponCode={null}
                     />
@@ -316,7 +421,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                     />
                   ))}
                 </div>
@@ -327,7 +432,7 @@ function ProductsPageContent() {
                       key={product.id}
                       product={product}
                       index={idx}
-                      onBuyNow={setBuyNowProduct}
+                      onBuyNow={handleBuyNow}
                       isCouponActive={false}
                       activeCouponCode={null}
                     />
@@ -363,7 +468,7 @@ function ProductsPageContent() {
                         key={product.id}
                         product={product}
                         index={idx}
-                        onBuyNow={setBuyNowProduct}
+                        onBuyNow={handleBuyNow}
                       />
                     ))}
                   </div>
@@ -374,7 +479,7 @@ function ProductsPageContent() {
                         key={product.id}
                         product={product}
                         index={idx}
-                        onBuyNow={setBuyNowProduct}
+                        onBuyNow={handleBuyNow}
                         isCouponActive={false}
                         activeCouponCode={null}
                       />
@@ -383,6 +488,56 @@ function ProductsPageContent() {
                 )}
               </section>
             )}
+          </div>
+        ) : selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'All' ? (
+          /* ─────────────────────────────────────────────────
+             COMBINED "ALL" VIEW UNDER ANTI TARNISH
+             ───────────────────────────────────────────────── */
+          <div className="space-y-16">
+            <section id="anti-tarnish-oxidized-earrings-section" className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Handcrafted Finish
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Oxidized Earrings Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('Oxidized Earrings')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Oxidized Earrings ({oxidizedEarrings.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {oxidizedEarrings.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {oxidizedEarrings.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
           </div>
         ) : filteredProducts.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8">
@@ -401,7 +556,7 @@ function ProductsPageContent() {
                 key={product.id}
                 product={product}
                 index={idx}
-                onBuyNow={setBuyNowProduct}
+                onBuyNow={handleBuyNow}
               />
             ))}
           </div>
@@ -415,7 +570,7 @@ function ProductsPageContent() {
                 key={product.id}
                 product={product}
                 index={idx}
-                onBuyNow={setBuyNowProduct}
+                onBuyNow={handleBuyNow}
                 isCouponActive={false}
                 activeCouponCode={null}
               />
