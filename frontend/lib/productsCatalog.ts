@@ -1343,6 +1343,334 @@ Show off your love for artistic jewelry with these unique oxidised earrings. The
   },
 
 
+
+  // ── ANTI TARNISH -> AMERICAN DIAMONDS ──
+  'royal-spiral-ad-necklace-set': {
+    id: 'anti-ad-neck-001',
+    name: 'Royal Spiral AD Necklace Set',
+    slug: 'royal-spiral-ad-necklace-set',
+    description: `*Royal Spiral AD Necklace Set*
+
+A stunning traditional necklace set featuring intricate spiral motifs and beautiful American Diamond detailing. Its elegant design adds a royal touch to your ethnic look, making it perfect for weddings, parties and festive occasions.
+
+*Product Details:*
+• Type: Necklace Set
+• Material: Artificial Jewellery
+• Stone: American Diamond
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Includes: Necklace, Matching Earrings & Maang Tikka`,
+    price: 1799.00,
+    compare_at_price: 3999.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond',
+    craft_type: 'Necklace Set',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'elegant-floral-sparkle-necklace-set': {
+    id: 'anti-ad-neck-002',
+    name: 'Elegant Floral Sparkle Necklace Set',
+    slug: 'elegant-floral-sparkle-necklace-set',
+    description: `*Elegant Floral Sparkle Necklace Set*
+
+Enhance your everyday style with this beautiful dual-tone necklace set. Designed with sparkling American Diamond floral accents and an elegant adjustable chain, it gives a sophisticated and modern look.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond
+• Finish: Gold & Silver Tone
+• Feature: Anti-Tarnish
+• Style: Modern & Elegant`,
+    price: 1499.00,
+    compare_at_price: 2599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Gold & Silver Tone • American Diamond',
+    craft_type: 'Modern & Elegant',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'ruby-emerald-teardrop-necklace-set': {
+    id: 'anti-ad-neck-003',
+    name: 'Ruby Emerald Teardrop Necklace Set',
+    slug: 'ruby-emerald-teardrop-necklace-set',
+    description: `*Ruby Emerald Teardrop Necklace Set*
+
+A beautiful combination of red and green teardrop stones with delicate sparkling detailing. This charming necklace set brings a colourful traditional touch to your outfit.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond, Red & Green Stones
+• Finish: Gold Polish
+• Feature: Anti-Tarnish
+• Occasion: Festive & Traditional Wear`,
+    price: 1299.00,
+    compare_at_price: 2399.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Gold Polish • American Diamond, Red & Green Stones',
+    craft_type: 'Necklace & Earrings Set',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'pink-petal-charm-necklace-set': {
+    id: 'anti-ad-neck-004',
+    name: 'Pink Petal Charm Necklace Set',
+    slug: 'pink-petal-charm-necklace-set',
+    description: `*Pink Petal Charm Necklace Set*
+
+Add a feminine touch to your jewellery collection with this gorgeous pink floral necklace set. Its delicate pink stone detailing and matching flower earrings make it perfect for casual outings and special occasions.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: Pink Coloured Stones & American Diamond
+• Finish: Gold Polish
+• Feature: Anti-Tarnish
+• Style: Floral Design`,
+    price: 1299.00,
+    compare_at_price: 2399.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Gold Polish • Pink Coloured Stones & American Diamond',
+    craft_type: 'Floral Design',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'silver-arrow-glamour-necklace-set': {
+    id: 'anti-ad-neck-005',
+    name: 'Silver Arrow Glamour Necklace Set',
+    slug: 'silver-arrow-glamour-necklace-set',
+    description: `*Silver Arrow Glamour Necklace Set*
+
+Make a statement with this eye-catching silver-tone necklace set. Featuring a beautiful repeated oval pattern with dangling arrow-style detailing, it offers a bold and stylish appearance for parties and celebrations.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Design: Contemporary Statement Style`,
+    price: 1499.00,
+    compare_at_price: 4599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond',
+    craft_type: 'Contemporary Statement Style',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'midnight-black-leaf-necklace-set': {
+    id: 'anti-ad-neck-006',
+    name: 'Midnight Black Leaf Necklace Set',
+    slug: 'midnight-black-leaf-necklace-set',
+    description: `*Midnight Black Leaf Necklace Set*
+
+A sophisticated necklace set featuring sparkling American Diamond leaf patterns with elegant black stone accents. Its unique design makes it a perfect choice for parties and evening occasions.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond with Black Accents
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Style: Designer Party Wear`,
+    price: 899.00,
+    compare_at_price: 2599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond with Black Accents',
+    craft_type: 'Designer Party Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'emerald-leaf-cascade-necklace-set': {
+    id: 'anti-ad-neck-007',
+    name: 'Emerald Leaf Cascade Necklace Set',
+    slug: 'emerald-leaf-cascade-necklace-set',
+    description: `*Emerald Leaf Cascade Necklace Set*
+
+Give your look a graceful makeover with this beautiful American Diamond necklace set. The delicate leaf-inspired design and sparkling finish create an elegant statement, perfect for ethnic and party wear.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Design: Leaf Pattern`,
+    price: 899.00,
+    compare_at_price: 2599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond',
+    craft_type: 'Leaf Pattern',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'emerald-teardrop-radiance-necklace-set': {
+    id: 'anti-ad-neck-008',
+    name: 'Emerald Teardrop Radiance Necklace Set',
+    slug: 'emerald-teardrop-radiance-necklace-set',
+    description: `*Emerald Teardrop Radiance Necklace Set*
+
+Featuring rich emerald green teardrop stones arranged beautifully along a sparkling American Diamond chain, this necklace set is perfect for adding a fresh and graceful touch to your outfit.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: Green Stones & American Diamond
+• Finish: Gold Polish
+• Feature: Anti-Tarnish
+• Style: Elegant Traditional Wear`,
+    price: 1299.00,
+    compare_at_price: 2399.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Gold Polish • Green Stones & American Diamond',
+    craft_type: 'Elegant Traditional Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'royal-blue-teardrop-necklace-set': {
+    id: 'anti-ad-neck-009',
+    name: 'Royal Blue Teardrop Necklace Set',
+    slug: 'royal-blue-teardrop-necklace-set',
+    description: `*Royal Blue Teardrop Necklace Set*
+
+Make your look stand out with this stunning royal blue necklace set. Beautiful blue teardrop stones paired with American Diamond detailing give it a classy and sophisticated appearance.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: Blue Stones & American Diamond
+• Finish: Gold Polish
+• Feature: Anti-Tarnish
+• Style: Party & Festive Wear`,
+    price: 1299.00,
+    compare_at_price: 2399.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Gold Polish • Blue Stones & American Diamond',
+    craft_type: 'Party & Festive Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'blossom-vine-ad-necklace-set': {
+    id: 'anti-ad-neck-010',
+    name: 'Blossom Vine AD Necklace Set',
+    slug: 'blossom-vine-ad-necklace-set',
+    description: `*Blossom Vine AD Necklace Set*
+
+Inspired by delicate floral vines, this beautiful American Diamond necklace set features an elegant V-shaped design with sparkling flower motifs. A perfect accessory for minimal yet stylish looks.
+
+*Product Details:*
+• Type: Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Design: Floral Vine Pattern`,
+    price: 999.00,
+    compare_at_price: 2599.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond',
+    craft_type: 'Floral Vine Pattern',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'ruby-diamond-royal-choker-set': {
+    id: 'anti-ad-neck-011',
+    name: 'Ruby Diamond Royal Choker Set',
+    slug: 'ruby-diamond-royal-choker-set',
+    description: `*Ruby Diamond Royal Choker Set*
+
+A luxurious statement choker featuring intricate American Diamond work combined with beautiful ruby-red stone accents. Its elaborate design gives a rich and royal appearance, making it ideal for weddings, receptions and grand celebrations.
+
+*Product Details:*
+• Type: Heavy Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond & Ruby Red Stones
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Style: Bridal & Wedding Wear`,
+    price: 1799.00,
+    compare_at_price: 3999.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond & Ruby Red Stones',
+    craft_type: 'Bridal & Wedding Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'sapphire-elegance-bridal-choker': {
+    id: 'anti-ad-neck-012',
+    name: 'Sapphire Elegance Bridal Choker',
+    slug: 'sapphire-elegance-bridal-choker',
+    description: `*Sapphire Elegance Bridal Choker*
+
+Bring elegance to your special occasions with this gorgeous sapphire blue American Diamond choker set. Its intricate stone arrangement and luxurious detailing make it a perfect choice for weddings and festive celebrations.
+
+*Product Details:*
+• Type: Heavy Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond & Blue Stones
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Style: Bridal & Party Wear`,
+    price: 1799.00,
+    compare_at_price: 3999.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond & Blue Stones',
+    craft_type: 'Bridal & Party Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+  'emerald-majesty-diamond-choker': {
+    id: 'anti-ad-neck-013',
+    name: 'Emerald Majesty Diamond Choker',
+    slug: 'emerald-majesty-diamond-choker',
+    description: `*Emerald Majesty Diamond Choker*
+
+A breathtaking designer choker featuring vibrant emerald green stones surrounded by sparkling American Diamond detailing. Its rich and graceful appearance makes it a beautiful choice for weddings, receptions and traditional celebrations.
+
+*Product Details:*
+• Type: Heavy Necklace & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond & Green Stones
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Style: Premium Bridal & Festive Wear`,
+    price: 1799.00,
+    compare_at_price: 3999.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond & Green Stones',
+    craft_type: 'Premium Bridal & Festive Wear',
+    images: [],
+    sizes: ['Free Size'],
+  },
+
+
 };
 
 export function getCatalogProduct(slug: string): CatalogProduct | undefined {
@@ -1408,4 +1736,20 @@ export const OXIDIZED_EARRINGS_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['black-stone-leaf-hoop-oxidised-earrings'],
   PRODUCTS_CATALOG['intricate-dome-classic-oxidised-jhumki'],
   PRODUCTS_CATALOG['turquoise-elephant-motif-oxidised-earrings'],
+];
+
+export const AMERICAN_DIAMONDS_PRODUCTS: CatalogProduct[] = [
+  PRODUCTS_CATALOG['royal-spiral-ad-necklace-set'],
+  PRODUCTS_CATALOG['elegant-floral-sparkle-necklace-set'],
+  PRODUCTS_CATALOG['ruby-emerald-teardrop-necklace-set'],
+  PRODUCTS_CATALOG['pink-petal-charm-necklace-set'],
+  PRODUCTS_CATALOG['silver-arrow-glamour-necklace-set'],
+  PRODUCTS_CATALOG['midnight-black-leaf-necklace-set'],
+  PRODUCTS_CATALOG['emerald-leaf-cascade-necklace-set'],
+  PRODUCTS_CATALOG['emerald-teardrop-radiance-necklace-set'],
+  PRODUCTS_CATALOG['royal-blue-teardrop-necklace-set'],
+  PRODUCTS_CATALOG['blossom-vine-ad-necklace-set'],
+  PRODUCTS_CATALOG['ruby-diamond-royal-choker-set'],
+  PRODUCTS_CATALOG['sapphire-elegance-bridal-choker'],
+  PRODUCTS_CATALOG['emerald-majesty-diamond-choker'],
 ];

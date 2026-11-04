@@ -18,6 +18,7 @@ import {
   ANKLET_PRODUCTS,
   PENDANT_PRODUCTS,
   OXIDIZED_EARRINGS_PRODUCTS,
+  AMERICAN_DIAMONDS_PRODUCTS,
 } from '../../lib/productsCatalog';
 
 const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p => ({
@@ -50,7 +51,7 @@ function ProductsPageContent() {
 
   const mainCategories = ['All', '925 Pure Silver', 'Anti Tarnish', 'Best Sellers', 'Hot Deals'];
   const silverSubsections = ['All', 'Bracelets', 'Necklaces', 'Anklets', 'Pendants'];
-  const antiTarnishSubsections = ['All', 'Oxidized Earrings'];
+  const antiTarnishSubsections = ['All', 'Oxidized Earrings', 'American Diamonds'];
 
   useEffect(() => {
     if (!categoryParam) return;
@@ -62,6 +63,9 @@ function ProductsPageContent() {
     } else if (catLower === 'earrings' || catLower.includes('oxidized')) {
       setSelectedCategory('Anti Tarnish');
       setSelectedSubcategory('Oxidized Earrings');
+    } else if (catLower === 'americandiamonds' || catLower.includes('american') || catLower.includes('diamond')) {
+      setSelectedCategory('Anti Tarnish');
+      setSelectedSubcategory('American Diamonds');
     } else if (catLower === 'bestsellers') {
       setSelectedCategory('Best Sellers');
     } else if (catLower === 'hotdeals') {
@@ -93,7 +97,7 @@ function ProductsPageContent() {
       setSelectedCategory('925 Pure Silver');
       return;
     }
-    const matchAnti = antiTarnishSubsections.find(s => s.toLowerCase() === subLower);
+    const matchAnti = antiTarnishSubsections.find(s => s.toLowerCase() === subLower || (subLower.includes('diamond') && s === 'American Diamonds') || (subLower.includes('earring') && s === 'Oxidized Earrings'));
     if (matchAnti) {
       setSelectedSubcategory(matchAnti);
       setSelectedCategory('Anti Tarnish');
@@ -109,6 +113,7 @@ function ProductsPageContent() {
 
   // Strict Category Buckets under Anti Tarnish
   const oxidizedEarrings: Product[] = (OXIDIZED_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
+  const americanDiamonds: Product[] = (AMERICAN_DIAMONDS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
 
   // Filtered list when a single subcategory or other category is selected
   const filteredProducts = ALL_CATALOG_PRODUCTS.filter((product) => {
@@ -143,7 +148,7 @@ function ProductsPageContent() {
     selectedCategory === '925 Pure Silver' && selectedSubcategory === 'All'
       ? bracelets.length + necklaces.length + anklets.length + pendants.length
       : selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'All'
-        ? oxidizedEarrings.length
+        ? oxidizedEarrings.length + americanDiamonds.length
         : filteredProducts.length;
 
   return (
@@ -205,7 +210,7 @@ function ProductsPageContent() {
         </h1>
         <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
           {selectedCategory === 'Anti Tarnish'
-            ? 'Intricately handcrafted anti-tarnish oxidized jewelry designed for timeless style, lasting durability, and everyday ethnic elegance.'
+            ? 'Intricately handcrafted anti-tarnish jewelry featuring sparkling American Diamond necklace sets and classic oxidized earrings designed for lasting durability and timeless glamour.'
             : 'Handcrafted in genuine 925 sterling silver with waterproof anti-tarnish rhodium finish. Designed for timeless elegance and effortless everyday styling.'}
         </p>
       </div>
@@ -494,7 +499,54 @@ function ProductsPageContent() {
              COMBINED "ALL" VIEW UNDER ANTI TARNISH
              ───────────────────────────────────────────────── */
           <div className="space-y-16">
-            <section id="anti-tarnish-oxidized-earrings-section" className="space-y-6">
+            {/* 1. American Diamonds Collection */}
+            <section id="anti-tarnish-american-diamonds-section" className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Sparkling AD Sets
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    American Diamonds Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('American Diamonds')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All American Diamonds ({americanDiamonds.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {americanDiamonds.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {americanDiamonds.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* 2. Oxidized Earrings Collection */}
+            <section id="anti-tarnish-oxidized-earrings-section" className="space-y-6 pt-4">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
                 <div>
                   <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
