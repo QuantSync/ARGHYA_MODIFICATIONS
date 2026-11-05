@@ -92,6 +92,29 @@ export const ALL_PRODUCT_PAYMENT_URLS: Record<string, string> = {
   'vamika-floral-kurti': 'https://rzp.io/rzp/vamikafloralkurti',
   'olive-tie-shoulder-kurti': 'https://rzp.io/rzp/olivetieshoulderkurti',
   'pink-tie-shoulder-kurti': 'https://rzp.io/rzp/pinktieshouklderkurti',
+
+  // ── Anti Tarnish -> Modern Pendants ────────────────────────────────────
+  'the-minimalist-silver-wave-layered-necklace': 'https://rzp.io/rzp/minimalistsilverwavelayerednec',
+  'the-minimalist-golden-wave-layered-necklace': 'https://rzp.io/rzp/minimalistgoldenwavelayerednec',
+  'the-azure-guardian-eye-pendant': 'https://rzp.io/rzp/azureguardianeyependant',
+  'the-meadow-dance-butterfly-necklace': 'https://rzp.io/rzp/meadowdancebutterflynecklace',
+  'the-orbit-beaded-long-chain': 'https://rzp.io/rzp/orbitbeadedlongchain',
+  'the-signature-monogram-bar-necklace': 'https://rzp.io/rzp/signaturemonogrambarnecklace',
+  'the-urban-rebel-cross-necklace': 'https://rzp.io/rzp/urbanrebelcrossnecklace',
+  'the-eclipse-open-circle-pendant': 'https://rzp.io/rzp/eclipseopencirclependant',
+  'the-sweetheart-minimal-pendant': 'https://rzp.io/rzp/sweetheartminimalpendant',
+  'the-elegant-pearl-lariat-necklace': 'https://rzp.io/rzp/elegantpearllariatnecklace',
+  'the-midnight-romance-y-necklace': 'https://rzp.io/rzp/midnightromanceynecklace',
+  'the-starlight-ruby-choker': 'https://rzp.io/rzp/starlightrubychoker',
+  'the-toggle-heart-drop-chain': 'https://rzp.io/rzp/toggleheartdropchain',
+  'the-noir-clover-deluxe-set': 'https://rzp.io/rzp/noircloverdeluxeset',
+  'the-crystal-tear-drop-pendant': 'https://rzp.io/rzp/crystalteardroppendant',
+  'the-onyx-heart-station-chain': 'https://rzp.io/rzp/onyxheartstationchain',
+  'the-heritage-bloom-pendant': 'https://rzp.io/rzp/heritagebloompendant',
+  'the-blush-heart-chain': 'https://rzp.io/rzp/blushheartchain',
+  'the-doves-flight-silver-pendant': 'https://rzp.io/rzp/doveflightsilverpendant',
+  'the-duo-tone-amour-set': 'https://rzp.io/rzp/duotonearmourset',
+  'the-blossoming-heart-ensemble': 'https://rzp.io/rzp/blossomingheartensemble',
 };
 
 /**

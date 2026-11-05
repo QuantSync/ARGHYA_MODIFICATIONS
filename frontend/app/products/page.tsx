@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, Suspense } from 'react';
-import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { VerticalProductCard }   from '../../components/VerticalProductCard';
 import { HorizontalProductCard } from '../../components/HorizontalProductCard';
@@ -182,21 +181,22 @@ function ProductsPageContent() {
               if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
           }}
-          className="w-full bg-[#5f0c1a] relative flex items-center justify-center cursor-pointer select-none group shadow-md border-b border-[#470813]"
+          className="w-full bg-[#65131f] cursor-pointer select-none shadow-md border-b border-[#470813]"
           title="Click to explore Anti-Tarnish Collection"
         >
-          <div className="w-full max-w-[1920px] aspect-[1024/341] relative overflow-hidden">
-            <Image
-              src="/images/anti_tarnish/shop_collection_banner_3x.png"
-              unoptimized
-              alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
-              fill
-              priority
-              quality={100}
-              sizes="100vw"
-              className="object-contain object-center transition-transform duration-500 ease-out group-hover:scale-[1.006]"
-            />
-          </div>
+          {/* Native img + srcSet keeps the banner pixel-sharp (no Next/Image crop, scale, or fill distortion). */}
+          <img
+            src="/images/anti_tarnish/shop_collection_banner_3x.png"
+            srcSet="/images/anti_tarnish/shop_collection_new_banner.png 1024w, /images/anti_tarnish/shop_collection_banner_2x.png 2048w, /images/anti_tarnish/shop_collection_banner_3x.png 3072w"
+            sizes="100vw"
+            alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
+            width={3072}
+            height={1023}
+            decoding="async"
+            fetchPriority="high"
+            className="block w-full h-auto select-none"
+            draggable={false}
+          />
         </div>
       )}
 

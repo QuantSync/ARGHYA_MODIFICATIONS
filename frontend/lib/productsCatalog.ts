@@ -1714,6 +1714,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/minimalistsilverwavelayerednec'
   },
 
   'the-minimalist-golden-wave-layered-necklace': {
@@ -1729,6 +1730,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/minimalistgoldenwavelayerednec'
   },
 
   'the-azure-guardian-eye-pendant': {
@@ -1744,6 +1746,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/azureguardianeyependant'
   },
 
   'the-meadow-dance-butterfly-necklace': {
@@ -1759,6 +1762,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/meadowdancebutterflynecklace'
   },
 
   'the-orbit-beaded-long-chain': {
@@ -1774,6 +1778,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/orbitbeadedlongchain'
   },
 
   'the-signature-monogram-bar-necklace': {
@@ -1789,6 +1794,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/signaturemonogrambarnecklace'
   },
 
   'the-urban-rebel-cross-necklace': {
@@ -1804,6 +1810,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/urbanrebelcrossnecklace'
   },
 
   'the-eclipse-open-circle-pendant': {
@@ -1819,6 +1826,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/eclipseopencirclependant'
   },
 
   'the-sweetheart-minimal-pendant': {
@@ -1834,6 +1842,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/sweetheartminimalpendant'
   },
 
   'the-elegant-pearl-lariat-necklace': {
@@ -1849,6 +1858,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/elegantpearllariatnecklace'
   },
 
   'the-midnight-romance-y-necklace': {
@@ -1864,6 +1874,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/midnightromanceynecklace'
   },
 
   'the-starlight-ruby-choker': {
@@ -1879,6 +1890,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/starlightrubychoker'
   },
 
   'the-toggle-heart-drop-chain': {
@@ -1894,6 +1906,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/toggleheartdropchain'
   },
 
   'the-noir-clover-deluxe-set': {
@@ -1909,6 +1922,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/noircloverdeluxeset'
   },
 
   'the-crystal-tear-drop-pendant': {
@@ -1924,6 +1938,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crystalteardroppendant'
   },
 
   'the-onyx-heart-station-chain': {
@@ -1939,6 +1954,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/onyxheartstationchain'
   },
 
   'the-heritage-bloom-pendant': {
@@ -1954,6 +1970,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/heritagebloompendant'
   },
 
   'the-blush-heart-chain': {
@@ -1969,6 +1986,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blushheartchain'
   },
 
   'the-doves-flight-silver-pendant': {
@@ -1984,6 +2002,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/doveflightsilverpendant'
   },
 
   'the-duo-tone-amour-set': {
@@ -1999,6 +2018,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/duotonearmourset'
   },
 
   'the-blossoming-heart-ensemble': {
@@ -2014,6 +2034,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     craft_type: 'Modern Pendant Necklace',
     images: [],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blossomingheartensemble'
   },
 
 
