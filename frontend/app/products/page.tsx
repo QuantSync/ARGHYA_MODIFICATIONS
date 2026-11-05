@@ -187,7 +187,7 @@ function ProductsPageContent() {
           {/* Native img + srcSet keeps the banner pixel-sharp (no Next/Image crop, scale, or fill distortion). */}
           <img
             src="/images/anti_tarnish/shop_collection_banner_3x.png"
-            srcSet="/images/anti_tarnish/shop_collection_new_banner.png 1024w, /images/anti_tarnish/shop_collection_banner_2x.png 2048w, /images/anti_tarnish/shop_collection_banner_3x.png 3072w"
+            srcSet="/images/anti_tarnish/shop_collection_banner.png 1024w, /images/anti_tarnish/shop_collection_banner_2x.png 2048w, /images/anti_tarnish/shop_collection_banner_3x.png 3072w"
             sizes="100vw"
             alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
             width={3072}

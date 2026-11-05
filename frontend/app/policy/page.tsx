@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowLeft, Lock, RefreshCw, Tag, X, Truck, ShieldCheck, RotateCcw } from 'lucide-react';
 import { BulgeWidget } from '../../components/BulgeWidget';
 import { motion, AnimatePresence } from 'framer-motion';
+import { PrivacyPolicyFullDocument, PRIVACY_POLICY_SUMMARY_POINTS } from '../../components/PrivacyPolicyContent';
 
 const POLICIES = [
   {
@@ -24,14 +25,7 @@ const POLICIES = [
     id: 'privacy',
     icon: Lock,
     title: 'Privacy Policy',
-    points: [
-      'We collect only the information you provide — name, email, and delivery address — solely to process and fulfil your orders.',
-      'Your personal data is never sold, rented, or shared with third parties without your explicit consent.',
-      'We employ industry-standard TLS encryption and secure storage to safeguard every piece of information you entrust to us.',
-      'Payment details are processed by PCI-DSS compliant gateways; Arghya Collections never stores raw card information on its servers.',
-      'You may request complete deletion of your account and associated data at any time by writing to us at care.arghya@gmail.com.',
-      'Cookies are used exclusively to improve site performance and remember your preferences — never for advertising profiling.',
-    ],
+    points: PRIVACY_POLICY_SUMMARY_POINTS,
   },
   {
     id: 'return',
@@ -119,6 +113,13 @@ function PolicyCard({ policy, onClick }: PolicyCardProps) {
           </div>
 
           {/* Static Bullet Points (Instant Direct Display) */}
+          {policy.id === 'privacy' && (
+            <div className="mb-4 inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-neutral-200 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Latest Revision: 5 November 2026
+            </div>
+          )}
+
           <ul className="space-y-4 pl-0" role="list">
             {policy.points.map((point, pointIdx) => (
               <li key={pointIdx} className="flex items-start gap-3">
@@ -132,6 +133,17 @@ function PolicyCard({ policy, onClick }: PolicyCardProps) {
               </li>
             ))}
           </ul>
+
+          {policy.id === 'privacy' && (
+            <div className="mt-6 pt-4 border-t border-neutral-200 dark:border-neutral-800 flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm">
+              <span className="text-neutral-500 dark:text-neutral-400">
+                Covers Razorpay integration, data security, rights & grievance officer.
+              </span>
+              <span className="font-bold underline text-black dark:text-white flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                Read Full Legal Policy →
+              </span>
+            </div>
+          )}
         </div>
       </section>
     </BulgeWidget>
@@ -210,12 +222,12 @@ export default function PolicyPage() {
         </div>
 
         <p className="text-center text-xs text-neutral-500 dark:text-neutral-400 mt-16 mb-8 leading-relaxed">
-          These policies were last updated on 1 September 2026. For any queries, please contact us at{' '}
+          These policies were last updated on 5 November 2026. For any queries, please contact us at{' '}
           <a
-            href="mailto:support@arghyacollections.com"
+            href="mailto:care@arghyya.com"
             className="underline font-semibold text-black dark:text-white hover:opacity-80 transition-opacity"
           >
-            support@arghyacollections.com
+            care@arghyya.com
           </a>
         </p>
       </div>
@@ -236,7 +248,7 @@ export default function PolicyPage() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
-              className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 shadow-2xl z-10"
+              className="relative w-full max-w-3xl max-h-[85vh] overflow-y-auto rounded-3xl border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-950 shadow-2xl z-10"
             >
               <div
                 className="absolute left-0 top-0 bottom-0 w-1 bg-black dark:bg-white rounded-l-3xl"
@@ -244,7 +256,7 @@ export default function PolicyPage() {
               />
               <button
                 onClick={() => setSelectedPolicy(null)}
-                className="absolute top-4 right-4 p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors"
+                className="absolute top-4 right-4 p-2 rounded-full hover:bg-neutral-100 dark:hover:bg-neutral-900 transition-colors z-20"
                 aria-label="Close modal"
               >
                 <X size={22} className="text-black dark:text-white" />
@@ -263,19 +275,23 @@ export default function PolicyPage() {
                   </h2>
                 </div>
 
-                <ul className="space-y-4 pl-0" role="list">
-                  {selectedPolicy.points.map((point, pointIdx) => (
-                    <li key={pointIdx} className="flex items-start gap-3">
-                      <span
-                        className="flex-shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full bg-black dark:bg-white"
-                        aria-hidden="true"
-                      />
-                      <p className="text-sm sm:text-base leading-relaxed text-neutral-700 dark:text-neutral-300 break-words font-sans">
-                        {point}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
+                {selectedPolicy.id === 'privacy' ? (
+                  <PrivacyPolicyFullDocument />
+                ) : (
+                  <ul className="space-y-4 pl-0" role="list">
+                    {selectedPolicy.points.map((point, pointIdx) => (
+                      <li key={pointIdx} className="flex items-start gap-3">
+                        <span
+                          className="flex-shrink-0 mt-[7px] w-1.5 h-1.5 rounded-full bg-black dark:bg-white"
+                          aria-hidden="true"
+                        />
+                        <p className="text-sm sm:text-base leading-relaxed text-neutral-700 dark:text-neutral-300 break-words font-sans">
+                          {point}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </motion.div>
           </div>
