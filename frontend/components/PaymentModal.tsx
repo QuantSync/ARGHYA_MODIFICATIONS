@@ -111,7 +111,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({ isOpen, onClose }) =
           key: process.env.NEXT_PUBLIC_RAZORPAY_KEY || 'rzp_live_TgZrGbzaYRBa90',
           amount: paymentData.amount, // auto-detected amount from backend
           currency: paymentData.currency,
-          name: 'ARGHYA COLLECTIONS',
+          name: 'ARGHYA',
           description: 'Payment for your bespoke order',
           order_id: paymentData.id,
           handler: async function (response: any) {

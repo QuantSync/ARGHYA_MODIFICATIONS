@@ -11,6 +11,7 @@ import { BuyNowChoiceModal }     from '../../components/modals/BuyNowChoiceModal
 import { CODChoiceModal }        from '../../components/modals/CODChoiceModal';
 import { PayOnDeliveryModal }    from '../../components/modals/PayOnDeliveryModal';
 import { AntiTarnishBannerGrid }  from '../../components/AntiTarnishBannerGrid';
+import { BannerSlideshow, BannerSlide } from '../../components/BannerSlideshow';
 import { Product }               from '../../lib/api';
 import {
   PRODUCTS_CATALOG,
@@ -28,6 +29,36 @@ const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p =>
   ...p,
   is_featured: true,
 }));
+
+const ANTI_TARNISH_BANNER_SLIDES: BannerSlide[] = [
+  {
+    src: '/images/banners/banner_anti_tarnish_shop_collection_3x.png',
+    srcSet: '/images/banners/banner_anti_tarnish_shop_collection.png 1024w, /images/banners/banner_anti_tarnish_shop_collection_2x.png 2048w, /images/banners/banner_anti_tarnish_shop_collection_3x.png 3072w',
+    alt: 'Shop the collection - Arghya Anti-Tarnish Fine Jewelry',
+    bgColor: '#65131f',
+    onClickScrollId: 'anti-tarnish-catalog-view',
+    title: 'Click to explore Anti-Tarnish Collection',
+  },
+  {
+    src: '/images/banners/banner_free_gifts_cat_3x.png',
+    srcSet: '/images/banners/banner_free_gifts_cat.png 1024w, /images/banners/banner_free_gifts_cat_2x.png 2048w, /images/banners/banner_free_gifts_cat_3x.png 3072w',
+    alt: 'Get Free Gifts on Order Above INR 299',
+    bgColor: '#ffa2d1',
+    onClickScrollId: 'anti-tarnish-catalog-view',
+    title: 'Click to explore Anti-Tarnish Offers',
+  },
+];
+
+const SILVER_BANNER_SLIDES: BannerSlide[] = [
+  {
+    src: '/images/banners/banner_silver_payless_3x.png',
+    srcSet: '/images/banners/banner_silver_payless.png 1024w, /images/banners/banner_silver_payless_2x.png 2048w, /images/banners/banner_silver_payless_3x.png 3072w',
+    alt: 'Pay Less Flex More - Arghya 925 Pure Silver Collection',
+    bgColor: '#000000',
+    onClickScrollId: 'anti-tarnish-catalog-view',
+    title: 'Click to explore 925 Pure Silver Collection',
+  },
+];
 
 function ProductsPageContent() {
   const searchParams = useSearchParams();
@@ -172,30 +203,24 @@ function ProductsPageContent() {
 
   return (
     <div className="w-full">
-      {/* ── Top Edge-to-Edge Hero Banner for Anti-Tarnish (Full Viewport Width like Home Screen Model Banner) ── */}
+      {/* ── Top Edge-to-Edge Hero Banner for Anti-Tarnish (Endless 2-Image Auto-Sliding Slideshow) ── */}
       {selectedCategory === 'Anti Tarnish' && (
-        <div
-          onClick={() => {
-            if (typeof window !== 'undefined') {
-              const el = document.getElementById('anti-tarnish-catalog-view');
-              if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          }}
-          className="w-full bg-[#65131f] cursor-pointer select-none shadow-md border-b border-[#470813]"
-          title="Click to explore Anti-Tarnish Collection"
-        >
-          {/* Native img + srcSet keeps the banner pixel-sharp (no Next/Image crop, scale, or fill distortion). */}
-          <img
-            src="/images/anti_tarnish/shop_collection_banner_3x.png"
-            srcSet="/images/anti_tarnish/shop_collection_banner.png 1024w, /images/anti_tarnish/shop_collection_banner_2x.png 2048w, /images/anti_tarnish/shop_collection_banner_3x.png 3072w"
-            sizes="100vw"
-            alt="Shop the collection - Arghya Anti-Tarnish Fine Jewelry"
-            width={3072}
-            height={1023}
-            decoding="async"
-            fetchPriority="high"
-            className="block w-full h-auto select-none"
-            draggable={false}
+        <div className="w-full border-b border-[#470813]">
+          <BannerSlideshow
+            slides={ANTI_TARNISH_BANNER_SLIDES}
+            intervalMs={3500}
+            priorityFirst={true}
+          />
+        </div>
+      )}
+
+      {/* ── Top Edge-to-Edge Hero Banner for 925 Pure Silver (Part 1: Pay Less Flex More Banner) ── */}
+      {selectedCategory === '925 Pure Silver' && (
+        <div className="w-full border-b border-neutral-900">
+          <BannerSlideshow
+            slides={SILVER_BANNER_SLIDES}
+            intervalMs={3500}
+            priorityFirst={true}
           />
         </div>
       )}

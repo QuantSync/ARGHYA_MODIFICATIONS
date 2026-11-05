@@ -114,14 +114,15 @@ export const Navbar: React.FC = () => {
 
             {/* Left: Brand Logo */}
             <div className="flex items-center justify-center md:justify-start">
-              <Link href="/" className="flex items-center" aria-label="Arghya Modifications — Home">
+              <Link href="/" className="flex items-center" aria-label="Arghya — Home">
                 <Image
-                  src="/images/arghya_watermark_logo_nav.png"
-                  alt="Arghya Modifications"
-                  width={130}
-                  height={42}
-                  className="object-contain brightness-0 dark:brightness-100 dark:invert"
+                  src="/images/arghya_logo_nav.png"
+                  alt="Arghya"
+                  width={160}
+                  height={69}
+                  className="object-contain"
                   priority
+                  quality={100}
                 />
               </Link>
             </div>

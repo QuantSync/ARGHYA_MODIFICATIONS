@@ -7,14 +7,14 @@ import { Sparkles, ChevronDown, ShieldCheck, HeartHandshake, Truck, Award } from
 const FAQS = [
   {
     q: 'What is ARGHYA and why is it also searched as Arghyya or arghyya.com?',
-    a: 'ARGHYA (officially online at arghyya.com, commonly spelled or searched as Arghyya, Arghya Collections, or arghya.co) is India’s signature contemporary couture brand. We blend royal traditional Indian craftsmanship with modern silhouettes — delivering handcrafted designer sarees, festive lehengas, Navratri chaniya choli sets, and everyday ethnic kurtis directly to your doorstep across India.'
+    a: 'ARGHYA (officially online at arghyya.com, commonly spelled or searched as Arghyya, Arghya, or arghya.co) is India’s signature contemporary couture brand. We blend royal traditional Indian craftsmanship with modern silhouettes — delivering handcrafted designer sarees, festive lehengas, Navratri chaniya choli sets, and everyday ethnic kurtis directly to your doorstep across India.'
   },
   {
     q: 'Where can I buy original Arghya (Arghyya) collections?',
     a: 'Original and authentic ARGHYA outfits are exclusively available on our official flagship store at arghyya.com (and www.arghyya.com). Every product is backed by our authentic craft guarantee, premium fabric certification, and verified Cash on Delivery.'
   },
   {
-    q: 'Is arghyya.com the official store for Arghya Collections?',
+    q: 'Is arghyya.com the official store for Arghya?',
     a: 'Yes, arghyya.com is the verified official web boutique for ARGHYA (Arghyya Collections). You can browse our complete designer catalogue, apply exclusive seasonal coupons, and order with zero risk using Cash On Delivery.'
   },
   {
@@ -49,9 +49,9 @@ export const BrandSearchSection: React.FC = () => {
           ARGHYA — <span className="text-amber-600 dark:text-amber-400">Slay Everyday</span> with Authentic Indian Couture
         </h2>
         <p className="mt-3 text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed">
-          Welcome to <strong>ARGHYA</strong> (officially at <strong>arghyya.com</strong>, also widely searched as <strong>Arghyya</strong>, <strong>Arghya Collections</strong>, or <strong>arghya.co</strong>). 
+          Welcome to <strong>ARGHYA</strong> (officially at <strong>arghyya.com</strong>, also widely searched as <strong>Arghyya</strong>, <strong>Arghya</strong>, or <strong>arghya.co</strong>). 
           We craft timeless Indian ethnic fashion, festive chaniya choli sets, everyday mirror-work kurtis, 
-          and royal designer sarees designed to bring affordable luxury to women across India. Whether you searched for <em>Arghya</em>, <em>Arghyya</em>, <em>arghyya.com</em>, or <em>Arghya Collections</em>, this is the official atelier store with verified pan-India Cash on Delivery.
+          and royal designer sarees designed to bring affordable luxury to women across India. Whether you searched for <em>Arghya</em>, <em>Arghyya</em>, <em>arghyya.com</em>, or <em>Arghya</em>, this is the official atelier store with verified pan-India Cash on Delivery.
         </p>
       </div>
 

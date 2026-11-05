@@ -671,6 +671,21 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
         </div>
       </div>
+
+      {/* ── Quality Assurance Trust Banner (Image 1) - Just Above Footer ── */}
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 mb-4">
+        <div className="w-full rounded-2xl overflow-hidden shadow-lg border border-[#3b0d14] bg-[#290a0e] select-none">
+          <img
+            src="/images/home/quality_assurance_banner.png"
+            alt="925 Silver Purity Certificate, Free Shipping Across India, High Quality Material, 7 Days Exchange & Return"
+            width={1024}
+            height={188}
+            className="w-full h-auto object-contain block"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
     </div>
   );
 }

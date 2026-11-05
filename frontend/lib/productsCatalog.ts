@@ -2340,7 +2340,44 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     sizes: ['Free Size'],
   },
 
+  'mystery-jar': {
+    id: 'deal-mystery-jar-001',
+    name: 'Mystery Jar',
+    slug: 'mystery-jar',
+    description: `*Mystery Jar — Gift for Her Edition*
 
+Unveil the magic with our exclusive Mystery Jar! Packed with high-value jewellery surprises, each jar is thoughtfully curated to bring you a handpicked collection of exquisite necklaces, statement earrings, sparkling charms, and delicate accessories.
+
+*What's Inside Your Mystery Jar:*
+• Guaranteed 3 to 5 surprise jewellery pieces inside every jar
+• Handpicked assortment of Anti-Tarnish, American Diamond, and 925 Pure Silver finish pieces
+• Beautifully presented in a reusable luxury vintage glass jar wrapped with charms
+• Exceptional retail value worth up to ₹1,499+
+• The ultimate romantic, birthday, or festive surprise gift for her
+
+*Pricing Details:*
+• Special Hot Deal Price: ₹499 only (Flat 65% OFF)
+• Regular Value: ₹1,499.00
+• Shipping: Free Express Shipping across India
+
+*Quality & Durability Guarantee:*
+• Skin-safe, hypoallergenic materials
+• Durable anti-tarnish protective coating
+• Safe tamper-evident packaging`,
+    price: 499.00,
+    compare_at_price: 1499.00,
+    category: 'Hot Deals',
+    subcategory: 'Gift For Her',
+    fabric: 'Curated Anti-Tarnish & Silver-Finish Jewellery',
+    craft_type: 'Curated Mystery Gift Jar',
+    images: [
+      '/images/mystery_jar/mystery_jar_square.jpg',
+      '/images/mystery_jar/mystery_jar_main.jpg',
+      '/images/mystery_jar/mystery_jar_banner.jpg',
+    ],
+    sizes: ['Standard Mystery Jar'],
+    razorpay_url: 'https://rzp.io/rzp/mysteryjar',
+  },
 
 };
 

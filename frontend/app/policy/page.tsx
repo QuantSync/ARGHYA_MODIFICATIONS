@@ -69,7 +69,7 @@ const POLICIES = [
       'Promotional and sale prices are valid only for the duration of the specified sale event and may be withdrawn or altered without prior notice.',
       'All items purchased during a sale event are sold on a final-sale basis — returns, exchanges, and cancellations are not accepted.',
       'Discount codes and promotional offers cannot be combined with active sale prices unless explicitly stated in the offer terms.',
-      'Arghya Collections reserves the right to cancel any order placed at an erroneous price arising from a technical or typographical error on the website.',
+      'Arghya reserves the right to cancel any order placed at an erroneous price arising from a technical or typographical error on the website.',
       'In the event of order cancellation due to a pricing error, customers will be notified promptly and a full refund will be issued within 5 business days.',
       'Limited-edition and handcrafted couture pieces offered during sale events are available in strictly finite quantities — first come, first served.',
     ],
@@ -194,13 +194,13 @@ export default function PolicyPage() {
 
         <div className="text-center space-y-3 mb-14">
           <span className="inline-block text-[10px] uppercase tracking-[0.35em] font-mono font-semibold text-black dark:text-white border border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-900 px-3.5 py-1 rounded-full">
-            Arghya Collections
+            Arghya
           </span>
           <h1 className="text-4xl sm:text-5xl font-bold font-serif text-black dark:text-white">
             Our Policies
           </h1>
           <p className="text-sm text-neutral-600 dark:text-neutral-400 max-w-xl mx-auto leading-relaxed">
-            Transparency, trust, and timeless care — the cornerstones of everything we do at Arghya Collections.
+            Transparency, trust, and timeless care — the cornerstones of everything we do at Arghya.
           </p>
           <div className="flex flex-wrap justify-center gap-3 pt-4">
             {POLICIES.map((p) => (

@@ -96,7 +96,7 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({ isOpen, onClos
 
                 {/* Brand label */}
                 <span className="text-[10px] font-mono uppercase tracking-[0.25em] text-burgundy-700/60 dark:text-amber-500/60 font-bold">
-                  Arghya Collections
+                  Arghya
                 </span>
 
                 {/* Headline */}

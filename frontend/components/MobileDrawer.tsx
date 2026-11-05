@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X, Home, ShoppingBag, Sparkles, User, Shield, FileText, Info, Scale } from 'lucide-react';
+import { X, User } from 'lucide-react';
 
 interface MobileDrawerProps {
   isOpen: boolean;
@@ -16,45 +16,31 @@ interface MobileDrawerProps {
   onOpenProfile: () => void;
 }
 
-const NAV_ITEMS = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'NAVRATRI SPECIAL', href: '/products?category=Navratri', icon: Sparkles },
-  { name: 'ETHNIC KURTIS', href: '/products?category=Kurti', icon: Sparkles },
-  { name: 'SKIRTS', href: '/products?category=Skirt', icon: Sparkles },
-  { name: 'SAREES', href: '/sarees', icon: Sparkles },
-  { name: 'MODERN', href: '/products?category=Modern', icon: ShoppingBag },
-  { name: 'Policy', href: '/policy', icon: FileText },
+interface DrawerMenuItem {
+  name: string;
+  href: string;
+}
+
+const DRAWER_MENU_ITEMS: DrawerMenuItem[] = [
+  { name: 'CATEGORIES', href: '/products' },
+  { name: 'HOT DEALS', href: '/products?category=HotDeals' },
+  { name: 'ANTI - TARNISH', href: '/products?category=AntiTarnish' },
+  { name: '925 PURE SILVER', href: '/products?category=Silver' },
+  { name: 'ABOUT US', href: '/about' },
+  { name: 'POLICIES', href: '/policy' },
+  { name: 'CONTACT US', href: '/about#contact' },
 ];
 
 const drawerVariants = {
   hidden: { x: '-100%' },
   visible: {
     x: 0,
-    transition: {
-      duration: 0.28,
-      ease: [0.16, 1, 0.3, 1], // Native-feel buttery smooth cubic-bezier
-    },
+    transition: { duration: 0.28, ease: [0.16, 1, 0.3, 1] as [number,number,number,number] },
   },
   exit: {
     x: '-100%',
-    transition: {
-      duration: 0.22,
-      ease: [0.4, 0, 1, 1],
-    },
+    transition: { duration: 0.22, ease: [0.4, 0, 1, 1] as [number,number,number,number] },
   },
-};
-
-const itemVariants = {
-  hidden: { x: -12, opacity: 0 },
-  visible: (i: number) => ({
-    x: 0,
-    opacity: 1,
-    transition: {
-      delay: 0.05 + i * 0.025,
-      duration: 0.18,
-      ease: 'easeOut',
-    },
-  }),
 };
 
 export const MobileDrawer: React.FC<MobileDrawerProps> = ({
@@ -71,7 +57,7 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
     <AnimatePresence>
       {isOpen && (
         <>
-          {/* Smooth GPU-composited backdrop without expensive dynamic Gaussian blur */}
+          {/* Backdrop — tap anywhere outside to close */}
           <motion.div
             key="drawer-backdrop"
             initial={{ opacity: 0 }}
@@ -79,11 +65,11 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.22, ease: 'easeOut' }}
             onClick={onClose}
-            className="fixed inset-0 z-[1000] bg-black/65"
+            className="fixed inset-0 z-[1000] bg-black/60"
             style={{ willChange: 'opacity' }}
           />
 
-          {/* Left Sliding Drawer — Hardware-accelerated with will-change */}
+          {/* Sliding Drawer */}
           <motion.aside
             key="mobile-drawer"
             variants={drawerVariants}
@@ -91,122 +77,104 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
             animate="visible"
             exit="exit"
             style={{ willChange: 'transform' }}
-            className="fixed top-0 left-0 bottom-0 z-[1001] w-72 max-w-[85vw] flex flex-col bg-[#1A0408] dark:bg-stone-950 border-r border-amber-500/20 shadow-2xl overflow-y-auto"
+            className="fixed top-0 left-0 bottom-0 z-[1001] w-[300px] max-w-[88vw] flex flex-col bg-white dark:bg-neutral-950 border-r border-neutral-200 dark:border-neutral-800 shadow-2xl select-none"
           >
-            {/* Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-amber-500/15">
-              <div>
-                {/* ARGHYA logo in Bodoni Moda – luxury serif */}
-                <span
-                  className="text-2xl font-bold tracking-widest luxury-text-gradient"
-                  style={{ fontFamily: "'Bodoni Moda', 'Playfair Display', Georgia, serif", fontWeight: 700 }}
-                >
-                  ARGHYA
-                </span>
-                <p className="text-[9px] uppercase tracking-[0.25em] text-amber-300/70 -mt-0.5">
-                  SLAY EVERYDAY
-                </p>
-              </div>
+            {/* ── Header: Black bar with centred MENU + X close ── */}
+            <div className="w-full bg-black text-white px-5 py-5 flex items-center justify-between shrink-0">
+              <div className="w-7" />
+              <h2 className="font-sans font-bold text-sm tracking-[0.3em] text-white uppercase">
+                MENU
+              </h2>
               <button
+                type="button"
                 onClick={onClose}
-                className="p-2 rounded-xl text-amber-200 dark:text-stone-300 hover:bg-amber-500/15 dark:hover:bg-amber-500/10 transition-colors"
+                aria-label="Close menu"
+                className="w-7 h-7 flex items-center justify-center rounded-full text-white/80 hover:text-white hover:bg-white/10 transition-colors active:scale-90"
               >
-                <X size={20} />
+                <X size={18} />
               </button>
             </div>
 
-            {/* Nav items */}
-            <nav className="flex-1 px-4 py-5 space-y-1">
-              {NAV_ITEMS.map((item, i) => (
-                <motion.div
+            {/* ── Nav Items — Rectangular Rounded-Edge Button Cards ── */}
+            <nav className="flex-1 overflow-y-auto px-4 py-5 space-y-3 bg-white dark:bg-neutral-950">
+              {DRAWER_MENU_ITEMS.map((item) => (
+                <Link
                   key={item.name}
-                  custom={i}
-                  variants={itemVariants}
-                  initial="hidden"
-                  animate="visible"
+                  href={item.href}
+                  onClick={onClose}
+                  className="
+                    flex items-center justify-between
+                    w-full px-5 py-4
+                    rounded-xl
+                    border border-neutral-200 dark:border-neutral-800
+                    bg-white dark:bg-neutral-900
+                    text-neutral-900 dark:text-neutral-100
+                    hover:bg-neutral-900 hover:text-white hover:border-neutral-900
+                    dark:hover:bg-white dark:hover:text-black dark:hover:border-white
+                    transition-all duration-200
+                    active:scale-[0.98]
+                    group
+                    shadow-sm hover:shadow-md
+                  "
                 >
-                  <Link
-                    href={item.href}
-                    onClick={onClose}
-                    className="flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold uppercase tracking-widest text-[#F0E6D8] dark:text-stone-200 hover:bg-amber-500/10 hover:text-amber-200 dark:hover:text-amber-300 transition-all group"
-                  >
-                    <item.icon
-                      size={17}
-                      className="text-amber-300 dark:text-amber-400 group-hover:scale-110 transition-transform flex-shrink-0"
-                    />
+                  <span className="font-sans text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase">
                     {item.name}
-                  </Link>
-                </motion.div>
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all shrink-0"
+                  >
+                    <path d="M9 18l6-6-6-6" />
+                  </svg>
+                </Link>
               ))}
             </nav>
 
-            {/* Footer actions: Sign In, About Us, Terms & Conditions, Admin */}
-            <div className="px-4 pb-6 space-y-2 border-t border-amber-500/15 pt-4">
-              {/* 1. User Auth / Sign In */}
+            {/* ── Footer: Sign In / User Account (NO Admin button) ── */}
+            <div className="px-4 pb-6 pt-4 border-t border-neutral-100 dark:border-neutral-900 bg-neutral-50/80 dark:bg-neutral-900/40 shrink-0 space-y-2">
               {userLoggedIn ? (
-                <motion.div custom={6} variants={itemVariants} initial="hidden" animate="visible">
+                <>
+                  {/* Profile button */}
                   <button
+                    type="button"
                     onClick={() => { onOpenProfile(); onClose(); }}
-                    className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl bg-amber-500/8 border border-amber-500/20 hover:bg-amber-500/15 transition-colors"
+                    className="w-full flex items-center justify-between px-5 py-3.5 rounded-xl bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 text-xs font-semibold text-neutral-800 dark:text-neutral-200 hover:border-black dark:hover:border-white transition-colors shadow-sm"
                   >
-                    <User size={16} className="text-amber-300 dark:text-amber-400 flex-shrink-0" />
-                    <span className="text-xs font-semibold text-[#F0E6D8] dark:text-amber-300 truncate max-w-[140px]">
-                      {userName}
-                    </span>
+                    <div className="flex items-center gap-2 truncate">
+                      <User size={15} className="shrink-0 text-neutral-500" />
+                      <span className="truncate">{userName || 'My Account'}</span>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5} strokeLinecap="round" strokeLinejoin="round" className="w-3.5 h-3.5 text-neutral-400 shrink-0">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
                   </button>
+
+                  {/* Sign Out */}
                   <button
+                    type="button"
                     onClick={() => { onLogout(); onClose(); }}
-                    className="w-full mt-1 px-4 py-2.5 rounded-xl text-xs font-semibold uppercase tracking-widest text-red-400 dark:text-red-400 hover:bg-red-950/30 transition-colors text-left"
+                    className="w-full px-5 py-2.5 text-center text-[11px] font-semibold uppercase tracking-widest text-red-600 dark:text-red-400 hover:underline transition-colors"
                   >
                     Sign Out
                   </button>
-                </motion.div>
+                </>
               ) : (
-                <motion.div custom={6} variants={itemVariants} initial="hidden" animate="visible">
-                  <button
-                    onClick={() => { onOpenLogin(); onClose(); }}
-                    className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold uppercase tracking-widest text-[#F0E6D8] dark:text-stone-200 hover:bg-amber-500/10 hover:text-amber-200 dark:hover:text-amber-300 transition-all"
-                  >
-                    <User size={17} className="text-amber-300 dark:text-amber-400 flex-shrink-0" />
-                    Sign In
-                  </button>
-                </motion.div>
-              )}
-
-              {/* 2. About Us */}
-              <motion.div custom={7} variants={itemVariants} initial="hidden" animate="visible">
-                <Link
-                  href="/about"
-                  onClick={onClose}
-                  className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold uppercase tracking-widest text-[#F0E6D8] dark:text-stone-200 hover:bg-amber-500/10 hover:text-amber-200 dark:hover:text-amber-300 transition-all"
-                >
-                  <Info size={17} className="text-amber-300 dark:text-amber-400 flex-shrink-0" />
-                  About Us
-                </Link>
-              </motion.div>
-
-              {/* 3. Terms & Conditions */}
-              <motion.div custom={8} variants={itemVariants} initial="hidden" animate="visible">
-                <Link
-                  href="/terms"
-                  onClick={onClose}
-                  className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold uppercase tracking-widest text-[#F0E6D8] dark:text-stone-200 hover:bg-amber-500/10 hover:text-amber-200 dark:hover:text-amber-300 transition-all"
-                >
-                  <Scale size={17} className="text-amber-300 dark:text-amber-400 flex-shrink-0" />
-                  Terms & Conditions
-                </Link>
-              </motion.div>
-
-              {/* 4. Admin Button */}
-              <motion.div custom={9} variants={itemVariants} initial="hidden" animate="visible">
+                /* Sign In button — full-width rounded rectangular */
                 <button
-                  onClick={() => { onOpenAdminLogin(); onClose(); }}
-                  className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-semibold uppercase tracking-widest text-amber-300 dark:text-amber-300 hover:bg-amber-500/10 border border-amber-400/25 dark:border-amber-500/20 transition-all"
+                  type="button"
+                  onClick={() => { onOpenLogin(); onClose(); }}
+                  className="w-full flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-black dark:bg-white text-white dark:text-black text-xs font-bold tracking-[0.2em] uppercase hover:opacity-90 active:scale-[0.98] transition-all shadow-sm"
                 >
-                  <Shield size={17} className="text-amber-400 dark:text-amber-400 flex-shrink-0" />
-                  Admin
+                  <User size={15} />
+                  <span>SIGN IN</span>
                 </button>
-              </motion.div>
+              )}
             </div>
           </motion.aside>
         </>
@@ -214,3 +182,5 @@ export const MobileDrawer: React.FC<MobileDrawerProps> = ({
     </AnimatePresence>
   );
 };
+
+export default MobileDrawer;

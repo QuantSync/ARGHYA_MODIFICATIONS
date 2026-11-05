@@ -252,6 +252,10 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
       'navratri rose print garbha skirt': GARBHA_ROSE_LINK,
       'navratri design garbha skirt': GARBHA_ROSE_LINK,
 
+      // ── Hot Deals & Specials ───────────────────────────────────────────────
+      'mystery-jar': 'https://rzp.io/rzp/mysteryjar',
+      'mystery jar': 'https://rzp.io/rzp/mysteryjar',
+
       // ── Non-coupon products ─────────────────────────────────────────────────
       'blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blueblossomfloralkurti',
       'pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',
@@ -395,7 +399,7 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
         key: process.env.NEXT_PUBLIC_RAZORPAY_KEY || 'rzp_live_TgZrGbzaYRBa90',
         amount: paymentData.amount,
         currency: paymentData.currency,
-        name: 'ARGHYA COLLECTIONS',
+        name: 'ARGHYA',
         description: `Buy Now — ${product.name}`,
         order_id: paymentData.id,
         handler: async (response: any) => {

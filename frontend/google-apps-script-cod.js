@@ -213,7 +213,7 @@ function doPost(e) {
  */
 function doGet(e) {
   return ContentService
-    .createTextOutput("✅ Arghya Collections COD Webhook is ACTIVE and READY to accept orders.")
+    .createTextOutput("✅ Arghya COD Webhook is ACTIVE and READY to accept orders.")
     .setMimeType(ContentService.MimeType.TEXT);
 }
 

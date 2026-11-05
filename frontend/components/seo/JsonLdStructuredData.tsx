@@ -14,7 +14,7 @@ export const JsonLdStructuredData: React.FC = () => {
       'Arghyya',
       'arghyya.com',
       'www.arghyya.com',
-      'Arghya Collections',
+      'Arghya',
       'Arghyya Collections',
       'arghya.co',
       'arghya.com',
@@ -28,7 +28,7 @@ export const JsonLdStructuredData: React.FC = () => {
     url: BASE_URL,
     logo: `${BASE_URL}/images/arghya_logo_card.png`,
     image: `${BASE_URL}/images/arghya_logo_card.png`,
-    description: 'ARGHYA (officially at arghyya.com, also widely searched as Arghya, Arghyya, Arghya Collections, or arghya.co) is India’s signature contemporary couture house specializing in affordable luxury designer sarees, royal lehengas, Navratri chaniya choli sets, and festive kurtis.',
+    description: 'ARGHYA (officially at arghyya.com, also widely searched as Arghya, Arghyya, Arghya, or arghya.co) is India’s signature contemporary couture house specializing in affordable luxury designer sarees, royal lehengas, Navratri chaniya choli sets, and festive kurtis.',
     slogan: 'Slay Everyday',
     email: 'care.arghya@gmail.com',
     telephone: '+91-8882827148',
@@ -56,7 +56,7 @@ export const JsonLdStructuredData: React.FC = () => {
     '@id': `${BASE_URL}/#website`,
     url: BASE_URL,
     name: 'ARGHYA',
-    alternateName: ['Arghya Modifications', 'Arghyya', 'arghyya.com', 'Arghya Collections'],
+    alternateName: ['Arghya Modifications', 'Arghyya', 'arghyya.com', 'Arghya'],
     description: 'Official online home of ARGHYA & Arghyya (arghyya.com) — Luxury Indian Couture & Designer Sarees',
     publisher: {
       '@id': `${BASE_URL}/#organization`
@@ -81,7 +81,7 @@ export const JsonLdStructuredData: React.FC = () => {
         name: 'What is ARGHYA and is it also known as Arghyya or arghyya.com?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ARGHYA (hosted at arghyya.com, also widely searched as Arghyya or Arghya Collections) is India’s premier luxury fashion atelier specializing in affordable premium designer sarees, festive kurtis, Navratri chaniya cholis, and royal ethnic wear.'
+          text: 'ARGHYA (hosted at arghyya.com, also widely searched as Arghyya or Arghya) is India’s premier luxury fashion atelier specializing in affordable premium designer sarees, festive kurtis, Navratri chaniya cholis, and royal ethnic wear.'
         }
       },
       {

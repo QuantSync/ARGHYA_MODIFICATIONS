@@ -140,7 +140,7 @@ export const AdminLoginModal: React.FC<AdminLoginModalProps> = ({ isOpen, onClos
                         ADMIN ACCESS
                       </h2>
                       <p className="text-xs text-stone-400 tracking-wider mt-1">
-                        Arghya Collections · Secure Portal
+                        Arghya · Secure Portal
                       </p>
                     </div>
                   </div>

@@ -195,6 +195,100 @@ export const HomeCategoryBannerGrid: React.FC = () => {
           })}
         </div>
       </div>
+
+      {/* ═══════════════════════════════════════════════════════
+          SECTION 3: BUY 2 AT ₹ 499 + FREE SURPRISE GIFTS (Image 4)
+          ═══════════════════════════════════════════════════════ */}
+      <div className="pt-2 sm:pt-4">
+        <Link
+          href="/products?category=HotDeals"
+          className="group block relative w-full aspect-[1024/253] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#470813] bg-[#3b0d14] cursor-pointer"
+          title="Buy 2 at ₹499 + Free Surprise Gifts"
+        >
+          <Image
+            src="/images/home/buy2_at_499_banner.png"
+            alt="Buy 2 at ₹499 + Free Surprise Gifts"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1200px"
+            className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.012]"
+            priority
+          />
+          <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border-2 border-transparent group-hover:border-white/40 transition-colors pointer-events-none" />
+        </Link>
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════
+          SECTION 4: HOT DEALS - UPTO 70% OFF (Image 2 & Image 3)
+          ═══════════════════════════════════════════════════════ */}
+      <div className="space-y-3.5 sm:space-y-5 pt-2 sm:pt-4">
+        <div className="text-center">
+          <Link
+            href="/products?category=HotDeals"
+            className="inline-flex items-center justify-center gap-3 group"
+          >
+            <div className="h-px bg-neutral-300 dark:bg-neutral-700 w-8 sm:w-16 transition-all group-hover:w-12 sm:group-hover:w-20" />
+            <h2 className="font-sans text-sm sm:text-base md:text-lg font-bold tracking-[0.25em] uppercase text-neutral-900 dark:text-neutral-100 group-hover:text-black dark:group-hover:text-white transition-colors">
+              HOT DEALS - UPTO 70% OFF
+            </h2>
+            <div className="h-px bg-neutral-300 dark:bg-neutral-700 w-8 sm:w-16 transition-all group-hover:w-12 sm:group-hover:w-20" />
+          </Link>
+        </div>
+
+        {/* 2-Column Grid for Image 2 (Gift for Her / Mystery Jar) and Image 3 (Combo) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 md:gap-5">
+          {/* Card 1: Gift for Her (Mystery Jar) -> Takes user to individual product catalogue /products/mystery-jar */}
+          <Link
+            href="/products/mystery-jar"
+            className="group block relative w-full aspect-[1024/662] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
+            title="Explore Mystery Jar - Gift For Her"
+          >
+            <Image
+              src="/images/home/deal_gift_for_her.jpg"
+              alt="Gift for Her - Mystery Jar Starts from ₹499"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+              className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.018]"
+            />
+            <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-black/30 dark:group-hover:border-white/40 transition-colors pointer-events-none" />
+          </Link>
+
+          {/* Card 2: Combo Earrings + Pendants -> Takes user to Hot Deals / Combo section */}
+          <Link
+            href="/products?category=HotDeals"
+            className="group block relative w-full aspect-[1024/664] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
+            title="Explore Combo - Earrings + Pendants"
+          >
+            <Image
+              src="/images/home/deal_combo_earrings_pendants.jpg"
+              alt="Combo Earrings + Pendants Starts from ₹199"
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+              className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.018]"
+            />
+            <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-black/30 dark:group-hover:border-white/40 transition-colors pointer-events-none" />
+          </Link>
+        </div>
+      </div>
+
+      {/* ═══════════════════════════════════════════════════════
+          SECTION 5: QUALITY ASSURANCE STRIP (Image 1)
+          ═══════════════════════════════════════════════════════ */}
+      <div className="pt-2 sm:pt-4">
+        <Link
+          href="/policy"
+          className="group block relative w-full aspect-[1024/188] rounded-xl sm:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#3b0d14] bg-[#290a0e] cursor-pointer"
+          title="ARGHYA Quality Assurance & Certified Policies"
+        >
+          <Image
+            src="/images/home/quality_assurance_banner.png"
+            alt="925 Silver Purity Certificate, Free Shipping Across India, High Quality Material, 7 Days Exchange & Return"
+            fill
+            sizes="(max-width: 1024px) 100vw, 1200px"
+            className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.008]"
+          />
+          <div className="absolute inset-0 rounded-xl sm:rounded-2xl border-2 border-transparent group-hover:border-white/30 transition-colors pointer-events-none" />
+        </Link>
+      </div>
     </div>
   );
 };

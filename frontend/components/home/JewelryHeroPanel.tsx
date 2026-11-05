@@ -62,42 +62,48 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ label, href, variant, image
   );
 };
 
-export const JewelryHeroPanel: React.FC = () => {
+interface JewelryHeroPanelProps {
+  hideBanner?: boolean;
+}
+
+export const JewelryHeroPanel: React.FC<JewelryHeroPanelProps> = ({ hideBanner = false }) => {
   return (
     <section className="w-full bg-white select-none">
-      {/* ── 0. Top Announcement Bar (From Image 1) ── */}
+      {/* ── 0. Top Announcement Bar ── */}
       <div className="w-full bg-black text-white text-[11px] sm:text-xs py-2 tracking-[0.25em] font-sans font-medium text-center uppercase select-none border-b border-stone-800">
         FREE SHIPPING EVERYWHERE
       </div>
 
-      {/* ── 1. Black Hero Banner (BUY 2 @ 2,299 + Model) ── */}
-      <div className="w-full bg-black text-white overflow-hidden relative">
-        <div className="w-full flex flex-col md:flex-row items-center justify-between min-h-[380px] sm:min-h-[440px] md:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px]">
-          {/* Left Text Column */}
-          <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col items-center md:items-start justify-center px-6 sm:px-12 md:pl-16 lg:pl-24 xl:pl-32 py-12 md:py-8 z-10 text-center md:text-left shrink-0">
-            <span className="font-serif text-sm sm:text-base md:text-lg tracking-[0.35em] uppercase text-stone-300 mb-3 sm:mb-4">
-              B U Y
-            </span>
+      {/* ── 1. Black Hero Banner (BUY 2 @ 2,299 + Model) — hidden when hideBanner=true ── */}
+      {!hideBanner && (
+        <div className="w-full bg-black text-white overflow-hidden relative">
+          <div className="w-full flex flex-col md:flex-row items-center justify-between min-h-[380px] sm:min-h-[440px] md:min-h-[500px] lg:min-h-[560px] xl:min-h-[600px]">
+            {/* Left Text Column */}
+            <div className="w-full md:w-5/12 lg:w-5/12 flex flex-col items-center md:items-start justify-center px-6 sm:px-12 md:pl-16 lg:pl-24 xl:pl-32 py-12 md:py-8 z-10 text-center md:text-left shrink-0">
+              <span className="font-serif text-sm sm:text-base md:text-lg tracking-[0.35em] uppercase text-stone-300 mb-3 sm:mb-4">
+                B U Y
+              </span>
 
-            <h1 className="font-sans font-bold text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight leading-none text-white mb-6 sm:mb-8 flex items-baseline gap-2 sm:gap-3">
-              <span className="font-sans font-medium text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem]">2 @</span>
-              <span>2,299</span>
-            </h1>
+              <h1 className="font-sans font-bold text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] tracking-tight leading-none text-white mb-6 sm:mb-8 flex items-baseline gap-2 sm:gap-3">
+                <span className="font-sans font-medium text-4xl sm:text-5xl md:text-6xl lg:text-[4.75rem]">2 @</span>
+                <span>2,299</span>
+              </h1>
 
-            <Link
-              href="/products"
-              className="inline-block border border-white text-white font-serif text-xs sm:text-sm tracking-[0.25em] uppercase px-8 sm:px-10 py-2.5 sm:py-3 hover:bg-white hover:text-black transition-all duration-300 active:scale-95"
-            >
-              SHOP NOW
-            </Link>
-          </div>
+              <Link
+                href="/products"
+                className="inline-block border border-white text-white font-serif text-xs sm:text-sm tracking-[0.25em] uppercase px-8 sm:px-10 py-2.5 sm:py-3 hover:bg-white hover:text-black transition-all duration-300 active:scale-95"
+              >
+                SHOP NOW
+              </Link>
+            </div>
 
-          {/* Right Model Photography Column with 3D Pop-Out Zoom Effect - Flush to Rightmost Edge */}
-          <div className="w-full md:w-7/12 lg:w-7/12 h-[380px] sm:h-[440px] md:h-[500px] lg:h-[560px] xl:h-[600px] relative flex items-end justify-end overflow-visible ml-auto">
-            <Model3DHeroWidget />
+            {/* Right Model Photography Column with 3D Pop-Out Zoom Effect - Flush to Rightmost Edge */}
+            <div className="w-full md:w-7/12 lg:w-7/12 h-[380px] sm:h-[440px] md:h-[500px] lg:h-[560px] xl:h-[600px] relative flex items-end justify-end overflow-visible ml-auto">
+              <Model3DHeroWidget />
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* ── 2. Alternating Geometric Categories Section ── */}
       <div className="w-full bg-white py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-12 border-b border-stone-200">

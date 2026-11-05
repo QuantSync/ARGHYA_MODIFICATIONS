@@ -171,7 +171,7 @@ export const FestiveSalePopupModal: React.FC<FestiveSalePopupModalProps> = ({
               </motion.div>
               
               <motion.p variants={STAGGER_ITEM} className="text-sm text-burgundy-800/80 dark:text-stone-300 leading-relaxed max-w-sm mx-auto font-medium">
-                Celebrate the season of joy with Arghya Collections. Step into the festivities with handwoven Navratri specials and vibrant ethnic wear.
+                Celebrate the season of joy with Arghya. Step into the festivities with handwoven Navratri specials and vibrant ethnic wear.
               </motion.p>
               
               <motion.div variants={STAGGER_ITEM} className="pt-2">

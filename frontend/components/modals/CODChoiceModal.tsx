@@ -162,7 +162,7 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
             {/* Header */}
             <div className="mb-6 pr-6">
               <p className="text-[10px] font-mono font-bold uppercase tracking-widest text-neutral-500 dark:text-neutral-400 mb-1">
-                ARGHYA COLLECTIONS
+                ARGHYA
               </p>
               <h2
                 id="cod-modal-title"

@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'ARGHYA | Arghyya Luxury Couture',
     short_name: 'Arghya',
-    description: 'ARGHYA (also searched as Arghyya / Arghya Collections) — Affordable Premium Indian Fashion, Designer Sarees, Navratri Chaniya Choli & Luxury Kurtis.',
+    description: 'ARGHYA (also searched as Arghyya / Arghya) — Affordable Premium Indian Fashion, Designer Sarees, Navratri Chaniya Choli & Luxury Kurtis.',
     start_url: '/',
     display: 'standalone',
     background_color: '#120304',

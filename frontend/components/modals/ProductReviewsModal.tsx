@@ -516,7 +516,7 @@ export const ProductReviewsModal: React.FC<ProductReviewsModalProps> = ({
           {/* Compact Footer Bar */}
           <div className="px-4 py-2.5 bg-stone-900 border-t border-amber-500/20 flex items-center justify-between text-[11px]">
             <span className="text-stone-400 truncate pr-2">
-              Arghya Collections • Authentic Artisan Guarantee
+              Arghya • Authentic Artisan Guarantee
             </span>
             <button
               onClick={onClose}

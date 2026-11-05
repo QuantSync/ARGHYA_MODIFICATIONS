@@ -77,7 +77,7 @@ export const WhatsAppModalWidget: React.FC<WhatsAppModalWidgetProps> = ({ isOpen
               {/* Automated Welcome Bubble */}
               <div className="p-3.5 rounded-2xl rounded-tl-xs bg-[#202c33] border border-white/5 text-xs text-stone-200 leading-relaxed shadow-sm">
                 <div className="font-semibold text-[#25D366] mb-1 flex items-center justify-between">
-                  <span>ARGHYA Collections</span>
+                  <span>ARGHYA</span>
                   <CheckCheck size={14} className="text-[#53bdeb]" />
                 </div>
                 Namaste! 🙏 Welcome to Arghyya Helpline. Click below to chat directly with our couture care team on WhatsApp.

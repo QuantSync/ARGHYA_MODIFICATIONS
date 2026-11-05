@@ -325,3 +325,4 @@ export const PrivacyPolicyFullDocument: React.FC<{ compact?: boolean }> = ({ com
     </div>
   );
 };
+

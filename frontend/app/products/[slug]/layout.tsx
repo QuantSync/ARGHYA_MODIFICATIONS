@@ -40,7 +40,7 @@ export async function generateMetadata({
       'arghya',
       'arghyya',
       'arghyya.com',
-      'arghya collections',
+      'arghya',
       'arghyya collections',
       'arghya.co',
       product.category.toLowerCase(),
