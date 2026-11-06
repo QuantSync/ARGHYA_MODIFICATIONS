@@ -265,6 +265,28 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
       'golden-pearl-hoop-combo':       'https://rzp.io/rzp/goldenpearlandhoopcombo',
       'white-red-petal-studs-combo':   'https://rzp.io/rzp/whiteandredpetalstudscombo',
 
+      // ── Anti Tarnish Modern Earrings ──────────────────────────────────────
+      'celeste-pearl-cascade-earrings':              'https://rzp.io/rzp/celestepearlcascadeearings',
+      'crystal-square-radiance-studs':               'https://rzp.io/rzp/crystalsquareradiancestuds',
+      'starlight-rhinestone-fringe-earrings':        'https://rzp.io/rzp/starlightrhinestonefringeearin',
+      'heartbeat-crystal-loop-earrings':             'https://rzp.io/rzp/heartbeatcrystalloopearrings',
+      'emerald-aura-teardrop-earrings':              'https://rzp.io/rzp/emeraldaurateardropearrings',
+      'golden-pearl-halo-earrings':                  'https://rzp.io/rzp/goldenpearlhaloearrings',
+      'blush-blossom-crystal-hoop-earrings':         'https://rzp.io/rzp/blushblossomcrystalhoopearring',
+      'golden-butterfly-dreams-gold-plated-earrings': 'https://rzp.io/rzp/goldenbutterflydreamsgoldplate',
+      'turquoise-charm-crystal-drops':               'https://rzp.io/rzp/turquoisecharmcrystaldrops',
+      'pearl-bow-elegance-hoop-earrings':            'https://rzp.io/rzp/pearlbowelegancehoopearings',
+      'blush-blossom-pearl-earrings':                'https://rzp.io/rzp/blushblossompearlearrings',
+      'golden-pearl-loop-studs':                     'https://rzp.io/rzp/goldenpearlloopstuds',
+      'crystal-cascade-drop-earrings':               'https://rzp.io/rzp/crystalcascadedrop',
+      'ivory-petal-bloom-earrings':                  'https://rzp.io/rzp/ivorypetalbloomearings',
+      'ruby-maroon-petal-studs':                     'https://rzp.io/rzp/rubymaroonpetalstuds',
+      'crystal-butterfly-gleam-studs':               'https://rzp.io/rzp/crystalbutterflygleamstuds',
+      'crimson-arc-statement-earrings':              'https://rzp.io/rzp/crimsonarcstatementearrings',
+      'royal-pearl-crystal-hoops':                   'https://rzp.io/rzp/royalpearlcrystalhoops',
+      'pearl-bow-sparkle-studs':                     'https://rzp.io/rzp/pearlbowsparklestuds',
+      'midnight-triple-heart-drops':                 'https://rzp.io/rzp/midnighttripleheartdrops',
+
       // ── Non-coupon products ─────────────────────────────────────────────────
       'blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blueblossomfloralkurti',
       'pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',

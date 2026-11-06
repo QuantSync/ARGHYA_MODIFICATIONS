@@ -2140,6 +2140,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/celeste_pearl_cascade_earrings/celeste_pearl_cascade_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/celestepearlcascadeearings',
   },
 
   'crystal-square-radiance-studs': {
@@ -2157,6 +2158,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/crystal_square_radiance_studs/crystal_square_radiance_studs_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crystalsquareradiancestuds',
   },
 
   'starlight-rhinestone-fringe-earrings': {
@@ -2174,6 +2176,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/starlight_rhinestone_fringe_earrings/starlight_rhinestone_fringe_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/starlightrhinestonefringeearin',
   },
 
   'heartbeat-crystal-loop-earrings': {
@@ -2191,6 +2194,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/heartbeat_crystal_loop_earrings/heartbeat_crystal_loop_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/heartbeatcrystalloopearrings',
   },
 
   'emerald-aura-teardrop-earrings': {
@@ -2208,6 +2212,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/emerald_aura_teardrop_earrings/emerald_aura_teardrop_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldaurateardropearrings',
   },
 
   'golden-pearl-halo-earrings': {
@@ -2225,6 +2230,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/golden_pearl_halo_earrings/golden_pearl_halo_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldenpearlhaloearrings',
   },
 
   'blush-blossom-crystal-hoop-earrings': {
@@ -2242,6 +2248,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/blush_blossom_crystal_hoop_earrings/blush_blossom_crystal_hoop_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blushblossomcrystalhoopearring',
   },
 
   'golden-butterfly-dreams-gold-plated-earrings': {
@@ -2259,6 +2266,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/golden_butterfly_dreams_gold_plated_earrings/golden_butterfly_dreams_gold_plated_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldenbutterflydreamsgoldplate',
   },
 
   'turquoise-charm-crystal-drops': {
@@ -2276,6 +2284,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/turquoise_charm_crystal_drops/turquoise_charm_crystal_drops_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/turquoisecharmcrystaldrops',
   },
 
   'pearl-bow-elegance-hoop-earrings': {
@@ -2293,6 +2302,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/pearl_bow_elegance_hoop_earrings/pearl_bow_elegance_hoop_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/pearlbowelegancehoopearings',
   },
 
   'blush-blossom-pearl-earrings': {
@@ -2310,6 +2320,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/blush_blossom_pearl_earrings/blush_blossom_pearl_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blushblossompearlearrings',
   },
 
   'golden-pearl-loop-studs': {
@@ -2327,6 +2338,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/golden_pearl_loop_studs/golden_pearl_loop_studs_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldenpearlloopstuds',
   },
 
   'crystal-cascade-drop-earrings': {
@@ -2344,6 +2356,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/crystal_cascade_drop_earrings/crystal_cascade_drop_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crystalcascadedrop',
   },
 
   'ivory-petal-bloom-earrings': {
@@ -2361,6 +2374,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/ivory_petal_bloom_earrings/ivory_petal_bloom_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/ivorypetalbloomearings',
   },
 
   'ruby-maroon-petal-studs': {
@@ -2378,6 +2392,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/ruby_maroon_petal_studs/ruby_maroon_petal_studs_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/rubymaroonpetalstuds',
   },
 
   'crystal-butterfly-gleam-studs': {
@@ -2395,6 +2410,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/crystal_butterfly_gleam_studs/crystal_butterfly_gleam_studs_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crystalbutterflygleamstuds',
   },
 
   'crimson-arc-statement-earrings': {
@@ -2412,6 +2428,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/crimson_arc_statement_earrings/crimson_arc_statement_earrings_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/crimsonarcstatementearrings',
   },
 
   'royal-pearl-crystal-hoops': {
@@ -2429,6 +2446,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/royal_pearl_crystal_hoops/royal_pearl_crystal_hoops_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/royalpearlcrystalhoops',
   },
 
   'pearl-bow-sparkle-studs': {
@@ -2446,6 +2464,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/pearl_bow_sparkle_studs/pearl_bow_sparkle_studs_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/pearlbowsparklestuds',
   },
 
   'midnight-triple-heart-drops': {
@@ -2463,6 +2482,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
       '/images/modern_earrings/midnight_triple_heart_drops/midnight_triple_heart_drops_1.png',
     ],
     sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/midnighttripleheartdrops',
   },
 
   'mystery-jar': {
@@ -2533,7 +2553,8 @@ Embrace a whimsical, fairy-core aesthetic with this charming necklace. Multiple 
     fabric: 'Anti-Tarnish Finish',
     craft_type: 'Butterfly Charm Combo',
     images: [
-      '/images/modern_pendants/meadow_dance_butterfly/meadow_dance_butterfly_1.png',
+      '/images/combos/the_meadow_dance_butterfly_combo/the_meadow_dance_butterfly_combo_1.png',
+      '/images/combos/the_meadow_dance_butterfly_combo/the_meadow_dance_butterfly_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/meadowdancebutterflycombo',
@@ -2565,7 +2586,8 @@ Channel your inner street-style icon with this bold, chunky silver chain. Featur
     fabric: 'Anti-Tarnish Silver Coating',
     craft_type: 'Chunky Chain Combo',
     images: [
-      '/images/modern_pendants/edgy_cross_pendant_chunky_chain/edgy_cross_pendant_chunky_chain_1.png',
+      '/images/combos/the_urban_rebel_cross_combo/the_urban_rebel_cross_combo_1.png',
+      '/images/combos/the_urban_rebel_cross_combo/the_urban_rebel_cross_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/urbanrebelcrosscombo',
@@ -2597,7 +2619,8 @@ A perfect pair of contrasting heart station necklaces — one in dramatic black 
     fabric: 'Anti-Tarnish Finish',
     craft_type: 'Heart Station Necklace Combo',
     images: [
-      '/images/modern_pendants/pastel_pink_heart_station_necklace/pastel_pink_heart_station_necklace_1.png',
+      '/images/combos/black_pink_heart_station_combo/black_pink_heart_station_combo_1.png',
+      '/images/combos/black_pink_heart_station_combo/black_pink_heart_station_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/blackpinkheartstationcombo',
@@ -2629,7 +2652,10 @@ Express timeless charm with the Golden Twin Hearts Charm Necklace. Featuring two
     fabric: 'Anti-Tarnish Gold Finish',
     craft_type: 'Twin Heart Necklace Combo',
     images: [
-      '/images/modern_pendants/pastel_pink_heart_station_necklace/pastel_pink_heart_station_necklace_1.png',
+      '/images/combos/golden_twin_loop_combo/golden_twin_loop_combo_1.png',
+      '/images/combos/golden_twin_loop_combo/golden_twin_loop_combo_2.png',
+      '/images/combos/golden_twin_loop_combo/golden_twin_loop_combo_3.jpeg',
+      '/images/combos/golden_twin_loop_combo/golden_twin_loop_combo_4.jpeg',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/goldentwinloopcombo',
@@ -2662,7 +2688,8 @@ Add a delicate and playful touch to your jewellery collection with the Golden Bu
     fabric: 'Anti-Tarnish Gold Finish',
     craft_type: 'Golden Necklace Combo',
     images: [
-      '/images/modern_pendants/meadow_dance_butterfly/meadow_dance_butterfly_1.png',
+      '/images/combos/golden_pretty_combo/golden_pretty_combo_1.png',
+      '/images/combos/golden_pretty_combo/golden_pretty_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/goldenpreetycombo',
@@ -2693,7 +2720,8 @@ Bring a touch of sophistication to your look with these Pearl Bow Elegance Hoop 
     fabric: 'Anti-Tarnish Finish, Faux Pearl',
     craft_type: 'Pearl Earring Combo',
     images: [
-      '/images/modern_earrings/pearl_bow_elegance_hoop_earrings/pearl_bow_elegance_hoop_earrings_1.png',
+      '/images/combos/golden_pearl_hoop_combo/golden_pearl_hoop_combo_1.png',
+      '/images/combos/golden_pearl_hoop_combo/golden_pearl_hoop_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/goldenpearlandhoopcombo',
@@ -2726,7 +2754,8 @@ Inspired by the beauty of blooming flowers, these Ivory Petal Earrings bring eff
     fabric: 'Anti-Tarnish Finish',
     craft_type: 'Floral Petal Studs Combo',
     images: [
-      '/images/modern_earrings/ivory_petal_bloom_earrings/ivory_petal_bloom_earrings_1.png',
+      '/images/combos/white_red_petal_studs_combo/white_red_petal_studs_combo_1.png',
+      '/images/combos/white_red_petal_studs_combo/white_red_petal_studs_combo_2.png',
     ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/whiteandredpetalstudscombo',
