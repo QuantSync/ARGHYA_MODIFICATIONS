@@ -198,6 +198,13 @@ export const Navbar: React.FC = () => {
             
           </div>
         </div>
+
+        {/* ── Tape: Free Shipping Pan India (Image 2 Red Zone) ── */}
+        <div className="w-full bg-black text-white py-1.5 sm:py-2 px-4 border-t border-neutral-800 text-center select-none shadow-xs">
+          <p className="text-[11px] sm:text-xs md:text-sm font-semibold tracking-[0.25em] sm:tracking-[0.3em] uppercase text-neutral-100 flex items-center justify-center gap-2">
+            <span>Free Shipping Pan India</span>
+          </p>
+        </div>
       </header>
 
       {/* ── Modals & Overlays ── */}
