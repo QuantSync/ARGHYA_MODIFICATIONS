@@ -1,14 +1,15 @@
 'use client';
 
 /**
- * ViewToggle — Centered pill/slider toggle for switching between
+ * ViewToggle — Rectangular with rounded corners slider toggle for switching between
  * Horizontal (grid) and Vertical (card) product views.
  *
- * Theme: strictly black-and-white with semi-transparent backdrop.
+ * Theme: premium high-contrast monochrome with backdrop blur.
  * Accessibility: role="tablist", keyboard arrow-key navigation, visible focus ring.
  */
 
 import React from 'react';
+import { LucideIcon, LayoutGrid, Rows3 } from 'lucide-react';
 
 export type ViewMode = 'horizontal' | 'vertical';
 
@@ -17,47 +18,56 @@ interface ViewToggleProps {
   onChange: (mode: ViewMode) => void;
 }
 
-const OPTIONS: { mode: ViewMode; label: string; icon: string }[] = [
-  { mode: 'horizontal', label: 'Horizontal View', icon: '⊞' },
-  { mode: 'vertical',   label: 'Vertical View',   icon: '☰' },
+const OPTIONS: { mode: ViewMode; label: string; icon: LucideIcon }[] = [
+  { mode: 'horizontal', label: 'HORIZONTAL VIEW', icon: LayoutGrid },
+  { mode: 'vertical',   label: 'VERTICAL VIEW',   icon: Rows3 },
 ];
 
 export const ViewToggle: React.FC<ViewToggleProps> = ({ viewMode, onChange }) => {
   const activeIdx = viewMode === 'horizontal' ? 0 : 1;
 
   const handleKeyDown = (e: React.KeyboardEvent, mode: ViewMode) => {
-    if (e.key === 'ArrowRight' && mode === 'horizontal') { e.preventDefault(); onChange('vertical'); }
-    if (e.key === 'ArrowLeft'  && mode === 'vertical')   { e.preventDefault(); onChange('horizontal'); }
-    if (e.key === 'Enter' || e.key === ' ')               { e.preventDefault(); onChange(mode); }
+    if (e.key === 'ArrowRight' && mode === 'horizontal') {
+      e.preventDefault();
+      onChange('vertical');
+    }
+    if (e.key === 'ArrowLeft' && mode === 'vertical') {
+      e.preventDefault();
+      onChange('horizontal');
+    }
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      onChange(mode);
+    }
   };
 
   return (
     <div className="flex justify-center my-6">
-      {/* Outer pill — semi-transparent black container */}
+      {/* Outer container — rectangular in shape with rounded corners */}
       <div
         role="tablist"
         aria-label="Product view mode"
-        className="relative flex items-center rounded-full p-1 select-none"
+        className="relative inline-flex items-center p-1.5 rounded-2xl select-none border border-neutral-700/50 shadow-xl"
         style={{
-          background: 'rgba(0, 0, 0, 0.65)',
-          backdropFilter: 'blur(10px)',
-          WebkitBackdropFilter: 'blur(10px)',
-          boxShadow: '0 2px 16px rgba(0,0,0,0.25)',
+          background: 'rgba(28, 28, 28, 0.88)',
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          boxShadow: '0 4px 20px rgba(0, 0, 0, 0.28)',
         }}
       >
-        {/* Sliding white thumb — moves based on active index */}
+        {/* Sliding thumb — rectangular in shape with rounded corners */}
         <div
           aria-hidden="true"
-          className="absolute top-1 bottom-1 rounded-full bg-white"
+          className="absolute top-1.5 bottom-1.5 rounded-xl bg-white shadow-md"
           style={{
-            width: 'calc(50% - 4px)',
-            left: activeIdx === 0 ? '4px' : 'calc(50%)',
-            transition: 'left 250ms ease, width 250ms ease',
+            width: 'calc(50% - 6px)',
+            left: activeIdx === 0 ? '6px' : 'calc(50%)',
+            transition: 'left 280ms cubic-bezier(0.16, 1, 0.3, 1)',
             pointerEvents: 'none',
           }}
         />
 
-        {OPTIONS.map(({ mode, label, icon }) => {
+        {OPTIONS.map(({ mode, label, icon: Icon }) => {
           const isActive = viewMode === mode;
           return (
             <button
@@ -68,17 +78,16 @@ export const ViewToggle: React.FC<ViewToggleProps> = ({ viewMode, onChange }) =>
               onClick={() => onChange(mode)}
               onKeyDown={(e) => handleKeyDown(e, mode)}
               className={`
-                relative z-10 flex items-center gap-1.5 px-5 py-2 rounded-full
-                text-xs font-bold uppercase tracking-widest
-                transition-colors duration-[250ms]
-                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                focus-visible:outline-white
-                ${isActive ? 'text-black' : 'text-white/75 hover:text-white'}
+                relative z-10 flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl
+                text-[11px] sm:text-xs font-bold uppercase tracking-wider
+                transition-colors duration-200 cursor-pointer
+                focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white
+                ${isActive ? 'text-black font-extrabold' : 'text-neutral-400 hover:text-white font-medium'}
               `}
             >
-              <span className="text-sm leading-none">{icon}</span>
-              <span className="hidden sm:inline">{label}</span>
-              <span className="sm:hidden">{mode === 'horizontal' ? 'H-View' : 'V-View'}</span>
+              <Icon size={14} className={isActive ? 'text-black' : 'text-neutral-400'} />
+              <span className="hidden sm:inline whitespace-nowrap">{label}</span>
+              <span className="sm:hidden whitespace-nowrap">{mode === 'horizontal' ? 'Horizontal' : 'Vertical'}</span>
             </button>
           );
         })}
@@ -86,4 +95,3 @@ export const ViewToggle: React.FC<ViewToggleProps> = ({ viewMode, onChange }) =>
     </div>
   );
 };
-

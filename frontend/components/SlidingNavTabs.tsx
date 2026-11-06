@@ -19,9 +19,7 @@ const NAV_ITEMS: NavItem[] = [
   { name: 'ANTI TARNISH', href: '/products?category=AntiTarnish', category: 'AntiTarnish' },
   { name: 'BEST SELLERS', href: '/products?category=BestSellers', category: 'BestSellers' },
   { name: 'HOT DEALS', href: '/products?category=HotDeals', category: 'HotDeals' },
-  { name: 'MODERN', href: '/products?category=Modern', category: 'Modern' },
-  { name: 'POLICY', href: '/policy' },
-  { name: 'T & C', href: '/terms' },
+  { name: 'F A Qs', href: '/faqs' },
 ];
 
 interface SlidingNavTabsContentProps {
@@ -105,9 +103,7 @@ export const SlidingNavTabs: React.FC<SlidingNavTabsProps> = ({ onAdminClick }) 
         <span>ANTI TARNISH</span>
         <span>BEST SELLERS</span>
         <span>HOT DEALS</span>
-        <span>MODERN</span>
-        <span>POLICY</span>
-        <span>TERMS & CONDITIONS</span>
+        <span>F A Qs</span>
       </nav>
     }>
       <SlidingNavTabsContent onAdminClick={onAdminClick} />

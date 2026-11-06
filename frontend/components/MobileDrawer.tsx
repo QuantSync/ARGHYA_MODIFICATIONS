@@ -27,7 +27,7 @@ const DRAWER_MENU_ITEMS: DrawerMenuItem[] = [
   { name: 'ANTI - TARNISH', href: '/products?category=AntiTarnish' },
   { name: '925 PURE SILVER', href: '/products?category=Silver' },
   { name: 'ABOUT US', href: '/about' },
-  { name: 'POLICIES', href: '/policy' },
+  { name: 'F A Qs', href: '/faqs' },
   { name: 'CONTACT US', href: '/about#contact' },
 ];
 

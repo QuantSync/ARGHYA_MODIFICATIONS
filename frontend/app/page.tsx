@@ -11,7 +11,6 @@ import { BuyNowChoiceModal } from '../components/modals/BuyNowChoiceModal';
 import { CODChoiceModal } from '../components/modals/CODChoiceModal';
 import { PayOnDeliveryModal } from '../components/modals/PayOnDeliveryModal';
 import { BannerSlideshow, BannerSlide } from '../components/BannerSlideshow';
-import { JewelryHeroPanel } from '../components/home/JewelryHeroPanel';
 import { HomeCategoryBannerGrid } from '../components/home/HomeCategoryBannerGrid';
 import { Product } from '../lib/api';
 import { ScrollReveal } from '../components/animations/ScrollReveal';
@@ -127,9 +126,6 @@ export default function HomePage() {
           priorityFirst={true}
         />
       </section>
-
-      {/* ── 2. Category Pillars (Anklets / Necklace / Chains / Bracelets) — no old big banner ── */}
-      <JewelryHeroPanel hideBanner={true} />
 
       <div className="space-y-16 sm:space-y-20">
         {/* ── 3. Category Banner Grid (Anti-Tarnish, 925 Silver, Buy 2 @ 499, Hot Deals, Quality) ── */}

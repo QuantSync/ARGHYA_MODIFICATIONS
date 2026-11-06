@@ -542,7 +542,9 @@ Keep away from perfumes, chemicals and excessive moisture. Store in a dry jewell
     subcategory: 'Necklaces',
     fabric: '925 Sterling Silver',
     craft_type: 'Blue Evil Eye Pendant Setting',
-    images: ['/images/necklaces/925-sterling-silver-blue-evil-eye-necklace.jpg'],
+    images: [
+      '/images/necklaces/925_blue_evil_eye/925_blue_evil_eye_necklace_1.png',
+    ],
     sizes: ['16 - 18 Inch Adjustable Chain'],
     razorpay_url: 'https://rzp.io/rzp/silverevileyenecklace',
   },
@@ -971,7 +973,9 @@ Add a pop of color to your ethnic wardrobe with these stunning oxidised silver j
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Artificial Stones',
     craft_type: 'Traditional Jhumki',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/royal_blue_leaf_drop_oxidised_jhumki/royal_blue_leaf_drop_oxidised_jhumki_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/royalblueleafdropoxidisedjhumk'
   },
@@ -995,7 +999,9 @@ These exquisite oxidised earrings feature an intricate, vintage-inspired floral 
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Metal Beads',
     craft_type: 'Dangle & Drop',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/vintage_floral_peacock_oxidised_dangle_earrings/vintage_floral_peacock_oxidised_dangle_earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/vintagefloralpeacockdangleeari'
   },
@@ -1019,7 +1025,9 @@ A unique blend of modern and traditional, these oxidised silver earrings feature
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Mirror, Metal Beads',
     craft_type: 'Chandbali Jhumki',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/mirror_center_oxidised_chandbali_jhumki/mirror_center_oxidised_chandbali_jhumki_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/mirrorcentreoxidisedchandbalij'
   },
@@ -1042,7 +1050,9 @@ Elevate your look with these majestic antique gold-tone jhumkis. The large circu
     subcategory: 'Oxidized Earrings',
     fabric: 'Antique Gold Finish, Faux Pearls',
     craft_type: 'Heavy Jhumki',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/antique_gold_textured_dome_jhumki/antique_gold_textured_dome_jhumki_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/antiquegoldtextureddomejhumki'
   },
@@ -1066,7 +1076,9 @@ Dazzle your way through every event with these sparkling oxidised earrings. They
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Clear Crystals',
     craft_type: 'Dangle & Drop',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/crystal_studded_spiral_oxidised_earrings/crystal_studded_spiral_oxidised_earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/crystalstuddedspiraloxidisedea'
   },
@@ -1114,7 +1126,9 @@ These charming oxidised earrings feature a smooth, pink teardrop stone set withi
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Pink Stone, Faux Pearls',
     craft_type: 'Drop Earrings',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/Petal_Teardrop_Oxidised_Earrings/Petal_Teardrop_Oxidised_Earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/pinkpetalteardropoxidisedearri'
   },
@@ -1138,7 +1152,9 @@ A timeless classic with a traditional twist. These oxidised silver hoop earrings
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish',
     craft_type: 'Hoop with Drops',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/8.Classic_Silver_Hoop_with_Ghungroo_Drops/8.Classic_Silver_Hoop_with_Ghungroo_Drops_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/classicsilverhoopswithghungroo'
   },
@@ -1162,7 +1178,9 @@ A classic design featuring a deep navy blue teardrop stone. The stone is encased
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Blue Stone, Faux Pearls',
     craft_type: 'Drop Earrings',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/midnight_blue_teardrop_oxidised_earrings/midnight_blue_teardrop_oxidised_earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/midnightblueteardropoxidisedea'
   },
@@ -1186,7 +1204,9 @@ These gorgeous oxidised earrings feature a detailed floral stud that transitions
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Faux Pearls',
     craft_type: 'Dangle & Drop',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/floral_motif_pearl_cluster_oxidised/floral_motif_pearl_cluster_oxidised_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/floralmotifpearlclusteroxidise'
   },
@@ -1210,7 +1230,9 @@ Embrace the bohemian trend with these simple yet striking oxidised silver hoop e
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish',
     craft_type: 'Hoop / Chandbali',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/11.Bohemian_Silver_Chandbali_Hoops/11.Bohemian_Silver_Chandbali_Hoops_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/bohemiansilverchandbalihoops'
   },
@@ -1234,7 +1256,9 @@ Make a bold statement with these oversized oxidised earrings. Featuring a large,
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Large Mirror, Faux Pearls, Crystals',
     craft_type: 'Statement Dangles',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/12.Monochrome_Mirror_Statement_Oxidised_Earrings/12.Monochrome_Mirror_Statement_Oxidised_Earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/monochromemirroroxidisedearing'
   },
@@ -1258,7 +1282,9 @@ These grand jhumkis are a masterpiece of traditional design. The stud features a
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Stones',
     craft_type: 'Heavy Jhumki',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/13.Majestic_Peacock_Oxidised_Jhumki/13.Majestic_Peacock_Oxidised_Jhumki_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/majesticpeacockoxidisedjhumki'
   },
@@ -1282,7 +1308,9 @@ A true conversation starter, these oxidised earrings feature a geometric sunburs
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Assorted Stones',
     craft_type: 'Statement Dangles',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/14.Sunburst_Mosaic_Oxidised_Danglers/14.Sunburst_Mosaic_Oxidised_Danglers_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/sunburstmosiacoxidiseddanglers'
   },
@@ -1306,7 +1334,9 @@ A perfect balance of elegance and edge. These oxidised earrings feature a cluste
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Black Stones',
     craft_type: 'Hoop / Dangle',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/Black_Stone_Leaf_Hoop_Oxidised_Earrings/Black_Stone_Leaf_Hoop_Oxidised_Earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/blackstoneleafhooppxidisedearr'
   },
@@ -1330,7 +1360,9 @@ These classic oxidised jhumkis feature a large, highly detailed circular stud th
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish',
     craft_type: 'Classic Jhumki',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/Intricate_Dome_Classic_Oxidised_Jhumki/Intricate_Dome_Classic_Oxidised_Jhumki_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/intricatedomeclassicoxidisedjh'
   },
@@ -1354,7 +1386,9 @@ Show off your love for artistic jewelry with these unique oxidised earrings. The
     subcategory: 'Oxidized Earrings',
     fabric: 'Oxidised Silver Finish, Turquoise Stone, Crystals, Faux Pearls',
     craft_type: 'Statement Dangles',
-    images: [],
+    images: [
+      '/images/oxidized_earrings/turquoise_elephant_motif_oxidised_earrings/turquoise_elephant_motif_oxidised_earrings_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/turquoiseelephantmotifoxidised'
   },
@@ -1383,7 +1417,9 @@ A stunning traditional necklace set featuring intricate spiral motifs and beauti
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond',
     craft_type: 'Necklace Set',
-    images: [],
+    images: [
+      '/images/american_diamonds/royal_spiral_ad_necklace_set/royal_spiral_ad_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/royalspiraladnecklaceset'
   },
@@ -1409,7 +1445,9 @@ Enhance your everyday style with this beautiful dual-tone necklace set. Designed
     subcategory: 'American Diamonds',
     fabric: 'Gold & Silver Tone • American Diamond',
     craft_type: 'Modern & Elegant',
-    images: [],
+    images: [
+      '/images/american_diamonds/elegant_floral_sparkle_necklace_set/elegant_floral_sparkle_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/elegantfloralsparklenecklacese'
   },
@@ -1487,7 +1525,9 @@ Make a statement with this eye-catching silver-tone necklace set. Featuring a be
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond',
     craft_type: 'Contemporary Statement Style',
-    images: [],
+    images: [
+      '/images/american_diamonds/silver_arrow_glamour_necklace_set/silver_arrow_glamour_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/silverarrowglamournecklaceset'
   },
@@ -1617,7 +1657,9 @@ Inspired by delicate floral vines, this beautiful American Diamond necklace set 
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond',
     craft_type: 'Floral Vine Pattern',
-    images: [],
+    images: [
+      '/images/american_diamonds/blossom_vine_ad_necklace_set/blossom_vine_ad_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/blossomvineadnecklaceset'
   },
@@ -1712,7 +1754,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/silver_wave_layered/silver_wave_layered_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/minimalistsilverwavelayerednec'
   },
@@ -1728,7 +1772,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/golden_wave_layered/golden_wave_layered_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/minimalistgoldenwavelayerednec'
   },
@@ -1744,7 +1790,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/mystic_evil_eye_charm_pendant/mystic_evil_eye_charm_pendant_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/azureguardianeyependant'
   },
@@ -1760,7 +1808,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/meadow_dance_butterfly/meadow_dance_butterfly_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/meadowdancebutterflynecklace'
   },
@@ -1776,7 +1826,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/orbital_beaded_saturn_chain/orbital_beaded_saturn_chain_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/orbitbeadedlongchain'
   },
@@ -1792,7 +1844,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/personalized_initial_tag_necklace/personalized_initial_tag_necklace_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/signaturemonogrambarnecklace'
   },
@@ -1808,7 +1862,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/edgy_cross_pendant_chunky_chain/edgy_cross_pendant_chunky_chain_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/urbanrebelcrossnecklace'
   },
@@ -1824,7 +1880,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/the_eclipse_open_circle_pendant/the_eclipse_open_circle_pendant_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/eclipseopencirclependant'
   },
@@ -1840,7 +1898,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/dainty_golden_heart_drop/dainty_golden_heart_drop_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/sweetheartminimalpendant'
   },
@@ -1856,7 +1916,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/pearl_crystal_butterfly_lariat/pearl_crystal_butterfly_lariat_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/elegantpearllariatnecklace'
   },
@@ -1872,7 +1934,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/the_midnight_romance_y_necklace/the_midnight_romance_y_necklace_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/midnightromanceynecklace'
   },
@@ -1888,7 +1952,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/y2k_star_ruby_accent_chain/y2k_star_ruby_accent_chain_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/starlightrubychoker'
   },
@@ -1904,7 +1970,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/the_toggle_heart_drop_chain/the_toggle_heart_drop_chain_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/toggleheartdropchain'
   },
@@ -1913,6 +1981,7 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     id: 'anti-mp-014',
     name: 'The Noir Clover Deluxe Set',
     slug: 'the-noir-clover-deluxe-set',
+    combo_price: 399.00,
     description: `*The Noir Clover Deluxe Set*\n\nGet the complete look with this stunning matching set. Featuring black four-leaf clover motifs spaced along a delicate gold chain, this set includes a necklace, a matching bracelet, and a pair of stud earrings. A classic design with a dark, elegant twist.\n\n*Product Details:*\n• Material: Artificial Jewellery\n• Colour: Gold, Black\n• Style: Modern Pendant Necklace\n• Closure/Clasp: Secure Clasp`,
     price: 399.00,
     compare_at_price: 999.00,
@@ -1920,7 +1989,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/midnight_clover_set/midnight_clover_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/noircloverdeluxeset'
   },
@@ -1936,7 +2007,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/teardrop_crystal_solitaire_pendant/teardrop_crystal_solitaire_pendant_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/crystalteardroppendant'
   },
@@ -1952,7 +2025,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/the_onyx_heart_station_chain/the_onyx_heart_station_chain_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/onyxheartstationchain'
   },
@@ -1968,7 +2043,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/vintage_botanical_oval_locket/vintage_botanical_oval_locket_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/heritagebloompendant'
   },
@@ -1984,7 +2061,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/pastel_pink_heart_station_necklace/pastel_pink_heart_station_necklace_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/blushheartchain'
   },
@@ -2000,7 +2079,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/silver_bird_crystal_drop/silver_bird_crystal_drop_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/doveflightsilverpendant'
   },
@@ -2032,7 +2113,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Pendants',
     fabric: 'Anti-Tarnish Artificial Jewellery',
     craft_type: 'Modern Pendant Necklace',
-    images: [],
+    images: [
+      '/images/modern_pendants/floral_heart_crystal_set/floral_heart_crystal_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/blossomingheartensemble'
   },
@@ -2051,7 +2134,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver & Pearl White Finish',
     craft_type: 'Pearl and Crystal Embellished',
-    images: [],
+    images: [
+      '/images/modern_earrings/celeste_pearl_cascade_earrings/celeste_pearl_cascade_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2066,7 +2151,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver & Clear Finish',
     craft_type: 'Square Crystal Embellishment',
-    images: [],
+    images: [
+      '/images/modern_earrings/crystal_square_radiance_studs/crystal_square_radiance_studs_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2081,7 +2168,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver Finish',
     craft_type: 'Multi-Strand Rhinestone Fringe',
-    images: [],
+    images: [
+      '/images/modern_earrings/starlight_rhinestone_fringe_earrings/starlight_rhinestone_fringe_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2096,7 +2185,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver Finish',
     craft_type: 'Double Heart-Inspired Loop',
-    images: [],
+    images: [
+      '/images/modern_earrings/heartbeat_crystal_loop_earrings/heartbeat_crystal_loop_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2111,7 +2202,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold & Emerald Green Finish',
     craft_type: 'Teardrop Stone with Crystal Detailing',
-    images: [],
+    images: [
+      '/images/modern_earrings/emerald_aura_teardrop_earrings/emerald_aura_teardrop_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2126,7 +2219,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold & Pearl White Finish',
     craft_type: 'Pearl Centre with Crystal Halo',
-    images: [],
+    images: [
+      '/images/modern_earrings/golden_pearl_halo_earrings/golden_pearl_halo_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2141,7 +2236,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold, Blush Pink & White Finish',
     craft_type: 'Flower, Pearl & Crystal Embellishment',
-    images: [],
+    images: [
+      '/images/modern_earrings/blush_blossom_crystal_hoop_earrings/blush_blossom_crystal_hoop_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2156,7 +2253,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Golden & Ivory White Finish',
     craft_type: 'Butterfly with Enamel Detailing',
-    images: [],
+    images: [
+      '/images/modern_earrings/golden_butterfly_dreams_gold_plated_earrings/golden_butterfly_dreams_gold_plated_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2171,7 +2270,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold, Turquoise & White Finish',
     craft_type: 'Turquoise Accent with Pearl & Crystal Detailing',
-    images: [],
+    images: [
+      '/images/modern_earrings/turquoise_charm_crystal_drops/turquoise_charm_crystal_drops_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2186,7 +2287,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold, Pearl White & Clear Finish',
     craft_type: 'Bow, Pearl & Crystal Embellishment',
-    images: [],
+    images: [
+      '/images/modern_earrings/pearl_bow_elegance_hoop_earrings/pearl_bow_elegance_hoop_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2201,7 +2304,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Pink, Green & Gold Finish',
     craft_type: 'Floral',
-    images: [],
+    images: [
+      '/images/modern_earrings/blush_blossom_pearl_earrings/blush_blossom_pearl_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2216,7 +2321,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold & Pearl White Finish',
     craft_type: 'Double Loop with Pearl',
-    images: [],
+    images: [
+      '/images/modern_earrings/golden_pearl_loop_studs/golden_pearl_loop_studs_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2231,7 +2338,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver & Clear Finish',
     craft_type: 'Crystal Cascade',
-    images: [],
+    images: [
+      '/images/modern_earrings/crystal_cascade_drop_earrings/crystal_cascade_drop_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2246,7 +2355,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Ivory White & Gold Finish',
     craft_type: 'Four-Petal Flower',
-    images: [],
+    images: [
+      '/images/modern_earrings/ivory_petal_bloom_earrings/ivory_petal_bloom_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2261,7 +2372,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Maroon & Gold Finish',
     craft_type: 'Floral Studs',
-    images: [],
+    images: [
+      '/images/modern_earrings/ruby_maroon_petal_studs/ruby_maroon_petal_studs_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2276,7 +2389,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Silver & Clear Finish',
     craft_type: 'Butterfly',
-    images: [],
+    images: [
+      '/images/modern_earrings/crystal_butterfly_gleam_studs/crystal_butterfly_gleam_studs_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2291,7 +2406,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Crimson Red & Gold Finish',
     craft_type: 'Curved Arc',
-    images: [],
+    images: [
+      '/images/modern_earrings/crimson_arc_statement_earrings/crimson_arc_statement_earrings_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2306,7 +2423,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold, White & Clear Finish',
     craft_type: 'Pearl & Crystal Hoops',
-    images: [],
+    images: [
+      '/images/modern_earrings/royal_pearl_crystal_hoops/royal_pearl_crystal_hoops_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2321,7 +2440,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Gold, White & Clear Finish',
     craft_type: 'Bow with Pearl Drop',
-    images: [],
+    images: [
+      '/images/modern_earrings/pearl_bow_sparkle_studs/pearl_bow_sparkle_studs_1.png',
+    ],
     sizes: ['Free Size'],
   },
 
@@ -2336,7 +2457,9 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'Modern Earrings',
     fabric: 'Black & Gold Finish',
     craft_type: 'Triple Heart Drop',
-    images: [],
+    images: [
+      '/images/modern_earrings/midnight_triple_heart_drops/midnight_triple_heart_drops_1.png',
+    ],
     sizes: ['Free Size'],
   },
 

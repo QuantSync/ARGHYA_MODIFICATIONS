@@ -114,11 +114,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`dark ${inter.variable} ${playfair.variable}`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <JsonLdStructuredData />
       </head>
-      <body className="min-h-screen flex flex-col transition-colors duration-300">
+      <body className="min-h-screen flex flex-col transition-colors duration-300 bg-white text-neutral-900">
         <ThemeProvider>
           <Navbar />
           <main className="flex-1 overflow-x-hidden">

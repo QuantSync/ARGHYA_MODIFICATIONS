@@ -170,7 +170,7 @@ function FaqSection() {
   };
 
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-8">
+    <section id="faqs" className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 space-y-8 scroll-mt-24">
       <div className="text-center space-y-3 mb-10">
         <span className="inline-flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-[0.25em] text-black dark:text-white font-bold px-3.5 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 bg-neutral-100 dark:bg-neutral-900">
           <Sparkles size={12} className="text-black dark:text-white" /> Answers &amp; Insights

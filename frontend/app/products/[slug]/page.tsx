@@ -384,7 +384,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
 
   const [quantity, setQuantity] = useState<number>(1);
-  const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
+  const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(true);
   const [pincode, setPincode] = useState<string>('');
 
   return (
