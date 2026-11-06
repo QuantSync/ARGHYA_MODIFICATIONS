@@ -256,6 +256,15 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
       'mystery-jar': 'https://rzp.io/rzp/mysteryjar',
       'mystery jar': 'https://rzp.io/rzp/mysteryjar',
 
+      // ── Hot Deals Combos ──────────────────────────────────────────────────
+      'meadow-dance-butterfly-combo':  'https://rzp.io/rzp/meadowdancebutterflycombo',
+      'urban-rebel-cross-combo':       'https://rzp.io/rzp/urbanrebelcrosscombo',
+      'black-pink-heart-station-combo': 'https://rzp.io/rzp/blackpinkheartstationcombo',
+      'golden-twin-loop-combo':        'https://rzp.io/rzp/goldentwinloopcombo',
+      'golden-pretty-combo':           'https://rzp.io/rzp/goldenpreetycombo',
+      'golden-pearl-hoop-combo':       'https://rzp.io/rzp/goldenpearlandhoopcombo',
+      'white-red-petal-studs-combo':   'https://rzp.io/rzp/whiteandredpetalstudscombo',
+
       // ── Non-coupon products ─────────────────────────────────────────────────
       'blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blueblossomfloralkurti',
       'pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',

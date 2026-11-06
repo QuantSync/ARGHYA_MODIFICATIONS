@@ -387,6 +387,22 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
   const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(true);
   const [pincode, setPincode] = useState<string>('');
 
+  // ── Mystery Jar: size-based payment URL ────────────────────────────────────
+  const isMysteryJar = product.slug === 'mystery-jar';
+  const mysteryJarPaymentUrl = isMysteryJar
+    ? selectedSize === 'Medium (₹799)'
+      ? 'https://rzp.io/rzp/mysteryjarmediumsize'
+      : selectedSize === 'Large (₹1499)'
+      ? 'https://rzp.io/rzp/mysteryjarlarge'
+      : 'https://rzp.io/rzp/mysteryjar'
+    : null;
+
+  const mysteryJarPrice = isMysteryJar
+    ? selectedSize === 'Medium (₹799)' ? 799
+    : selectedSize === 'Large (₹1499)' ? 1499
+    : 499
+    : product.price;
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <CartDrawer onCheckout={() => setIsPaymentModalOpen(true)} />
@@ -408,7 +424,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         onClose={() => setIsPODModalOpen(false)}
         product={product as Product}
         selectedSize={selectedSize}
-        effectivePrice={product.price}
+        effectivePrice={isMysteryJar ? mysteryJarPrice : product.price}
       />
       <ProductReviewsModal
         isOpen={isReviewsModalOpen}
@@ -528,7 +544,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           {/* Price */}
           <div className="flex items-center gap-3 flex-wrap">
             <span suppressHydrationWarning className="text-2xl font-bold text-burgundy-900 dark:text-amber-400">
-              ₹{product.price.toLocaleString('en-IN')}
+              ₹{(isMysteryJar ? mysteryJarPrice : product.price).toLocaleString('en-IN')}
             </span>
             {product.compare_at_price && (
               <span suppressHydrationWarning className="text-sm text-stone-400 line-through">
@@ -588,6 +604,56 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               </div>
             </div>
           )}
+
+          {/* Size / Jar Selection */}
+          {sizes && sizes.length > 0 && (sizes.length > 1 || sizes[0] !== 'Free Size') && (
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <label className="text-xs text-burgundy-800/70 dark:text-stone-400 font-bold uppercase tracking-wider block">
+                  {isMysteryJar ? 'Select Jar Size / Option' : 'Select Size'}
+                </label>
+                {isBlossomKurti && (
+                  <span className="text-[10px] text-rose-600 dark:text-rose-400 font-bold bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded-full border border-rose-200 dark:border-rose-900/60 flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
+                    Size S Sold Out
+                  </span>
+                )}
+              </div>
+              <div className="flex flex-wrap gap-2.5">
+                {sizes.map((sizeOption: string) => {
+                  const isSoldOut = sizeOption === 'S' && isBlossomKurti;
+                  const isSelected = selectedSize === sizeOption;
+                  return (
+                    <button
+                      key={sizeOption}
+                      type="button"
+                      onClick={() => {
+                        if (isSoldOut) {
+                          setIsSoldOutModalOpen(true);
+                          return;
+                        }
+                        setSelectedSize(sizeOption);
+                      }}
+                      className={`relative px-4 py-2 rounded-xl text-xs font-bold uppercase border transition-all ${
+                        isSoldOut
+                          ? 'border-rose-300 dark:border-rose-900/70 bg-rose-50/70 dark:bg-rose-950/30 text-rose-400 dark:text-rose-400/60 cursor-pointer'
+                          : isSelected
+                          ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-sm ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-stone-900'
+                          : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 hover:border-black dark:hover:border-white'
+                      }`}
+                    >
+                      <span className={isSoldOut ? 'line-through opacity-70' : ''}>{sizeOption}</span>
+                      {isSoldOut && (
+                        <span className="absolute -top-2 -right-1.5 text-[8px] font-black text-rose-600 bg-rose-100 dark:bg-rose-900 px-1.5 rounded-full border border-rose-300 dark:border-rose-700">
+                          Sold
+                        </span>
+                      )}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* ── PAYMENT BUTTONS (Add To Cart | Buy Now) ── */}
           <div className="flex flex-col gap-3 pt-1">
@@ -609,7 +675,13 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               </button>
               <button
                 type="button"
-                onClick={() => setIsBuyNowChoiceOpen(true)}
+                onClick={() => {
+                  if (isMysteryJar && mysteryJarPaymentUrl) {
+                    window.location.href = mysteryJarPaymentUrl;
+                    return;
+                  }
+                  setIsBuyNowChoiceOpen(true);
+                }}
                 className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-100 py-4 rounded-md font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
               >
                 Buy Now

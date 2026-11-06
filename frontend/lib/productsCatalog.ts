@@ -14,6 +14,8 @@ export interface CatalogProduct {
   sizes?: string[];
   colorOptions?: any[];
   razorpay_url?: string;
+  razorpay_url_medium?: string;
+  razorpay_url_large?: string;
 }
 
 export const PRODUCTS_CATALOG: Record<string, CatalogProduct> = {
@@ -2498,9 +2500,238 @@ Unveil the magic with our exclusive Mystery Jar! Packed with high-value jeweller
       '/images/mystery_jar/mystery_jar_main.jpg',
       '/images/mystery_jar/mystery_jar_banner.jpg',
     ],
-    sizes: ['Standard Mystery Jar'],
+    sizes: ['Small (₹499)', 'Medium (₹799)', 'Large (₹1499)'],
     razorpay_url: 'https://rzp.io/rzp/mysteryjar',
+    razorpay_url_medium: 'https://rzp.io/rzp/mysteryjarmediumsize',
+    razorpay_url_large: 'https://rzp.io/rzp/mysteryjarlarge',
   },
+
+  // ── HOT DEALS — PRODUCT COMBOS ──────────────────────────────────────────────
+
+  'meadow-dance-butterfly-combo': {
+    id: 'hot-combo-001',
+    name: 'The Meadow Dance Butterfly Combo',
+    slug: 'meadow-dance-butterfly-combo',
+    description: `*The Meadow Dance Butterfly Combo*
+
+Embrace a whimsical, fairy-core aesthetic with this charming necklace. Multiple delicate butterfly charms are evenly spaced along a fine chain, creating a floating effect. Available in both classic silver and warm gold finishes to match your mood.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• 3D butterfly motifs
+• Lightweight and skin-friendly chain
+
+*Combo Includes:*
+• Fluttering Butterfly Charms Necklace (Silver + Golden variants)
+
+*Why You'll Love It:* A dreamy, nature-inspired combo that adds a magical touch to any outfit. Perfect for gifting or treating yourself to a fairy-tale accessory upgrade.`,
+    price: 349.00,
+    compare_at_price: 1299.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Finish',
+    craft_type: 'Butterfly Charm Combo',
+    images: [
+      '/images/modern_pendants/meadow_dance_butterfly/meadow_dance_butterfly_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/meadowdancebutterflycombo',
+  },
+
+  'urban-rebel-cross-combo': {
+    id: 'hot-combo-002',
+    name: 'The Urban Rebel Cross Combo',
+    slug: 'urban-rebel-cross-combo',
+    description: `*The Urban Rebel Cross Combo*
+
+Channel your inner street-style icon with this bold, chunky silver chain. Featuring a textured twisted link design and a subtle cross pendant with a dark stone accent, this piece is perfect for layering or making a statement on its own.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish silver coating
+• Heavy-duty chunky links
+• Grunge aesthetic
+
+*Combo Includes:*
+• Edgy Cross Pendant Chunky Chain
+• Y2K Star & Ruby Accent Chain
+
+*Why You'll Love It:* A power-duo of bold chains — one edgy cross pendant and one Y2K star-ruby accent — made for the fashion-forward rebel in you.`,
+    price: 449.00,
+    compare_at_price: 1299.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Silver Coating',
+    craft_type: 'Chunky Chain Combo',
+    images: [
+      '/images/modern_pendants/edgy_cross_pendant_chunky_chain/edgy_cross_pendant_chunky_chain_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/urbanrebelcrosscombo',
+  },
+
+  'black-pink-heart-station-combo': {
+    id: 'hot-combo-003',
+    name: 'Black & Pink Heart Station Necklace Combo',
+    slug: 'black-pink-heart-station-combo',
+    description: `*Black & Pink Heart Station Necklace Combo*
+
+A perfect pair of contrasting heart station necklaces — one in dramatic black enamel and one in soft pastel pink — for a versatile combo that suits every mood and occasion.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• Heart station design
+• Lightweight and skin-friendly chain
+
+*Combo Includes:*
+• Black Enamel Heart Station Necklace
+• Pastel Pink Heart Station Necklace
+
+*Why You'll Love It:* Two beautiful necklaces at an unbeatable price. Layer them together or switch between them — either way, you're winning every outfit.`,
+    price: 299.00,
+    compare_at_price: 1399.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Finish',
+    craft_type: 'Heart Station Necklace Combo',
+    images: [
+      '/images/modern_pendants/pastel_pink_heart_station_necklace/pastel_pink_heart_station_necklace_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/blackpinkheartstationcombo',
+  },
+
+  'golden-twin-loop-combo': {
+    id: 'hot-combo-004',
+    name: 'Golden Twin & Loop Combo',
+    slug: 'golden-twin-loop-combo',
+    description: `*Golden Twin & Loop Combo*
+
+Express timeless charm with the Golden Twin Hearts Charm Necklace. Featuring two beautifully connected open-heart pendants, this necklace represents love and togetherness. The sleek golden finish and delicate chain create a stylish minimalist look that complements both western and ethnic outfits.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• 3D butterfly motifs
+• Lightweight and skin-friendly chain
+
+*Combo Includes:*
+• Golden Love Loop Heart Necklace
+• Golden Twin Hearts Charm Necklace
+
+*Why You'll Love It:* Two golden heart necklaces — one looping and one twin-heart — that symbolise love and togetherness. A perfect gift for someone special or a treat for yourself.`,
+    price: 349.00,
+    compare_at_price: 1399.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Gold Finish',
+    craft_type: 'Twin Heart Necklace Combo',
+    images: [
+      '/images/modern_pendants/pastel_pink_heart_station_necklace/pastel_pink_heart_station_necklace_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldentwinloopcombo',
+  },
+
+  'golden-pretty-combo': {
+    id: 'hot-combo-005',
+    name: 'Golden Pretty Combo',
+    slug: 'golden-pretty-combo',
+    description: `*Golden Pretty Combo*
+
+Elevate your everyday look with the elegant Golden Bowbell Sleek Chain Necklace. Featuring a delicate bow-shaped pendant with a charming dangling bell detail, this necklace adds a graceful and playful touch to your style.
+
+Add a delicate and playful touch to your jewellery collection with the Golden Butterfly Beaded Charm Necklace. Featuring a beautifully designed butterfly pendant paired with tiny golden bead accents along the chain, this necklace offers a graceful and feminine appeal.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• Skin-friendly chain
+
+*Combo Includes:*
+• Golden Butterfly Beaded Charm Necklace
+• Golden Bowbell Sleek Chain Necklace
+
+*Why You'll Love It:* Two golden beauties — a butterfly beaded charm and a bowbell pendant — that add a feminine, playful sparkle to any outfit.`,
+    price: 399.00,
+    compare_at_price: 1399.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Gold Finish',
+    craft_type: 'Golden Necklace Combo',
+    images: [
+      '/images/modern_pendants/meadow_dance_butterfly/meadow_dance_butterfly_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldenpreetycombo',
+  },
+
+  'golden-pearl-hoop-combo': {
+    id: 'hot-combo-006',
+    name: 'Golden Pearl & Hoop Combo',
+    slug: 'golden-pearl-hoop-combo',
+    description: `*Golden Pearl & Hoop Combo*
+
+Bring a touch of sophistication to your look with these Pearl Bow Elegance Hoop Earrings. Beautifully designed with delicate bow accents, lustrous pearl details and sparkling crystal embellishments, these earrings offer a charming blend of elegance and contemporary fashion. Perfect for everyday styling, outings and special occasions.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• Skin-friendly
+
+*Combo Includes:*
+• Pearl Bow Elegance Hoop Earrings
+• Golden Pearl Loop Studs
+
+*Why You'll Love It:* A sophisticated pearl duo — elegant hoops and minimalist studs — that elevate every outfit from casual to formal with effortless grace.`,
+    price: 349.00,
+    compare_at_price: 1599.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Finish, Faux Pearl',
+    craft_type: 'Pearl Earring Combo',
+    images: [
+      '/images/modern_earrings/pearl_bow_elegance_hoop_earrings/pearl_bow_elegance_hoop_earrings_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/goldenpearlandhoopcombo',
+  },
+
+  'white-red-petal-studs-combo': {
+    id: 'hot-combo-007',
+    name: 'White & Red Petal Studs Combo',
+    slug: 'white-red-petal-studs-combo',
+    description: `*White & Red Petal Studs Combo*
+
+Bring a bold and beautiful touch to your look with these Ruby Maroon Floral Earrings. Designed with rich maroon petals, golden borders and delicate centre detailing, they make a perfect accessory for adding colour to your outfit.
+
+Inspired by the beauty of blooming flowers, these Ivory Petal Earrings bring effortless elegance to your jewellery collection. Their soft white petals and golden detailing create a timeless and graceful look.
+
+*Product Details:*
+• Artificial jewellery
+• Anti-tarnish finish
+• Skin-friendly
+
+*Combo Includes:*
+• Ivory Petal Bloom Earrings
+• Ruby Maroon Petal Studs
+
+*Why You'll Love It:* Two floral petal stud earrings — one soft ivory and one bold ruby maroon — giving you both delicate and dramatic options in one beautiful combo.`,
+    price: 399.00,
+    compare_at_price: 1599.00,
+    category: 'Hot Deals',
+    subcategory: 'Combos',
+    fabric: 'Anti-Tarnish Finish',
+    craft_type: 'Floral Petal Studs Combo',
+    images: [
+      '/images/modern_earrings/ivory_petal_bloom_earrings/ivory_petal_bloom_earrings_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/whiteandredpetalstudscombo',
+  },
+
 
 };
 
@@ -2630,4 +2861,15 @@ export const MODERN_EARRINGS_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['royal-pearl-crystal-hoops'],
   PRODUCTS_CATALOG['pearl-bow-sparkle-studs'],
   PRODUCTS_CATALOG['midnight-triple-heart-drops'],
+];
+
+export const HOT_DEALS_PRODUCTS: CatalogProduct[] = [
+  PRODUCTS_CATALOG['mystery-jar'],
+  PRODUCTS_CATALOG['meadow-dance-butterfly-combo'],
+  PRODUCTS_CATALOG['urban-rebel-cross-combo'],
+  PRODUCTS_CATALOG['black-pink-heart-station-combo'],
+  PRODUCTS_CATALOG['golden-twin-loop-combo'],
+  PRODUCTS_CATALOG['golden-pretty-combo'],
+  PRODUCTS_CATALOG['golden-pearl-hoop-combo'],
+  PRODUCTS_CATALOG['white-red-petal-studs-combo'],
 ];

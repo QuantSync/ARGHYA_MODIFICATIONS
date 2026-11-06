@@ -23,6 +23,7 @@ import {
   AMERICAN_DIAMONDS_PRODUCTS,
   MODERN_PENDANTS_PRODUCTS,
   MODERN_EARRINGS_PRODUCTS,
+  HOT_DEALS_PRODUCTS,
 } from '../../lib/productsCatalog';
 
 const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p => ({
@@ -165,6 +166,9 @@ function ProductsPageContent() {
   const modernPendants: Product[] = (MODERN_PENDANTS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const modernEarrings: Product[] = (MODERN_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
 
+  // Hot Deals products (combos + mystery jar)
+  const hotDeals: Product[] = (HOT_DEALS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
+
   // Filtered list when a single subcategory or other category is selected
   const filteredProducts = ALL_CATALOG_PRODUCTS.filter((product) => {
     if (selectedCategory === '925 Pure Silver') {
@@ -187,7 +191,7 @@ function ProductsPageContent() {
     if (selectedCategory === 'Best Sellers')
       return product.price >= 1500 || product.slug.includes('toggle') || product.slug.includes('clover');
     if (selectedCategory === 'Hot Deals')
-      return product.price < 1500 || Boolean(product.combo_price);
+      return product.category === 'Hot Deals';
     // "All" main category
     if (selectedSubcategory !== 'All')
       return product.subcategory?.toLowerCase() === selectedSubcategory.toLowerCase();
@@ -264,29 +268,6 @@ function ProductsPageContent() {
         selectedSize="Free Size"
         effectivePrice={buyNowChoiceProduct?.price || 0}
       />
-
-      {/* ── Page Heading ── */}
-      <div>
-        <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
-          Arghya Modifications • Fine Jewelry
-        </span>
-        <h1 className="font-serif text-4xl sm:text-5xl font-bold text-black dark:text-white mt-1">
-          {selectedCategory === '925 Pure Silver' && selectedSubcategory !== 'All'
-            ? `925 Pure Silver ${selectedSubcategory}`
-            : selectedCategory === '925 Pure Silver'
-              ? '925 Pure Silver Collection'
-              : selectedCategory === 'Anti Tarnish' && selectedSubcategory !== 'All'
-                ? `Anti Tarnish ${selectedSubcategory}`
-                : selectedCategory === 'Anti Tarnish'
-                  ? 'Anti Tarnish Collection'
-                  : `${selectedCategory} Collection`}
-        </h1>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-2 max-w-xl">
-          {selectedCategory === 'Anti Tarnish'
-            ? 'Intricately handcrafted anti-tarnish jewelry featuring sparkling American Diamond necklace sets and classic oxidized earrings designed for lasting durability and timeless glamour.'
-            : 'Handcrafted in genuine 925 sterling silver with waterproof anti-tarnish rhodium finish. Designed for timeless elegance and effortless everyday styling.'}
-        </p>
-      </div>
 
       {/* ── Anti-Tarnish Festive Banner & Interactive Category Grid ── */}
       {selectedCategory === 'Anti Tarnish' && (
@@ -764,6 +745,50 @@ function ProductsPageContent() {
                 </div>
               )}
             </section>
+          </div>
+        ) : selectedCategory === 'Hot Deals' ? (
+          /* ─────────────────────────────────────────────────
+             HOT DEALS — Mystery Jar + Combos
+             ───────────────────────────────────────────────── */
+          <div className="space-y-6">
+            {/* Header */}
+            <div className="p-5 rounded-2xl bg-gradient-to-r from-rose-50 to-amber-50 dark:from-rose-950/40 dark:to-amber-950/40 border border-rose-200 dark:border-rose-800">
+              <span className="text-xs text-rose-600 dark:text-rose-400 uppercase tracking-widest font-mono font-bold">
+                🔥 Limited Time Offers
+              </span>
+              <h2 className="font-serif text-2xl font-bold text-black dark:text-white mt-1">
+                Hot Deals — Best Value Combos & Mystery
+              </h2>
+              <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+                Handpicked combos and surprise deals at unbeatable prices. Get more for less!
+              </p>
+            </div>
+
+            {viewMode === 'horizontal' ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {hotDeals.map((product, idx) => (
+                  <HorizontalProductCard
+                    key={product.id}
+                    product={product}
+                    index={idx}
+                    onBuyNow={handleBuyNow}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col w-full">
+                {hotDeals.map((product, idx) => (
+                  <VerticalProductCard
+                    key={product.id}
+                    product={product}
+                    index={idx}
+                    onBuyNow={handleBuyNow}
+                    isCouponActive={false}
+                    activeCouponCode={null}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         ) : filteredProducts.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8">
