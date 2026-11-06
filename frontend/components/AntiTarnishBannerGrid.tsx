@@ -16,6 +16,7 @@ interface CategoryCardItem {
   labelPosition: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left';
   showNativeLabel: boolean;
   alt: string;
+  objectPosition?: string;
 }
 
 const CATEGORY_CARDS: CategoryCardItem[] = [
@@ -23,18 +24,19 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
     id: 'ethnic-card',
     label: 'ETHNIC',
     subcategory: 'American Diamonds',
-    imageSrc: '/images/anti_tarnish/banner_ethnic_ad.jpg',
+    imageSrc: '/images/anti_tarnish/banner_ethnic_ad.png',
     labelPosition: 'bottom-right',
-    showNativeLabel: true,
+    showNativeLabel: false, // Embedded high-res on image
     alt: 'Ethnic American Diamond Anti-Tarnish Necklace Set',
   },
   {
     id: 'kashmiri-card',
     label: 'KASHMIRI EARRINGS',
     subcategory: 'Oxidized Earrings',
-    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.jpg',
+    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.png',
     labelPosition: 'bottom-left',
-    showNativeLabel: true,
+    showNativeLabel: false, // Embedded high-res on image
+    objectPosition: 'object-bottom',
     alt: 'Kashmiri Style Drop & Dangle Traditional Earrings',
   },
   {
@@ -109,7 +111,7 @@ export const AntiTarnishBannerGrid: React.FC<AntiTarnishBannerGridProps> = ({
                 alt={card.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 600px"
-                className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                className={`object-cover ${card.objectPosition || 'object-center'} transition-transform duration-500 ease-out group-hover:scale-[1.02]`}
               />
 
               {/* Gradient Scrim for Contrast & Elegance */}

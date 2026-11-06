@@ -12,6 +12,7 @@ interface BannerCard {
   labelPosition?: 'bottom-right' | 'bottom-left' | 'top-right' | 'bottom-center';
   showNativeLabel: boolean;
   alt: string;
+  objectPosition?: string;
 }
 
 const ANTI_TARNISH_CARDS: BannerCard[] = [
@@ -19,18 +20,19 @@ const ANTI_TARNISH_CARDS: BannerCard[] = [
     id: 'anti-ethnic',
     title: 'ETHNIC',
     href: '/products?category=AntiTarnish&subcategory=AmericanDiamonds',
-    imageSrc: '/images/anti_tarnish/banner_ethnic_ad.jpg',
+    imageSrc: '/images/anti_tarnish/banner_ethnic_ad.png',
     labelPosition: 'bottom-right',
-    showNativeLabel: true,
+    showNativeLabel: false, // Text "ETHNIC" is already embedded high-res in the image
     alt: 'Ethnic American Diamond Anti-Tarnish Jewelry Set',
   },
   {
     id: 'anti-kashmiri',
     title: 'KASHMIRI EARRINGS',
     href: '/products?category=AntiTarnish&subcategory=OxidizedEarrings',
-    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.jpg',
+    imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.png',
     labelPosition: 'bottom-left',
-    showNativeLabel: true,
+    showNativeLabel: false, // Text "KASHMIRI EARRINGS" is already embedded high-res in the image
+    objectPosition: 'object-bottom',
     alt: 'Kashmiri Style Drop & Dangle Traditional Earrings',
   },
   {
@@ -126,7 +128,7 @@ export const HomeCategoryBannerGrid: React.FC = () => {
                   alt={card.alt}
                   fill
                   sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 600px"
-                  className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.02]"
+                  className={`object-cover ${card.objectPosition || 'object-center'} transition-transform duration-500 ease-out group-hover:scale-[1.02]`}
                 />
 
                 {/* Subtle Gradient Overlay */}
@@ -197,12 +199,12 @@ export const HomeCategoryBannerGrid: React.FC = () => {
       </div>
 
       {/* ═══════════════════════════════════════════════════════
-          SECTION 3: BUY 2 AT ₹ 499 + FREE SURPRISE GIFTS (Image 4)
+          SECTION 3: BUY 2 AT ₹ 499 + FREE SURPRISE GIFTS
           ═══════════════════════════════════════════════════════ */}
       <div className="pt-2 sm:pt-4">
         <Link
           href="/products?category=HotDeals"
-          className="group block relative w-full aspect-[1024/253] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#470813] bg-[#3b0d14] cursor-pointer"
+          className="group block relative w-full aspect-[1024/199] rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-[#470813] bg-[#380e0f] cursor-pointer"
           title="Buy 2 at ₹499 + Free Surprise Gifts"
         >
           <Image

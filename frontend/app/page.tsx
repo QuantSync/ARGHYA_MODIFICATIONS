@@ -48,6 +48,14 @@ const HOME_BANNER_SLIDES: BannerSlide[] = [
     title: 'Explore 925 Pure Silver',
   },
   {
+    src: '/images/banners/banner_buy_studs_199_3x.png',
+    srcSet: '/images/banners/banner_buy_studs_199.png 1024w, /images/banners/banner_buy_studs_199_2x.png 2048w, /images/banners/banner_buy_studs_199_3x.png 3072w',
+    alt: 'Buy Studs @ ₹199 - Proudly offering the best Prices & Quality in India',
+    bgColor: '#050720',
+    href: '/products?category=AntiTarnish&subcategory=ModernEarrings',
+    title: 'Buy Studs @ ₹199',
+  },
+  {
     src: '/images/banners/banner_anti_tarnish_shop_collection_3x.png',
     srcSet: '/images/banners/banner_anti_tarnish_shop_collection.png 1024w, /images/banners/banner_anti_tarnish_shop_collection_2x.png 2048w, /images/banners/banner_anti_tarnish_shop_collection_3x.png 3072w',
     alt: 'Shop the collection - Arghya Anti-Tarnish Fine Jewelry',

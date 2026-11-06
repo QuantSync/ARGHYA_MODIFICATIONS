@@ -41,6 +41,14 @@ const ANTI_TARNISH_BANNER_SLIDES: BannerSlide[] = [
     title: 'Click to explore Anti-Tarnish Collection',
   },
   {
+    src: '/images/banners/banner_buy_studs_199_3x.png',
+    srcSet: '/images/banners/banner_buy_studs_199.png 1024w, /images/banners/banner_buy_studs_199_2x.png 2048w, /images/banners/banner_buy_studs_199_3x.png 3072w',
+    alt: 'Buy Studs @ ₹199 - Proudly offering the best Prices & Quality in India',
+    bgColor: '#050720',
+    onClickScrollId: 'anti-tarnish-catalog-view',
+    title: 'Buy Studs @ ₹199',
+  },
+  {
     src: '/images/banners/banner_free_gifts_cat_3x.png',
     srcSet: '/images/banners/banner_free_gifts_cat.png 1024w, /images/banners/banner_free_gifts_cat_2x.png 2048w, /images/banners/banner_free_gifts_cat_3x.png 3072w',
     alt: 'Get Free Gifts on Order Above INR 299',
