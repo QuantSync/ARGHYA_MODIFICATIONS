@@ -299,7 +299,7 @@ export const LimitedStockModal: React.FC<LimitedStockModalProps> = ({
                   <p className={`text-xs sm:text-sm mt-2 max-w-sm mx-auto leading-relaxed ${
                     isDark ? 'text-stone-300' : 'text-stone-700'
                   }`}>
-                    This handcrafted boutique couture piece is in unprecedented demand. <span className={`font-black underline ${
+                    This handcrafted fine jewellery piece is in unprecedented demand. <span className={`font-black underline ${
                       isDark ? 'text-amber-300' : 'text-rose-700'
                     }`}>{getScarcityText(effectivePieces)}</span> in stock!
                   </p>

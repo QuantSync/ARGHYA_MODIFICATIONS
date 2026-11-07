@@ -18,294 +18,25 @@ import { getProductReviews } from '../../../lib/productReviews';
 
 import { SoldOutSizeModal } from '../../../components/modals/SoldOutSizeModal';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 import { getCatalogProduct, PRODUCTS_CATALOG } from '../../../lib/productsCatalog';
 
-
-const PRODUCTS_MAP: Record<string, any> = {
-  'rangrez-chaniya-set': {
-    id: 'a1b2c3d4-e5f6-7a8b-9c0d-1e2f3a4b5c6d',
-    name: 'Rangrez Chaniya Set',
-    slug: 'rangrez-chaniya-set',
-    description: 'ARGHYA \u2014 Rangrez Chaniya Set\nMulticolour Printed Lehenga \u2022 Blouse \u2022 Dupatta',
-    price: 2099.00,
-    compare_at_price: 4999.00,
-    category: 'NAVRATRI SPECIAL',
-    fabric: 'Printed Handloom',
-    craft_type: 'NAVRATRI COLLECTION BY . Rangrez Chaniya Set',
-    images: [
-      '/products/rangrez/3.jpg',
-      '/products/rangrez/1.jpg',
-      '/products/rangrez/2.jpg',
-      '/products/rangrez/4.jpg'
-    ]
-  },
-  'the-prism-radiance-fusion-set': {
-    id: 'b2c3d4e5-f6a7-8b9c-0d1e-2f3a4b5c6d7e',
-    name: 'The Prism Radiance Fusion Set',
-    slug: 'the-prism-radiance-fusion-set',
-    description: 'ARGHYA \u2014 Fusion Collection\nHandcrafted Fusion Saree & Lehenga Set \u2022 Blouse \u2022 Dupatta',
-    price: 799.00,
-    compare_at_price: 1799.00,
-    category: 'FUSION COLLECTION',
-    fabric: 'Silk Blend & Georgette',
-    craft_type: 'Prism Radiance & Saffron Fusion',
-    images: [
-      '/products/fusion/The Prism Radiance Fusion Set.jpg',
-      '/products/fusion/The Saffron Aura Fusion Set.jpg'
-    ],
-    colorOptions: [
-      {
-        name: 'The Prism Radiance Fusion Set',
-        colorName: 'Red',
-        colorHex: '#DC2626',
-        images: ['/products/fusion/The Prism Radiance Fusion Set.jpg']
-      },
-      {
-        name: 'The Saffron Aura Fusion Set',
-        colorName: 'Orange',
-        colorHex: '#EA580C',
-        images: ['/products/fusion/The Saffron Aura Fusion Set.jpg']
-      }
-    ]
-  },
-  'the-saffron-aura-fusion-set': {
-    id: 'c3d4e5f6-a7b8-9c0d-1e2f-3a4b5c6d7e8f',
-    name: 'The Saffron Aura Fusion Set',
-    slug: 'the-saffron-aura-fusion-set',
-    description: 'ARGHYA \u2014 Fusion Collection\nHandcrafted Saffron Fusion Saree & Lehenga Set \u2022 Blouse \u2022 Dupatta',
-    price: 799.00,
-    compare_at_price: 1799.00,
-    category: 'FUSION COLLECTION',
-    fabric: 'Silk Blend & Georgette',
-    craft_type: 'Saffron Aura Fusion',
-    images: ['/products/fusion/The Saffron Aura Fusion Set.jpg'],
-    colorOptions: [
-      {
-        name: 'The Prism Radiance Fusion Set',
-        colorName: 'Red',
-        colorHex: '#DC2626',
-        images: ['/products/fusion/The Prism Radiance Fusion Set.jpg']
-      },
-      {
-        name: 'The Saffron Aura Fusion Set',
-        colorName: 'Orange',
-        colorHex: '#EA580C',
-        images: ['/products/fusion/The Saffron Aura Fusion Set.jpg']
-      }
-    ]
-  },
-
-  'lime-green-floral-mirror-work-kurti': {
-    id: 'd4e5f6a7-b89c-0d1e-2f3a-4b5newkurti1',
-    name: 'Lime Green Floral Mirror-Work Kurti',
-    slug: 'lime-green-floral-mirror-work-kurti',
-    description: 'Floral-print lime green kurti with tie-up shoulders and mirror-work trim. Easy, pretty and made for festive days.\n\nSlay Everyday: Elevate your casual ethnic look with this breezy, minimal yet vibrant piece.\n\nFabric: Premium Cotton Blend\nCare: Dry clean recommended',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/1.jpg', '/products/kurti/2.jpg']
-  },
-  'neelam-floral-kurti': {
-    id: 'e5f6a7b8-c9d0-1e2f-3a4b-5c6neelam1',
-    name: 'Neelam Floral Kurti',
-    slug: 'neelam-floral-kurti',
-    description: 'Navy blue floral kurti with tie-up shoulders and mirror-work trim. Rich colour, easy fit, made for festive evenings.\n\nTwo shades, one floral story.\n\nSlay Everyday: Elevate your casual ethnic look with this breezy, minimal yet vibrant piece.\n\nFabric: Premium Cotton Blend\nCare: Dry clean recommended',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/3.jpg', '/products/kurti/4.jpg']
-  },
-  'roshni-floral-kurti': {
-    id: 'f7g8h9i0-j1k2-l3m4-n5o6-7p8roshni1',
-    name: 'Roshni Floral Kurti',
-    slug: 'roshni-floral-kurti',
-    description: '\u2022 Turn heads in the Roshni kurti\n\u2022 Vivid fuchsia-pink base with large dusty-blue, blush and mauve florals\n\u2022 Soft tone-on-tone print behind florals\n\u2022 Sleeveless A-line cut with scoop neck\n\u2022 Tie-up shoulder straps with small tassel ends\n\u2022 Mirror-work along neckline and hem\n\u2022 Pair with white palazzos for festive days, mehndi functions and celebrations',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/5.jpg', '/products/kurti/6.jpg']
-  },
-  'vamika-floral-kurti': {
-    id: 'g8h9i0j1-k2l3-m4n5-o6p7-8q9vamika1',
-    name: 'Vamika Floral Kurti',
-    slug: 'vamika-floral-kurti',
-    description: '\u2022 The Vamika kurti pairs a rich wine-plum base with lush magenta, blush and powder-blue blooms\n\u2022 Sleeveless A-line silhouette with a scoop neck and tie-up shoulder straps\n\u2022 Mirror-work borders on the neckline and hem finish with delicate hanging detail\n\u2022 Style it with white palazzos for an elegant, easy look for evening gatherings, festive occasions and family celebrations',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/7.jpg', '/products/kurti/8.jpg']
-  },
-  'olive-tie-shoulder-kurti': {
-    id: 'h9i0j1k2-l3m4-n5o6-p7q8-r9solive1',
-    name: 'Olive Tie Shoulder Kurti',
-    slug: 'olive-tie-shoulder-kurti',
-    description: '\u2022 Keep it fresh and festive in this olive-green kurti\n\u2022 A soft tonal floral texture runs through the fabric, dotted with delicate ivory motifs\n\u2022 The sleeveless A-line cut has a scoop neck and tie-up shoulder straps, and the ties end in mirror-detailed tassels\n\u2022 Mirror-work trims the neckline and hem\n\u2022 Pair it with white palazzos, as shown, for a light, elegant look for day functions, haldi ceremonies and get-togethers',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/9.jpg', '/products/kurti/10.jpg']
-  },
-  'pink-tie-shoulder-kurti': {
-    id: 'i0j1k2l3-m4n5-o6p7-q8r9-s0tpink1',
-    name: 'Pink Tie Shoulder Kurti',
-    slug: 'pink-tie-shoulder-kurti',
-    description: '\u2022 Bright, bold and ready for the celebration\n\u2022 This fuchsia-pink kurti is scattered with ivory-and-gold motifs on a subtly textured base\n\u2022 The sleeveless A-line silhouette has a scoop neck and tie-up shoulder straps\n\u2022 Mirror-work borders the neckline and hem, and small hanging beads along the hem add a playful swing\n\u2022 Style it with white palazzos, as shown, for a vibrant look for mehndi nights, festive days and family functions',
-    price: 379.00,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/11.jpg', '/products/kurti/12.jpg']
-  },
-  'plum-tie-shoulder-kurti': {
-    id: 'k2l3m4n5-o6p7-q8r9-s0t1-u2v3plum1',
-    name: 'Plum Tie Shoulder Kurti',
-    slug: 'plum-tie-shoulder-kurti',
-    description: '\u2022 Rich, moody and full of depth. The plum-purple base has a mottled, dye-inspired texture, with cream-and-gold motifs that stand out against it\n\u2022 The sleeveless A-line cut has a scoop neck and tie-up shoulder straps finished with small tassels\n\u2022 Mirror-work along the neckline and hem adds a soft shimmer\n\u2022 Pair it with white palazzos, as shown, for a graceful look for evening functions, festive gatherings and special occasions',
-    price: 398,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Floral Print & Mirror Work',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/13.jpg', '/products/kurti/14.jpg']
-  },
-  'royal-embroided-kurti': {
-    id: 'r0y1a2l3-e4m5-b6r7-o8i9-d0e1d2k3u4r5',
-    name: 'Royal Embroided Kurti',
-    slug: 'royal-embroided-kurti',
-    description: 'Embrace timeless elegance with a modern twist. This stunning white tunic is a masterpiece of intricate artistry, featuring delicate white-on-white embroidery that blends traditional paisley motifs with contemporary geometric patterns.\n\nDesigned for the woman who loves effortless grace, this piece features a breezy A-line silhouette and delicate spaghetti straps, making it the perfect companion for sun-drenched afternoons. The ethereal white palette is playfully contrasted with vibrant, multi-colored tassel detailing along the neckline and side slits, adding a pop of joy and a bohemian spirit to the look.\n\nFinished with a sophisticated scalloped lace hem, this top transitions seamlessly from a polished daytime look with wide-leg denim to a refined evening ensemble.',
-    price: 576,
-    compare_at_price: 899.00,
-    category: 'Kurti',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'White-on-White Embroidery',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/royal1.jpg', '/products/kurti/royal2.jpg', '/products/kurti/royal3.jpg', '/products/kurti/royal4.jpg']
-  },
-  // ── Navratri Garbha Skirt Collection (4 colour variants in one catalogue) ──
-  'navratri-rose-print-garbha-skirt': {
-    id: 'n4v1r4t7-r0s3-g4r6-h4s1-k1r7s0k1r701',
-    name: 'Navratri Design Garbha Skirt',
-    slug: 'navratri-rose-print-garbha-skirt',
-    description: 'Step into a world of color and culture. This breathtaking maxi skirt is more than just a garment; it is a wearable piece of art. Featuring a delicate all-over floral print on a crisp white canvas, the skirt blooms into a magnificent wide border that tells a story of tradition.\n\nInspired by timeless folk art, the intricate border depicts rhythmic dancers and traditional motifs in vibrant hues of saffron, crimson, and royal blue. The voluminous, high-waist silhouette is designed for movement, creating a stunning flare with every step you take. Accented with a shimmering embellished waistband, this piece perfectly bridges the gap between ethnic heritage and modern luxury.',
-    price: 891,
-    compare_at_price: 1299.00,
-    category: 'Navratri Special',
-    fabric: 'Premium Cotton Blend',
-    craft_type: 'Folk Art Print & Mirror Embellishments',
-    sizes: ['Free Size'],
-    images: ['/products/kurti/navratri_skirt1.jpg', '/products/kurti/navratri_skirt2.jpg'],
-    colorOptions: [
-      {
-        name: 'Navratri Rose Print Garbha Skirt',
-        colorName: 'Red',
-        colorHex: '#DC2626',
-        slug: 'navratri-rose-print-garbha-skirt',
-        description: 'Step into a world of color and culture. This breathtaking maxi skirt is more than just a garment; it is a wearable piece of art. Featuring a delicate all-over floral print on a crisp white canvas, the skirt blooms into a magnificent wide border that tells a story of tradition.\n\nInspired by timeless folk art, the intricate border depicts rhythmic dancers and traditional motifs in vibrant hues of saffron, crimson, and royal blue. The voluminous, high-waist silhouette is designed for movement, creating a stunning flare with every step you take. Accented with a shimmering embellished waistband, this piece perfectly bridges the gap between ethnic heritage and modern luxury.',
-        craft_type: 'Folk Art Print & Mirror Embellishments',
-        images: ['/products/kurti/navratri_skirt1.jpg', '/products/kurti/navratri_skirt2.jpg']
-      },
-      {
-        name: 'Navratri Folk Design Garbha Skirt',
-        colorName: 'Golden Yellow',
-        colorHex: '#DAA520',
-        slug: 'navratri-folk-design-garbha-skirt',
-        description: 'Step into a celebration of color and culture. The Heritage Harmony skirt is a wearable masterpiece that blends traditional Indian folk art with a contemporary bohemian silhouette.\n\nThe piece begins with a delicate, all-over ditsy floral print on a crisp white canvas, creating a light and airy feel. As the eye moves downward, the skirt blooms into a magnificent, wide-border narrative, depicting rhythmic traditional dancers and ornate motifs in vibrant shades of saffron, crimson, and royal blue.\n\nFinished with an intricately embellished waistband that adds a touch of shimmering luxury, this high-waisted, full-flare skirt is designed for the woman who carries her heritage with grace and modern confidence.',
-        craft_type: 'Folk Art Print & Mirror Embellishments',
-        images: ['/products/kurti/navratri_folk_skirt1.jpg', '/products/kurti/navratri_folk_skirt2.jpg']
-      },
-      {
-        name: 'Navratri Garba Blue Skirt',
-        colorName: 'Blue',
-        colorHex: '#1E40AF',
-        slug: 'navratri-garba-blue-skirt',
-        description: 'Celebrate the spirit of the festivities with a garment that embodies grace and tradition. Our Navratri Garba Blue Skirt is a breathtaking fusion of heritage artistry and modern silhouette, designed specifically for the woman who wants to shine under the festive lights.\n\nThe skirt features a pristine white canvas adorned with intricate blue and gold geometric motifs, creating a sophisticated, airy feel. This elegance is grounded by a magnificent wide border that captures the essence of the dance\u2014featuring beautifully detailed figures in traditional Garba attire, swirling in rhythm.\n\nFinished with a shimmering embellished waistband, this high-volume flare ensures that every step and every twirl is a statement of elegance.',
-        craft_type: 'Geometric Blue Motifs & Garba Art Border',
-        images: ['/products/kurti/navratri_blue_skirt1.jpg', '/products/kurti/navratri_blue_skirt2.jpg']
-      },
-      {
-        name: 'Raasrang Garba Skirt',
-        colorName: 'Green',
-        colorHex: '#4D7C0F',
-        slug: 'raasrang-garba-skirt',
-        description: "Meet the Raasrang Garba Skirt from Arghya, made to be twirled. This ivory skirt has a scattered multicolour floral print, and its hem is lined with illustrated Garba dancers in motion, so the whole skirt looks alive when you dance.\n\nThe wide hem carries folk-art panels in mustard, indigo, coral and green. Each panel shows a village scene of musicians, dancers and festive figures. A shimmering olive-green border finishes the edge.\n\nThe skirt has a generous flare, so it fans out into a full circle with every spin. The smocked, stretchable waist fits comfortably through hours of Garba and Dandiya without needing adjustments or safety pins.\n\nPair it with a crisp white crop top for a modern look, or with a mirror-work choli or kediyu blouse for a traditional one. Add oxidised silver jewellery and jutti, and you're ready for the dance floor.",
-        craft_type: 'Folk Art Panels & Olive Green Border',
-        images: ['/products/kurti/raasrang_skirt1.jpg', '/products/kurti/raasrang_skirt2.jpg']
-      }
-    ]
-  },
-
-  // ── Blossom Floral Printed Kurti — single catalogue with Blue & Pink colour options ──
-  'blue-blossom-floral-printed-kurti': {
-    id: 'blossom-floral-printed-kurti-001',
-    name: 'Blossom Floral Printed Kurti',
-    slug: 'blue-blossom-floral-printed-kurti',
-    description: 'Arghya Blossom Floral Printed Kurti\nCream cotton-feel kurti available in soft Blue and dreamy Pink floral prints, with pom-pom trims\n\nProduct Description\n\nThe Blossom Floral Printed Kurti is a light, easy kurti for everyday wear. The cream base blooms with large watercolour-style florals — choose your favourite shade.\n\nThe design details set it apart. The side slit has a tie-up dori detail, and the slit and hem are edged with white pom-pom lace. The back has a criss-cross neckline cutout, which adds interest from behind. The sleeves are full-length and the neckline is clean, so it works for a day at college, a family lunch or a casual outing.\n\nIt is a breathable, comfortable kurti that pairs well with jeans, palazzos, leggings or an ethnic skirt.',
-    price: 419.00,
-    compare_at_price: 999.00,
-    category: 'Kurti',
-    fabric: 'Cotton-Feel',
-    craft_type: 'Floral Print & Pom-Pom Trim',
-    sizes: ['S', 'L', 'XL', 'XXL'],
-    images: ['/products/kurti/blue_blossom_kurti_v2.jpg'],
-    colorOptions: [
-      {
-        name: 'Blue Blossom Floral Printed Kurti',
-        colorName: 'Blue',
-        colorHex: '#3B82F6',
-        slug: 'blue-blossom-floral-printed-kurti',
-        description: 'Arghya Blue Blossom Floral Printed Kurti\nCream cotton-feel kurti with a soft blue floral print and pom-pom trims\n\nProduct Description\n\nThe Blue Blossom Floral Printed Kurti is a light, easy kurti for everyday wear. The cream base carries large clusters of powder-blue and denim-blue flowers with sage-green leaves, so it looks fresh and calm. The print is soft and watercolour-like, not loud.\n\nThe design details set it apart. The side slit has a tie-up dori detail, and the slit and hem are edged with white pom-pom lace. The back has a criss-cross neckline cutout, which adds interest from behind. The sleeves are full-length and the neckline is clean, so it works for a day at college, a family lunch or a casual outing.\n\nIt is a breathable, comfortable kurti that pairs well with jeans, palazzos, leggings or an ethnic skirt.',
-        craft_type: 'Floral Print & Pom-Pom Trim',
-        sizes: ['S', 'L', 'XL', 'XXL'],
-        images: ['/products/kurti/blue_blossom_kurti_v2.jpg']
-      },
-      {
-        name: 'Pink Blossom Floral Printed Kurti',
-        colorName: 'Pink',
-        colorHex: '#EC4899',
-        slug: 'pink-blossom-floral-printed-kurti',
-        description: 'Arghya Pink Blossom Floral Printed Kurti\nCream cotton-feel kurti with a rosy-pink floral print and pom-pom trims\n\nProduct Description\n\nThe Pink Blossom Floral Printed Kurti has big, romantic flowers in rose-pink and dusty blush on a cream base, with sage-green leaves for balance. The look is warm and feminine, and it flatters most skin tones.\n\nThe tie-up dori detail on the side slit and the white pom-pom trim along the hem add a playful touch. The criss-cross back neckline makes it stand out from a plain kurti. It is a soft, easy kurti for daily wear that still looks put-together enough for festive gatherings.\n\nWear it with jeans for a relaxed look or with palazzos or a skirt for something more traditional.',
-        craft_type: 'Floral Print & Pom-Pom Trim',
-        sizes: ['S', 'L', 'XL', 'XXL'],
-        images: ['/products/kurti/red_blossom_kurti_v2.jpg']
-      }
-    ]
-  }
-};
-
-// ── Slug aliases: all 4 skirt URLs resolve to the same combined catalogue ──
-PRODUCTS_MAP['navratri-folk-design-garbha-skirt'] = PRODUCTS_MAP['navratri-rose-print-garbha-skirt'];
-PRODUCTS_MAP['navratri-garba-blue-skirt'] = PRODUCTS_MAP['navratri-rose-print-garbha-skirt'];
-PRODUCTS_MAP['raasrang-garba-skirt'] = PRODUCTS_MAP['navratri-rose-print-garbha-skirt'];
-
-// ── Blossom Kurti: pink & legacy red slugs resolve to the same combined catalogue ──
-PRODUCTS_MAP['pink-blossom-floral-printed-kurti'] = PRODUCTS_MAP['blue-blossom-floral-printed-kurti'];
-PRODUCTS_MAP['red-blossom-floral-printed-kurti'] = PRODUCTS_MAP['blue-blossom-floral-printed-kurti'];
-
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
+  const router = useRouter();
   const { addItem } = useCartStore();
   const [isPaymentModalOpen, setIsPaymentModalOpen] = useState(false);
   const [selectedImageIdx, setSelectedImageIdx] = useState(0);
 
-  const baseProduct = getCatalogProduct(params.slug) || PRODUCTS_CATALOG[params.slug] || PRODUCTS_MAP[params.slug] || Object.values(PRODUCTS_CATALOG)[0];
+  const rawProduct = getCatalogProduct(params.slug) || PRODUCTS_CATALOG[params.slug];
+
+  useEffect(() => {
+    if (!rawProduct) {
+      router.replace('/products');
+    }
+  }, [rawProduct, router]);
+
+  const baseProduct = rawProduct || Object.values(PRODUCTS_CATALOG)[0];
 
   // Auto-select the colour that matches the URL slug
   const initialColorIdx = baseProduct.colorOptions
@@ -313,13 +44,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     : 0;
   const [selectedColorIdx, setSelectedColorIdx] = useState(initialColorIdx);
 
-  const isBlossomKurti =
-    params.slug.includes('blossom-floral-printed-kurti') ||
-    baseProduct.slug?.includes('blossom-floral-printed-kurti');
-
   const initialSizes = baseProduct.colorOptions?.[initialColorIdx]?.sizes || baseProduct.sizes || ['Free Size'];
-  // Default to first in-stock size (skipping sold-out S for Blossom kurti)
-  const defaultInitialSize = (isBlossomKurti ? initialSizes.find((s: string) => s !== 'S') : null) || initialSizes[0] || 'Free Size';
+  const defaultInitialSize = initialSizes[0] || 'Free Size';
   const [selectedSize, setSelectedSize] = useState<string>(defaultInitialSize);
   const [isSoldOutModalOpen, setIsSoldOutModalOpen] = useState(false);
 
@@ -343,11 +69,11 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
   useEffect(() => {
     const currentSizes = activeColorOption?.sizes || baseProduct.sizes || ['Free Size'];
-    if (!currentSizes.includes(selectedSize) || (selectedSize === 'S' && isBlossomKurti)) {
-      const fallback = (isBlossomKurti ? currentSizes.find((s: string) => s !== 'S') : null) || currentSizes[0] || 'Free Size';
+    if (!currentSizes.includes(selectedSize)) {
+      const fallback = currentSizes[0] || 'Free Size';
       setSelectedSize(fallback);
     }
-  }, [activeColorOption, baseProduct.sizes, selectedSize, isBlossomKurti]);
+  }, [activeColorOption, baseProduct.sizes, selectedSize]);
 
   // Product Reviews data
   const [isReviewsModalOpen, setIsReviewsModalOpen] = useState(false);
@@ -612,42 +338,22 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                 <label className="text-xs text-burgundy-800/70 dark:text-stone-400 font-bold uppercase tracking-wider block">
                   {isMysteryJar ? 'Select Jar Size / Option' : 'Select Size'}
                 </label>
-                {isBlossomKurti && (
-                  <span className="text-[10px] text-rose-600 dark:text-rose-400 font-bold bg-rose-50 dark:bg-rose-950/40 px-2 py-0.5 rounded-full border border-rose-200 dark:border-rose-900/60 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
-                    Size S Sold Out
-                  </span>
-                )}
               </div>
               <div className="flex flex-wrap gap-2.5">
                 {sizes.map((sizeOption: string) => {
-                  const isSoldOut = sizeOption === 'S' && isBlossomKurti;
                   const isSelected = selectedSize === sizeOption;
                   return (
                     <button
                       key={sizeOption}
                       type="button"
-                      onClick={() => {
-                        if (isSoldOut) {
-                          setIsSoldOutModalOpen(true);
-                          return;
-                        }
-                        setSelectedSize(sizeOption);
-                      }}
+                      onClick={() => setSelectedSize(sizeOption)}
                       className={`relative px-4 py-2 rounded-xl text-xs font-bold uppercase border transition-all ${
-                        isSoldOut
-                          ? 'border-rose-300 dark:border-rose-900/70 bg-rose-50/70 dark:bg-rose-950/30 text-rose-400 dark:text-rose-400/60 cursor-pointer'
-                          : isSelected
+                        isSelected
                           ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-sm ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-stone-900'
                           : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 hover:border-black dark:hover:border-white'
                       }`}
                     >
-                      <span className={isSoldOut ? 'line-through opacity-70' : ''}>{sizeOption}</span>
-                      {isSoldOut && (
-                        <span className="absolute -top-2 -right-1.5 text-[8px] font-black text-rose-600 bg-rose-100 dark:bg-rose-900 px-1.5 rounded-full border border-rose-300 dark:border-rose-700">
-                          Sold
-                        </span>
-                      )}
+                      <span>{sizeOption}</span>
                     </button>
                   );
                 })}

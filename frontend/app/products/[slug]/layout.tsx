@@ -19,13 +19,33 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: 'Luxury Ethnic Couture & Designer Sarees',
-      description: 'Explore affordable luxury couture, designer sarees, and festive wear at ARGHYA (Arghyya Collections).',
+      title: 'ARGHYA — Fine Jewellery | 925 Pure Silver & Anti-Tarnish Collection',
+      description: 'Discover handcrafted Indian fine jewellery, authenticated 925 sterling silver, and waterproof anti-tarnish designer pieces at ARGHYA. Free Shipping Pan India & Cash on Delivery.',
+      openGraph: {
+        title: 'ARGHYA — Fine Jewellery | 925 Pure Silver & Anti-Tarnish Collection',
+        description: 'Discover handcrafted Indian fine jewellery, authenticated 925 sterling silver, and waterproof anti-tarnish designer pieces at ARGHYA. Free Shipping Pan India & Cash on Delivery.',
+        url: BASE_URL,
+        siteName: 'ARGHYA Fine Jewellery',
+        images: [
+          {
+            url: `${BASE_URL}/images/arghya_logo_card.png`,
+            width: 1200,
+            height: 630,
+            alt: 'ARGHYA Fine Jewellery',
+          },
+        ],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'ARGHYA — Fine Jewellery | 925 Pure Silver & Anti-Tarnish',
+        description: 'Discover handcrafted Indian fine jewellery, authenticated 925 sterling silver, and waterproof anti-tarnish designer pieces at ARGHYA. Free Shipping Pan India & Cash on Delivery.',
+        images: [`${BASE_URL}/images/arghya_logo_card.png`],
+      },
     };
   }
 
-  const title = `${product.name} — Luxury Ethnic Couture`;
-  const description = `Buy ${product.name} at ₹${product.price} online from ARGHYA (Arghyya Collections). ${product.fabric || 'Premium Fabric'} with ${product.craft_type || 'Artisanal Craft'}. Verified Cash on Delivery & Fast Delivery across India.`;
+  const title = `${product.name} — ARGHYA Fine Jewellery`;
+  const description = `Shop ${product.name} (₹${product.price}) online at ARGHYA. Handcrafted luxury Indian jewellery in ${product.fabric || '925 sterling silver / anti-tarnish'}. Free Shipping Pan India & Cash on Delivery available.`;
   const canonicalUrl = `${BASE_URL}/products/${params.slug}`;
   const imageUrl = product.images[0]?.startsWith('http')
     ? product.images[0]
@@ -40,21 +60,22 @@ export async function generateMetadata({
       'arghya',
       'arghyya',
       'arghyya.com',
-      'arghya',
-      'arghyya collections',
-      'arghya.co',
+      'arghya fine jewellery',
+      'indian fine jewellery',
+      '925 sterling silver',
+      'anti tarnish jewellery',
       product.category.toLowerCase(),
-      'designer ethnic wear online',
-      'cash on delivery ethnic wear',
+      'buy jewellery online india',
+      'cash on delivery jewellery',
     ],
     alternates: {
       canonical: canonicalUrl,
     },
     openGraph: {
-      title: `${product.name} | ARGHYA (Arghyya Collections)`,
+      title: `${product.name} | ARGHYA Fine Jewellery`,
       description,
       url: canonicalUrl,
-      siteName: 'ARGHYA (Arghyya Collections)',
+      siteName: 'ARGHYA Fine Jewellery',
       locale: 'en_IN',
       type: 'website',
       images: [
@@ -68,7 +89,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${product.name} | ARGHYA`,
+      title: `${product.name} | ARGHYA Fine Jewellery`,
       description,
       images: [imageUrl],
     },

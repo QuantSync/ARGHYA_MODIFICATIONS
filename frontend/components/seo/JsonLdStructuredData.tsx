@@ -6,7 +6,7 @@ export const JsonLdStructuredData: React.FC = () => {
   // 1. Organization & Brand Schema with alternateName mapping for "arghya", "arghyya", "arghyya.com", "arghya.co"
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': ['ClothingStore', 'Brand', 'Organization'],
+    '@type': ['JewelryStore', 'Brand', 'Organization'],
     '@id': `${BASE_URL}/#organization`,
     name: 'ARGHYA',
     alternateName: [
@@ -22,13 +22,13 @@ export const JsonLdStructuredData: React.FC = () => {
       'Arghyya Official',
       'Arghya Boutique',
       'Arghyya Boutique',
-      'Arghya Fashion',
-      'Arghyya Fashion'
+      'Arghya Jewellery',
+      'Arghyya Fine Jewellery'
     ],
     url: BASE_URL,
     logo: `${BASE_URL}/images/arghya_logo_card.png`,
     image: `${BASE_URL}/images/arghya_logo_card.png`,
-    description: 'ARGHYA (officially at arghyya.com, also widely searched as Arghya, Arghyya, Arghya, or arghya.co) is India’s signature contemporary couture house specializing in affordable luxury designer sarees, royal lehengas, Navratri chaniya choli sets, and festive kurtis.',
+    description: 'ARGHYA (officially at arghyya.com, also widely searched as Arghya, Arghyya, Arghya, or arghya.co) is India’s signature contemporary fine jewellery house specializing in authenticated 925 sterling silver, waterproof anti-tarnish designer jewellery, American Diamond sets, and handcrafted oxidised silver earrings.',
     slogan: 'Slay Everyday',
     email: 'care.arghya@gmail.com',
     telephone: '+91-8882827148',
@@ -56,8 +56,8 @@ export const JsonLdStructuredData: React.FC = () => {
     '@id': `${BASE_URL}/#website`,
     url: BASE_URL,
     name: 'ARGHYA',
-    alternateName: ['Arghya Modifications', 'Arghyya', 'arghyya.com', 'Arghya'],
-    description: 'Official online home of ARGHYA & Arghyya (arghyya.com) — Luxury Indian Couture & Designer Sarees',
+    alternateName: ['Arghya Modifications', 'Arghyya', 'arghyya.com', 'Arghya', 'ARGHYA Fine Jewellery'],
+    description: 'Official online home of ARGHYA & Arghyya (arghyya.com) — Fine Jewellery & 925 Pure Silver Collection',
     publisher: {
       '@id': `${BASE_URL}/#organization`
     },
@@ -81,15 +81,15 @@ export const JsonLdStructuredData: React.FC = () => {
         name: 'What is ARGHYA and is it also known as Arghyya or arghyya.com?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'ARGHYA (hosted at arghyya.com, also widely searched as Arghyya or Arghya) is India’s premier luxury fashion atelier specializing in affordable premium designer sarees, festive kurtis, Navratri chaniya cholis, and royal ethnic wear.'
+          text: 'ARGHYA (hosted at arghyya.com, also widely searched as Arghyya or Arghya) is India’s premier fine jewellery atelier specializing in certified 925 sterling silver, waterproof anti-tarnish everyday jewelry, American Diamond sets, and handcrafted oxidised silver earrings.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Where can I purchase authentic Arghya or Arghyya outfits?',
+        name: 'Where can I purchase authentic Arghya or Arghyya jewellery?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Authentic ARGHYA couture is exclusively available at our official online flagship store at arghyya.com (www.arghyya.com) with guaranteed quality and verified Cash on Delivery across India.'
+          text: 'Authentic ARGHYA fine jewellery is exclusively available at our official online flagship store at arghyya.com (www.arghyya.com) with guaranteed 925 silver purity hallmarks and verified Cash on Delivery across India.'
         }
       },
       {

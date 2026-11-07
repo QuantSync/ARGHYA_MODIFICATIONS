@@ -13,15 +13,15 @@ export default function AdminDashboardPage() {
   });
 
   const [inventoryLogs, setInventoryLogs] = useState([
-    { id: '1', sku: 'ARG-SAR-CRIM-FS', product: 'Royal Crimson Banarasi Silk Saree', change: -1, reason: 'ORDER_DEDUCTION', quantityLeft: 14, date: '2026-09-20 10:45' },
-    { id: '2', sku: 'ARG-LEH-EMR-M', product: 'Emerald Green Zardozi Velvet Lehenga (M)', change: -1, reason: 'ORDER_DEDUCTION', quantityLeft: 3, date: '2026-09-20 09:30' },
-    { id: '3', sku: 'ARG-ANK-PNK-M', product: 'Blush Pink Chanderi Anarkali Suit (M)', change: 10, reason: 'MANUAL_RESTOCK', quantityLeft: 20, date: '2026-09-19 16:20' }
+    { id: '1', sku: 'ARG-SIL-STR-BRC', product: '925 Sterling Silver Star Bracelet', change: -1, reason: 'ORDER_DEDUCTION', quantityLeft: 14, date: '2026-09-20 10:45' },
+    { id: '2', sku: 'ARG-MOD-CEL-EAR', product: 'Celeste Pearl Cascade Earrings', change: -1, reason: 'ORDER_DEDUCTION', quantityLeft: 3, date: '2026-09-20 09:30' },
+    { id: '3', sku: 'ARG-OXI-MAJ-JHM', product: 'Majestic Peacock Oxidised Jhumki', change: 10, reason: 'MANUAL_RESTOCK', quantityLeft: 20, date: '2026-09-19 16:20' }
   ]);
 
   const [pythonJobOutput, setPythonJobOutput] = useState<string | null>(null);
 
   const triggerPythonJob = () => {
-    setPythonJobOutput('Running Inventory Optimizer & Analytics Python scripts...\n-------------------------------------------------\n[OUTPUT]: Identified 2 variants below reorder threshold (ROP=5).\n[RECOMMENDATION]: Restock Emerald Green Lehenga (M) +3 units.\n[ANALYTICS]: Gross Revenue ₹1,16,998.00 across 4 categories.');
+    setPythonJobOutput('Running Inventory Optimizer & Analytics Python scripts...\n-------------------------------------------------\n[OUTPUT]: Identified 2 variants below reorder threshold (ROP=5).\n[RECOMMENDATION]: Restock Celeste Pearl Cascade Earrings +5 units.\n[ANALYTICS]: Gross Revenue ₹1,16,998.00 across fine jewellery categories.');
   };
 
   return (

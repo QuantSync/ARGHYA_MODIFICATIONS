@@ -254,7 +254,7 @@ export const CODChoiceModal: React.FC<CODChoiceModalProps> = ({
 
             {/* Footer note */}
             <p className="mt-5 text-center text-[10px] text-neutral-400 dark:text-neutral-500 font-medium">
-              100% Safe · Authentic Arghya Couture · Free Shipping
+              100% Safe · Authentic Arghya Fine Jewellery · Free Shipping
             </p>
           </motion.div>
         </>

@@ -15,7 +15,7 @@ const TERMS_SECTIONS: TermSection[] = [
     title: '1. Introduction and Acceptance',
     postulates: [
       'Welcome to Arghyya. This website, www.arghyya.com (the "Website"), is owned and operated by Arghyya, having its registered office at Delhi, India ("Arghyya , SLAY EVERYDAY").',
-      'These Terms & Conditions ("Terms") govern your access to and use of the Website and any purchase of women’s ethnic wear, sarees, kurtis, skirts and related products ("Products") from us.',
+      'These Terms & Conditions ("Terms") govern your access to and use of the Website and any purchase of 925 sterling silver, anti-tarnish jewellery, and related fine jewellery accessories ("Products") from us.',
       'By browsing the Website, creating an account, subscribing to our newsletter or placing an order, you confirm that you have read, understood and agreed to these Terms, along with our Privacy Policy, Shipping Policy and Return, Exchange & Refund Policy, which form part of this agreement. If you do not agree, please do not use the Website.',
       'This document is an electronic record under the Information Technology Act, 2000 and the rules made under it. It does not require any physical or digital signature.'
     ]
@@ -43,8 +43,8 @@ const TERMS_SECTIONS: TermSection[] = [
     title: '4. Products, Colours and Craft Variations',
     postulates: [
       'Colour: Product photos are taken under studio lighting. Actual colour may differ slightly depending on your screen settings.',
-      'Fabric and craft: Many of our pieces involve traditional weaving, dyeing, block printing, embroidery or handwork. Minor variations in weave, print alignment, shade or embellishment are natural characteristics of such work and are not treated as defects.',
-      'Size and fit: Please refer to the size chart on each product page before ordering. Measurements may vary by a small tolerance (up to ± 1 inch / 2 cm).',
+      'Materials and craft: Our collections feature genuine 925 sterling silver and high-grade anti-tarnish alloys with protective electroplating. Handcrafted details, stone settings, and polish may display slight artisanal variations which are natural hallmarks of authentic jewellery craftsmanship.',
+      'Dimensions and styling: Please refer to chain lengths, pendant measurements, and specifications provided on each product page before ordering.',
       'Availability: All Products are subject to availability. We may discontinue any Product at any time.',
       'Descriptions: We try to keep descriptions, images and specifications error-free, but we do not guarantee that they are complete or free from typographical mistakes.'
     ]
@@ -87,7 +87,7 @@ const TERMS_SECTIONS: TermSection[] = [
       'Eligibility for return or exchange: Request within 48 hours of delivery.',
       'The Product must be unused, unwashed, unaltered, with all original tags, packaging and invoice intact, and free from perfume, makeup, deodorant, food or pet stains.',
       'Not eligible: sale or clearance items marked "final sale", customised or made-to-order pieces, altered items, innerwear/accessories/masks (hygiene reasons), gift cards, and items returned after the window.',
-      'For sarees, the return is not accepted if the saree has been unfolded and worn, or if fall/pico or blouse stitching has been done.',
+      'For jewellery items, returns are accepted only if the security seal, jewellery tags, and protective boxes remain untampered and unworn.',
       'Damaged, defective or wrong product: Report within 48 hours of delivery with clear photos/video and your order number. If confirmed, we will offer a replacement, exchange or full refund, and we will bear the pickup cost.',
       'Refunds: Refunds are processed to the original payment method within 7 to 10 working days after we receive and inspect the returned item. For COD orders, refunds are made by bank transfer/UPI to details you provide, or as store credit.',
       'COD fees are non-refundable unless the return is due to our error.',

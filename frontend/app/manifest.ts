@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'ARGHYA | Arghyya Luxury Couture',
+    name: 'ARGHYA | Fine Jewellery',
     short_name: 'Arghya',
-    description: 'ARGHYA (also searched as Arghyya / Arghya) — Affordable Premium Indian Fashion, Designer Sarees, Navratri Chaniya Choli & Luxury Kurtis.',
+    description: 'ARGHYA (also searched as Arghyya / Arghya) — Authenticated 925 Sterling Silver & Waterproof Anti-Tarnish Indian Fine Jewellery.',
     start_url: '/',
     display: 'standalone',
     background_color: '#120304',

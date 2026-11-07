@@ -61,8 +61,8 @@ export const PayOnDeliveryModal: React.FC<PayOnDeliveryModalProps> = ({
   const totalAmount = basePrice + COD_CHARGE;
 
   // Determine display name and image
-  const displayName = product?.name || 'Blossom Floral Printed Kurti';
-  const productImage = product?.images?.[0] || '/products/kurti/blue_blossom_kurti_v2.jpg';
+  const displayName = product?.name || 'ARGHYA Fine Jewellery';
+  const productImage = product?.images?.[0] || '/images/arghya_logo_card.png';
   const activeSize = selectedSize || (product?.sizes && product.sizes.length > 0 ? product.sizes[0] : 'Free Size');
 
   // ESC key handler
@@ -152,7 +152,7 @@ export const PayOnDeliveryModal: React.FC<PayOnDeliveryModalProps> = ({
         state: formData.state.trim(),
         pincode: formData.pincode.trim(),
         productName: displayName,
-        productSlug: product?.slug || 'blossom-floral-printed-kurti',
+        productSlug: product?.slug || 'arghya-fine-jewellery',
         size: activeSize,
         basePrice: basePrice,
         deliveryCharge: COD_CHARGE,

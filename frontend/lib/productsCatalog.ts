@@ -962,7 +962,7 @@ Make a sophisticated style statement with this elegant triple-layer sterling sil
     slug: 'royal-blue-leaf-drop-oxidised-jhumki',
     description: `*Royal Blue Leaf Drop Oxidised Jhumki*
 
-Add a pop of color to your ethnic wardrobe with these stunning oxidised silver jhumkis. Featuring a rectangular top adorned with deep royal blue leaf-shaped stones, these earrings cascade into a beautifully detailed, traditional silver jhumki. Perfect for pairing with kurtis and sarees.
+Add a pop of color to your ethnic wardrobe with these stunning oxidised silver jhumkis. Featuring a rectangular top adorned with deep royal blue leaf-shaped stones, these earrings cascade into a beautifully detailed, traditional silver jhumki. Perfect for pairing with any ethnic or modern festive outfit.
 
 *Product Details:*
 • Material: Oxidised Silver Finish, Artificial Stones

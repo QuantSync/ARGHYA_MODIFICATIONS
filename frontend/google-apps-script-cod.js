@@ -84,7 +84,7 @@ function doPost(e) {
         city: "Kolkata",
         state: "West Bengal",
         pincode: "700001",
-        productName: "Blossom Floral Printed Kurti",
+        productName: "ARGHYA Fine Jewellery",
         orderId: "ARG-COD-TEST",
         email: "care.arghya@gmail.com",
         phone: "9876543210",
@@ -131,7 +131,7 @@ function doPost(e) {
     }
 
     // Format product name (include size if available)
-    var prodName = data.productName || "Blossom Floral Printed Kurti";
+    var prodName = data.productName || "ARGHYA Fine Jewellery";
     if (data.size && data.size !== "Free Size" && !prodName.includes(data.size)) {
       prodName += " (Size: " + data.size + ")";
     }
@@ -234,7 +234,7 @@ function testDoPost() {
         city: "Kolkata",
         state: "West Bengal",
         pincode: "700001",
-        productName: "Blossom Floral Printed Kurti",
+        productName: "ARGHYA Fine Jewellery",
         size: "Free Size",
         basePrice: 419,
         deliveryCharge: 25,

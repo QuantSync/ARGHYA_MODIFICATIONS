@@ -71,7 +71,7 @@ const POLICIES = [
       'Discount codes and promotional offers cannot be combined with active sale prices unless explicitly stated in the offer terms.',
       'Arghya reserves the right to cancel any order placed at an erroneous price arising from a technical or typographical error on the website.',
       'In the event of order cancellation due to a pricing error, customers will be notified promptly and a full refund will be issued within 5 business days.',
-      'Limited-edition and handcrafted couture pieces offered during sale events are available in strictly finite quantities — first come, first served.',
+      'Limited-edition and handcrafted fine jewellery pieces offered during sale events are available in strictly finite quantities — first come, first served.',
     ],
   },
 ];

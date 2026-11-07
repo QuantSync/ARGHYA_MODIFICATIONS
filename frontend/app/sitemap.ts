@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { PRODUCTS_CATALOG } from '../lib/productsCatalog';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.arghyya.com';
 
@@ -20,12 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/sarees`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly',
-      priority: 0.85,
-    },
-    {
       url: `${BASE_URL}/about`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
@@ -45,28 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // Active product slugs for complete catalog indexing
-  const productSlugs = [
-    'rangrez-chaniya-set',
-    'the-prism-radiance-fusion-set',
-    'the-saffron-aura-fusion-set',
-    'lime-green-floral-mirror-work-kurti',
-    'neelam-floral-kurti',
-    'roshni-floral-kurti',
-    'vamika-floral-kurti',
-    'olive-tie-shoulder-kurti',
-    'pink-tie-shoulder-kurti',
-    'plum-tie-shoulder-kurti',
-    'royal-embroided-kurti',
-    'navratri-rose-print-garbha-skirt',
-    'navratri-folk-design-garbha-skirt',
-    'navratri-garba-blue-skirt',
-    'raasrang-garba-skirt',
-    'blue-blossom-floral-printed-kurti',
-    'pink-blossom-floral-printed-kurti',
-  ];
-
-  const productRoutes: MetadataRoute.Sitemap = productSlugs.map((slug) => ({
+  // Active fine jewellery product slugs for complete catalog indexing
+  const productRoutes: MetadataRoute.Sitemap = Object.keys(PRODUCTS_CATALOG).map((slug) => ({
     url: `${BASE_URL}/products/${slug}`,
     lastModified: currentDate,
     changeFrequency: 'weekly',

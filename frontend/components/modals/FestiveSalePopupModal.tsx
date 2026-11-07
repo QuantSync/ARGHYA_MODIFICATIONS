@@ -166,12 +166,12 @@ export const FestiveSalePopupModal: React.FC<FestiveSalePopupModalProps> = ({
                   id="festive-modal-title"
                   className="font-serif text-3xl sm:text-4xl font-bold text-burgundy-900 dark:text-stone-100 leading-tight"
                 >
-                  The Festive Couture<br />Sale Event
+                  The Festive Jewellery<br />Sale Event
                 </h2>
               </motion.div>
               
               <motion.p variants={STAGGER_ITEM} className="text-sm text-burgundy-800/80 dark:text-stone-300 leading-relaxed max-w-sm mx-auto font-medium">
-                Celebrate the season of joy with Arghya. Step into the festivities with handwoven Navratri specials and vibrant ethnic wear.
+                Celebrate the season of joy with Arghya. Step into the festivities with certified 925 sterling silver and waterproof anti-tarnish fine jewellery.
               </motion.p>
               
               <motion.div variants={STAGGER_ITEM} className="pt-2">

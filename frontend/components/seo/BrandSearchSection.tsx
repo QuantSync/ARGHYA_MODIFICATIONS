@@ -7,23 +7,23 @@ import { Sparkles, ChevronDown, ShieldCheck, HeartHandshake, Truck, Award } from
 const FAQS = [
   {
     q: 'What is ARGHYA and why is it also searched as Arghyya or arghyya.com?',
-    a: 'ARGHYA (officially online at arghyya.com, commonly spelled or searched as Arghyya, Arghya, or arghya.co) is India’s signature contemporary couture brand. We blend royal traditional Indian craftsmanship with modern silhouettes — delivering handcrafted designer sarees, festive lehengas, Navratri chaniya choli sets, and everyday ethnic kurtis directly to your doorstep across India.'
+    a: 'ARGHYA (officially online at arghyya.com, commonly spelled or searched as Arghyya, Arghya, or arghya.co) is India’s signature contemporary fine jewellery brand. We craft authenticated 925 sterling silver bracelets, necklaces, anklets, waterproof anti-tarnish earrings, and modern pendants designed to empower everyday confidence and affordable luxury across India.'
   },
   {
-    q: 'Where can I buy original Arghya (Arghyya) collections?',
-    a: 'Original and authentic ARGHYA outfits are exclusively available on our official flagship store at arghyya.com (and www.arghyya.com). Every product is backed by our authentic craft guarantee, premium fabric certification, and verified Cash on Delivery.'
+    q: 'Where can I buy original Arghya (Arghyya) fine jewellery?',
+    a: 'Original and authentic ARGHYA fine jewellery is exclusively available on our official flagship store at arghyya.com (and www.arghyya.com). Every piece is backed by our 925 silver purity guarantee, anti-tarnish durability, and verified Cash on Delivery.'
   },
   {
-    q: 'Is arghyya.com the official store for Arghya?',
-    a: 'Yes, arghyya.com is the verified official web boutique for ARGHYA (Arghyya Collections). You can browse our complete designer catalogue, apply exclusive seasonal coupons, and order with zero risk using Cash On Delivery.'
+    q: 'Is arghyya.com the official store for Arghya Collections?',
+    a: 'Yes, arghyya.com is the verified official web boutique for ARGHYA (Arghyya Collections). You can browse our complete fine jewellery catalogue, explore pure silver and anti-tarnish collections, and order with zero risk using Cash On Delivery.'
   },
   {
     q: 'Do you offer Cash On Delivery (COD) across India?',
     a: 'Yes, ARGHYA (arghyya.com) offers seamless Cash On Delivery (COD) alongside prepaid UPI and Card payments across 28,000+ pin codes in India, with rapid dispatch and doorstep tracking.'
   },
   {
-    q: 'What makes Arghya / Arghyya sarees and couture unique?',
-    a: 'Every Arghya ensemble is handpicked and tailored with focus on lightweight luxury, breathable handloom silks, authentic mirror-work trims, and festive elegance at genuinely accessible price points.'
+    q: 'What makes Arghya / Arghyya jewellery unique?',
+    a: 'Every Arghya piece is handcrafted with certified 925 sterling silver or advanced waterproof anti-tarnish coating. Engineered to be hypoallergenic and skin-safe, our jewellery blends royal Indian elegance with contemporary everyday minimalism at genuinely accessible price points.'
   }
 ];
 
@@ -35,7 +35,7 @@ export const BrandSearchSection: React.FC = () => {
   };
 
   return (
-    <section 
+    <section
       aria-label="About ARGHYA (Arghyya Collections)"
       className="relative py-12 md:py-16 px-4 max-w-6xl mx-auto border-t border-amber-500/15 text-stone-900 dark:text-stone-100"
     >
@@ -46,12 +46,11 @@ export const BrandSearchSection: React.FC = () => {
           <span>The Official Atelier of Arghya & Arghyya</span>
         </div>
         <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-black text-black dark:text-white tracking-tight">
-          ARGHYA — <span className="text-amber-600 dark:text-amber-400">Slay Everyday</span> with Authentic Indian Couture
+          ARGHYA — <span className="text-amber-600 dark:text-amber-400">Slay Everyday</span> with Fine Indian Jewellery
         </h2>
         <p className="mt-3 text-sm sm:text-base text-stone-600 dark:text-stone-300 leading-relaxed">
           Welcome to <strong>ARGHYA</strong> (officially at <strong>arghyya.com</strong>, also widely searched as <strong>Arghyya</strong>, <strong>Arghya</strong>, or <strong>arghya.co</strong>). 
-          We craft timeless Indian ethnic fashion, festive chaniya choli sets, everyday mirror-work kurtis, 
-          and royal designer sarees designed to bring affordable luxury to women across India. Whether you searched for <em>Arghya</em>, <em>Arghyya</em>, <em>arghyya.com</em>, or <em>Arghya</em>, this is the official atelier store with verified pan-India Cash on Delivery.
+          We craft timeless 925 sterling silver bracelets, waterproof anti-tarnish necklaces, American Diamond sets, and oxidised silver earrings designed to bring affordable everyday luxury to women across India. Whether you searched for <em>Arghya</em>, <em>Arghyya</em>, <em>arghyya.com</em>, or <em>Arghya Jewellery</em>, this is the official atelier store with verified pan-India Cash on Delivery.
         </p>
       </div>
 
@@ -60,7 +59,7 @@ export const BrandSearchSection: React.FC = () => {
         <div className="p-4 rounded-2xl bg-amber-50/60 dark:bg-stone-900/50 border border-amber-500/20 text-center">
           <Award className="w-6 h-6 mx-auto mb-2 text-amber-600 dark:text-amber-400" />
           <h3 className="font-serif text-sm font-bold">100% Authentic</h3>
-          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">Guaranteed handloom craft & fabrics</p>
+          <p className="text-[11px] text-stone-500 dark:text-stone-400 mt-1">Certified 925 silver & anti-tarnish durability</p>
         </div>
         <div className="p-4 rounded-2xl bg-amber-50/60 dark:bg-stone-900/50 border border-amber-500/20 text-center">
           <Truck className="w-6 h-6 mx-auto mb-2 text-emerald-600 dark:text-emerald-400" />
@@ -88,7 +87,7 @@ export const BrandSearchSection: React.FC = () => {
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div 
+              <div
                 key={index}
                 className="border border-stone-200 dark:border-white/10 rounded-xl overflow-hidden bg-white/70 dark:bg-stone-900/40 transition-colors"
               >
@@ -99,9 +98,8 @@ export const BrandSearchSection: React.FC = () => {
                   aria-expanded={isOpen}
                 >
                   <span>{faq.q}</span>
-                  <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 text-amber-500 ${
-                    isOpen ? 'rotate-180' : ''
-                  }`} />
+                  <ChevronDown className={`w-4 h-4 shrink-0 transition-transform duration-200 text-amber-500 ${isOpen ? 'rotate-180' : ''
+                    }`} />
                 </button>
                 <AnimatePresence>
                   {isOpen && (

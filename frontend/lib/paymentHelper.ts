@@ -72,27 +72,6 @@ export const ALL_PRODUCT_PAYMENT_URLS: Record<string, string> = {
   'moonstarnecklace': 'https://rzp.io/rzp/moonstarnecklace',
   '925 celestial moon & star necklace': 'https://rzp.io/rzp/moonstarnecklace',
 
-  // ── Kurtis & Festive Wear ──────────────────────────────────────────────
-  'rangrez-chaniya-set': 'https://rzp.io/rzp/rangrezchaniyaset',
-  'the-saffron-aura-fusion-set': 'https://rzp.io/rzp/withoutdiscountsaffronfusion',
-  'the-prism-radiance-fusion-set': 'https://rzp.io/rzp/withoutdiscountprismradiancefu',
-  'plum-tie-shoulder-kurti': 'https://rzp.io/rzp/plumtieshoulderkurti',
-  'royal-embroided-kurti': 'https://rzp.io/rzp/embroidedkurti',
-  'navratri-rose-print-garbha-skirt': 'https://rzp.io/rzp/rosegarbhaskirt',
-  'navratri-folk-design-garbha-skirt': 'https://rzp.io/rzp/navratrifolkskirt',
-  'navratri-garba-blue-skirt': 'https://rzp.io/rzp/garbablueskirt',
-  'raasrang-garba-skirt': 'https://rzp.io/rzp/raasrangskirt',
-  'blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blueblossomfloralkurti',
-  'pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',
-  'red-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',
-  'lime-green-floral-mirror-work-kurti': 'https://rzp.io/rzp/limegreenfloralkurti',
-  'gulnar-floral-kurti': 'https://rzp.io/rzp/limegreenfloralkurti',
-  'neelam-floral-kurti': 'https://rzp.io/rzp/neelamfloralkurti',
-  'roshni-floral-kurti': 'https://rzp.io/rzp/roshnifloralkurti',
-  'vamika-floral-kurti': 'https://rzp.io/rzp/vamikafloralkurti',
-  'olive-tie-shoulder-kurti': 'https://rzp.io/rzp/olivetieshoulderkurti',
-  'pink-tie-shoulder-kurti': 'https://rzp.io/rzp/pinktieshouklderkurti',
-
   // ── Anti Tarnish -> Modern Pendants ────────────────────────────────────
   'the-minimalist-silver-wave-layered-necklace': 'https://rzp.io/rzp/minimalistsilverwavelayerednec',
   'the-minimalist-golden-wave-layered-necklace': 'https://rzp.io/rzp/minimalistgoldenwavelayerednec',

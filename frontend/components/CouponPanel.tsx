@@ -8,11 +8,7 @@ import { isNavratriCoupon, VALID_COUPON, SPECIAL_COUPON_1, SPECIAL_COUPON_2, use
 const DISCOUNT_PERCENT_NAVRATRI = 5;
 const DISCOUNT_PERCENT_LEGACY   = 10;
 
-export const COUPON_ELIGIBLE_SLUGS = [
-  'rangrez-chaniya-set',
-  'the-prism-radiance-fusion-set',
-  'the-saffron-aura-fusion-set',
-];
+export const COUPON_ELIGIBLE_SLUGS: string[] = [];
 
 interface CouponPanelProps {
   /** Called when a valid coupon is entered. Passes the discount percentage and code. */
@@ -124,11 +120,11 @@ export const CouponPanel: React.FC<CouponPanelProps> = ({
                   <div className="flex items-center gap-1.5 mb-1">
                     <Sparkles size={10} style={{ color: '#fbbf24' }} />
                     <span className="text-[9px] font-bold uppercase tracking-widest" style={{ color: '#fbbf24' }}>
-                      5% off — Navratri Special
+                      Festive Fine Jewellery Offer
                     </span>
                   </div>
                   <p className="text-[9px] leading-relaxed" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                    Rangrez Chaniya Set · Prism &amp; Saffron Fusion Sets · Plum Kurti · Royal Embroided Kurti · Navratri Garbha Skirt
+                    Exclusive discounts on select 925 sterling silver and anti-tarnish collections
                   </p>
                 </div>
 

@@ -19,12 +19,13 @@ module.exports = {
     PAYTM: 'paytm'
   },
   CATEGORIES: [
-    'Saree',
-    'Lehenga',
-    'Kurti',
-    'Anarkali',
-    'Fusion Wear',
-    'Bridal Wear'
+    '925 Pure Silver',
+    'Anti Tarnish',
+    'Hot Deals',
+    'Bracelets',
+    'Necklaces',
+    'Earrings',
+    'Combos'
   ],
   INVENTORY_LOG_REASONS: {
     ORDER_DEDUCTION: 'ORDER_DEDUCTION',

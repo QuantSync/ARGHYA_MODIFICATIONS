@@ -12,7 +12,7 @@ const pillars = [
   {
     icon: <AnimatedClock />,
     title: '100% Handcrafted Authenticity',
-    desc: 'Every saree & lehenga is certified pure silk woven by master artisans.',
+    desc: 'Every 925 silver & anti-tarnish piece is handcrafted with certified purity by master artisans.',
   },
   {
     icon: <AnimatedTruck />,

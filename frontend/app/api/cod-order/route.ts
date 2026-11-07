@@ -56,7 +56,7 @@ export async function POST(req: Request) {
             city,
             state,
             pincode,
-            productName: productName || 'Blossom Floral Printed Kurti',
+            productName: productName || 'ARGHYA Fine Jewellery',
             productSlug: productSlug || '',
             size: size || 'Free Size',
             amount: data.amountText || (totalAmount ? `Rs ${basePrice || (totalAmount - 25)} + Rs ${deliveryCharge || 25} = Rs ${totalAmount}` : `Rs ${totalAmount || 444}`),

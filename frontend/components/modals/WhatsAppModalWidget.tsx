@@ -80,7 +80,7 @@ export const WhatsAppModalWidget: React.FC<WhatsAppModalWidgetProps> = ({ isOpen
                   <span>ARGHYA</span>
                   <CheckCheck size={14} className="text-[#53bdeb]" />
                 </div>
-                Namaste! 🙏 Welcome to Arghyya Helpline. Click below to chat directly with our couture care team on WhatsApp.
+                Namaste! 🙏 Welcome to Arghyya Helpline. Click below to chat directly with our jewellery concierge team on WhatsApp.
               </div>
 
               {/* Option 1: @arghyahelpline Bulge Button Card */}

@@ -86,21 +86,11 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
   const currentCode = modalCouponCode || activeCouponCode || null;
   const navratriActive = !!currentCode && (isNavratriCoupon(currentCode) || currentCode.trim().toUpperCase() === 'DISCOUNT01');
 
-  const isGarbhaSkirtProduct =
-    product.slug === 'navratri-rose-print-garbha-skirt' ||
-    product.slug === 'navratri-folk-design-garbha-skirt' ||
-    product.slug === 'navratri-garba-blue-skirt' ||
-    product.slug === 'raasrang-garba-skirt' ||
-    (!!product.name && product.name.toLowerCase().includes('garbha skirt')) ||
-    (!!product.name && product.name.toLowerCase().includes('navratri rose print'));
-
-  // Show the navratri-discounted price in the modal when any navratri coupon is active
+  // Show the discounted price in the modal when coupon is active
   const rawPrice = variantPrice ?? Number(product.price);
   const effectivePrice =
-    navratriActive && (
-      (product.slug && NAVRATRI5_PRICE_MAP[product.slug] !== undefined) || isGarbhaSkirtProduct
-    )
-      ? ((product.slug && NAVRATRI5_PRICE_MAP[product.slug]?.discounted) ?? 846)
+    navratriActive && product.slug && NAVRATRI5_PRICE_MAP[product.slug] !== undefined
+      ? (NAVRATRI5_PRICE_MAP[product.slug]?.discounted ?? rawPrice)
       : rawPrice;
   const displayPrice = effectivePrice.toLocaleString('en-IN');
 
@@ -147,111 +137,7 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
 
     // ── Direct Razorpay payment link redirects (per-product) ────────────────
     //
-    // Coupon-eligible products have TWO payment links each:
-    //   • A "discounted" link  — used when coupon is applied
-    //   • A "full-price" link  — used when no coupon is applied
-    //
-    // Non-eligible products always use their single link regardless of coupon.
-
-    // ── Rangrez Chaniya Set ───────────────────────────────────────────────────
-    const RANGREZ_LINK = currentCode === 'MAHIKA05'
-      ? 'https://rzp.io/rzp/rangrezchaniyamahika'
-      : currentCode === 'AMAN05'
-      ? 'https://rzp.io/rzp/rangrezchaniyaaman05'
-      : currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/rangrezarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/rangrezchaniyasiddu02'
-      : navratriActive
-      ? 'https://rzp.io/rzp/rangrezdiscount01'               // Any navratri code → ₹1994
-      : currentCode === 'ARGHYA10'
-      ? 'https://rzp.io/rzp/discountedpricerangrezchaniya'
-      : 'https://rzp.io/rzp/rangrezchaniyaset';
-
-    // ── The Saffron Aura Fusion Set ───────────────────────────────────────────
-    const SAFFRON_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/fusionkurtiarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/fusionkurtisiddu02'
-      : navratriActive
-      ? 'https://rzp.io/rzp/fusionsetdiscount01'             // Any navratri code → ₹759
-      : currentCode === 'ARGHYA10'
-      ? 'https://rzp.io/rzp/saffronaurafusionset'            // ARGHYA10 → ₹719
-      : 'https://rzp.io/rzp/withoutdiscountsaffronfusion';   // No coupon → ₹799
-
-    // ── The Prism Radiance Fusion Set ─────────────────────────────────────────
-    const PRISM_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/fusionkurtiarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/fusionkurtisiddu02'
-      : navratriActive
-      ? 'https://rzp.io/rzp/fusionsetdiscount01'             // Any navratri code → ₹759
-      : currentCode === 'ARGHYA10'
-      ? 'https://rzp.io/rzp/prismradiancefusionset'          // ARGHYA10 → ₹719
-      : 'https://rzp.io/rzp/withoutdiscountprismradiancefu'; // No coupon → ₹799
-
-    // ── Plum Tie Shoulder Kurti ───────────────────────────────────────────────
-    const PLUM_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/plumkurtiarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/plumkurti02'
-      : navratriActive
-      ? 'https://rzp.io/rzp/plumkurtidiscount01'             // Any navratri code → ₹378
-      : 'https://rzp.io/rzp/plumtieshoulderkurti';           // No coupon → ₹398
-
-    // ── Royal Embroided Kurti ─────────────────────────────────────────────────
-    const ROYAL_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/embroidedkurtiarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/embroidedkurtisiddu02'
-      : navratriActive
-      ? 'https://rzp.io/rzp/embroidedkurtidiscount01'        // Any navratri code → ₹547
-      : 'https://rzp.io/rzp/embroidedkurti';                 // No coupon → ₹576
-
-    // ── Navratri Garbha Skirt variants ───────────────────────────────────────
-    const GARBHA_ROSE_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/navratriskirtarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/navratriskirtsiddu02'
-      : (navratriActive || currentCode?.trim().toUpperCase() === 'DISCOUNT01')
-      ? 'https://rzp.io/rzp/navratriskirtdiscount01'         // Navratri DISCOUNT01 → ₹846
-      : 'https://rzp.io/rzp/rosegarbhaskirt';               // No coupon → ₹891
-    const GARBHA_FOLK_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/navratriskirtarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/navratriskirtsiddu02'
-      : (navratriActive || currentCode?.trim().toUpperCase() === 'DISCOUNT01')
-      ? 'https://rzp.io/rzp/navratriskirtdiscount01'
-      : 'https://rzp.io/rzp/navratriflokgarbha';
-    const GARBHA_BLUE_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/navratriskirtarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/navratriskirtsiddu02'
-      : (navratriActive || currentCode?.trim().toUpperCase() === 'DISCOUNT01')
-      ? 'https://rzp.io/rzp/navratriskirtdiscount01'
-      : 'https://rzp.io/rzp/navratriblueskirt';
-    const RAASRANG_LINK = currentCode === 'ARG07'
-      ? 'https://rzp.io/rzp/navratriskirtarg07'
-      : currentCode === 'SIDDU02'
-      ? 'https://rzp.io/rzp/navratriskirtsiddu02'
-      : (navratriActive || currentCode?.trim().toUpperCase() === 'DISCOUNT01')
-      ? 'https://rzp.io/rzp/navratriskirtdiscount01'
-      : 'https://rzp.io/rzp/navratrirasranggarbhaskirt';
-
     const RAZORPAY_LINKS: Record<string, string> = {
-      // ── Coupon-eligible (resolved above based on active coupon) ─────────────
-      'rangrez-chaniya-set':            RANGREZ_LINK,
-      'the-saffron-aura-fusion-set':    SAFFRON_LINK,
-      'the-prism-radiance-fusion-set':  PRISM_LINK,
-      'plum-tie-shoulder-kurti':        PLUM_LINK,
-      'royal-embroided-kurti':          ROYAL_LINK,
-      'navratri-rose-print-garbha-skirt': GARBHA_ROSE_LINK,
-      'navratri-folk-design-garbha-skirt': GARBHA_FOLK_LINK,
-      'navratri-garba-blue-skirt':      GARBHA_BLUE_LINK,
-      'raasrang-garba-skirt':           RAASRANG_LINK,
-      'navratri rose print garbha skirt': GARBHA_ROSE_LINK,
-      'navratri design garbha skirt': GARBHA_ROSE_LINK,
-
       // ── Hot Deals & Specials ───────────────────────────────────────────────
       'mystery-jar': 'https://rzp.io/rzp/mysteryjar',
       'mystery jar': 'https://rzp.io/rzp/mysteryjar',
@@ -287,39 +173,6 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
       'pearl-bow-sparkle-studs':                     'https://rzp.io/rzp/pearlbowsparklestuds',
       'midnight-triple-heart-drops':                 'https://rzp.io/rzp/midnighttripleheartdrops',
 
-      // ── Non-coupon products ─────────────────────────────────────────────────
-      'blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blueblossomfloralkurti',
-      'pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/redblossomfloral',
-      'red-blossom-floral-printed-kurti':  'https://rzp.io/rzp/redblossomfloral',
-      'gulnar-floral-kurti':       'https://rzp.io/rzp/limegreenfloralkurti',
-      'lime-green-floral-mirror-work-kurti': 'https://rzp.io/rzp/limegreenfloralkurti',
-      'neelam-floral-kurti':       'https://rzp.io/rzp/neelamfloralkurti',
-      'roshni-floral-kurti':       'https://rzp.io/rzp/roshnifloralkurti',
-      'vamika-floral-kurti':       'https://rzp.io/rzp/vamikafloralkurti',
-      'olive-tie-shoulder-kurti':  'https://rzp.io/rzp/olivetieshoulderkurti',
-      'pink-tie-shoulder-kurti':   'https://rzp.io/rzp/pinktieshouklderkurti',
-
-      // ── COD Handling Fee Direct Links ───────────────────────────────────────
-      'cod-blue-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blossomfloralkurti',
-      'cod-pink-blossom-floral-printed-kurti': 'https://rzp.io/rzp/blossomfloralkurti',
-      'cod-red-blossom-floral-printed-kurti':  'https://rzp.io/rzp/blossomfloralkurti',
-      'cod-blossom-floral-printed-kurti':      'https://rzp.io/rzp/blossomfloralkurti',
-      'cod-blossom-floral-printed-kurti-001':  'https://rzp.io/rzp/blossomfloralkurti',
-      'cod-rangrez-chaniya-set': 'https://rzp.io/rzp/cashondeliveryrangrezchaniya',
-      'cod-the-prism-radiance-fusion-set': 'https://rzp.io/rzp/cashondeliveryprismradiancefus',
-      'cod-the-saffron-aura-fusion-set': 'https://rzp.io/rzp/cashondeliverysaffronaurafusio',
-      'cod-lime-green-floral-mirror-work-kurti': 'https://rzp.io/rzp/cashondeliveryfloralworkkurti',
-      'cod-neelam-floral-kurti': 'https://rzp.io/rzp/cashyondeliveryneelamfloral',
-      'cod-roshni-floral-kurti': 'https://rzp.io/rzp/cashondeliveryroshnifloral',
-      'cod-vamika-floral-kurti': 'https://rzp.io/rzp/cashondeliveryvamikafloral',
-      'cod-olive-tie-shoulder-kurti': 'https://rzp.io/rzp/cashondeliveryolivetiekurti',
-      'cod-pink-tie-shoulder-kurti': 'https://rzp.io/rzp/cashondeliverypinktiekurti',
-      'cod-plum-tie-shoulder-kurti': 'https://rzp.io/rzp/cashondeliveryplumfloral',
-      'cod-royal-embroided-kurti': 'https://rzp.io/rzp/cashondeliveryembroided',
-      'cod-navratri-rose-print-garbha-skirt': 'https://rzp.io/rzp/cashondeliverynavratrigarbhask',
-      'cod-navratri-folk-design-garbha-skirt': 'https://rzp.io/rzp/cashondeliverynavratrifolk',
-      'cod-navratri-garba-blue-skirt': 'https://rzp.io/rzp/cashondeliverynavratribluesk',
-      'cod-raasrang-garba-skirt': 'https://rzp.io/rzp/cashondeliverynavratrirasrang',
 
       // ── 925 Pure Silver Bracelets ──────────────────────────────────────────
       '925-sterling-silver-purple-stone-bracelet': 'https://rzp.io/rzp/puresilverpurplestonedbraclet',
