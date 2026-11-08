@@ -138,7 +138,7 @@ export default function HomePage() {
       {/* ── Label 2: White Label Below Slideshow (Image 1 Red Zone) ── */}
       <div className="w-full bg-white text-black border-y border-neutral-200/90 dark:bg-white dark:text-black dark:border-neutral-200 py-2 sm:py-2.5 px-4 text-center select-none shadow-xs !mt-0">
         <p className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.22em] sm:tracking-[0.28em] uppercase text-neutral-900 flex items-center justify-center gap-2">
-          <span>Happily Served 1000+ Customers</span>
+          <span>Happily Served 1000+ Fashion Lovers</span>
         </p>
       </div>
 
