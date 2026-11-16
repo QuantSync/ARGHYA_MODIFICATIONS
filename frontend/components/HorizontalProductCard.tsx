@@ -62,15 +62,9 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
           />
         ) : (
           /* Placeholder when no image is uploaded yet */
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 dark:from-neutral-900 dark:to-neutral-950 flex flex-col items-center justify-center gap-2 px-4 text-center">
-            <span className="font-serif text-3xl font-light text-neutral-400 dark:text-neutral-600 mb-1">
-              925
-            </span>
-            <span className="text-[11px] uppercase font-black tracking-wider text-neutral-700 dark:text-neutral-300">
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 dark:from-neutral-900 dark:to-neutral-950 flex flex-col items-center justify-center px-4 text-center">
+            <span className="text-[11px] sm:text-xs uppercase font-black tracking-wider text-neutral-800 dark:text-neutral-200">
               PRODUCT OUT OF STOCK
-            </span>
-            <span className="text-[10px] uppercase font-bold tracking-[0.25em] text-neutral-400 dark:text-neutral-500">
-              COMING SOON
             </span>
           </div>
         )}
@@ -89,9 +83,9 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
           </span>
         )}
 
-        {/* 925 Silver badge — top-right */}
+        {/* Category badge — top-right */}
         <span className="absolute top-2 right-2 bg-white/90 dark:bg-black/80 text-black dark:text-white text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-widest z-10 border border-neutral-200 dark:border-neutral-700">
-          925 Silver
+          {product.category === 'Anti Tarnish' ? 'Anti-Tarnish' : '925 Silver'}
         </span>
       </Link>
 

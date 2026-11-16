@@ -147,15 +147,15 @@ export const VerticalProductCard: React.FC<VerticalProductCardProps> = ({
                     />
                   ) : (
                     <div className="absolute inset-0 bg-neutral-100 dark:bg-neutral-900 flex flex-col items-center justify-center p-8 text-center">
-                      <div className="w-20 h-20 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center mb-4 bg-white/60 dark:bg-black/60 shadow-sm">
-                        <span className="font-serif text-2xl font-light text-neutral-400">925</span>
-                      </div>
                       <span className="text-xs uppercase tracking-widest font-mono text-neutral-500 font-bold mb-2">
                         {product.category} {product.subcategory ? `• ${product.subcategory}` : ''}
                       </span>
-                      <h4 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-200 max-w-sm">
+                      <h4 className="font-serif text-2xl font-bold text-neutral-800 dark:text-neutral-200 max-w-sm mb-4">
                         {activeName}
                       </h4>
+                      <span className="inline-block px-4 py-2 rounded-full text-xs uppercase font-black tracking-wider bg-black text-white dark:bg-white dark:text-black shadow">
+                        PRODUCT OUT OF STOCK
+                      </span>
                     </div>
                   )}
 
