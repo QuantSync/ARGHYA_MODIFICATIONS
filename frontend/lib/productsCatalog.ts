@@ -2762,6 +2762,381 @@ Inspired by the beauty of blooming flowers, these Ivory Petal Earrings bring eff
   },
 
 
+  // ── ANTI TARNISH -> KASHMIRI EARRINGS ──
+  'royal-pearl-cascade-kashmiri-earrings': {
+    id: 'at-kash-001',
+    name: 'Royal Pearl Cascade Kashmiri Earrings',
+    slug: 'royal-pearl-cascade-kashmiri-earrings',
+    description: `*Royal Pearl Cascade Kashmiri Earrings*
+
+Elegant golden Kashmiri long earrings featuring a beautiful pearl-studded top and multiple delicate hanging chains with traditional golden ghungroo accents. A graceful statement design for ethnic and festive looks.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Pearls',
+    craft_type: 'Kashmiri Pearl & Ghungroo Chain Dangles',
+    images: ['/images/kashmiri_earrings/royal-pearl-cascade-kashmiri-earrings/royal-pearl-cascade-kashmiri-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'noor-e-kashmir-crescent-chandbali-earrings': {
+    id: 'at-kash-002',
+    name: 'Noor-e-Kashmir Crescent Chandbali Earrings',
+    slug: 'noor-e-kashmir-crescent-chandbali-earrings',
+    description: `*Noor-e-Kashmir Crescent Chandbali Earrings*
+
+Beautiful Kashmiri-inspired chandbali earrings with a striking red stone stud, crescent moon detailing and sparkling white stones. Finished with delicate hanging golden chains for a rich traditional appearance.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Ruby Stones',
+    craft_type: 'Kashmiri Crescent Chandbali with Hanging Chains',
+    images: ['/images/kashmiri_earrings/noor-e-kashmir-crescent-chandbali-earrings/noor-e-kashmir-crescent-chandbali-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'golden-ghungroo-trio-jhumka-earrings': {
+    id: 'at-kash-003',
+    name: 'Golden Ghungroo Trio Jhumka Earrings',
+    slug: 'golden-ghungroo-trio-jhumka-earrings',
+    description: `*Golden Ghungroo Trio Jhumka Earrings*
+
+Traditional golden Kashmiri earrings featuring beautiful floral stud tops, three hanging chain strands and intricate jhumka-shaped ghungroo charms. A unique design that adds a festive and ethnic touch.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass',
+    craft_type: 'Floral Stud Trio Chain with Jhumka Ghungroo',
+    images: ['/images/kashmiri_earrings/golden-ghungroo-trio-jhumka-earrings/golden-ghungroo-trio-jhumka-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'gulbahar-floral-chain-drop-earrings': {
+    id: 'at-kash-004',
+    name: 'Gulbahar Floral Chain Drop Earrings',
+    slug: 'gulbahar-floral-chain-drop-earrings',
+    description: `*Gulbahar Floral Chain Drop Earrings*
+
+Delicate Kashmiri-style earrings with a beautiful white stone floral design and multiple long golden chain drops decorated with tiny ghungroo accents. Perfect for women who love elegant and minimal traditional jewellery.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & White Stones',
+    craft_type: 'White Stone Floral Stud with Multi-Chain Drops',
+    images: ['/images/kashmiri_earrings/gulbahar-floral-chain-drop-earrings/gulbahar-floral-chain-drop-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'mehr-kundan-blossom-multi-chain-earrings': {
+    id: 'at-kash-005',
+    name: 'Mehr Kundan Blossom Multi-Chain Earrings',
+    slug: 'mehr-kundan-blossom-multi-chain-earrings',
+    description: `*Mehr Kundan Blossom Multi-Chain Earrings*
+
+Gorgeous Kashmiri earrings featuring a sparkling white kundan-style floral top with multiple hanging golden chains and delicate ghungroo details. Their statement look makes them a lovely choice for festive celebrations and traditional outfits.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 249.00,
+    compare_at_price: 749.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Kundan Crystals',
+    craft_type: 'Kundan Floral Stud with Hanging Ghungroo Chains',
+    images: ['/images/kashmiri_earrings/mehr-kundan-blossom-multi-chain-earrings/mehr-kundan-blossom-multi-chain-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'siyah-royal-black-crescent-kashmiri-earrings': {
+    id: 'at-kash-006',
+    name: 'Siyah Royal Black Crescent Kashmiri Earrings',
+    slug: 'siyah-royal-black-crescent-kashmiri-earrings',
+    description: `*Siyah Royal Black Crescent Kashmiri Earrings*
+
+A stunning Kashmiri-inspired design featuring a bold black stone stud, golden crescent detailing and beautiful white stone embellishments. The hanging golden chains add movement and a royal traditional charm.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Onyx Black Stone',
+    craft_type: 'Black Stone Crescent Chandbali with Multi-Chains',
+    images: ['/images/kashmiri_earrings/siyah-royal-black-crescent-kashmiri-earrings/siyah-royal-black-crescent-kashmiri-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'royal-ruby-blossom-kashmiri-earrings': {
+    id: 'at-kash-007',
+    name: 'Royal Ruby Blossom Kashmiri Earrings',
+    slug: 'royal-ruby-blossom-kashmiri-earrings',
+    description: `*Royal Ruby Blossom Kashmiri Earrings*
+
+Embrace timeless elegance with these stunning Kashmiri-inspired earrings, featuring rich ruby-red and emerald-green floral detailing paired with beautifully crafted golden chain drops and delicate ghungroo accents. Their traditional charm and graceful movement make them a perfect statement piece for festive occasions and ethnic celebrations.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 249.00,
+    compare_at_price: 749.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Ruby-Emerald Stones',
+    craft_type: 'Ruby & Emerald Floral Dangles with Ghungroo Drops',
+    images: ['/images/kashmiri_earrings/royal-ruby-blossom-kashmiri-earrings/royal-ruby-blossom-kashmiri-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'gulnaar-noor-pearl-cascade-earrings': {
+    id: 'at-kash-008',
+    name: 'Gulnaar Noor Pearl Cascade Earrings',
+    slug: 'gulnaar-noor-pearl-cascade-earrings',
+    description: `*Gulnaar Noor Pearl Cascade Earrings*
+
+A beautiful blend of traditional artistry and royal elegance. These exquisite earrings feature intricate square kundan-inspired detailing, surrounded by lustrous pearl accents and delicate golden chains finished with charming ghungroo drops. Perfect for adding a regal touch to your ethnic ensemble.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 299.00,
+    compare_at_price: 899.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass, Kundan & Pearls',
+    craft_type: 'Square Kundan Pearl Stud with Cascade Chains',
+    images: ['/images/kashmiri_earrings/gulnaar-noor-pearl-cascade-earrings/gulnaar-noor-pearl-cascade-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'gulbahar-ruby-kashmiri-chain-earrings': {
+    id: 'at-kash-009',
+    name: 'Gulbahar Ruby Kashmiri Chain Earrings',
+    slug: 'gulbahar-ruby-kashmiri-chain-earrings',
+    description: `*Gulbahar Ruby Kashmiri Chain Earrings*
+
+Inspired by the timeless beauty of Kashmiri craftsmanship, these elegant earrings showcase a gorgeous ruby-red floral design complemented by multiple golden chain strands and delicate traditional ghungroo embellishments. A graceful choice for those who love ethnic jewellery with a royal touch.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Ruby Accents',
+    craft_type: 'Ruby Floral Motif with Cascading Ghungroo Chains',
+    images: ['/images/kashmiri_earrings/gulbahar-ruby-kashmiri-chain-earrings/gulbahar-ruby-kashmiri-chain-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'maharani-multicolour-kashmiri-earrings': {
+    id: 'at-kash-010',
+    name: 'Maharani Multicolour Kashmiri Earrings',
+    slug: 'maharani-multicolour-kashmiri-earrings',
+    description: `*Maharani Multicolour Kashmiri Earrings*
+
+Make every moment special with these magnificent traditional Kashmiri earrings. Featuring a stunning sun-inspired floral motif with vibrant ruby and emerald accents, complemented by cascading golden chains and delicate ghungroo charms. A perfect statement accessory for weddings, festivals and grand ethnic looks.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass, Ruby & Emerald Stones',
+    craft_type: 'Sunburst Multicolour Motif with Golden Chains',
+    images: ['/images/kashmiri_earrings/maharani-multicolour-kashmiri-earrings/maharani-multicolour-kashmiri-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
+  'emerald-peacock-royale-kashmiri-earrings': {
+    id: 'at-kash-011',
+    name: 'Emerald Peacock Royale Kashmiri Earrings',
+    slug: 'emerald-peacock-royale-kashmiri-earrings',
+    description: `*Emerald Peacock Royale Kashmiri Earrings*
+
+Inspired by the majestic beauty of peacocks, these enchanting earrings feature intricate peacock-inspired golden craftsmanship with rich emerald-green detailing. The cascading golden chains and delicate ghungroo accents create a beautiful traditional silhouette, making them an irresistible addition to your ethnic jewellery collection.
+
+*Product Details*
+• Product Type: Earrings
+• Collection: Kashmiri Earrings
+• Jewellery Type: Artificial / Fashion Jewellery
+• Finish: Golden Finish
+• Special Feature: Anti-Tarnish
+• Style: Traditional & Ethnic
+• Occasion: Wedding, Festive, Party & Daily Wear
+• Package Contains: 1 Pair of Earrings
+• Gender: Women
+
+*Care Instructions*
+• Keep away from water, perfume and harsh chemicals.
+• Store in an airtight jewellery box after use.
+• Avoid direct contact with moisture.
+• Handle delicate chains and hanging charms carefully.`,
+    price: 249.00,
+    compare_at_price: 749.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Kashmiri Earrings',
+    fabric: 'Golden Finish Brass & Emerald Stones',
+    craft_type: 'Peacock Golden Filigree with Cascading Chains',
+    images: ['/images/kashmiri_earrings/emerald-peacock-royale-kashmiri-earrings/emerald-peacock-royale-kashmiri-earrings_1.png'],
+    sizes: ['1 Pair (Free Size)'],
+  },
+
 };
 
 export function getCatalogProduct(slug: string): CatalogProduct | undefined {
@@ -2901,4 +3276,18 @@ export const HOT_DEALS_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['golden-pretty-combo'],
   PRODUCTS_CATALOG['golden-pearl-hoop-combo'],
   PRODUCTS_CATALOG['white-red-petal-studs-combo'],
+];
+
+export const KASHMIRI_EARRINGS_PRODUCTS: CatalogProduct[] = [
+  PRODUCTS_CATALOG['royal-pearl-cascade-kashmiri-earrings'],
+  PRODUCTS_CATALOG['noor-e-kashmir-crescent-chandbali-earrings'],
+  PRODUCTS_CATALOG['golden-ghungroo-trio-jhumka-earrings'],
+  PRODUCTS_CATALOG['gulbahar-floral-chain-drop-earrings'],
+  PRODUCTS_CATALOG['mehr-kundan-blossom-multi-chain-earrings'],
+  PRODUCTS_CATALOG['siyah-royal-black-crescent-kashmiri-earrings'],
+  PRODUCTS_CATALOG['royal-ruby-blossom-kashmiri-earrings'],
+  PRODUCTS_CATALOG['gulnaar-noor-pearl-cascade-earrings'],
+  PRODUCTS_CATALOG['gulbahar-ruby-kashmiri-chain-earrings'],
+  PRODUCTS_CATALOG['maharani-multicolour-kashmiri-earrings'],
+  PRODUCTS_CATALOG['emerald-peacock-royale-kashmiri-earrings'],
 ];

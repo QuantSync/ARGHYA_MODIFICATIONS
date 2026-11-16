@@ -134,8 +134,8 @@ export const Navbar: React.FC = () => {
 
             {/* Right: Actions (Theme Toggle, Admin, User, Search, Cart) */}
             <div className="flex items-center space-x-2.5 sm:space-x-4">
-              {/* Circular Theme Toggle */}
-              <CircularThemeToggle />
+              {/* Circular Theme Toggle — temporarily hidden */}
+              {/* <CircularThemeToggle /> */}
 
               {/* Desktop Admin shortcut icon */}
               <button
@@ -146,8 +146,8 @@ export const Navbar: React.FC = () => {
                 <Shield size={18} />
               </button>
 
-              {/* User Account / Sign In */}
-              {user ? (
+              {/* User Account / Sign In — temporarily hidden */}
+              {/* user ? (
                 <div className="flex items-center space-x-2">
                   <button
                     onClick={() => setIsProfileOpen(true)}
@@ -180,7 +180,7 @@ export const Navbar: React.FC = () => {
                   <User size={15} />
                   <span className="hidden sm:inline">Sign In</span>
                 </button>
-              )}
+              ) */}
 
               <Link href="/products" className="p-2 text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors" aria-label="Search Products">
                 <Search size={19} />

@@ -48,6 +48,14 @@ const HOME_BANNER_SLIDES: BannerSlide[] = [
     title: 'Explore 925 Pure Silver',
   },
   {
+    src: '/images/banners/banner_buy1get1_free_3x.png',
+    srcSet: '/images/banners/banner_buy1get1_free.png 1024w, /images/banners/banner_buy1get1_free_2x.png 2048w, /images/banners/banner_buy1get1_free_3x.png 3072w',
+    alt: 'BUY 1 GET 1 FREE - Special Jewellery Offer',
+    bgColor: '#000000',
+    href: '/products?category=AntiTarnish',
+    title: 'BUY 1 GET 1 FREE Offer',
+  },
+  {
     src: '/images/banners/banner_buy_studs_199_3x.png',
     srcSet: '/images/banners/banner_buy_studs_199.png 1024w, /images/banners/banner_buy_studs_199_2x.png 2048w, /images/banners/banner_buy_studs_199_3x.png 3072w',
     alt: 'Buy Studs @ ₹199 - Proudly offering the best Prices & Quality in India',

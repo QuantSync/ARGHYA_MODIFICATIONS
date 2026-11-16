@@ -32,7 +32,7 @@ const CATEGORY_CARDS: CategoryCardItem[] = [
   {
     id: 'kashmiri-card',
     label: 'KASHMIRI EARRINGS',
-    subcategory: 'Oxidized Earrings',
+    subcategory: 'Kashmiri Earrings',
     imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.png',
     labelPosition: 'bottom-left',
     showNativeLabel: false, // Embedded high-res on image

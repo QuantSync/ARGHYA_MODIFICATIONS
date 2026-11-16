@@ -17,7 +17,7 @@ interface BannerCard {
 
 const ANTI_TARNISH_CARDS: BannerCard[] = [
   {
-    id: 'anti-ethnic',
+    id: 'anti-ethnic', 
     title: 'ETHNIC',
     href: '/products?category=AntiTarnish&subcategory=AmericanDiamonds',
     imageSrc: '/images/anti_tarnish/banner_ethnic_ad.png',
@@ -28,7 +28,7 @@ const ANTI_TARNISH_CARDS: BannerCard[] = [
   {
     id: 'anti-kashmiri',
     title: 'KASHMIRI EARRINGS',
-    href: '/products?category=AntiTarnish&subcategory=OxidizedEarrings',
+    href: '/products?category=AntiTarnish&subcategory=KashmiriEarrings',
     imageSrc: '/images/anti_tarnish/banner_kashmiri_earrings.png',
     labelPosition: 'bottom-left',
     showNativeLabel: false, // Text "KASHMIRI EARRINGS" is already embedded high-res in the image

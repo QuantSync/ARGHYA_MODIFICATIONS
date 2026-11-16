@@ -20,6 +20,7 @@ import {
   ANKLET_PRODUCTS,
   PENDANT_PRODUCTS,
   OXIDIZED_EARRINGS_PRODUCTS,
+  KASHMIRI_EARRINGS_PRODUCTS,
   AMERICAN_DIAMONDS_PRODUCTS,
   MODERN_PENDANTS_PRODUCTS,
   MODERN_EARRINGS_PRODUCTS,
@@ -39,6 +40,14 @@ const ANTI_TARNISH_BANNER_SLIDES: BannerSlide[] = [
     bgColor: '#65131f',
     onClickScrollId: 'anti-tarnish-catalog-view',
     title: 'Click to explore Anti-Tarnish Collection',
+  },
+  {
+    src: '/images/banners/banner_buy1get1_free_3x.png',
+    srcSet: '/images/banners/banner_buy1get1_free.png 1024w, /images/banners/banner_buy1get1_free_2x.png 2048w, /images/banners/banner_buy1get1_free_3x.png 3072w',
+    alt: 'BUY 1 GET 1 FREE - Special Jewellery Offer',
+    bgColor: '#000000',
+    onClickScrollId: 'anti-tarnish-catalog-view',
+    title: 'BUY 1 GET 1 FREE Offer',
   },
   {
     src: '/images/banners/banner_buy_studs_199_3x.png',
@@ -94,7 +103,7 @@ function ProductsPageContent() {
 
   const mainCategories = ['All', '925 Pure Silver', 'Anti Tarnish', 'Best Sellers', 'Hot Deals'];
   const silverSubsections = ['All', 'Bracelets', 'Necklaces', 'Anklets', 'Pendants'];
-  const antiTarnishSubsections = ['All', 'Oxidized Earrings', 'American Diamonds', 'Modern Pendants', 'Modern Earrings'];
+  const antiTarnishSubsections = ['All', 'Kashmiri Earrings', 'Oxidized Earrings', 'American Diamonds', 'Modern Pendants', 'Modern Earrings'];
 
   useEffect(() => {
     if (!categoryParam) return;
@@ -103,6 +112,9 @@ function ProductsPageContent() {
       setSelectedCategory('925 Pure Silver');
     } else if (catLower === 'antitarnish' || catLower.includes('anti-tarnish') || catLower.includes('antitarnish') || catLower.includes('tarnish')) {
       setSelectedCategory('Anti Tarnish');
+    } else if (catLower.includes('kashmiri')) {
+      setSelectedCategory('Anti Tarnish');
+      setSelectedSubcategory('Kashmiri Earrings');
     } else if (catLower === 'earrings' || catLower.includes('oxidized')) {
       setSelectedCategory('Anti Tarnish');
       setSelectedSubcategory('Oxidized Earrings');
@@ -149,6 +161,7 @@ function ProductsPageContent() {
     const matchAnti = antiTarnishSubsections.find(s => {
       const sLow = s.toLowerCase();
       if (sLow === subLower) return true;
+      if (s === 'Kashmiri Earrings' && subLower.includes('kashmiri')) return true;
       if (s === 'American Diamonds' && subLower.includes('diamond')) return true;
       if (s === 'Oxidized Earrings' && subLower.includes('oxidized')) return true;
       if (s === 'Modern Pendants' && (subLower.includes('pendant') || subLower === 'modern pendants')) return true;
@@ -169,6 +182,7 @@ function ProductsPageContent() {
   const pendants: Product[]  = PENDANT_PRODUCTS.map(p => ({ ...p, is_featured: true }));
 
   // Strict Category Buckets under Anti Tarnish
+  const kashmiriEarrings: Product[] = (KASHMIRI_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const oxidizedEarrings: Product[] = (OXIDIZED_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const americanDiamonds: Product[] = (AMERICAN_DIAMONDS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const modernPendants: Product[] = (MODERN_PENDANTS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
@@ -210,7 +224,7 @@ function ProductsPageContent() {
     selectedCategory === '925 Pure Silver' && selectedSubcategory === 'All'
       ? bracelets.length + necklaces.length + anklets.length + pendants.length
       : selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'All'
-        ? oxidizedEarrings.length + americanDiamonds.length + modernPendants.length + modernEarrings.length
+        ? kashmiriEarrings.length + oxidizedEarrings.length + americanDiamonds.length + modernPendants.length + modernEarrings.length
         : filteredProducts.length;
 
   return (
@@ -570,8 +584,54 @@ function ProductsPageContent() {
              COMBINED "ALL" VIEW UNDER ANTI TARNISH
              ───────────────────────────────────────────────── */
           <div className="space-y-16">
-            {/* 1. American Diamonds Collection */}
-            <section id="anti-tarnish-american-diamonds-section" className="space-y-6">
+            {/* 1. Kashmiri Earrings Collection */}
+            <section id="anti-tarnish-kashmiri-earrings-section" className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Kashmiri Heritage Collection
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Kashmiri Earrings Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('Kashmiri Earrings')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Kashmiri Earrings ({kashmiriEarrings.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {kashmiriEarrings.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {kashmiriEarrings.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* 2. American Diamonds Collection */}
+            <section id="anti-tarnish-american-diamonds-section" className="space-y-6 pt-4">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
                 <div>
                   <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">

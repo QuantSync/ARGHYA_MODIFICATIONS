@@ -14,7 +14,7 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 1,
     title: '1. Introduction and Acceptance',
     postulates: [
-      'Welcome to Arghyya. This website, www.arghyya.com (the "Website"), is owned and operated by Arghyya, having its registered office at Delhi, India ("Arghyya , SLAY EVERYDAY").',
+      'Welcome to ARGHYA. This website, www.ARGHYA.com (the "Website"), is owned and operated by ARGHYA, having its registered office at Delhi, India ("ARGHYA , SLAY EVERYDAY").',
       'These Terms & Conditions ("Terms") govern your access to and use of the Website and any purchase of 925 sterling silver, anti-tarnish jewellery, and related fine jewellery accessories ("Products") from us.',
       'By browsing the Website, creating an account, subscribing to our newsletter or placing an order, you confirm that you have read, understood and agreed to these Terms, along with our Privacy Policy, Shipping Policy and Return, Exchange & Refund Policy, which form part of this agreement. If you do not agree, please do not use the Website.',
       'This document is an electronic record under the Information Technology Act, 2000 and the rules made under it. It does not require any physical or digital signature.'
@@ -56,8 +56,8 @@ const TERMS_SECTIONS: TermSection[] = [
       'All prices are in Indian Rupees (INR) and if any, are shown at checkout.',
       'We may change prices at any time without notice. The price applicable to your order is the one displayed when you place it.',
       'If a Product is listed at an obviously wrong price because of a technical or typographical error, we may cancel the order and refund any amount paid.',
-      'Payment methods: UPI, credit/debit cards, net banking, wallets and Cash on Delivery, where available. Payments are processed by RAZORPAY. We do not store your full card details.',
-      'Cash on Delivery: available for pincodes and order values shown at checkout. A COD handling fee of [₹X] may apply.',
+      'Payment methods: UPI, credit/debit cards, net banking, wallets, EMI and Cash on Delivery, where available. Payments are processed by RAZORPAY. We do not store your full card details.',
+      'Cash on Delivery: available for pincodes and order values shown at checkout. A shipping charge of ₹25 may apply on Door Delivery method.',
       'If payment fails but money is debited, the amount is normally reversed by your bank or the gateway within 5 to 7 working days. Please contact us if it is not.'
     ]
   },
@@ -90,24 +90,21 @@ const TERMS_SECTIONS: TermSection[] = [
       'For jewellery items, returns are accepted only if the security seal, jewellery tags, and protective boxes remain untampered and unworn.',
       'Damaged, defective or wrong product: Report within 48 hours of delivery with clear photos/video and your order number. If confirmed, we will offer a replacement, exchange or full refund, and we will bear the pickup cost.',
       'Refunds: Refunds are processed to the original payment method within 7 to 10 working days after we receive and inspect the returned item. For COD orders, refunds are made by bank transfer/UPI to details you provide, or as store credit.',
-      'COD fees are non-refundable unless the return is due to our error.',
-      'Store credit, where offered, is valid for 6 to 12 months.'
+      'COD fees are non-refundable unless the return is due to our error. Store credit, where offered, is valid for 6 to 12 months.'
     ]
   },
   {
     id: 9,
     title: '9. Discounts, Offers and Promotions',
     postulates: [
-      'Coupon codes and promotional offers are valid only for the stated period and cannot be combined unless expressly stated.',
-      'We may withdraw or modify any offer at any time. Abuse of offers (multiple accounts, fake orders, reselling) may lead to cancellation of orders and account suspension.',
-      'Promotional or "sale" prices may change the return eligibility described in Section 8.'
+      'Coupon codes and promotional offers are valid only for the stated period and cannot be combined with other offers unless explicitly stated.'
     ]
   },
   {
     id: 10,
     title: '10. Intellectual Property',
     postulates: [
-      'All content on the Website, including the Arghyya name, logo, taglines (including "Slay Everyday"), designs, patterns, prints, photographs, videos, text, graphics and layout, is owned by or licensed to us and protected under Indian and international laws on copyright, trademarks and designs.',
+      'All content on the Website, including the ARGHYA name, logo, taglines (including "Slay Everyday"), designs, patterns, prints, photographs, videos, text, graphics and layout, is owned by or licensed to us and protected under Indian and international laws on copyright, trademarks and designs.',
       'You may view and print content for personal, non-commercial use only. You must not copy, reproduce, modify, distribute, scrape, republish or use our content, designs or images for commercial purposes (including reselling, replicating our designs or listing them on other platforms) without our prior written permission.',
       'Any unauthorised use may result in legal action, including claims for damages.'
     ]
@@ -128,7 +125,7 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 12,
     title: '12. Reviews, Photos and User Content',
     postulates: [
-      'If you submit reviews, photos, videos, comments or tag us on social media, you grant Arghyya a non-exclusive, worldwide, royalty-free, perpetual licence to use, display, reproduce and share that content for marketing and promotional purposes, with credit to your handle where reasonable.',
+      'If you submit reviews, photos, videos, comments or tag us on social media, you grant ARGHYA a non-exclusive, worldwide, royalty-free, perpetual licence to use, display, reproduce and share that content for marketing and promotional purposes, with credit to your handle where reasonable.',
       'You confirm that you own or have the rights to the content and that it does not infringe anyone’s rights. We may remove any content at our discretion.'
     ]
   },
@@ -160,7 +157,7 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 16,
     title: '16. Limitation of Liability',
     postulates: [
-      'To the maximum extent permitted by law, Arghyya, its directors, employees, partners and affiliates will not be liable for any indirect, incidental, special or consequential losses arising from your use of the Website or Products.',
+      'To the maximum extent permitted by law, ARGHYA, its directors, employees, partners and affiliates will not be liable for any indirect, incidental, special or consequential losses arising from your use of the Website or Products.',
       'Our total liability for any claim relating to an order is limited to the amount you paid for that order.'
     ]
   },
@@ -168,7 +165,7 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 17,
     title: '17. Indemnity',
     postulates: [
-      'You agree to indemnify and hold harmless Arghyya and its team from any claims, losses, damages or expenses (including reasonable legal fees) arising from your breach of these Terms, your misuse of the Website, or your violation of any law or third-party right.'
+      'You agree to indemnify and hold harmless ARGHYA and its team from any claims, losses, damages or expenses (including reasonable legal fees) arising from your breach of these Terms, your misuse of the Website, or your violation of any law or third-party right.'
     ]
   },
   {
@@ -192,12 +189,12 @@ const TERMS_SECTIONS: TermSection[] = [
     title: '20. Grievance Officer',
     postulates: [
       'In line with the Consumer Protection (E-Commerce) Rules, 2020 and the Information Technology (Intermediary Guidelines) Rules, 2021, complaints may be sent to:',
-      'Name: MOHNISH KUMAR GAUR',
-      'Designation: CO-FOUNDER',
+      'Name: MR ANUBHAV SINGH RAJPUT',
+      'Designation: CTO & Director (Operations)',
       'Email: care.arghya@gmail.com',
-      'Phone: +91-8882827148',
+      'Phone: +91 72909 99906',
       'Address: New Delhi, INDIA',
-      'Working hours: Mon to Sat, 10:00 AM to 6:00 PM IST',
+      'Working hours: Mon to Fri , 10:00 AM to 6:00 PM IST',
       'We will acknowledge complaints within 48 hours and aim to resolve them within one month of receipt.'
     ]
   },
@@ -205,7 +202,7 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 21,
     title: '21. Seller and Business Information',
     postulates: [
-      'Legal name: Arghya',
+      'Legal name: ARGHYA',
       'Registered address: New Delhi, INDIA',
       'Country of origin of Products: India'
     ]
@@ -224,7 +221,7 @@ const TERMS_SECTIONS: TermSection[] = [
     postulates: [
       'Severability: If any provision is held invalid, the rest remain in force.',
       'No waiver: Our failure to enforce any right is not a waiver of that right.',
-      'Entire agreement: These Terms, together with our Privacy, Shipping and Return policies, are the entire agreement between you and Arghyya regarding the Website and Products.',
+      'Entire agreement: These Terms, together with our Privacy, Shipping and Return policies, are the entire agreement between you and ARGHYA regarding the Website and Products.',
       'Assignment: We may assign our rights under these Terms; you may not without our written consent.'
     ]
   },
@@ -232,9 +229,9 @@ const TERMS_SECTIONS: TermSection[] = [
     id: 24,
     title: '24. Contact Us',
     postulates: [
-      'Arghya',
+      'ARGHYA',
       'Email: care.arghya@gmail.com',
-      'Phone / WhatsApp: +91-8882827148 , +91-7290999906 , +91-9310622289',
+      'Phone / WhatsApp: +91-8882827148 , +91-9310622289',
       'Website: www.arghyya.com',
       'Instagram: @arghyyaofficial'
     ]
@@ -257,21 +254,19 @@ export default function TermsPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-      {/* Hero Header Section (No Particle Background) */}
-      <section className="relative py-14 sm:py-20 px-4 sm:px-6 lg:px-8 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-950 overflow-hidden">
-        <div className="relative z-10 max-w-5xl mx-auto text-center space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-100 dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-700 text-black dark:text-white text-xs font-bold uppercase tracking-widest shadow-sm">
-            <Scale size={14} className="text-black dark:text-white" />
-            <span>Legal Agreement</span>
+    <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors">
+      {/* Hero Header */}
+      <section className="relative py-16 sm:py-24 border-b border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-[11px] font-mono tracking-widest uppercase text-neutral-600 dark:text-neutral-400">
+            <Scale size={14} />
+            Legal Agreement
           </div>
-
-          <h1 className="font-serif text-3xl sm:text-5xl font-extrabold tracking-wide text-black dark:text-white">
-            TERMS &amp; CONDITIONS
+          <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-black dark:text-white">
+            Terms & Conditions
           </h1>
-
-          <p className="text-xs sm:text-sm font-semibold tracking-wider text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto uppercase">
-            Arghyya | www.arghyya.com &bull; Last updated: 30 September 2026
+          <p className="max-w-2xl mx-auto text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 font-sans leading-relaxed">
+            Please read these terms carefully before using our website or ordering our handcrafted 925 sterling silver and anti-tarnish fine jewellery pieces.
           </p>
         </div>
       </section>

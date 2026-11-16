@@ -6,7 +6,8 @@ import { useCartStore } from '../../../store/cartStore';
 import { CartDrawer } from '../../../components/CartDrawer';
 import { PaymentModal } from '../../../components/PaymentModal';
 import { PaymentRedirectCard } from '../../../components/PaymentRedirectCard';
-import { ShoppingBag, Truck, CheckCircle2, Star, StarHalf, MessageSquareQuote, ThumbsUp, PenLine, Sparkles, ChevronDown, ChevronUp, Filter, Layers, Share2 } from 'lucide-react';
+import { ShoppingBag, Truck, CheckCircle2, Star, StarHalf, MessageSquareQuote, ThumbsUp, PenLine, Sparkles, ChevronDown, ChevronUp, Filter, Layers, Share2, ShieldCheck, Package, Gift } from 'lucide-react';
+import { PaymentLogosRow } from '../../../components/PaymentLogosRow';
 import { Product } from '../../../lib/api';
 
 import { BuyCODButton } from '../../../components/buttons/BuyCODButton';
@@ -110,8 +111,12 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
 
   const [quantity, setQuantity] = useState<number>(1);
-  const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(true);
+  const [isDetailsOpen, setIsDetailsOpen] = useState<boolean>(false);
+  const [isFaqsOpen, setIsFaqsOpen] = useState<boolean>(false);
   const [pincode, setPincode] = useState<string>('');
+  const [deliveryChecked, setDeliveryChecked] = useState<boolean>(false);
+  const [isGiftCustomOpen, setIsGiftCustomOpen] = useState<boolean>(false);
+  const [giftMessage, setGiftMessage] = useState<string>('');
 
   // ── Mystery Jar: size-based payment URL ────────────────────────────────────
   const isMysteryJar = product.slug === 'mystery-jar';
@@ -203,21 +208,15 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
               />
             ) : (
               <div className="absolute inset-0 bg-gradient-to-br from-neutral-100 via-neutral-50 to-neutral-200 dark:from-neutral-900 dark:via-neutral-950 dark:to-neutral-900 flex flex-col items-center justify-center p-8 text-center">
-                <div className="w-28 h-28 rounded-full border border-neutral-300 dark:border-neutral-700 flex items-center justify-center mb-6 bg-white/60 dark:bg-black/60 shadow-md">
-                  <span className="font-serif text-4xl font-light text-neutral-400 dark:text-neutral-500">925</span>
-                </div>
                 <span className="text-xs uppercase tracking-[0.25em] font-mono text-neutral-500 font-bold mb-2">
                   {product.category} {product.subcategory ? `• ${product.subcategory}` : ''}
                 </span>
-                <h4 className="font-serif text-3xl font-bold text-neutral-800 dark:text-neutral-200 max-w-md leading-snug">
+                <h4 className="font-serif text-3xl font-bold text-neutral-800 dark:text-neutral-200 max-w-md leading-snug mb-6">
                   {product.name}
                 </h4>
-                <div className="mt-6 flex flex-col items-center gap-1.5">
-                  <span className="inline-block px-4 py-2 rounded-full text-xs uppercase font-black tracking-wider bg-black text-white dark:bg-white dark:text-black shadow">
+                <div className="flex flex-col items-center">
+                  <span className="inline-block px-5 py-2.5 rounded-full text-xs uppercase font-black tracking-wider bg-black text-white dark:bg-white dark:text-black shadow">
                     PRODUCT OUT OF STOCK
-                  </span>
-                  <span className="text-[11px] uppercase font-bold tracking-[0.25em] text-neutral-400 dark:text-neutral-500">
-                    COMING SOON
                   </span>
                 </div>
               </div>
@@ -238,19 +237,14 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           )}
         </div>
 
-        {/* ═══════════════════════ RIGHT: Product Info ═══════════════════════ */}
-        <div className="flex flex-col gap-5">
+        {/* ══════════════════════ RIGHT: Product Info ═════════════════════ */}
+        <div className="flex flex-col gap-4">
 
-          {/* Name + Share */}
+          {/* 1. Product Title + Share */}
           <div className="flex items-start justify-between gap-3">
-            <div className="flex-1 min-w-0">
-              <span className="text-[11px] text-burgundy-700 dark:text-amber-400 font-mono uppercase tracking-widest font-bold">
-                {product.category}{product.craft_type ? ` • ${product.craft_type}` : ''}
-              </span>
-              <h1 className="font-serif text-2xl sm:text-3xl font-bold text-burgundy-900 dark:text-stone-100 mt-1 leading-snug">
-                {product.name}
-              </h1>
-            </div>
+            <h1 className="text-2xl sm:text-3xl font-normal text-neutral-900 dark:text-neutral-100 tracking-tight leading-snug flex-1 min-w-0">
+              {product.name}
+            </h1>
             <button
               type="button"
               title="Share product"
@@ -261,69 +255,89 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                   navigator.clipboard.writeText(window.location.href);
                 }
               }}
-              className="mt-1 p-2 rounded-full border border-stone-200 dark:border-stone-700 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors shrink-0"
+              className="mt-1 p-2 rounded-full border border-neutral-200 dark:border-neutral-700 hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors shrink-0"
             >
-              <Share2 size={16} className="text-stone-600 dark:text-stone-300" />
+              <Share2 size={16} className="text-neutral-500 dark:text-neutral-400" />
             </button>
           </div>
 
-          {/* Price */}
-          <div className="flex items-center gap-3 flex-wrap">
-            <span suppressHydrationWarning className="text-2xl font-bold text-burgundy-900 dark:text-amber-400">
-              ₹{(isMysteryJar ? mysteryJarPrice : product.price).toLocaleString('en-IN')}
-            </span>
-            {product.compare_at_price && (
-              <span suppressHydrationWarning className="text-sm text-stone-400 line-through">
-                ₹{product.compare_at_price.toLocaleString('en-IN')}
-              </span>
-            )}
-            {product.combo_price && (
-              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-black text-white dark:bg-white dark:text-black shadow-sm">
-                BUY 2 @ ₹{product.combo_price.toLocaleString('en-IN')}
-              </span>
-            )}
-          </div>
+          {/* 2. Price Row */}
+          {(() => {
+            const effectivePrice = isMysteryJar ? mysteryJarPrice : product.price;
+            const comparePrice = product.compare_at_price && product.compare_at_price > effectivePrice
+              ? product.compare_at_price
+              : Math.round(effectivePrice * 2.27);
+            const savePercent = comparePrice > effectivePrice
+              ? Math.round(((comparePrice - effectivePrice) / comparePrice) * 100)
+              : 0;
+            return (
+              <div className="space-y-1">
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span suppressHydrationWarning className="text-2xl sm:text-[28px] font-normal text-neutral-900 dark:text-neutral-100">
+                    ₹ {effectivePrice.toLocaleString('en-IN')}
+                  </span>
+                  {comparePrice > effectivePrice && (
+                    <span suppressHydrationWarning className="text-lg text-neutral-500 dark:text-neutral-400 line-through font-normal">
+                      ₹ {comparePrice.toLocaleString('en-IN')}
+                    </span>
+                  )}
+                  {savePercent > 0 && (
+                    <span className="bg-[#0052cc] text-white text-[11px] font-bold px-2 py-0.5 rounded tracking-wide">
+                      Save {savePercent}%
+                    </span>
+                  )}
+                  {product.combo_price && (
+                    <span className="px-2 py-0.5 rounded text-[11px] font-bold uppercase bg-black text-white dark:bg-white dark:text-black">
+                      BUY 2 @ ₹{product.combo_price.toLocaleString('en-IN')}
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-neutral-400 dark:text-neutral-500">
+                  Inclusive of all taxes. Free Shipping Pan INDIA
+                </p>
+              </div>
+            );
+          })()}
 
-          <p className="text-xs text-stone-500 font-medium -mt-3">Inclusive of all taxes</p>
-
-          {/* Star rating */}
+          {/* 3. Star Rating */}
           <button
             type="button"
             onClick={() => setIsReviewsModalOpen(true)}
-            className="flex items-center gap-1.5 group -mt-2"
+            className="flex items-center gap-2 group cursor-pointer w-fit"
             title="View all reviews"
           >
-            <div className="flex items-center">
+            <div className="flex items-center gap-0.5">
               {[1,2,3,4].map((i) => (
-                <Star key={i} className="w-3.5 h-3.5 fill-[#f59e0b] text-[#f59e0b]" />
+                <Star key={i} className="w-4 h-4 fill-[#f59e0b] text-[#f59e0b]" />
               ))}
               {ratingNum >= 4.8
-                ? <Star className="w-3.5 h-3.5 fill-[#f59e0b] text-[#f59e0b]" />
-                : <StarHalf className="w-3.5 h-3.5 fill-[#f59e0b] text-[#f59e0b]" />
+                ? <Star className="w-4 h-4 fill-[#f59e0b] text-[#f59e0b]" />
+                : <StarHalf className="w-4 h-4 fill-[#f59e0b] text-[#f59e0b]" />
               }
             </div>
-            <span className="text-xs font-bold text-stone-700 dark:text-stone-300">{ratingString}</span>
-            <span className="text-xs text-stone-500 group-hover:text-amber-500 group-hover:underline">({reviewCount})</span>
+            <span className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
+              {ratingString} <span className="text-neutral-400 font-normal mx-0.5">|</span> {reviewCount}
+            </span>
           </button>
 
           {/* Colour Options */}
           {baseProduct.colorOptions && baseProduct.colorOptions.length > 0 && (
             <div className="space-y-2">
-              <label className="text-xs text-burgundy-800/70 dark:text-stone-400 font-bold uppercase tracking-wider block">
+              <label className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 block">
                 Colour Available
               </label>
-              <div className="flex flex-wrap gap-2.5">
+              <div className="flex flex-wrap gap-2">
                 {baseProduct.colorOptions.map((opt: any, idx: number) => (
                   <button
                     key={opt.colorName}
                     onClick={() => { setSelectedColorIdx(idx); setSelectedImageIdx(0); }}
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold uppercase border transition-all ${
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold border transition-all ${
                       selectedColorIdx === idx
-                        ? 'border-burgundy-800 bg-burgundy-800/10 text-burgundy-900 dark:border-amber-400 dark:bg-amber-500/20 dark:text-amber-300 ring-1 ring-amber-400'
-                        : 'border-burgundy-800/15 bg-white dark:border-stone-800 dark:bg-stone-900 text-burgundy-800/70 dark:text-stone-400 hover:border-burgundy-800/30'
+                        ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
+                        : 'border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 hover:border-black dark:hover:border-white'
                     }`}
                   >
-                    <span className="w-3 h-3 rounded-full border border-stone-200" style={{ backgroundColor: opt.colorHex }} />
+                    <span className="w-3 h-3 rounded-full border border-neutral-300" style={{ backgroundColor: opt.colorHex }} />
                     <span>{opt.colorName}</span>
                   </button>
                 ))}
@@ -334,12 +348,10 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           {/* Size / Jar Selection */}
           {sizes && sizes.length > 0 && (sizes.length > 1 || sizes[0] !== 'Free Size') && (
             <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <label className="text-xs text-burgundy-800/70 dark:text-stone-400 font-bold uppercase tracking-wider block">
-                  {isMysteryJar ? 'Select Jar Size / Option' : 'Select Size'}
-                </label>
-              </div>
-              <div className="flex flex-wrap gap-2.5">
+              <label className="text-xs font-bold uppercase tracking-wider text-neutral-600 dark:text-neutral-400 block">
+                {isMysteryJar ? 'Select Jar Size / Option' : 'Select Size'}
+              </label>
+              <div className="flex flex-wrap gap-2">
                 {sizes.map((sizeOption: string) => {
                   const isSelected = selectedSize === sizeOption;
                   return (
@@ -347,100 +359,205 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
                       key={sizeOption}
                       type="button"
                       onClick={() => setSelectedSize(sizeOption)}
-                      className={`relative px-4 py-2 rounded-xl text-xs font-bold uppercase border transition-all ${
+                      className={`px-4 py-2 rounded-lg text-xs font-semibold border transition-all ${
                         isSelected
-                          ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black shadow-sm ring-2 ring-black dark:ring-white ring-offset-2 dark:ring-offset-stone-900'
-                          : 'border-stone-300 dark:border-stone-700 bg-white dark:bg-stone-900 text-stone-800 dark:text-stone-200 hover:border-black dark:hover:border-white'
+                          ? 'border-black bg-black text-white dark:border-white dark:bg-white dark:text-black'
+                          : 'border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 hover:border-black dark:hover:border-white'
                       }`}
                     >
-                      <span>{sizeOption}</span>
+                      {sizeOption}
                     </button>
                   );
                 })}
               </div>
             </div>
           )}
-
-          {/* ── PAYMENT BUTTONS (Add To Cart | Buy Now) ── */}
-          <div className="flex flex-col gap-3 pt-1">
-            <div className="flex gap-3">
-              <button
-                type="button"
-                onClick={() => addItem(product, {
-                  id: `v-${product.slug}-${selectedColorIdx}`,
-                  product_id: product.id,
-                  size: selectedSize,
-                  color: activeColorOption?.colorName || 'Default',
-                  sku: `ARG-${product.slug.toUpperCase()}`,
-                  quantity_avail: 15
-                })}
-                className="flex-1 bg-white dark:bg-transparent border-2 border-black dark:border-white text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black py-4 rounded-md font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200"
-              >
-                <ShoppingBag size={15} />
-                Add To Cart
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  if (isMysteryJar && mysteryJarPaymentUrl) {
-                    window.location.href = mysteryJarPaymentUrl;
-                    return;
-                  }
-                  setIsBuyNowChoiceOpen(true);
+
+          {/* 4. Check Delivery */}
+          <div className="space-y-1.5">
+            <label className="text-xs font-medium text-neutral-800 dark:text-neutral-200 block">
+              Check Delivery
+            </label>
+            <div className="flex w-full border border-neutral-300 dark:border-neutral-700 rounded overflow-hidden">
+              <input
+                type="text"
+                value={pincode}
+                onChange={(e) => {
+                  setPincode(e.target.value.replace(/\D/g, '').slice(0, 6));
+                  setDeliveryChecked(false);
                 }}
-                className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-100 py-4 rounded-md font-bold uppercase tracking-wider text-xs sm:text-sm flex items-center justify-center gap-2 transition-all duration-200 shadow-lg"
+                placeholder="Enter your pincode"
+                className="flex-1 px-3.5 py-2.5 text-xs text-neutral-900 dark:text-neutral-100 bg-white dark:bg-neutral-900 placeholder:text-neutral-400 focus:outline-none"
+              />
+              <button
+                type="button"
+                onClick={() => { if (pincode.length === 6) setDeliveryChecked(true); }}
+                className="bg-black text-white dark:bg-white dark:text-black px-5 py-2.5 text-xs font-bold uppercase tracking-widest shrink-0 hover:bg-neutral-800 dark:hover:bg-neutral-200 transition-colors"
               >
-                Buy Now
+                CHECK
               </button>
+            </div>
+            {deliveryChecked && (
+              <p className="text-[11px] text-emerald-700 dark:text-emerald-400 font-medium flex items-center gap-1.5 pt-0.5">
+                <CheckCircle2 size={12} className="shrink-0" />
+                Free delivery in 3–5 business days across India
+              </p>
+            )}
+          </div>
+
+          {/* 5. 4 Value Pillars */}
+          <div className="border border-neutral-200 dark:border-neutral-800 rounded-xl p-3 bg-white dark:bg-neutral-950/60">
+            <div className="grid grid-cols-4 divide-x divide-neutral-200 dark:divide-neutral-800 text-center">
+              <div className="flex flex-col items-center gap-1 px-1 py-1">
+                <div className="w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-neutral-800 dark:text-amber-200"><ShieldCheck size={22} strokeWidth={1.6} /></div>
+                <span className="text-[9px] sm:text-[10px] font-bold text-neutral-800 dark:text-neutral-200 leading-tight">Quality<br />Guaranteed</span>
+              </div>
+              <div className="flex flex-col items-center gap-1 px-1 py-1">
+                <div className="w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-neutral-800 dark:text-amber-200"><Package size={22} strokeWidth={1.6} /></div>
+                <span className="text-[9px] sm:text-[10px] font-bold text-neutral-800 dark:text-neutral-200 leading-tight">Premium<br />Packaging</span>
+              </div>
+              <div className="flex flex-col items-center gap-1 px-1 py-1">
+                <div className="w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-neutral-800 dark:text-amber-200"><Sparkles size={20} strokeWidth={1.6} /></div>
+                <span className="text-[9px] sm:text-[10px] font-bold text-neutral-800 dark:text-neutral-200 leading-tight">Anti<br />Tarnish</span>
+              </div>
+              <div className="flex flex-col items-center gap-1 px-1 py-1">
+                <div className="w-10 h-10 rounded-full bg-amber-50 dark:bg-amber-950/40 flex items-center justify-center text-neutral-800 dark:text-amber-200"><Truck size={22} strokeWidth={1.6} /></div>
+                <span className="text-[9px] sm:text-[10px] font-bold text-neutral-800 dark:text-neutral-200 leading-tight">Free<br />Shipping</span>
+              </div>
             </div>
           </div>
 
-
-
-
-          {/* ── Trust Badges Image ── */}
-          <div className="relative w-full rounded-xl overflow-hidden">
-            <Image
-              src="/trust-badges.jpg"
-              alt="925 Pure Silver Quality Guaranteed, Free Shipping Across India, 6 Month Replacement, Cash On Delivery Available"
-              width={900}
-              height={340}
-              className="w-full h-auto object-contain"
-              quality={100}
-            />
-          </div>
-
-
-          {/* ── Product Details Collapsible ── */}
-          <div className="border-t border-stone-200 dark:border-stone-700 pt-3">
+          {/* 6. Send as a Gift */}
+          <div className="border border-neutral-200 dark:border-neutral-800 rounded-xl p-3 bg-white dark:bg-neutral-950/60">
             <button
               type="button"
-              onClick={() => setIsDetailsOpen(prev => !prev)}
-              className="w-full flex items-center justify-between py-2 text-sm font-bold text-stone-800 dark:text-stone-200 hover:text-stone-600 dark:hover:text-stone-400 transition-colors"
+              onClick={() => setIsGiftCustomOpen(prev => !prev)}
+              className="w-full flex items-center justify-between cursor-pointer"
             >
-              <span>Product Details, Material & Care</span>
-              <motion.span
-                animate={{ rotate: isDetailsOpen ? 45 : 0 }}
-                transition={{ duration: 0.2 }}
-                className="text-lg leading-none font-light text-stone-500"
-              >
-                +
-              </motion.span>
+              <div className="flex items-center gap-3">
+                <div className="w-8 h-8 rounded bg-amber-50 dark:bg-amber-950/50 flex items-center justify-center shrink-0">
+                  <Gift size={16} className="text-amber-700 dark:text-amber-300" />
+                </div>
+                <div className="text-left">
+                  <p className="text-[11px] sm:text-xs font-bold text-neutral-900 dark:text-neutral-100 tracking-wide uppercase">SEND AS A GIFT ?</p>
+                  <p className="text-[10px] text-neutral-400 dark:text-neutral-500">Tap for customisation</p>
+                </div>
+              </div>
+              <svg viewBox="0 0 32 32" className="w-9 h-9 fill-neutral-900 dark:fill-white shrink-0" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="12" width="24" height="3" rx="0.5" />
+                <rect x="6.5" y="15.5" width="8" height="10.5" rx="0.3" />
+                <rect x="17.5" y="15.5" width="8" height="10.5" rx="0.3" />
+                <path d="M13 12 C10 12 7 10 9 7 C11 4 14 7 15 12Z" />
+                <path d="M19 12 C22 12 25 10 23 7 C21 4 18 7 17 12Z" />
+              </svg>
             </button>
-            <AnimatePresence initial={false}>
-              {isDetailsOpen && (
+            <AnimatePresence>
+              {isGiftCustomOpen && (
                 <motion.div
-                  key="details-drawer"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: 'auto', opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="overflow-hidden"
+                  transition={{ duration: 0.2 }}
+                  className="overflow-hidden mt-3 pt-3 border-t border-neutral-100 dark:border-neutral-800"
                 >
+                  <p className="text-[10px] sm:text-[11px] text-neutral-500 dark:text-neutral-400 mb-2">
+                    🎁 Complimentary handwritten gift note &amp; luxury unboxing included with every gift order:
+                  </p>
+                  <input
+                    type="text"
+                    value={giftMessage}
+                    onChange={(e) => setGiftMessage(e.target.value)}
+                    placeholder="Recipient name or special message (Optional)"
+                    className="w-full text-xs px-3 py-2 border border-neutral-300 dark:border-neutral-700 rounded bg-white dark:bg-neutral-900 text-neutral-900 dark:text-neutral-100 placeholder:text-neutral-400 focus:outline-none focus:border-black dark:focus:border-white"
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* 7. Add To Cart | Buy Now */}
+          <div className="flex gap-3">
+            <button
+              type="button"
+              onClick={() => addItem(product, {
+                id: `v-${product.slug}-${selectedColorIdx}`,
+                product_id: product.id,
+                size: selectedSize,
+                color: activeColorOption?.colorName || 'Default',
+                sku: `ARG-${product.slug.toUpperCase()}`,
+                quantity_avail: 15
+              })}
+              className="flex-1 bg-white dark:bg-transparent border border-neutral-300 dark:border-neutral-600 hover:border-black dark:hover:border-white text-neutral-900 dark:text-white py-3.5 rounded-md font-semibold text-xs sm:text-sm tracking-wide transition-all"
+            >
+              Add To Cart
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                if (isMysteryJar && mysteryJarPaymentUrl) {
+                  window.location.href = mysteryJarPaymentUrl;
+                  return;
+                }
+                setIsBuyNowChoiceOpen(true);
+              }}
+              className="flex-1 bg-black hover:bg-neutral-800 text-white dark:bg-white dark:text-black dark:hover:bg-neutral-200 py-3.5 rounded-md font-semibold text-xs sm:text-sm tracking-wide transition-all shadow-sm"
+            >
+              Buy Now
+            </button>
+          </div>
+
+          {/* 8. Payment Logos */}
+          <PaymentLogosRow />
+
+          {/* 9. Product Details Accordion */}
+          <div className="border-t border-neutral-200 dark:border-neutral-800 pt-3">
+            <button
+              type="button"
+              onClick={() => setIsDetailsOpen(prev => !prev)}
+              className="w-full flex items-center justify-between py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors cursor-pointer"
+            >
+              <span>Product Details , Material &amp; Care</span>
+              <motion.span animate={{ rotate: isDetailsOpen ? 45 : 0 }} transition={{ duration: 0.2 }} className="text-lg leading-none font-light text-neutral-500">+</motion.span>
+            </button>
+            <AnimatePresence initial={false}>
+              {isDetailsOpen && (
+                <motion.div key="details-drawer" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }} className="overflow-hidden">
                   <div className="pb-4 pt-1">
-                    <p className="text-sm text-stone-600 dark:text-stone-300 leading-relaxed whitespace-pre-line">
-                      {product.description || 'Premium quality 925 Sterling Silver. Anti-tarnish coated. Skin-safe and waterproof. Handle with care — avoid harsh chemicals.'}
+                    <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-300 leading-relaxed whitespace-pre-line">
+                      {product.description || 'Premium quality 925 Sterling Silver. Anti-tarnish coated. Skin-safe and waterproof.'}
                     </p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+
+          {/* 10. FAQ's Accordion */}
+          <div className="border-t border-neutral-200 dark:border-neutral-800 pt-3">
+            <button
+              type="button"
+              onClick={() => setIsFaqsOpen(prev => !prev)}
+              className="w-full flex items-center justify-between py-2 text-sm font-semibold text-neutral-900 dark:text-neutral-100 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors cursor-pointer"
+            >
+              <span>FAQ&apos;s</span>
+              <motion.span animate={{ rotate: isFaqsOpen ? 45 : 0 }} transition={{ duration: 0.2 }} className="text-lg leading-none font-light text-neutral-500">+</motion.span>
+            </button>
+            <AnimatePresence initial={false}>
+              {isFaqsOpen && (
+                <motion.div key="faqs-drawer" initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }} className="overflow-hidden">
+                  <div className="pb-4 pt-2 space-y-3 text-xs sm:text-sm text-neutral-600 dark:text-neutral-300">
+                    <div>
+                      <p className="font-semibold text-neutral-800 dark:text-neutral-200">Is this genuine 925 Pure Silver / Anti-Tarnish?</p>
+                      <p className="mt-0.5 leading-relaxed">Yes, all our pure silver pieces are crafted with authentic 925 sterling silver, and our anti-tarnish jewelry features premium anti-fade waterproof coating.</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-neutral-800 dark:text-neutral-200">What are the delivery charges and timeline?</p>
+                      <p className="mt-0.5 leading-relaxed">Free Shipping Pan India on all prepaid orders. Delivery typically takes 3–5 business days across India.</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-neutral-800 dark:text-neutral-200">How do I keep my jewelry looking brand new?</p>
+                      <p className="mt-0.5 leading-relaxed">Store in the airtight pouch provided. Avoid direct contact with strong perfumes, detergents, or chlorine to preserve lustrous shine.</p>
+                    </div>
                   </div>
                 </motion.div>
               )}
