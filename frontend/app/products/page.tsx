@@ -103,7 +103,7 @@ function ProductsPageContent() {
 
   const mainCategories = ['All', '925 Pure Silver', 'Anti Tarnish', 'Best Sellers', 'Hot Deals'];
   const silverSubsections = ['All', 'Bracelets', 'Necklaces', 'Anklets', 'Pendants'];
-  const antiTarnishSubsections = ['All', 'Kashmiri Earrings', 'Oxidized Earrings', 'American Diamonds', 'Modern Pendants', 'Modern Earrings'];
+  const antiTarnishSubsections = ['All', 'Bracelets', 'Kashmiri Earrings', 'Oxidized Earrings', 'American Diamonds', 'Modern Pendants', 'Modern Earrings'];
 
   useEffect(() => {
     if (!categoryParam) return;
@@ -152,15 +152,18 @@ function ProductsPageContent() {
   useEffect(() => {
     if (!subcategoryParam) return;
     const subLower = subcategoryParam.toLowerCase();
-    const matchSilver = silverSubsections.find(s => s.toLowerCase() === subLower);
-    if (matchSilver) {
-      setSelectedSubcategory(matchSilver);
-      setSelectedCategory('925 Pure Silver');
-      return;
-    }
+    const catLowerSub = (categoryParam || '').toLowerCase();
+    const isAntiTarnishCategory =
+      catLowerSub === 'antitarnish' ||
+      catLowerSub.includes('anti-tarnish') ||
+      catLowerSub.includes('antitarnish') ||
+      catLowerSub.includes('tarnish');
+
+    // Check Anti Tarnish subsections first when category param indicates Anti Tarnish
     const matchAnti = antiTarnishSubsections.find(s => {
       const sLow = s.toLowerCase();
       if (sLow === subLower) return true;
+      if (s === 'Bracelets' && subLower === 'bracelets') return true;
       if (s === 'Kashmiri Earrings' && subLower.includes('kashmiri')) return true;
       if (s === 'American Diamonds' && subLower.includes('diamond')) return true;
       if (s === 'Oxidized Earrings' && subLower.includes('oxidized')) return true;
@@ -168,12 +171,27 @@ function ProductsPageContent() {
       if (s === 'Modern Earrings' && (subLower.includes('modern') && (subLower.includes('earring') || subLower.includes('earing')) || subLower === 'modern earrings' || subLower === 'modern earings')) return true;
       return false;
     });
+    if (isAntiTarnishCategory && matchAnti) {
+      setSelectedSubcategory(matchAnti);
+      setSelectedCategory('Anti Tarnish');
+      return;
+    }
+
+    // Check 925 Silver subsections
+    const matchSilver = silverSubsections.find(s => s.toLowerCase() === subLower);
+    if (matchSilver) {
+      setSelectedSubcategory(matchSilver);
+      setSelectedCategory('925 Pure Silver');
+      return;
+    }
+
+    // Fallback: match anti tarnish even without explicit category param
     if (matchAnti) {
       setSelectedSubcategory(matchAnti);
       setSelectedCategory('Anti Tarnish');
       return;
     }
-  }, [subcategoryParam]);
+  }, [subcategoryParam, categoryParam]);
 
   // Strict Category Buckets under 925 Pure Silver
   const bracelets: Product[] = BRACELET_PRODUCTS.map(p => ({ ...p, is_featured: true }));
@@ -859,10 +877,21 @@ function ProductsPageContent() {
             )}
           </div>
         ) : filteredProducts.length === 0 ? (
-          <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8">
-            <p className="text-base font-medium text-neutral-600 dark:text-neutral-400">
-              New designs for this section are being cataloged. Check back shortly!
-            </p>
+          <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8 space-y-3">
+            {selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'Bracelets' ? (
+              <>
+                <p className="text-2xl font-serif font-bold text-black dark:text-white tracking-tight">
+                  Anti-Tarnish Bracelets — Coming Soon ✨
+                </p>
+                <p className="text-base text-neutral-600 dark:text-neutral-400 max-w-md mx-auto">
+                  We&apos;re crafting a stunning new collection of anti-tarnish bracelets, designed to stay beautiful every day. Stay tuned!
+                </p>
+              </>
+            ) : (
+              <p className="text-base font-medium text-neutral-600 dark:text-neutral-400">
+                New designs for this section are being cataloged. Check back shortly!
+              </p>
+            )}
           </div>
         ) : viewMode === 'horizontal' ? (
           /* ─────────────────────────────────────────────────

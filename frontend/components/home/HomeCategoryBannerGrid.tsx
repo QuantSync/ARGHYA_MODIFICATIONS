@@ -236,17 +236,17 @@ export const HomeCategoryBannerGrid: React.FC = () => {
           </Link>
         </div>
 
-        {/* 2-Column Grid for Image 2 (Gift for Her / Mystery Jar) and Image 3 (Combo) */}
+        {/* 2-Column Grid for Image 2 (Anti-Tarnish Bracelets) and Image 3 (Combo) */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 md:gap-5">
-          {/* Card 1: Gift for Her (Mystery Jar) -> Takes user to individual product catalogue /products/mystery-jar */}
+          {/* Card 1: Anti-Tarnish Bracelets -> Takes user to Anti-Tarnish Bracelets catalogue */}
           <Link
-            href="/products/mystery-jar"
+            href="/products?category=AntiTarnish&subcategory=Bracelets"
             className="group block relative w-full aspect-[1024/662] rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-200/80 dark:border-neutral-800 focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white cursor-pointer bg-neutral-100 dark:bg-neutral-900"
-            title="Explore Mystery Jar - Gift For Her"
+            title="Explore Anti-Tarnish Bracelets Collection"
           >
             <Image
-              src="/images/home/deal_gift_for_her.jpg"
-              alt="Gift for Her - Mystery Jar Starts from ₹499"
+              src="/images/home/deal_anti_tarnish_bracelets.png"
+              alt="Anti-Tarnish Handcrafted Bracelets"
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
               className="object-cover object-center transition-transform duration-500 ease-out group-hover:scale-[1.018]"

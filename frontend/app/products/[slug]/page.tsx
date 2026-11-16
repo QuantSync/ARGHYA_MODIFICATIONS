@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useCartStore } from '../../../store/cartStore';
 import { CartDrawer } from '../../../components/CartDrawer';
 import { PaymentModal } from '../../../components/PaymentModal';
 import { PaymentRedirectCard } from '../../../components/PaymentRedirectCard';
-import { ShoppingBag, Truck, CheckCircle2, Star, StarHalf, MessageSquareQuote, ThumbsUp, PenLine, Sparkles, ChevronDown, ChevronUp, Filter, Layers, Share2, ShieldCheck, Package, Gift } from 'lucide-react';
+import { ShoppingBag, Truck, CheckCircle2, Star, StarHalf, MessageSquareQuote, ThumbsUp, PenLine, Sparkles, ChevronDown, ChevronUp, Filter, Layers, Share2, ShieldCheck, Package, Gift, Lock } from 'lucide-react';
 import { PaymentLogosRow } from '../../../components/PaymentLogosRow';
 import { Product } from '../../../lib/api';
 
@@ -135,7 +136,32 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     : product.price;
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative">
+      {/* If mystery-jar is currently under revision, display an unclickable blur overlay over the entire page */}
+      {isMysteryJar && (
+        <div className="fixed inset-0 z-[9999] bg-white/70 dark:bg-black/80 backdrop-blur-xl flex flex-col items-center justify-center p-6 text-center select-none">
+          <div className="max-w-md w-full bg-white dark:bg-neutral-900 border border-neutral-300 dark:border-neutral-800 rounded-3xl p-8 shadow-2xl space-y-4">
+            <div className="w-14 h-14 mx-auto rounded-full bg-black/5 dark:bg-white/5 flex items-center justify-center text-neutral-800 dark:text-neutral-200">
+              <Lock size={26} />
+            </div>
+            <h2 className="font-serif text-2xl font-bold text-black dark:text-white">
+              Gift For Her — Updating Soon
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed">
+              We are currently making updates to this exclusive collection. Please check back shortly!
+            </p>
+            <div className="pt-2">
+              <Link
+                href="/products"
+                className="inline-block px-6 py-2.5 rounded-full bg-black dark:bg-white text-white dark:text-black text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity"
+              >
+                Explore Other Collections
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+
       <CartDrawer onCheckout={() => setIsPaymentModalOpen(true)} />
       <PaymentModal isOpen={isPaymentModalOpen} onClose={() => setIsPaymentModalOpen(false)} />
       <PaymentRedirectCard

@@ -33,8 +33,11 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
       ? Math.round((1 - product.price / product.compare_at_price) * 100)
       : 0;
 
+  const isMysteryJar = product.slug === 'mystery-jar';
+
   const handleBuyNow = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if (isMysteryJar) return;
     if (onBuyNow) {
       onBuyNow(product);
     } else if (razorUrl) {
@@ -43,7 +46,15 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
   };
 
   return (
-    <div className="flex flex-col bg-white dark:bg-neutral-950 border border-neutral-100 dark:border-neutral-800 group overflow-hidden">
+    <div className={`flex flex-col bg-white dark:bg-neutral-950 border border-neutral-100 dark:border-neutral-800 group overflow-hidden relative ${isMysteryJar ? 'pointer-events-none select-none' : ''}`}>
+      {isMysteryJar && (
+        <div className="absolute inset-0 z-20 bg-white/40 dark:bg-black/50 backdrop-blur-sm flex flex-col items-center justify-center p-3 text-center pointer-events-none">
+          <span className="px-3 py-1 rounded-full bg-black/80 text-white dark:bg-white/90 dark:text-black text-[10px] font-bold tracking-wider uppercase shadow">
+            Updating Soon
+          </span>
+        </div>
+      )}
+
       {/* ── Product Image ── */}
       <Link
         href={`/products/${product.slug}`}
