@@ -22,12 +22,13 @@ interface DrawerMenuItem {
 }
 
 const DRAWER_MENU_ITEMS: DrawerMenuItem[] = [
-  { name: 'CATEGORIES', href: '/products' },
-  { name: 'HOT DEALS', href: '/products?category=HotDeals' },
-  { name: 'ANTI - TARNISH', href: '/products?category=AntiTarnish' },
-  { name: '925 PURE SILVER', href: '/products?category=Silver' },
+  { name: 'HOME', href: '/' },
   { name: 'ABOUT US', href: '/about' },
-  { name: 'F A Qs', href: '/faqs' },
+  { name: '925 PURE SILVER', href: '/products?category=Silver' },
+  { name: 'ANTI TARNISH', href: '/products?category=AntiTarnish' },
+  { name: 'BEST SELLERS', href: '/products?category=BestSellers' },
+  { name: 'HOT DEALS', href: '/products?category=HotDeals' },
+  { name: 'F A QS', href: '/faqs' },
   { name: 'CONTACT US', href: '/about#contact' },
 ];
 

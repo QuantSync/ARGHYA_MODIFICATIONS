@@ -247,8 +247,8 @@ function ProductsPageContent() {
 
   return (
     <div className="w-full">
-      {/* ── Top Edge-to-Edge Hero Banner for Anti-Tarnish (Endless 2-Image Auto-Sliding Slideshow) ── */}
-      {selectedCategory === 'Anti Tarnish' && (
+      {/* ── Top Edge-to-Edge Hero Banner ── */}
+      {selectedCategory === 'Anti Tarnish' ? (
         <div className="w-full border-b border-[#470813]">
           <BannerSlideshow
             slides={ANTI_TARNISH_BANNER_SLIDES}
@@ -256,10 +256,7 @@ function ProductsPageContent() {
             priorityFirst={true}
           />
         </div>
-      )}
-
-      {/* ── Top Edge-to-Edge Hero Banner for 925 Pure Silver (Part 1: Pay Less Flex More Banner) ── */}
-      {selectedCategory === '925 Pure Silver' && (
+      ) : (
         <div className="w-full border-b border-neutral-900">
           <BannerSlideshow
             slides={SILVER_BANNER_SLIDES}
@@ -268,6 +265,13 @@ function ProductsPageContent() {
           />
         </div>
       )}
+
+      {/* ── Label: Happily Served 1000+ Plus Fashion Lovers (Below Top Banner — Same as Home Screen) ── */}
+      <div className="w-full bg-white text-black border-y border-neutral-200/90 dark:bg-white dark:text-black dark:border-neutral-200 py-2 sm:py-2.5 px-4 text-center select-none shadow-xs !mt-0">
+        <p className="text-[11px] sm:text-xs md:text-sm font-bold tracking-[0.22em] sm:tracking-[0.28em] uppercase text-neutral-900 flex items-center justify-center gap-2">
+          <span>Happily Served 1000+ Plus Fashion Lovers</span>
+        </p>
+      </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 space-y-8">
         <CartDrawer />
