@@ -65,7 +65,13 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
         {hasImage ? (
           <Image
             src={mainImage}
-            alt={`${product.name} - 925 Sterling Silver`}
+            alt={
+              product.category === 'Anti Tarnish'
+                ? `${product.name} - Anti-Tarnish Fine Jewelry`
+                : product.category === 'Hot Deals' || product.subcategory === 'Combos'
+                ? `${product.name} - Exclusive Hot Deal`
+                : `${product.name} - 925 Sterling Silver`
+            }
             fill
             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
@@ -94,10 +100,12 @@ export const HorizontalProductCard: React.FC<HorizontalProductCardProps> = ({
           </span>
         )}
 
-        {/* Category badge — top-right */}
-        <span className="absolute top-2 right-2 bg-white/90 dark:bg-black/80 text-black dark:text-white text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-widest z-10 border border-neutral-200 dark:border-neutral-700">
-          {product.category === 'Anti Tarnish' ? 'Anti-Tarnish' : '925 Silver'}
-        </span>
+        {/* Category badge — top-right (omit for combos and hot deals) */}
+        {product.category !== 'Hot Deals' && product.subcategory !== 'Combos' && (
+          <span className="absolute top-2 right-2 bg-white/90 dark:bg-black/80 text-black dark:text-white text-[9px] font-bold px-2 py-1 rounded-full uppercase tracking-widest z-10 border border-neutral-200 dark:border-neutral-700">
+            {product.category === 'Anti Tarnish' ? 'Anti-Tarnish' : '925 Silver'}
+          </span>
+        )}
       </Link>
 
       {/* ── Info Section ── */}

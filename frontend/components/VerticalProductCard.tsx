@@ -161,9 +161,11 @@ export const VerticalProductCard: React.FC<VerticalProductCardProps> = ({
 
                   {/* Top Quality Badge */}
                   <div className="absolute top-4 left-4 z-10 flex flex-wrap gap-2">
-                    <span className="bg-black/90 dark:bg-white/90 text-white dark:text-black text-[10px] sm:text-xs font-bold px-3.5 py-1.5 rounded-full tracking-widest uppercase shadow-md backdrop-blur-sm">
-                      {product.category === 'Anti Tarnish' ? 'Anti-Tarnish' : '925 Silver'}
-                    </span>
+                    {product.category !== 'Hot Deals' && product.subcategory !== 'Combos' && (
+                      <span className="bg-black/90 dark:bg-white/90 text-white dark:text-black text-[10px] sm:text-xs font-bold px-3.5 py-1.5 rounded-full tracking-widest uppercase shadow-md backdrop-blur-sm">
+                        {product.category === 'Anti Tarnish' ? 'Anti-Tarnish' : '925 Silver'}
+                      </span>
+                    )}
                     {product.combo_price && (
                       <span className="bg-rose-700 text-white text-[10px] sm:text-xs font-bold px-3 py-1.5 rounded-full tracking-widest uppercase shadow-md">
                         HOT COMBO
