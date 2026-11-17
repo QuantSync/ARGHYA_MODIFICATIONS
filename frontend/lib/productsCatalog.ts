@@ -1641,7 +1641,9 @@ Make your look stand out with this stunning royal blue necklace set. Beautiful b
     subcategory: 'American Diamonds',
     fabric: 'Gold Polish • Blue Stones & American Diamond',
     craft_type: 'Party & Festive Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/royal_blue_teardrop_necklace_set/royal_blue_teardrop_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/royalblueteardropnecklaceset'
   },
@@ -1695,7 +1697,9 @@ A luxurious statement choker featuring intricate American Diamond work combined 
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond & Ruby Red Stones',
     craft_type: 'Bridal & Wedding Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/ruby_diamond_royal_choker_set/ruby_diamond_royal_choker_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/rubydiamondroyalchokerset'
   },
@@ -1721,7 +1725,9 @@ Bring elegance to your special occasions with this gorgeous sapphire blue Americ
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond & Blue Stones',
     craft_type: 'Bridal & Party Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/sapphire_elegance_bridal_choker/sapphire_elegance_bridal_choker_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/sapphireelegancebridalchoker'
   },
