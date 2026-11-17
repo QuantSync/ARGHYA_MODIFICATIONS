@@ -173,6 +173,19 @@ export const PaymentRedirectCard: React.FC<PaymentRedirectCardProps> = ({
       'pearl-bow-sparkle-studs':                     'https://rzp.io/rzp/pearlbowsparklestuds',
       'midnight-triple-heart-drops':                 'https://rzp.io/rzp/midnighttripleheartdrops',
 
+      // ── Anti Tarnish Kashmiri Earrings ─────────────────────────────────────
+      'royal-pearl-cascade-kashmiri-earrings':       'https://rzp.io/rzp/royalpearlcascadekashmiriearri',
+      'noor-e-kashmir-crescent-chandbali-earrings':  'https://rzp.io/rzp/noorekashmircrescentchandbali',
+      'golden-ghungroo-trio-jhumka-earrings':        'https://rzp.io/rzp/goldenghungrootriojhumka',
+      'gulbahar-floral-chain-drop-earrings':         'https://rzp.io/rzp/gulbaharfloralchaindropearring',
+      'mehr-kundan-blossom-multi-chain-earrings':    'https://rzp.io/rzp/mehrkudanblossommultichainearr',
+      'siyah-royal-black-crescent-kashmiri-earrings':'https://rzp.io/rzp/siyahroyalblackcrescentkashmir',
+      'royal-ruby-blossom-kashmiri-earrings':        'https://rzp.io/rzp/royalrubyblossomkashmiriearrin',
+      'gulnaar-noor-pearl-cascade-earrings':         'https://rzp.io/rzp/gulnarnoorpearlcascadeearrings',
+      'gulbahar-ruby-kashmiri-chain-earrings':       'https://rzp.io/rzp/gulbaharrubykashmirichainearri',
+      'maharani-multicolour-kashmiri-earrings':      'https://rzp.io/rzp/maharanimulticolourkashmiriear',
+      'emerald-peacock-royale-kashmiri-earrings':    'https://rzp.io/rzp/emeraldpeacockroyalekashmiriea',
+
 
       // ── 925 Pure Silver Bracelets ──────────────────────────────────────────
       '925-sterling-silver-purple-stone-bracelet': 'https://rzp.io/rzp/puresilverpurplestonedbraclet',

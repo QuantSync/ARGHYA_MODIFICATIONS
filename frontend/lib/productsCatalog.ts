@@ -2833,6 +2833,7 @@ Elegant golden Kashmiri long earrings featuring a beautiful pearl-studded top an
     craft_type: 'Kashmiri Pearl & Ghungroo Chain Dangles',
     images: ['/images/kashmiri_earrings/royal-pearl-cascade-kashmiri-earrings/royal-pearl-cascade-kashmiri-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/royalpearlcascadekashmiriearri',
   },
 
   'noor-e-kashmir-crescent-chandbali-earrings': {
@@ -2867,6 +2868,7 @@ Beautiful Kashmiri-inspired chandbali earrings with a striking red stone stud, c
     craft_type: 'Kashmiri Crescent Chandbali with Hanging Chains',
     images: ['/images/kashmiri_earrings/noor-e-kashmir-crescent-chandbali-earrings/noor-e-kashmir-crescent-chandbali-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/noorekashmircrescentchandbali',
   },
 
   'golden-ghungroo-trio-jhumka-earrings': {
@@ -2901,6 +2903,7 @@ Traditional golden Kashmiri earrings featuring beautiful floral stud tops, three
     craft_type: 'Floral Stud Trio Chain with Jhumka Ghungroo',
     images: ['/images/kashmiri_earrings/golden-ghungroo-trio-jhumka-earrings/golden-ghungroo-trio-jhumka-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/goldenghungrootriojhumka',
   },
 
   'gulbahar-floral-chain-drop-earrings': {
@@ -2935,6 +2938,7 @@ Delicate Kashmiri-style earrings with a beautiful white stone floral design and 
     craft_type: 'White Stone Floral Stud with Multi-Chain Drops',
     images: ['/images/kashmiri_earrings/gulbahar-floral-chain-drop-earrings/gulbahar-floral-chain-drop-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/gulbaharfloralchaindropearring',
   },
 
   'mehr-kundan-blossom-multi-chain-earrings': {
@@ -2969,6 +2973,7 @@ Gorgeous Kashmiri earrings featuring a sparkling white kundan-style floral top w
     craft_type: 'Kundan Floral Stud with Hanging Ghungroo Chains',
     images: ['/images/kashmiri_earrings/mehr-kundan-blossom-multi-chain-earrings/mehr-kundan-blossom-multi-chain-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/mehrkudanblossommultichainearr',
   },
 
   'siyah-royal-black-crescent-kashmiri-earrings': {
@@ -3003,6 +3008,7 @@ A stunning Kashmiri-inspired design featuring a bold black stone stud, golden cr
     craft_type: 'Black Stone Crescent Chandbali with Multi-Chains',
     images: ['/images/kashmiri_earrings/siyah-royal-black-crescent-kashmiri-earrings/siyah-royal-black-crescent-kashmiri-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/siyahroyalblackcrescentkashmir',
   },
 
   'royal-ruby-blossom-kashmiri-earrings': {
@@ -3037,6 +3043,7 @@ Embrace timeless elegance with these stunning Kashmiri-inspired earrings, featur
     craft_type: 'Ruby & Emerald Floral Dangles with Ghungroo Drops',
     images: ['/images/kashmiri_earrings/royal-ruby-blossom-kashmiri-earrings/royal-ruby-blossom-kashmiri-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/royalrubyblossomkashmiriearrin',
   },
 
   'gulnaar-noor-pearl-cascade-earrings': {
@@ -3071,6 +3078,7 @@ A beautiful blend of traditional artistry and royal elegance. These exquisite ea
     craft_type: 'Square Kundan Pearl Stud with Cascade Chains',
     images: ['/images/kashmiri_earrings/gulnaar-noor-pearl-cascade-earrings/gulnaar-noor-pearl-cascade-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/gulnarnoorpearlcascadeearrings',
   },
 
   'gulbahar-ruby-kashmiri-chain-earrings': {
@@ -3105,6 +3113,7 @@ Inspired by the timeless beauty of Kashmiri craftsmanship, these elegant earring
     craft_type: 'Ruby Floral Motif with Cascading Ghungroo Chains',
     images: ['/images/kashmiri_earrings/gulbahar-ruby-kashmiri-chain-earrings/gulbahar-ruby-kashmiri-chain-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/gulbaharrubykashmirichainearri',
   },
 
   'maharani-multicolour-kashmiri-earrings': {
@@ -3139,6 +3148,7 @@ Make every moment special with these magnificent traditional Kashmiri earrings. 
     craft_type: 'Sunburst Multicolour Motif with Golden Chains',
     images: ['/images/kashmiri_earrings/maharani-multicolour-kashmiri-earrings/maharani-multicolour-kashmiri-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/maharanimulticolourkashmiriear',
   },
 
   'emerald-peacock-royale-kashmiri-earrings': {
@@ -3173,6 +3183,7 @@ Inspired by the majestic beauty of peacocks, these enchanting earrings feature i
     craft_type: 'Peacock Golden Filigree with Cascading Chains',
     images: ['/images/kashmiri_earrings/emerald-peacock-royale-kashmiri-earrings/emerald-peacock-royale-kashmiri-earrings_1.png'],
     sizes: ['1 Pair (Free Size)'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldpeacockroyalekashmiriea',
   },
 
 };
