@@ -1501,7 +1501,9 @@ Add a feminine touch to your jewellery collection with this gorgeous pink floral
     subcategory: 'American Diamonds',
     fabric: 'Gold Polish • Pink Coloured Stones & American Diamond',
     craft_type: 'Floral Design',
-    images: [],
+    images: [
+      '/images/american_diamonds/pink_petal_charm_necklace_set/pink_petal_charm_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/pinkpetalcharmnecklaceset'
   },
@@ -1555,7 +1557,9 @@ A sophisticated necklace set featuring sparkling American Diamond leaf patterns 
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond with Black Accents',
     craft_type: 'Designer Party Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/midnight_black_leaf_necklace_set/midnight_black_leaf_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/midnightblackleafnecklaceset'
   },
@@ -1581,7 +1585,9 @@ Give your look a graceful makeover with this beautiful American Diamond necklace
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond',
     craft_type: 'Leaf Pattern',
-    images: [],
+    images: [
+      '/images/american_diamonds/emerald_leaf_cascade_necklace_set/emerald_leaf_cascade_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/emeraldleafcascadenecklaceset'
   },
@@ -1607,7 +1613,9 @@ Featuring rich emerald green teardrop stones arranged beautifully along a sparkl
     subcategory: 'American Diamonds',
     fabric: 'Gold Polish • Green Stones & American Diamond',
     craft_type: 'Elegant Traditional Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/emerald_teardrop_radiance_necklace_set/emerald_teardrop_radiance_necklace_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/emeraldteardropradiancenecklac'
   },
@@ -1739,7 +1747,37 @@ A breathtaking designer choker featuring vibrant emerald green stones surrounded
     subcategory: 'American Diamonds',
     fabric: 'Silver Polish • American Diamond & Green Stones',
     craft_type: 'Premium Bridal & Festive Wear',
-    images: [],
+    images: [
+      '/images/american_diamonds/emerald_majesty_diamond_choker/emerald_majesty_diamond_choker_1.png',
+    ],
+    sizes: ['Free Size'],
+    razorpay_url: 'https://rzp.io/rzp/emeraldmajestydiamondchoker'
+  },
+
+  'the-emerald-empress-choker-set': {
+    id: 'anti-ad-neck-014',
+    name: 'The Emerald Empress Choker Set',
+    slug: 'the-emerald-empress-choker-set',
+    description: `*The Emerald Empress Choker Set*
+
+A royal statement choker set adorned with sparkling American Diamonds, rich emerald green centerpieces, and graceful hanging pearl accents with matching pearl-drop earrings. An imperial masterpiece designed for grand weddings and royal festive occasions.
+
+*Product Details:*
+• Type: Statement Choker & Earrings Set
+• Material: Artificial Jewellery
+• Stone: American Diamond, Emerald Green Stones & Lustrous Pearls
+• Finish: Silver Polish
+• Feature: Anti-Tarnish
+• Style: Royal Bridal & Festive Wear`,
+    price: 1799.00,
+    compare_at_price: 3999.00,
+    category: 'Anti Tarnish',
+    subcategory: 'American Diamonds',
+    fabric: 'Silver Polish • American Diamond, Emerald Stones & Pearls',
+    craft_type: 'Royal Bridal & Festive Wear',
+    images: [
+      '/images/american_diamonds/the_emerald_empress_choker_set/the_emerald_empress_choker_set_1.png',
+    ],
     sizes: ['Free Size'],
     razorpay_url: 'https://rzp.io/rzp/emeraldmajestydiamondchoker'
   },
@@ -3218,6 +3256,7 @@ export const AMERICAN_DIAMONDS_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['ruby-diamond-royal-choker-set'],
   PRODUCTS_CATALOG['sapphire-elegance-bridal-choker'],
   PRODUCTS_CATALOG['emerald-majesty-diamond-choker'],
+  PRODUCTS_CATALOG['the-emerald-empress-choker-set'],
 ];
 
 export const MODERN_PENDANTS_PRODUCTS: CatalogProduct[] = [
