@@ -25,9 +25,15 @@ import {
   OXIDIZED_EARRINGS_PRODUCTS,
   MODERN_PENDANTS_PRODUCTS,
   MODERN_EARRINGS_PRODUCTS,
+  ANTI_TARNISH_BRACELETS_PRODUCTS,
 } from '../lib/productsCatalog';
 
 // ── Anti-Tarnish Collections ──────────────────────────────────────────────────
+const ANTI_TARNISH_BRACELETS_COLLECTION: Product[] = (ANTI_TARNISH_BRACELETS_PRODUCTS || []).map(p => ({
+  ...p,
+  is_featured: true,
+}));
+
 const KASHMIRI_EARRINGS_COLLECTION: Product[] = (KASHMIRI_EARRINGS_PRODUCTS || []).map(p => ({
   ...p,
   is_featured: true,
@@ -226,8 +232,56 @@ export default function HomePage() {
             </ScrollReveal>
           </div>
 
-          {/* 1. Kashmiri Earrings Collection */}
-          <section id="kashmiri-earrings-collection" className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          {/* 1. Anti-Tarnish Bracelets Collection */}
+          <section id="anti-tarnish-bracelets-collection" className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <ScrollReveal direction="up" delay={0.05}>
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-4">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Premium Gold-Tone Finish
+                  </span>
+                  <h3 className="font-serif text-2xl sm:text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Anti-Tarnish Bracelets Collection
+                  </h3>
+                </div>
+                <Link
+                  href="/products?category=AntiTarnish&subcategory=Bracelets"
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Bracelets ({ANTI_TARNISH_BRACELETS_COLLECTION.length}) →
+                </Link>
+              </div>
+            </ScrollReveal>
+
+            {viewMode === 'horizontal' ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {ANTI_TARNISH_BRACELETS_COLLECTION.map((product, idx) => (
+                  <HorizontalProductCard
+                    key={product.id}
+                    product={product}
+                    index={idx}
+                    onBuyNow={handleBuyNow}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col w-full">
+                {ANTI_TARNISH_BRACELETS_COLLECTION.map((product, idx) => (
+                  <VerticalProductCard
+                    key={product.id}
+                    product={product}
+                    index={idx}
+                    onBuyNow={handleBuyNow}
+                    isCouponActive={false}
+                    activeCouponCode={null}
+                  />
+                ))}
+              </div>
+            )}
+          </section>
+
+          {/* 2. Kashmiri Earrings Collection */}
+          <section id="kashmiri-earrings-collection" className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 pt-2">
             <ScrollReveal direction="up" delay={0.05}>
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-4">
                 <div>

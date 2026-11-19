@@ -955,6 +955,1341 @@ Make a sophisticated style statement with this elegant triple-layer sterling sil
     sizes: ['10.5 Inch (Standard)'],
   },
 
+  // ── ANTI TARNISH -> BRACELETS ──
+  'amoura-heartbeat-bracelet': {
+    id: 'anti-brac-001',
+    name: 'Amoura Heartbeat Bracelet',
+    slug: 'amoura-heartbeat-bracelet',
+    description: `*Amoura Heartbeat Bracelet*
+ROMANTIC HEART COLLECTION
+
+A beautiful blend of romance and sophistication, this gold-tone bracelet features two delicate heart motifs, one highlighted with elegant white enamel and the other in a contrasting dark finish. Sparkling accents and a Greek-inspired pattern complete its timeless design, making it a charming addition to your everyday elegance.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/amoura_heartbeat_bracelet/amoura_heartbeat_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'florielle-blossom-bracelet': {
+    id: 'anti-brac-002',
+    name: 'Florielle Blossom Bracelet',
+    slug: 'florielle-blossom-bracelet',
+    description: `*Florielle Blossom Bracelet*
+FLORAL ELEGANCE COLLECTION
+
+Inspired by the beauty of blooming flowers, this statement bracelet showcases a multilayered gold-tone structure adorned with delicate floral accents. A sparkling crystal flower at the centre adds a graceful touch, creating a perfect balance of modern design and feminine charm.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/florielle_blossom_bracelet/florielle_blossom_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'celestia-crystal-bar-bracelet': {
+    id: 'anti-brac-003',
+    name: 'Celestia Crystal Bar Bracelet',
+    slug: 'celestia-crystal-bar-bracelet',
+    description: `*Celestia Crystal Bar Bracelet*
+TIMELESS SPARKLE COLLECTION
+
+Designed for effortless sophistication, this gold-tone bracelet features a beautifully embellished rectangular centrepiece with two rows of shimmering clear stones. Its sleek linear detailing adds a refined and contemporary appeal, making it an ideal accessory for both special occasions and elegant everyday styling.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/celestia_crystal_bar_bracelet/celestia_crystal_bar_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'aurelia-petal-charm-bracelet': {
+    id: 'anti-brac-004',
+    name: 'Aurelia Petal Charm Bracelet',
+    slug: 'aurelia-petal-charm-bracelet',
+    description: `*Aurelia Petal Charm Bracelet*
+BOTANICAL LUXE COLLECTION
+
+A graceful expression of floral beauty, this bracelet features a delicate four-petal crystal-inspired flower framed with intricate golden detailing. The additional circular accent adds a distinctive touch, while its polished gold-tone finish brings timeless elegance to your wrist.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 219.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/aurelia_petal_charm_bracelet/aurelia_petal_charm_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'clover-etoile-bracelet': {
+    id: 'anti-brac-005',
+    name: 'Clover Étoile Bracelet',
+    slug: 'clover-etoile-bracelet',
+    description: `*Clover Étoile Bracelet*
+ICONIC CHARM COLLECTION
+
+Inspired by the timeless beauty of clover motifs, this bracelet features a striking combination of black and white floral-inspired elements, complemented by sparkling circular stone accents. Its elegant gold-tone frame creates a sophisticated contrast, making it a statement piece for those who appreciate distinctive luxury.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/clover_etoile_bracelet/clover_etoile_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'infinity-grace-bracelet': {
+    id: 'anti-brac-006',
+    name: 'Infinity Grace Bracelet',
+    slug: 'infinity-grace-bracelet',
+    description: `*Infinity Grace Bracelet*
+MINIMALIST LUXE COLLECTION
+
+Symbolising endless elegance, this bracelet showcases a beautifully sculpted infinity motif set against a sleek polished gold-tone band. Its clean and minimal design makes it a versatile accessory that effortlessly complements both casual outfits and sophisticated ensembles.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 219.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/infinity_grace_bracelet/infinity_grace_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'grecian-majesty-bracelet': {
+    id: 'anti-brac-007',
+    name: 'Grecian Majesty Bracelet',
+    slug: 'grecian-majesty-bracelet',
+    description: `*Grecian Majesty Bracelet*
+HERITAGE LUXE COLLECTION
+
+Inspired by classic Greek geometric artistry, this bracelet features an eye-catching patterned gold-tone centrepiece paired with a sparkling crystal-embellished section. The intricate detailing and luxurious finish create a bold yet refined look for women who love statement accessories.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/grecian_majesty_bracelet/grecian_majesty_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'zivara-chevron-bracelet': {
+    id: 'anti-brac-008',
+    name: 'Zivara Chevron Bracelet',
+    slug: 'zivara-chevron-bracelet',
+    description: `*Zivara Chevron Bracelet*
+CONTEMPORARY GLAM COLLECTION
+
+Make a striking impression with this uniquely designed gold-tone bracelet featuring a bold zigzag silhouette and multiple crystal-encrusted geometric panels. Its layered angular detailing creates a captivating play of light, adding a modern and glamorous touch to your jewellery collection.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 299.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'everluxe-infinity-bracelet': {
+    id: 'anti-brac-009',
+    name: 'Everluxe Infinity Bracelet',
+    slug: 'everluxe-infinity-bracelet',
+    description: `*Everluxe Infinity Bracelet*
+SIGNATURE GLAM COLLECTION
+
+A statement of everlasting sophistication, this bracelet features an elongated infinity-inspired design embellished with sparkling clear stones along its graceful curves. The polished gold-tone finish enhances its brilliance, making it a stunning choice for celebrations, evening occasions and elegant styling.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/everluxe_infinity_bracelet/everluxe_infinity_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'everheart-tree-of-life-bracelet': {
+    id: 'anti-brac-010',
+    name: 'Everheart Tree of Life Bracelet',
+    slug: 'everheart-tree-of-life-bracelet',
+    description: `*Everheart Tree of Life Bracelet*
+SYMBOLIC BEAUTY COLLECTION
+
+Celebrating love, growth and timeless beauty, this bracelet showcases a beautiful combination of sparkling heart-shaped accents and intricately crafted tree-inspired openwork motifs. Its elegant gold-tone finish and artistic detailing make it a meaningful yet fashionable accessory for every occasion.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 289.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/everheart_tree_of_life_bracelet/everheart_tree_of_life_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'roselle-butterfly-charm-bracelet': {
+    id: 'anti-brac-011',
+    name: 'Roselle Butterfly Charm Bracelet',
+    slug: 'roselle-butterfly-charm-bracelet',
+    description: `*Roselle Butterfly Charm Bracelet*
+ENAMEL CHARM COLLECTION
+
+Add a vibrant touch of elegance to your look with this beautiful gold-tone bracelet featuring a striking red butterfly-inspired bow motif, delicate white clover detailing and sparkling crystal accents. Its charming combination of colours and intricate elements creates a playful yet luxurious statement.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/roselle_butterfly_charm_bracelet/roselle_butterfly_charm_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'elara-wave-crystal-bracelet': {
+    id: 'anti-brac-012',
+    name: 'Elara Wave Crystal Bracelet',
+    slug: 'elara-wave-crystal-bracelet',
+    description: `*Elara Wave Crystal Bracelet*
+MODERN ARTISTRY COLLECTION
+
+Featuring an artistic flowing design, this gold-tone bracelet showcases graceful interwoven curves paired with crystal-embellished oval accents and subtle black detailing. Its contemporary silhouette and polished finish make it a sophisticated choice for modern jewellery lovers.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [
+      '/images/anti_tarnish_bracelets/elara_wave_crystal_bracelet/elara_wave_crystal_bracelet_1.png',
+    ],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'mariposa-pearl-butterfly-bracelet': {
+    id: 'anti-brac-013',
+    name: 'Mariposa Pearl Butterfly Bracelet',
+    slug: 'mariposa-pearl-butterfly-bracelet',
+    description: `*Mariposa Pearl Butterfly Bracelet*
+BUTTERFLY DREAMS COLLECTION
+
+Inspired by delicate butterfly wings, this elegant bracelet features a beautiful white butterfly-inspired centrepiece paired with a sparkling floral motif and subtle crystal accents. The graceful gold-tone structure adds a touch of feminine sophistication to your everyday and occasion wear.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'nazare-evil-eye-charm-bracelet': {
+    id: 'anti-brac-014',
+    name: 'Nazaré Evil Eye Charm Bracelet',
+    slug: 'nazare-evil-eye-charm-bracelet',
+    description: `*Nazaré Evil Eye Charm Bracelet*
+PROTECTIVE CHARM COLLECTION
+
+Make a distinctive style statement with this gold-tone charm bracelet featuring beautiful blue evil eye motifs and a detailed hand-inspired central charm. Its delicate dangling elements and vibrant blue accents create a unique blend of traditional symbolism and contemporary fashion.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 349.00,
+    compare_at_price: 899.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'bellora-bow-and-heart-bracelet': {
+    id: 'anti-brac-015',
+    name: 'Bellora Bow & Heart Bracelet',
+    slug: 'bellora-bow-and-heart-bracelet',
+    description: `*Bellora Bow & Heart Bracelet*
+ROMANTIC GLAM COLLECTION
+
+Designed to celebrate timeless femininity, this elegant double-band bracelet features a beautifully sculpted golden bow at the centre, complemented by sparkling heart-shaped crystal charms and a delicate line of shimmering stones. A graceful accessory that brings romance and glamour to every outfit.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 349.00,
+    compare_at_price: 899.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'florenza-daisy-cutwork-cuff': {
+    id: 'anti-brac-016',
+    name: 'Florenza Daisy Cutwork Cuff',
+    slug: 'florenza-daisy-cutwork-cuff',
+    description: `*Florenza Daisy Cutwork Cuff*
+FLORAL STATEMENT COLLECTION
+
+Embrace understated luxury with this beautifully crafted gold-tone cuff featuring an intricate repeating daisy-inspired cutwork pattern. Its wide structured silhouette and polished finish create a graceful statement, making it a perfect choice for elegant everyday styling and special occasions.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'ivory-wings-butterfly-bracelet': {
+    id: 'anti-brac-017',
+    name: 'Ivory Wings Butterfly Bracelet',
+    slug: 'ivory-wings-butterfly-bracelet',
+    description: `*Ivory Wings Butterfly Bracelet*
+MINIMAL BUTTERFLY COLLECTION
+
+Delicate yet eye-catching, this gold-tone bracelet features a beautiful white butterfly-inspired centrepiece with sleek elongated cutout detailing and subtle sparkling crystal accents. Its minimalist design and refined finish make it an effortlessly elegant addition to your jewellery collection.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'noir-radiance-crystal-bracelet': {
+    id: 'anti-brac-018',
+    name: 'Noir Radiance Crystal Bracelet',
+    slug: 'noir-radiance-crystal-bracelet',
+    description: `*Noir Radiance Crystal Bracelet*
+BOLD LUXE COLLECTION
+
+Combining bold geometry with refined brilliance, this gold-tone bracelet showcases a striking rectangular centrepiece featuring baguette-style crystal detailing and a contrasting dark border. Its intricately patterned band adds texture and character, creating a sophisticated statement accessory.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'lumina-double-row-bracelet': {
+    id: 'anti-brac-019',
+    name: 'Lumina Double Row Bracelet',
+    slug: 'lumina-double-row-bracelet',
+    description: `*Lumina Double Row Bracelet*
+LAYERED ELEGANCE COLLECTION
+
+Elevate your wrist styling with this elegant double-row gold-tone bracelet featuring a delicate linked geometric pattern on the upper band and a continuous shimmering crystal strip along the lower edge. Its beautifully balanced design creates a luxurious layered appearance without compromising on sophistication.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'tresora-heartbeat-bracelet': {
+    id: 'anti-brac-020',
+    name: 'Trésora Heartbeat Bracelet',
+    slug: 'tresora-heartbeat-bracelet',
+    description: `*Trésora Heartbeat Bracelet*
+HEART OF LUXURY COLLECTION
+
+A beautiful expression of love and elegance, this polished gold-tone bracelet features three stunning heart-shaped crystal accents arranged gracefully across its sleek band. The combination of its smooth golden surface and sparkling heart details creates a timeless and sophisticated look.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 219.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'aquila-wave-crystal-cuff': {
+    id: 'anti-brac-021',
+    name: 'Aquila Wave Crystal Cuff',
+    slug: 'aquila-wave-crystal-cuff',
+    description: `*Aquila Wave Crystal Cuff*
+CONTEMPORARY GLAMOUR
+
+Make a bold impression with this beautifully sculpted gold-tone cuff featuring flowing wavy lines and an elegant teardrop-shaped crystal accent. Its artistic openwork design creates a captivating layered effect, bringing contemporary sophistication and effortless glamour to your wrist.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'amorette-crystal-link-bracelet': {
+    id: 'anti-brac-022',
+    name: 'Amorette Crystal Link Bracelet',
+    slug: 'amorette-crystal-link-bracelet',
+    description: `*Amorette Crystal Link Bracelet*
+GEOMETRIC CHARM
+
+Featuring an artistic sequence of interlocking geometric motifs, this gold-tone bracelet is beautifully adorned with sparkling heart-shaped crystal accents. Its intricate openwork detailing and graceful symmetrical design create a delicate yet eye-catching statement for every occasion.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 249.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'celestique-arc-crystal-bracelet': {
+    id: 'anti-brac-023',
+    name: 'Celestique Arc Crystal Bracelet',
+    slug: 'celestique-arc-crystal-bracelet',
+    description: `*Celestique Arc Crystal Bracelet*
+ARCHITECTURAL GLAM
+
+Inspired by graceful architectural curves, this stunning gold-tone bracelet features a series of overlapping arched elements embellished with shimmering crystals. The delicate dangling crystal accents add extra brilliance, creating a luxurious design that beautifully catches the light.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 299.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'onyx-noir-square-bracelet': {
+    id: 'anti-brac-024',
+    name: 'Onyx Noir Square Bracelet',
+    slug: 'onyx-noir-square-bracelet',
+    description: `*Onyx Noir Square Bracelet*
+MODERN MINIMALISM
+
+Bold simplicity meets modern elegance in this gold-tone bracelet featuring five striking black square accents arranged across its central bar. The contrasting dark detailing and polished golden finish create a sophisticated look, perfect for women who love minimal yet distinctive jewellery.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 229.00,
+    compare_at_price: 699.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'bellissima-golden-bow-bangle': {
+    id: 'anti-brac-025',
+    name: 'Bellissima Golden Bow Bangle',
+    slug: 'bellissima-golden-bow-bangle',
+    description: `*Bellissima Golden Bow Bangle*
+ROMANTIC LUXURY
+
+Add a charming touch of luxury to your style with this elegant gold-tone bangle featuring a beautifully sculpted three-dimensional bow centrepiece. Delicate crystal embellishments along the sides enhance its brilliance, making it a graceful accessory for parties, celebrations and special occasions.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 299.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'obsidian-elegance-bracelet': {
+    id: 'anti-brac-026',
+    name: 'Obsidian Elegance Bracelet',
+    slug: 'obsidian-elegance-bracelet',
+    description: `*Obsidian Elegance Bracelet*
+UNDERSTATED SOPHISTICATION
+
+Designed for lovers of understated sophistication, this bracelet features a sleek triple-line gold-tone structure with a bold circular black centrepiece. Tiny sparkling crystal accents add a refined touch of brilliance, creating a beautiful contrast between modern minimalism and timeless elegance.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'solenne-classic-gold-cuff': {
+    id: 'anti-brac-027',
+    name: 'Solenne Classic Gold Cuff',
+    slug: 'solenne-classic-gold-cuff',
+    description: `*Solenne Classic Gold Cuff*
+SCULPTURAL LUXE
+
+Embrace the beauty of simplicity with this bold and beautifully polished gold-tone cuff. Its wide, smooth silhouette and clean sculptural finish create an effortlessly luxurious appearance. A versatile statement piece that pairs beautifully with both everyday outfits and elevated occasion wear.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'papillon-butterfly-charm-bracelet': {
+    id: 'anti-brac-028',
+    name: 'Papillon Butterfly Charm Bracelet',
+    slug: 'papillon-butterfly-charm-bracelet',
+    description: `*Papillon Butterfly Charm Bracelet*
+BUTTERFLY CHARM
+
+Inspired by the delicate beauty of butterflies, this gold-tone bracelet features alternating white butterfly motifs and elegant black circular accents. Its artistic arrangement and polished golden detailing create a charming contrast, making it a beautiful choice for adding a graceful finishing touch to your look.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 299.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'mon-amour-heart-bracelet': {
+    id: 'anti-brac-029',
+    name: 'Mon Amour Heart Bracelet',
+    slug: 'mon-amour-heart-bracelet',
+    description: `*Mon Amour Heart Bracelet*
+ROMANTIC CUTWORK
+
+Celebrate love with this stylish gold-tone bracelet featuring contrasting white and black heart-shaped accents set against an intricate geometric cutwork band. Its unique combination of playful heart motifs and contemporary detailing makes it a charming addition to your jewellery collection.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 279.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'seraphina-heartline-bracelet': {
+    id: 'anti-brac-030',
+    name: 'Seraphina Heartline Bracelet',
+    slug: 'seraphina-heartline-bracelet',
+    description: `*Seraphina Heartline Bracelet*
+FEMININE SOPHISTICATION
+
+Discover understated elegance with this delicate gold-tone bracelet featuring beautiful white heart-shaped accents and a sparkling baguette-style crystal detail. Its slender open-frame design and graceful decorative elements create a refined, feminine look that is perfect for everyday sophistication and thoughtful gifting.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 349.00,
+    compare_at_price: 899.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'amorella-heart-enamel-bracelet': {
+    id: 'anti-brac-031',
+    name: 'Amorella Heart Enamel Bracelet',
+    slug: 'amorella-heart-enamel-bracelet',
+    description: `*Amorella Heart Enamel Bracelet*
+ENAMEL ELEGANCE
+
+Celebrate love and elegance with this beautiful gold-tone bracelet featuring a charming arrangement of black and white heart-shaped enamel motifs. Its polished golden frame and contrasting heart details create a sophisticated yet playful design, making it a perfect accessory for everyday styling, romantic occasions and thoughtful gifting.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 349.00,
+    compare_at_price: 899.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
+  'crystelle-blossom-cuff-bracelet': {
+    id: 'anti-brac-032',
+    name: 'Crystelle Blossom Cuff Bracelet',
+    slug: 'crystelle-blossom-cuff-bracelet',
+    description: `*Crystelle Blossom Cuff Bracelet*
+FLORAL CRYSTAL CUFF
+
+Embrace timeless elegance with this stunning gold-tone open cuff bracelet featuring two beautifully embellished floral-inspired crystal motifs at either end. The sparkling stone detailing adds a luxurious touch, while its sleek and minimal structure creates a graceful balance of sophistication and modern charm. Perfect for parties, celebrations and elegant everyday wear.
+
+*Product Details:*
+• Brand: ARGHYA
+• Product Type: Anti-Tarnish Metal Bracelet
+• Material: Metal
+• Finish: Premium Gold-Tone Finish
+• Colour: Gold
+• Stone Type: Artificial Crystals / Decorative Stones (where applicable)
+• Design: Contemporary, Elegant & Fashion-Forward
+• Durability: Anti-Tarnish Coating
+• Style: Fashion Jewellery
+• Occasion: Casual Wear, Party Wear, Festive Wear & Special Occasions
+• Care Instructions: Keep away from water, perfumes, lotions and harsh chemicals. Store in a dry place when not in use.
+• Package Contains: 1 Bracelet
+
+*Why You'll Love It:*
+• Anti-tarnish finish designed to help maintain its shine.
+• Elegant gold-tone appearance for a premium look.
+• Beautiful detailing with distinctive and fashionable designs.
+• Versatile styling for everyday wear and special occasions.
+• A perfect gifting choice for someone special.
+
+Care Tip: To maintain the beauty and finish of your bracelet, avoid direct contact with water and chemicals. Gently wipe with a soft, dry cloth after use.`,
+    price: 299.00,
+    compare_at_price: 799.00,
+    category: 'Anti Tarnish',
+    subcategory: 'Bracelets',
+    fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
+    craft_type: 'Anti-Tarnish Metal Bracelet',
+    images: [],
+    sizes: ['Free Size (Adjustable)'],
+  },
+
   // ── ANTI TARNISH -> OXIDIZED EARRINGS ──
   'royal-blue-leaf-drop-oxidised-jhumki': {
     id: 'anti-ox-ear-001',
@@ -3425,6 +4760,41 @@ export const OXIDIZED_EARRINGS_PRODUCTS: CatalogProduct[] = [
   PRODUCTS_CATALOG['black-stone-leaf-hoop-oxidised-earrings'],
   PRODUCTS_CATALOG['intricate-dome-classic-oxidised-jhumki'],
   PRODUCTS_CATALOG['turquoise-elephant-motif-oxidised-earrings'],
+];
+
+export const ANTI_TARNISH_BRACELETS_PRODUCTS: CatalogProduct[] = [
+  PRODUCTS_CATALOG['amoura-heartbeat-bracelet'],
+  PRODUCTS_CATALOG['florielle-blossom-bracelet'],
+  PRODUCTS_CATALOG['celestia-crystal-bar-bracelet'],
+  PRODUCTS_CATALOG['aurelia-petal-charm-bracelet'],
+  PRODUCTS_CATALOG['clover-etoile-bracelet'],
+  PRODUCTS_CATALOG['infinity-grace-bracelet'],
+  PRODUCTS_CATALOG['grecian-majesty-bracelet'],
+  PRODUCTS_CATALOG['zivara-chevron-bracelet'],
+  PRODUCTS_CATALOG['everluxe-infinity-bracelet'],
+  PRODUCTS_CATALOG['everheart-tree-of-life-bracelet'],
+  PRODUCTS_CATALOG['roselle-butterfly-charm-bracelet'],
+  PRODUCTS_CATALOG['elara-wave-crystal-bracelet'],
+  PRODUCTS_CATALOG['mariposa-pearl-butterfly-bracelet'],
+  PRODUCTS_CATALOG['nazare-evil-eye-charm-bracelet'],
+  PRODUCTS_CATALOG['bellora-bow-and-heart-bracelet'],
+  PRODUCTS_CATALOG['florenza-daisy-cutwork-cuff'],
+  PRODUCTS_CATALOG['ivory-wings-butterfly-bracelet'],
+  PRODUCTS_CATALOG['noir-radiance-crystal-bracelet'],
+  PRODUCTS_CATALOG['lumina-double-row-bracelet'],
+  PRODUCTS_CATALOG['tresora-heartbeat-bracelet'],
+  PRODUCTS_CATALOG['aquila-wave-crystal-cuff'],
+  PRODUCTS_CATALOG['amorette-crystal-link-bracelet'],
+  PRODUCTS_CATALOG['celestique-arc-crystal-bracelet'],
+  PRODUCTS_CATALOG['onyx-noir-square-bracelet'],
+  PRODUCTS_CATALOG['bellissima-golden-bow-bangle'],
+  PRODUCTS_CATALOG['obsidian-elegance-bracelet'],
+  PRODUCTS_CATALOG['solenne-classic-gold-cuff'],
+  PRODUCTS_CATALOG['papillon-butterfly-charm-bracelet'],
+  PRODUCTS_CATALOG['mon-amour-heart-bracelet'],
+  PRODUCTS_CATALOG['seraphina-heartline-bracelet'],
+  PRODUCTS_CATALOG['amorella-heart-enamel-bracelet'],
+  PRODUCTS_CATALOG['crystelle-blossom-cuff-bracelet'],
 ];
 
 export const AMERICAN_DIAMONDS_PRODUCTS: CatalogProduct[] = [

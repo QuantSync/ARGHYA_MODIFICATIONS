@@ -13,7 +13,8 @@ interface AdminLoginModalProps {
 const ADMIN_CREDENTIALS: Record<string, string> = {
   anubhavsinghrajput: 'Admin321',   // admin details    : Anubhav Singh Rajput
   mohnishgaur: 'Admin321',      // admin details : Mohnish Gaur
-  kanishkverma: 'Admin321',      // admin details : Kanishk Verma
+  devsharma: 'Admin321',        // admin details : Dev Sharma
+  kanishkverma: 'Admin321',      // admin details : Dev Sharma (legacy alias)
 };
 
 const bubbleVariants = {

@@ -22,10 +22,9 @@ const TEAM_MEMBERS: TeamMember[] = [
   {
     role: 'Founder',
     roleLabel: 'FOUNDER & VISIONARY',
-    name: 'Kanishk Verma',
-    email: 'kanishkv55@gmail.com',
+    name: 'Dev Sharma',
     bio:
-      'The creative force behind ARGHYA — Kanishk blends timeless elegance with modern affordable luxury, curating signature fine jewellery pieces that empower everyday confidence and celebrate individuality.',
+      'The creative force behind ARGHYA — Dev blends timeless elegance with modern affordable luxury, curating signature fine jewellery pieces that empower everyday confidence and celebrate individuality.',
     icon: <Crown size={28} />,
     delay: 0.1,
   },

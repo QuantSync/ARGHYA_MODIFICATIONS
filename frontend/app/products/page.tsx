@@ -25,6 +25,7 @@ import {
   MODERN_PENDANTS_PRODUCTS,
   MODERN_EARRINGS_PRODUCTS,
   HOT_DEALS_PRODUCTS,
+  ANTI_TARNISH_BRACELETS_PRODUCTS,
 } from '../../lib/productsCatalog';
 
 const ALL_CATALOG_PRODUCTS: Product[] = Object.values(PRODUCTS_CATALOG).map(p => ({
@@ -200,6 +201,7 @@ function ProductsPageContent() {
   const pendants: Product[]  = PENDANT_PRODUCTS.map(p => ({ ...p, is_featured: true }));
 
   // Strict Category Buckets under Anti Tarnish
+  const antiTarnishBracelets: Product[] = (ANTI_TARNISH_BRACELETS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const kashmiriEarrings: Product[] = (KASHMIRI_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const oxidizedEarrings: Product[] = (OXIDIZED_EARRINGS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
   const americanDiamonds: Product[] = (AMERICAN_DIAMONDS_PRODUCTS || []).map(p => ({ ...p, is_featured: true }));
@@ -229,7 +231,7 @@ function ProductsPageContent() {
       return true;
     }
     if (selectedCategory === 'Best Sellers')
-      return product.price >= 1500 || product.slug.includes('toggle') || product.slug.includes('clover');
+      return product.price >= 1500 || product.slug.includes('toggle') || product.slug.includes('clover') || product.slug.includes('nazare-evil-eye');
     if (selectedCategory === 'Hot Deals')
       return product.category === 'Hot Deals';
     // "All" main category
@@ -606,7 +608,53 @@ function ProductsPageContent() {
              COMBINED "ALL" VIEW UNDER ANTI TARNISH
              ───────────────────────────────────────────────── */
           <div className="space-y-16">
-            {/* 1. Kashmiri Earrings Collection */}
+            {/* 1. Anti-Tarnish Bracelets Collection */}
+            <section id="anti-tarnish-bracelets-section" className="space-y-6">
+              <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
+                <div>
+                  <span className="text-xs text-neutral-500 uppercase tracking-widest font-mono font-bold">
+                    Anti Tarnish • Premium Gold-Tone Finish
+                  </span>
+                  <h2 className="font-serif text-3xl font-bold text-black dark:text-white mt-0.5">
+                    Anti-Tarnish Bracelets Collection
+                  </h2>
+                </div>
+                <button
+                  onClick={() => setSelectedSubcategory('Bracelets')}
+                  className="text-black dark:text-white hover:underline text-xs uppercase tracking-widest font-bold mt-2 sm:mt-0"
+                >
+                  View All Bracelets ({antiTarnishBracelets.length}) →
+                </button>
+              </div>
+
+              {viewMode === 'horizontal' ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                  {antiTarnishBracelets.map((product, idx) => (
+                    <HorizontalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                    />
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-col w-full">
+                  {antiTarnishBracelets.map((product, idx) => (
+                    <VerticalProductCard
+                      key={product.id}
+                      product={product}
+                      index={idx}
+                      onBuyNow={handleBuyNow}
+                      isCouponActive={false}
+                      activeCouponCode={null}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+
+            {/* 2. Kashmiri Earrings Collection */}
             <section id="anti-tarnish-kashmiri-earrings-section" className="space-y-6">
               <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end border-b border-neutral-200 dark:border-neutral-800 pb-3">
                 <div>
@@ -882,20 +930,9 @@ function ProductsPageContent() {
           </div>
         ) : filteredProducts.length === 0 ? (
           <div className="text-center py-20 border border-dashed border-neutral-300 dark:border-neutral-700 rounded-3xl p-8 space-y-3">
-            {selectedCategory === 'Anti Tarnish' && selectedSubcategory === 'Bracelets' ? (
-              <>
-                <p className="text-2xl font-serif font-bold text-black dark:text-white tracking-tight">
-                  Anti-Tarnish Bracelets — Coming Soon ✨
-                </p>
-                <p className="text-base text-neutral-600 dark:text-neutral-400 max-w-md mx-auto">
-                  We&apos;re crafting a stunning new collection of anti-tarnish bracelets, designed to stay beautiful every day. Stay tuned!
-                </p>
-              </>
-            ) : (
-              <p className="text-base font-medium text-neutral-600 dark:text-neutral-400">
-                New designs for this section are being cataloged. Check back shortly!
-              </p>
-            )}
+            <p className="text-base font-medium text-neutral-600 dark:text-neutral-400">
+              New designs for this section are being cataloged. Check back shortly!
+            </p>
           </div>
         ) : viewMode === 'horizontal' ? (
           /* ─────────────────────────────────────────────────
