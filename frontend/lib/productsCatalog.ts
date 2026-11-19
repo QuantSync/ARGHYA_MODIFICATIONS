@@ -1294,7 +1294,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/zivara_chevron_bracelet/zivara_chevron_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1507,7 +1509,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/mariposa_pearl_butterfly_bracelet/mariposa_pearl_butterfly_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1548,7 +1552,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/nazare_evil_eye_charm_bracelet/nazare_evil_eye_charm_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1589,7 +1595,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/bellora_bow_and_heart_bracelet/bellora_bow_and_heart_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1630,7 +1638,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/florenza_daisy_cutwork_cuff/florenza_daisy_cutwork_cuff_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
