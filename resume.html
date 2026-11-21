@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anubhav Singh - Software Engineer Resume</title>
+  <style>
+    :root {
+      --primary: #0f172a;
+      --secondary: #334155;
+      --accent: #2563eb;
+      --text: #1e293b;
+      --light-text: #64748b;
+      --border: #e2e8f0;
+      --bg: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background-color: #f8fafc;
+      line-height: 1.45;
+      font-size: 13.5px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 820px;
+      margin: 24px auto;
+      background: var(--bg);
+      padding: 40px 48px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+
+    header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 16px;
+      margin-bottom: 18px;
+    }
+
+    .name {
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 2px;
+      margin-bottom: 8px;
+    }
+
+    .contact-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 12.5px;
+      color: var(--secondary);
+    }
+
+    .contact-bar a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-bar a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .contact-separator {
+      color: #cbd5e1;
+    }
+
+    section {
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 13.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--primary);
+      border-bottom: 1.5px solid var(--border);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .education-item, .project-item {
+      margin-bottom: 14px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    .item-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--primary);
+    }
+
+    .item-link {
+      font-size: 12px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-left: 6px;
+    }
+
+    .item-tech {
+      font-size: 12px;
+      color: var(--light-text);
+      font-style: italic;
+    }
+
+    .item-date {
+      font-size: 12px;
+      color: var(--light-text);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .item-subtitle {
+      font-size: 13px;
+      color: var(--secondary);
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 18px;
+      margin-top: 4px;
+    }
+
+    li {
+      margin-bottom: 3px;
+      color: #334155;
+    }
+
+    li strong {
+      color: #0f172a;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 6px 14px;
+      font-size: 13px;
+    }
+
+    .skill-cat {
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .skill-list {
+      color: var(--secondary);
+    }
+
+    .print-button {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      transition: background 0.2s;
+    }
+
+    .print-button:hover {
+      background: #1d4ed8;
+    }
+
+    @media print {
+      body {
+        background: transparent;
+        font-size: 12.5px;
+      }
+      .page {
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        max-width: 100%;
+      }
+      .print-button {
+        display: none;
+      }
+      section {
+        margin-bottom: 14px;
+      }
+      .name {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="print-button" onclick="window.print()">🖨 Save / Print PDF</button>
+
+  <div class="page">
+    <header>
+      <h1 class="name">Anubhav Singh</h1>
+      <div class="title">Software Engineer • Full-Stack & Systems Developer</div>
+      <div class="contact-bar">
+        <span>📍 New Delhi, India</span>
+        <span class="contact-separator">•</span>
+        <a href="mailto:quantsyncofficial@gmail.com">✉ quantsyncofficial@gmail.com</a>
+        <span class="contact-separator">•</span>
+        <a href="https://github.com/QuantSync" target="_blank">🐙 github.com/QuantSync</a>
+        <span class="contact-separator">•</span>
+        <a href="https://linkedin.com" target="_blank">💼 LinkedIn</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="item-header">
+          <span class="item-title">Guru Gobind Singh Indraprastha University (GGSIPU)</span>
+          <span class="item-date">Expected 2027</span>
+        </div>
+        <div class="item-subtitle">Bachelor of Technology (B.Tech) in Computer Science & Engineering (CSE) • 2nd Year</div>
+        <ul>
+          <li><strong>Core Coursework:</strong> Data Structures & Algorithms, Object-Oriented Programming (C++/Java), Database Management Systems (DBMS), Operating Systems, Computer Networks, Software Engineering.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-cat">Languages:</div>
+        <div class="skill-list">C++, Python, TypeScript, JavaScript, Dart, SQL (PostgreSQL), C, HTML5, CSS3</div>
+
+        <div class="skill-cat">Web / Full-Stack:</div>
+        <div class="skill-list">Next.js 14/15 (App Router), React, Node.js, Express, Tailwind CSS, Framer Motion, Zustand, REST & WebSocket APIs</div>
+
+        <div class="skill-cat">Mobile & Apps:</div>
+        <div class="skill-list">Flutter (Dart), Cross-Platform Application Architecture, Reactive State Management</div>
+
+        <div class="skill-cat">Databases & Cloud:</div>
+        <div class="skill-list">PostgreSQL, Supabase, MongoDB, Firebase, Redis, Docker, Vercel, Git / GitHub Actions</div>
+
+        <div class="skill-cat">Systems & Tools:</div>
+        <div class="skill-list">High-Performance Computing, CMake, Qt, Linux / Bash, Postman, CI/CD, Knowledge Distillation</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Featured Projects</h2>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">FinceptTerminal — Financial Analytics & Quantitative Research Terminal</span>
+            <a class="item-link" href="https://github.com/QuantSync/FinceptTerminal" target="_blank">[GitHub]</a>
+          </div>
+          <span class="item-tech">C++, Python, CMake, Qt, Docker</span>
+        </div>
+        <ul>
+          <li>Engineered a high-performance desktop market analytics terminal inspired by Bloomberg & FactSet for real-time quantitative research and economic data exploration.</li>
+          <li>Built high-throughput analytic engines in <strong>C++</strong> with <strong>Python bindings</strong> for custom algorithmic factor modeling and backtesting.</li>
+          <li>Architected a multi-threaded data ingestion pipeline parsing streaming tick data and macro metrics with sub-millisecond execution times.</li>
+          <li>Integrated modular packaging and cross-platform compilation with <strong>CMake</strong> and containerized testing via <strong>Docker</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">QuantMessage — Multi-Agent AI Messaging Platform</span>
+            <a class="item-link" href="https://github.com/QuantSync/QuantMessage_App" target="_blank">[GitHub]</a>
+          </div>
+          <span class="item-tech">Flutter (Dart), Python, C++, Supabase, WebSockets, Docker</span>
+        </div>
+        <ul>
+          <li>Architected a cross-platform (iOS, Android, Web, Desktop) agentic platform that orchestrates multi-agent AI communication and autonomous task execution.</li>
+          <li>Developed a low-latency streaming backend integrating <strong>Supabase Realtime</strong>, WebSockets, and asynchronous worker queues.</li>
+          <li>Engineered unidirectional reactive state synchronization and custom dynamic widgets in <strong>Flutter</strong> to visualize structured AI outputs.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">ARGHYA — Full-Stack E-Commerce Platform</span>
+            <a class="item-link" href="https://github.com/QuantSync/ARGHYA_MODIFICATIONS" target="_blank">[GitHub]</a>
+          </div>
+          <span class="item-tech">Next.js 14/15, TypeScript, Tailwind CSS, Supabase, Stripe & Razorpay</span>
+        </div>
+        <ul>
+          <li>Developed a production-grade luxury jewellery e-commerce application serving 100+ active SKU catalogues across mobile and web viewports.</li>
+          <li>Leveraged SSR and ISR in <strong>Next.js App Router</strong>, achieving <strong>95+ Google Lighthouse</strong> performance scores.</li>
+          <li>Integrated multi-gateway payment checkout flows with <strong>Razorpay & Stripe Webhooks</strong> for atomic transactions and live order updates.</li>
+          <li>Implemented client-side category filters and interactive micro-animations using <strong>Framer Motion</strong> and <strong>Zustand</strong>.</li>
+        </ul>
+      </div>
+
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">QuantSync AI Infrastructure — Low-Latency Mini-Model Framework</span>
+            <a class="item-link" href="https://github.com/QuantSync" target="_blank">[GitHub Organization]</a>
+          </div>
+          <span class="item-tech">Python, C++, PyTorch, Docker</span>
+        </div>
+        <ul>
+          <li>Founder and lead maintainer of <strong>QuantSync</strong>, developing hyper-fast, cost-efficient mini-models (QuantCore, Windcrest).</li>
+          <li>Conducted model knowledge distillation experiments to compress frontier model capabilities for low-latency inference on commodity hardware.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Achievements & Open-Source Contributions</h2>
+      <ul>
+        <li><strong>Open-Source Founder:</strong> Creator of <strong>QuantSync</strong> on GitHub with 7+ public repositories spanning financial computing, multi-agent systems, and cross-platform apps.</li>
+        <li><strong>Fast-Paced Builder:</strong> Proven ability to conceptualize, design, and ship production-ready software systems across frontend, backend, mobile, and low-level systems.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
