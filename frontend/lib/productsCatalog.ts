@@ -1982,7 +1982,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/onyx_noir_square_bracelet/onyx_noir_square_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
