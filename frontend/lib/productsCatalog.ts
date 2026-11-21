@@ -1681,7 +1681,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/ivory_wings_butterfly_bracelet/ivory_wings_butterfly_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1722,7 +1724,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/noir_radiance_crystal_bracelet/noir_radiance_crystal_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1763,7 +1767,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/lumina_double_row_bracelet/lumina_double_row_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1845,7 +1851,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/aquila_wave_crystal_cuff/aquila_wave_crystal_cuff_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1886,7 +1894,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/amorette_crystal_link_bracelet/amorette_crystal_link_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -1927,7 +1937,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/celestique_arc_crystal_bracelet/celestique_arc_crystal_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -2009,7 +2021,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/bellissima_golden_bow_bangle/bellissima_golden_bow_bangle_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -2050,7 +2064,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/obsidian_elegance_bracelet/obsidian_elegance_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -2173,7 +2189,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/mon_amour_heart_bracelet/mon_amour_heart_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -2214,7 +2232,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/seraphina_heartline_bracelet/seraphina_heartline_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
@@ -2296,7 +2316,9 @@ Care Tip: To maintain the beauty and finish of your bracelet, avoid direct conta
     subcategory: 'Bracelets',
     fabric: 'Anti-Tarnish Metal • Premium Gold-Tone Finish',
     craft_type: 'Anti-Tarnish Metal Bracelet',
-    images: [],
+    images: [
+      '/images/anti_tarnish_bracelets/crystelle_blossom_cuff_bracelet/crystelle_blossom_cuff_bracelet_1.png',
+    ],
     sizes: ['Free Size (Adjustable)'],
   },
 
